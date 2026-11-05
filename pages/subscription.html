@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plans & Subscription | Research AI</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/subscription.css">
+</head>
+
+<body>
+
+    <div class="sub-page">
+
+        <!-- TOP BAR -->
+        <header class="sub-topbar">
+            <a href="dashboard.html" class="sub-brand" aria-label="Research AI Dashboard">
+                <span class="sub-brand-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+                <span>Research AI</span>
+            </a>
+
+            <div class="sub-top-actions">
+                <a href="research-gap.html" class="sub-back">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Research Gap
+                </a>
+
+                <a href="dashboard.html" class="sub-back">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="sub-hero">
+            <span class="sub-eyebrow">
+                <i class="fa-solid fa-crown"></i>
+                Research AI Plans
+            </span>
+
+            <h1>Choose the plan that fits your research workflow</h1>
+
+            <p>
+                Compare Research Gap analysis limits across all available plans.
+                Your current subscription and plan limits are loaded directly from
+                your Research AI account.
+            </p>
+        </section>
+
+        <!-- CURRENT SUBSCRIPTION -->
+        <section class="sub-current" id="currentSubscription">
+            <div class="sub-loading">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                Loading your subscription...
+            </div>
+        </section>
+
+        <!-- PLANS -->
+        <section>
+            <h2 class="sub-section-heading">Available Plans</h2>
+
+            <div class="sub-plans" id="plansContainer">
+                <div class="sub-loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    Loading plans...
+                </div>
+            </div>
+        </section>
+
+        <!-- INFORMATION -->
+        <section class="sub-info">
+
+            <article class="sub-info-card">
+                <h3>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Subscription limits
+                </h3>
+
+                <p>
+                    Research Gap limits are enforced by the backend entitlement
+                    system. Changing browser-side JavaScript cannot bypass the
+                    selected-paper limit.
+                </p>
+            </article>
+
+            <article class="sub-info-card" id="upgradeInfo">
+                <h3>
+                    <i class="fa-solid fa-arrow-up-right-dots"></i>
+                    Upgrade options
+                </h3>
+
+                <p>
+                    Available upgrade paths for your current plan will appear here.
+                </p>
+
+                <div class="sub-upgrade-list" id="upgradeList"></div>
+            </article>
+
+        </section>
+
+        <footer class="sub-footer">
+            © 2026 Research AI. Subscription and payment activation are being
+            prepared in phases.
+        </footer>
+
+    </div>
+
+    <div id="subscriptionToast" class="sub-toast" hidden></div>
+
+    <script>
+        "use strict";
+
+        const API_BASE = "../backend";
+        const currentSubscription = document.getElementById("currentSubscription");
+        const plansContainer = document.getElementById("plansContainer");
+        const upgradeList = document.getElementById("upgradeList");
+        const toast = document.getElementById("subscriptionToast");
+
+        let currentData = null;
+        let plansData = [];
+
+        function escapeHtml(value) {
+            const div = document.createElement("div");
+            div.textContent = value == null ? "" : String(value);
+            return div.innerHTML;
+        }
+
+        function showToast(message) {
+            toast.textContent = message;
+            toast.hidden = false;
+
+            clearTimeout(window.__subscriptionToastTimer);
+
+            window.__subscriptionToastTimer = setTimeout(() => {
+                toast.hidden = true;
+            }, 3000);
+        }
+
+        function formatPrice(plan) {
+            const paise = plan.price_paise;
+
+            if (paise === null || paise === undefined || paise === "") {
+                return {
+                    main: "—",
+                    suffix: "",
+                    note: "Price will be configured before payment activation."
+                };
+            }
+
+            const amount = Number(paise) / 100;
+
+            if (!Number.isFinite(amount)) {
+                return {
+                    main: "—",
+                    suffix: "",
+                    note: "Price is not configured."
+                };
+            }
+
+            return {
+                main: `₹${amount.toLocaleString("en-IN", {
+                    minimumFractionDigits: amount % 1 ? 2 : 0,
+                    maximumFractionDigits: 2
+                })}`,
+                suffix: "/ month",
+                note: ""
+            };
+        }
+
+        function paperLimitText(plan) {
+            if (plan.unlimited === true || plan.max_papers === null) {
+                return "Unlimited selected papers";
+            }
+
+            return `Up to ${Number(plan.max_papers).toLocaleString("en-IN")} selected papers`;
+        }
+
+        function planIcon(code) {
+            switch (code) {
+                case "free":
+                    return "fa-seedling";
+                case "basic":
+                    return "fa-layer-group";
+                case "pro":
+                    return "fa-bolt";
+                case "unlimited":
+                    return "fa-infinity";
+                default:
+                    return "fa-crown";
+            }
+        }
+
+        function renderCurrentSubscription(subscription) {
+            const plan = subscription.plan || {};
+
+            const limit = plan.unlimited
+                ? "∞"
+                : Number(plan.max_papers || 0).toLocaleString("en-IN");
+
+            const status = String(subscription.status || "unknown").toLowerCase();
+
+            currentSubscription.innerHTML = `
+        <div class="sub-current-item">
+            <span class="sub-current-label">Current Plan</span>
+            <div class="sub-current-value">
+                ${escapeHtml(plan.name || "Unknown")}
+                <small>• ${escapeHtml(paperLimitText(plan))}</small>
+            </div>
+        </div>
+
+        <div class="sub-current-item">
+            <span class="sub-current-label">Research Gap Limit</span>
+            <div class="sub-current-value">
+                ${escapeHtml(limit)}
+                <small>papers</small>
+            </div>
+        </div>
+
+        <div class="sub-current-item">
+            <span class="sub-current-label">Subscription Status</span>
+            <div class="sub-status">
+                <span class="sub-status-dot"></span>
+                ${escapeHtml(status.charAt(0).toUpperCase() + status.slice(1))}
+            </div>
+        </div>
+    `;
+        }
+
+        function renderUpgradeOptions(subscription) {
+            const options = Array.isArray(currentData?.upgrade_options)
+                ? currentData.upgrade_options
+                : [];
+
+            if (!options.length) {
+                upgradeList.innerHTML = `
+            <span class="sub-upgrade-chip">
+                <i class="fa-solid fa-check"></i>
+                ${subscription.plan?.code === "unlimited"
+                        ? "You are on the highest available plan."
+                        : "No upgrade options returned."}
+            </span>
+        `;
+                return;
+            }
+
+            upgradeList.innerHTML = options.map(plan => `
+        <span class="sub-upgrade-chip">
+            ${escapeHtml(plan.name)}
+            • ${plan.unlimited ? "∞" : `${escapeHtml(plan.max_papers)} papers`}
+        </span>
+    `).join("");
+        }
+
+        function renderPlans(plans, subscription) {
+            const currentCode = String(subscription.plan?.code || "").toLowerCase();
+
+            plansContainer.innerHTML = plans.map(plan => {
+                const code = String(plan.code || "").toLowerCase();
+                const isCurrent = code === currentCode;
+                const price = formatPrice(plan);
+
+                let buttonText = "Upgrade";
+                let buttonClass = "";
+
+                if (isCurrent) {
+                    buttonText = "Current Plan";
+                    buttonClass = "current";
+                } else if (code === "free") {
+                    buttonText = "Free Plan";
+                    buttonClass = "secondary";
+                }
+
+                const popular = code === "pro"
+                    ? `<span class="sub-card-badge popular">Popular</span>`
+                    : "";
+
+                const currentBadge = isCurrent
+                    ? `<span class="sub-card-badge">Current</span>`
+                    : "";
+
+                const priceNote = price.note
+                    ? `<div class="sub-price-config">${escapeHtml(price.note)}</div>`
+                    : "";
+
+                return `
+            <article class="sub-card ${isCurrent ? "current" : ""}"
+                     data-plan-code="${escapeHtml(code)}">
+
+                ${isCurrent ? currentBadge : popular}
+
+                <div class="sub-card-icon">
+                    <i class="fa-solid ${planIcon(code)}"></i>
+                </div>
+
+                <h3>${escapeHtml(plan.name)}</h3>
+
+                <p class="sub-card-description">
+                    ${escapeHtml(plan.description || "")}
+                </p>
+
+                <div class="sub-price">
+                    <div class="sub-price-main">
+                        <strong>${escapeHtml(price.main)}</strong>
+                        <span>${escapeHtml(price.suffix)}</span>
+                    </div>
+                    ${priceNote}
+                </div>
+
+                <p class="sub-feature-title">Includes</p>
+
+                <ul class="sub-features">
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>${escapeHtml(paperLimitText(plan))}</span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Evidence-grounded Research Gap analysis</span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Validated cross-paper synthesis</span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Research blueprint generation</span>
+                    </li>
+                </ul>
+
+                <div class="sub-card-footer">
+                    <button
+                        type="button"
+                        class="sub-plan-button ${buttonClass}"
+                        data-action="${isCurrent ? "current" : "upgrade"}"
+                        data-plan="${escapeHtml(code)}"
+                        ${isCurrent || code === "free" ? "disabled" : ""}
+                    >
+                        ${escapeHtml(buttonText)}
+                    </button>
+
+                    <p class="sub-plan-note">
+                        ${isCurrent
+                        ? "This is your active subscription."
+                        : code === "free"
+                            ? "No payment required."
+                            : "Payment activation will be enabled in Phase 2."}
+                    </p>
+                </div>
+            </article>
+        `;
+            }).join("");
+
+            plansContainer.querySelectorAll(".sub-plan-button[data-action='upgrade']")
+                .forEach(button => {
+                    button.addEventListener("click", () => {
+                        const plan = button.dataset.plan || "";
+                        const planInfo = plans.find(item => item.code === plan);
+
+                        showToast(
+                            `${planInfo?.name || "Selected plan"} is ready for payment integration. Razorpay will be connected in Phase 2.`
+                        );
+                    });
+                });
+        }
+
+        async function fetchJson(url) {
+            const response = await fetch(url, {
+                credentials: "same-origin",
+                cache: "no-store",
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            const raw = await response.text();
+
+            let data = null;
+
+            try {
+                data = raw ? JSON.parse(raw) : null;
+            } catch (error) {
+                throw new Error("Subscription service returned an unexpected response.");
+            }
+
+            if (!response.ok || !data || !data.success) {
+                throw new Error(data?.message || "Unable to load subscription information.");
+            }
+
+            return data;
+        }
+
+        async function loadSubscriptionPage() {
+            try {
+                const [plansResponse, currentResponse] = await Promise.all([
+                    fetchJson(`${API_BASE}/subscription/api.php?action=plans`),
+                    fetchJson(`${API_BASE}/subscription/api.php?action=current`)
+                ]);
+
+                plansData = Array.isArray(plansResponse.plans)
+                    ? plansResponse.plans
+                    : [];
+
+                currentData = currentResponse.subscription || null;
+
+                if (!currentData || !currentData.plan) {
+                    throw new Error("Current subscription information is incomplete.");
+                }
+
+                renderCurrentSubscription(currentData);
+                renderUpgradeOptions(currentData);
+                renderPlans(plansData, currentData);
+
+            } catch (error) {
+                console.error("Subscription page error:", error);
+
+                currentSubscription.innerHTML = `
+            <div class="sub-error">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                ${escapeHtml(error.message || "Unable to load subscription information.")}
+            </div>
+        `;
+
+                plansContainer.innerHTML = `
+            <div class="sub-error">
+                Subscription plans could not be loaded. Please refresh the page.
+            </div>
+        `;
+
+                upgradeList.innerHTML = "";
+            }
+        }
+
+        loadSubscriptionPage();
+    </script>
+
+</body>
+
+</html>

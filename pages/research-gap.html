@@ -1,0 +1,3723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#2563eb">
+
+    <title>Research Gap | Research AI</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- Existing CSS -->
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet" href="../css/pages.css">
+
+    <style>
+        .gap-ai-workbench {
+            margin: 24px 0;
+            padding: 24px;
+            border: 1px solid rgba(37, 99, 235, .15);
+            border-radius: 18px;
+            background: var(--card-bg, #fff);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, .06)
+        }
+
+        .gap-workbench-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 18px
+        }
+
+        .gap-workbench-head h2 {
+            margin: 4px 0 6px;
+            font-size: 22px
+        }
+
+        .gap-workbench-head p {
+            margin: 0;
+            color: #64748b
+        }
+
+        .gap-live-badge {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: #eff6ff;
+            color: #2563eb;
+            white-space: nowrap
+        }
+
+        .gap-workbench-form {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 12px
+        }
+
+        .gap-topic-input {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #dbe3ef;
+            border-radius: 12px;
+            font: inherit;
+            outline: none
+        }
+
+        .gap-topic-input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, .1)
+        }
+
+        .gap-generate-btn {
+            border: 0;
+            border-radius: 12px;
+            padding: 0 20px;
+            background: #2563eb;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+            min-height: 48px
+        }
+
+        .gap-generate-btn:disabled {
+            opacity: .65;
+            cursor: wait
+        }
+
+        .gap-paper-selector {
+            margin-top: 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            background: #fbfdff;
+            overflow: hidden
+        }
+
+        .gap-selector-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 13px 15px;
+            border-bottom: 1px solid #e2e8f0
+        }
+
+        .gap-selector-head strong {
+            font-size: 14px;
+            color: #334155
+        }
+
+        .gap-selector-actions {
+            display: flex;
+            gap: 7px
+        }
+
+        .gap-selector-action {
+            border: 1px solid #dbe3ef;
+            background: #fff;
+            color: #475569;
+            border-radius: 8px;
+            padding: 6px 9px;
+            font: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer
+        }
+
+        .gap-selector-action:hover {
+            border-color: #a5b4fc;
+            color: #3730a3;
+            background: #f8faff
+        }
+
+        .gap-paper-search-row {
+            display: flex;
+            gap: 8px;
+            padding: 11px 15px;
+            border-bottom: 1px solid #eef2f7
+        }
+
+        .gap-paper-search {
+            flex: 1;
+            min-width: 0;
+            border: 1px solid #dbe3ef;
+            border-radius: 9px;
+            padding: 9px 11px;
+            font: inherit;
+            font-size: 13px;
+            outline: none
+        }
+
+        .gap-paper-search:focus {
+            border-color: #818cf8;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, .08)
+        }
+
+        .gap-selected-count {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 600
+        }
+
+        .gap-paper-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            max-height: 330px;
+            overflow: auto;
+            padding: 12px 15px
+        }
+
+        .gap-paper-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 11px;
+            border: 1px solid #e5eaf1;
+            border-radius: 10px;
+            background: #fff;
+            cursor: pointer;
+            transition: .15s ease
+        }
+
+        .gap-paper-option:hover {
+            border-color: #c7d2fe;
+            background: #fafbff
+        }
+
+        .gap-paper-option.selected {
+            border-color: #a5b4fc;
+            background: #f5f7ff
+        }
+
+        .gap-paper-option input {
+            margin-top: 3px;
+            accent-color: #4f46e5
+        }
+
+        .gap-paper-option-body {
+            min-width: 0
+        }
+
+        .gap-paper-option-title {
+            display: block;
+            color: #334155;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1.4
+        }
+
+        .gap-paper-option-meta {
+            display: block;
+            margin-top: 4px;
+            color: #94a3b8;
+            font-size: 11px;
+            line-height: 1.4
+        }
+
+        .gap-paper-option-score {
+            display: inline-flex;
+            margin-top: 6px;
+            padding: 3px 6px;
+            border-radius: 999px;
+            color: #4338ca;
+            background: #eef2ff;
+            font-size: 10px;
+            font-weight: 700
+        }
+
+        .gap-selector-empty {
+            padding: 24px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 13px
+        }
+
+        .gap-selector-note {
+            padding: 9px 15px;
+            border-top: 1px solid #eef2f7;
+            color: #64748b;
+            background: #f8fafc;
+            font-size: 11px
+        }
+
+        .gap-validation-banner {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            margin-bottom: 14px;
+            padding: 12px 14px;
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            background: #f0fdf4;
+            color: #166534;
+            font-size: 12px;
+            line-height: 1.5
+        }
+
+        .gap-validation-banner.warning {
+            border-color: #fde68a;
+            background: #fffbeb;
+            color: #92400e
+        }
+
+        .gap-evidence-block {
+            margin-top: 12px;
+            padding: 11px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background: #f8fafc
+        }
+
+        .gap-evidence-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #e8edf3
+        }
+
+        .gap-evidence-item:last-child {
+            border-bottom: 0;
+            padding-bottom: 0
+        }
+
+        .gap-evidence-paper {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #475569;
+            font-size: 11px;
+            font-weight: 700
+        }
+
+        .gap-evidence-paper a {
+            color: #4f46e5;
+            text-decoration: none
+        }
+
+        .gap-evidence-paper a:hover {
+            text-decoration: underline
+        }
+
+        .gap-evidence-quote {
+            margin-top: 5px;
+            color: #475569;
+            font-size: 12px;
+            line-height: 1.55
+        }
+
+        .gap-evidence-quote:before {
+            content: '“'
+        }
+
+        .gap-evidence-quote:after {
+            content: '”'
+        }
+
+        .gap-evidence-valid {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: auto;
+            color: #15803d;
+            font-size: 10px;
+            font-weight: 700
+        }
+
+        .gap-paper-chip-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px
+        }
+
+        .gap-result-paper-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 8px;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #4338ca;
+            font-size: 10px;
+            font-weight: 700
+        }
+
+        .gap-basis-note {
+            margin-top: 9px;
+            color: #64748b;
+            font-size: 11px
+        }
+
+        .gap-rejected-note {
+            margin-top: 12px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            background: #f8fafc;
+            color: #64748b;
+            font-size: 11px
+        }
+
+        .gap-analysis-result {
+            display: none;
+            margin-top: 22px
+        }
+
+        .gap-analysis-result.show {
+            display: block
+        }
+
+        .gap-result-summary {
+            padding: 16px;
+            border-radius: 14px;
+            background: #f8fafc;
+            margin-bottom: 16px
+        }
+
+        .gap-result-summary strong {
+            display: block;
+            margin-bottom: 6px
+        }
+
+        .gap-result-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px
+        }
+
+        .gap-live-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 17px;
+            background: #fff
+        }
+
+        .gap-live-card h3 {
+            margin: 0 0 8px;
+            font-size: 17px
+        }
+
+        .gap-live-card p {
+            margin: 7px 0;
+            color: #475569;
+            line-height: 1.55
+        }
+
+        .gap-live-meta {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap;
+            margin-bottom: 10px
+        }
+
+        .gap-live-pill {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 8px;
+            border-radius: 999px;
+            background: #f1f5f9;
+            color: #475569;
+            text-transform: uppercase
+        }
+
+        .gap-live-pill.high {
+            background: #fef2f2;
+            color: #dc2626
+        }
+
+        .gap-live-pill.medium {
+            background: #fff7ed;
+            color: #c2410c
+        }
+
+        .gap-live-pill.low {
+            background: #f0fdf4;
+            color: #15803d
+        }
+
+        .gap-source-note {
+            font-size: 12px;
+            color: #64748b
+        }
+
+        .gap-recommendation-live {
+            margin-top: 16px;
+            padding: 18px;
+            border-radius: 14px;
+            background: #eff6ff
+        }
+
+        .gap-recommendation-live h3 {
+            margin: 0 0 7px
+        }
+
+        .gap-recommendation-live p {
+            margin: 6px 0;
+            color: #334155
+        }
+
+        @media(max-width:900px) {
+            .gap-paper-list {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media(max-width:760px) {
+
+            .gap-workbench-form,
+            .gap-result-grid {
+                grid-template-columns: 1fr
+            }
+
+            .gap-generate-btn {
+                min-height: 46px;
+                padding: 12px 18px
+            }
+
+            .gap-workbench-head {
+                flex-direction: column
+            }
+
+            .gap-selector-head {
+                align-items: flex-start;
+                flex-direction: column
+            }
+
+            .gap-selector-actions {
+                width: 100%
+            }
+
+            .gap-selector-action {
+                flex: 1
+            }
+
+            .gap-paper-search-row {
+                flex-direction: column
+            }
+
+            .gap-selected-count {
+                justify-content: center
+            }
+        }
+
+        .gap-blueprint-selector {
+            margin-top: 20px;
+            padding: 18px;
+            border: 1px solid #dbeafe;
+            border-radius: 14px;
+            background: #f8fbff
+        }
+
+        .gap-blueprint-selector h3 {
+            margin: 0 0 6px;
+            color: #1e3a8a;
+            font-size: 17px
+        }
+
+        .gap-blueprint-selector p {
+            margin: 0 0 12px;
+            color: #64748b;
+            font-size: 12px
+        }
+
+        .gap-blueprint-controls {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 10px
+        }
+
+        .gap-blueprint-select {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid #dbe3ef;
+            border-radius: 10px;
+            background: #fff;
+            font: inherit;
+            font-size: 13px
+        }
+
+        .gap-blueprint-btn {
+            border: 0;
+            border-radius: 10px;
+            padding: 0 16px;
+            background: #2563eb;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+            min-height: 44px
+        }
+
+        .gap-blueprint-btn:disabled {
+            opacity: .65;
+            cursor: wait
+        }
+
+        .gap-blueprint {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #dbe3ef;
+            border-radius: 16px;
+            background: #fff
+        }
+
+        .gap-blueprint-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            align-items: flex-start;
+            margin-bottom: 16px
+        }
+
+        .gap-blueprint-head h3 {
+            margin: 0 0 5px;
+            font-size: 20px;
+            color: #0f172a
+        }
+
+        .gap-blueprint-head p {
+            margin: 0;
+            color: #64748b;
+            font-size: 12px
+        }
+
+        .gap-blueprint-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .gap-blueprint-action {
+            border: 1px solid #dbe3ef;
+            background: #fff;
+            color: #334155;
+            border-radius: 9px;
+            padding: 8px 11px;
+            font: inherit;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer
+        }
+
+        .gap-blueprint-action.primary {
+            background: #2563eb;
+            color: #fff;
+            border-color: #2563eb
+        }
+
+        .gap-blueprint-section {
+            margin-top: 14px;
+            padding: 14px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            background: #fafafa
+        }
+
+        .gap-blueprint-section h4 {
+            margin: 0 0 8px;
+            font-size: 14px;
+            color: #1e293b
+        }
+
+        .gap-blueprint-section p {
+            margin: 0;
+            color: #475569;
+            font-size: 13px;
+            line-height: 1.65
+        }
+
+        .gap-blueprint-section ol,
+        .gap-blueprint-section ul {
+            margin: 7px 0 0;
+            padding-left: 21px;
+            color: #475569;
+            font-size: 13px;
+            line-height: 1.65
+        }
+
+        .gap-blueprint-source-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 9px
+        }
+
+        .gap-blueprint-source {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 8px;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #4338ca;
+            font-size: 10px;
+            font-weight: 700;
+            text-decoration: none
+        }
+
+        .gap-blueprint-note {
+            margin-top: 12px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            background: #f0fdf4;
+            color: #166534;
+            font-size: 11px;
+            line-height: 1.5
+        }
+
+        @media (max-width:760px) {
+            .gap-blueprint-controls {
+                grid-template-columns: 1fr
+            }
+
+            .gap-blueprint-head {
+                flex-direction: column
+            }
+
+            .gap-blueprint-actions {
+                width: 100%
+            }
+
+            .gap-blueprint-action {
+                flex: 1
+            }
+
+            .gap-blueprint-selector {
+                padding: 14px
+            }
+        }
+
+        @media print {
+            body.printing-blueprint * {
+                visibility: hidden !important
+            }
+
+            body.printing-blueprint .gap-blueprint,
+            body.printing-blueprint .gap-blueprint * {
+                visibility: visible !important
+            }
+
+            body.printing-blueprint .gap-blueprint {
+                position: absolute !important;
+                left: 0 !important;
+                top: 0 !important;
+                width: 100% !important;
+                margin: 0 !important;
+                border: 0 !important;
+                box-shadow: none !important;
+                background: #fff !important
+            }
+
+            body.printing-blueprint .gap-blueprint-actions,
+            body.printing-blueprint .gap-blueprint-source-list {
+                display: none !important
+            }
+
+            body.printing-blueprint .gap-blueprint-section {
+                break-inside: avoid;
+                page-break-inside: avoid
+            }
+
+            body.printing-blueprint {
+                background: #fff !important
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="dashboard-wrapper">
+
+
+        <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <a href="../index.html">
+
+                    <span class="sidebar-logo-icon">
+
+                        <i class="fa-solid fa-brain"></i>
+
+                    </span>
+
+                    <span class="sidebar-logo-text">
+
+                        Research <strong>AI</strong>
+
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- CLOSE -->
+
+            <button class="sidebar-close" id="sidebarClose" type="button">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <!-- MAIN MENU -->
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-heading">
+                    MAIN MENU
+                </p>
+
+
+                <nav class="sidebar-nav">
+
+
+                    <a href="dashboard.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-house"></i>
+
+                        </span>
+
+                        Dashboard
+
+                    </a>
+
+
+                    <a href="research-domain.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                        </span>
+
+                        Research Domains
+
+                    </a>
+
+
+                    <a href="papers.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-file-lines"></i>
+
+                        </span>
+
+                        Research Papers
+
+                    </a>
+
+
+                    <a href="datasets.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-database"></i>
+
+                        </span>
+
+                        Datasets
+
+                    </a>
+
+
+                    <a href="models.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-microchip"></i>
+
+                        </span>
+
+                        AI Models
+
+                    </a>
+
+
+                    <a href="github.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </span>
+
+                        GitHub Explorer
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- AI TOOLS -->
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-heading">
+                    AI RESEARCH TOOLS
+                </p>
+
+
+                <nav class="sidebar-nav">
+
+
+                    <a href="ai-analysis.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        </span>
+
+                        AI Analysis
+
+                    </a>
+
+
+                    <a href="research-gap.html" class="sidebar-link active">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </span>
+
+                        Research Gap
+
+                    </a>
+
+
+                    <a href="idea-generator.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                        </span>
+
+                        Idea Generator
+
+                    </a>
+
+
+                    <a href="literature.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-book-open"></i>
+
+                        </span>
+
+                        Literature Review
+
+                    </a>
+
+
+                    <a href="ai-chat.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </span>
+
+                        AI Assistant
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- RESOURCES -->
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-heading">
+                    RESOURCES
+                </p>
+
+
+                <nav class="sidebar-nav">
+
+
+                    <a href="conferences.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                        </span>
+
+                        Conferences
+
+                    </a>
+
+
+                    <a href="citation.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-quote-right"></i>
+
+                        </span>
+
+                        Citation Generator
+
+                    </a>
+
+
+                    <a href="internet-research.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                        </span>
+
+                        Internet Research
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+
+                <a href="settings.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                    </span>
+
+                    Settings
+
+                </a>
+
+
+                <a href="profile.html" class="sidebar-profile">
+
+                    <div class="profile-avatar">
+                        AJ
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong>
+                            Researcher
+                        </strong>
+
+                        <span>
+                            Student Account
+                        </span>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- OVERLAY -->
+
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+        <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- TOP NAVBAR -->
+
+            <header class="top-navbar">
+
+
+                <div class="navbar-left">
+
+
+                    <button class="menu-toggle" id="menuToggle" type="button">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="page-title">
+
+                        <span>
+                            AI Research Tools
+                        </span>
+
+                        <h1>
+                            Research Gap
+                        </h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="global-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" placeholder="Search papers, topics, datasets...">
+
+                    <span class="search-shortcut">
+                        Ctrl K
+                    </span>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+
+                <div class="navbar-actions">
+
+
+                    <button class="navbar-icon-btn" id="themeToggle" type="button">
+
+                        <i class="fa-regular fa-moon"></i>
+
+                    </button>
+
+
+                    <a href="notifications.html" class="navbar-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </a>
+
+
+                    <a href="profile.html" class="navbar-user">
+
+                        <div class="navbar-avatar">
+                            AJ
+                        </div>
+
+
+                        <div class="navbar-user-info">
+
+                            <strong>
+                                Researcher
+                            </strong>
+
+                            <span>
+                                Student
+                            </span>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+            <div class="page-content">
+
+
+                <!-- BREADCRUMB -->
+
+                <div class="page-breadcrumb">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <a href="ai-analysis.html">
+                        AI Analysis
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>
+                        Research Gap
+                    </span>
+
+                </div>
+
+
+                <!-- =================================================
+                 HERO
+                 ================================================= -->
+
+                <section class="research-gap-hero">
+
+
+                    <div class="gap-hero-content">
+
+
+                        <div class="gap-ai-badge">
+
+                            <span>
+                                <i class="fa-solid fa-sparkles"></i>
+                            </span>
+
+                            AI RESEARCH DISCOVERY
+
+                        </div>
+
+
+                        <h2>
+                            Discover What's Missing
+                        </h2>
+
+
+                        <p>
+
+                            Identify unexplored research areas,
+                            limitations in existing studies and
+                            promising opportunities for future work.
+
+                        </p>
+
+
+                        <div class="gap-paper-chip">
+
+                            <div class="gap-paper-chip-icon">
+
+                                <i class="fa-solid fa-file-lines"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ANALYZED RESEARCH
+                                </span>
+
+                                <strong>
+                                    Deep Learning Approaches for Automated
+                                    Medical Diagnosis
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gap-hero-visual">
+
+
+                        <div class="gap-radar">
+
+                            <div class="radar-line horizontal"></div>
+
+                            <div class="radar-line vertical"></div>
+
+                            <div class="radar-circle circle-one"></div>
+
+                            <div class="radar-circle circle-two"></div>
+
+                            <div class="radar-circle circle-three"></div>
+
+
+                            <span class="radar-dot dot-a"></span>
+
+                            <span class="radar-dot dot-b"></span>
+
+                            <span class="radar-dot dot-c"></span>
+
+                            <span class="radar-dot dot-d"></span>
+
+
+                            <div class="radar-center">
+
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                 LIVE AI RESEARCH GAP WORKBENCH
+                 ================================================= -->
+
+                <section class="gap-ai-workbench" aria-labelledby="gapWorkbenchTitle">
+                    <div class="gap-workbench-head">
+                        <div>
+                            <span class="gap-ai-badge">AI GAP ANALYSIS</span>
+                            <h2 id="gapWorkbenchTitle">Generate Research Gaps from Evidence</h2>
+                            <p>Enter a research topic. The backend analyzes matching papers from your research database
+                                and generates evidence-grounded gaps.</p>
+                        </div>
+                        <span class="gap-live-badge"><i class="fa-solid fa-shield-halved"></i> Evidence grounded</span>
+                    </div>
+                    <div class="gap-workbench-form">
+                        <input id="gapTopicInput" class="gap-topic-input" type="text" maxlength="500"
+                            placeholder="e.g. AI-based dental caries detection"
+                            value="Deep Learning Approaches for Automated Medical Diagnosis" data-paper-id="1">
+                        <button id="generateGapsBtn" class="gap-generate-btn" type="button"><i
+                                class="fa-solid fa-wand-magic-sparkles"></i> Generate Research Gaps</button>
+                    </div>
+
+                    <div class="gap-paper-selector" id="gapPaperSelector">
+                        <div class="gap-selector-head">
+                            <div>
+                                <strong><i class="fa-solid fa-layer-group"></i> Select papers for cross-paper
+                                    analysis</strong>
+                                <div id="gapEntitlementBadge" style="margin-top:5px;font-size:11px;color:#64748b;">
+                                    <i class="fa-solid fa-spinner fa-spin"></i> Loading plan limit...
+                                </div>
+                            </div>
+                            <div class="gap-selector-actions">
+                                <button class="gap-selector-action" id="gapSelectAllBtn" type="button">Select
+                                    All</button>
+                                <button class="gap-selector-action" id="gapClearAllBtn" type="button">Clear</button>
+                            </div>
+                        </div>
+                        <div class="gap-paper-search-row">
+                            <input id="gapPaperSearch" class="gap-paper-search" type="search" maxlength="200"
+                                placeholder="Search papers by title, author, journal or topic...">
+                            <span class="gap-selected-count" id="gapSelectedCount">0 / 8 selected</span>
+                        </div>
+                        <div class="gap-paper-list" id="gapPaperList">
+                            <div class="gap-selector-empty">Loading research papers...</div>
+                        </div>
+                        <div class="gap-selector-note">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Only selected papers that meet the topic-relevance threshold are sent to the AI.
+                            <span id="gapDynamicLimitText">Maximum 8 papers.</span>
+                        </div>
+                    </div>
+
+                    <div id="gapAnalysisResult" class="gap-analysis-result" aria-live="polite"></div>
+                </section>
+
+
+                <!-- =================================================
+                 SUMMARY STATS
+                 ================================================= -->
+
+                <section class="gap-stat-grid">
+
+
+                    <div class="gap-stat-card">
+
+                        <div class="gap-stat-icon blue">
+
+                            <i class="fa-solid fa-chart-simple"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                GAPS IDENTIFIED
+                            </span>
+
+                            <strong>
+                                07
+                            </strong>
+
+                            <small>
+                                Across analyzed research
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gap-stat-card">
+
+                        <div class="gap-stat-icon red">
+
+                            <i class="fa-solid fa-fire"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                HIGH PRIORITY
+                            </span>
+
+                            <strong>
+                                03
+                            </strong>
+
+                            <small>
+                                Strong research opportunity
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gap-stat-card">
+
+                        <div class="gap-stat-icon purple">
+
+                            <i class="fa-solid fa-puzzle-piece"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                GAP CATEGORIES
+                            </span>
+
+                            <strong>
+                                05
+                            </strong>
+
+                            <small>
+                                Methodology to deployment
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="gap-stat-card">
+
+                        <div class="gap-stat-icon green">
+
+                            <i class="fa-solid fa-rocket"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                OPPORTUNITY SCORE
+                            </span>
+
+                            <strong>
+                                91%
+                            </strong>
+
+                            <small>
+                                High potential
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                 FILTER BAR
+                 ================================================= -->
+
+                <section class="gap-filter-bar">
+
+
+                    <div class="gap-filter-title">
+
+                        <i class="fa-solid fa-filter"></i>
+
+                        <strong>
+                            Research Gap Explorer
+                        </strong>
+
+                        <span>
+                            7 findings
+                        </span>
+
+                    </div>
+
+
+                    <div class="gap-filters">
+
+
+                        <button class="gap-filter-btn active" data-filter="all" type="button">
+                            All Gaps
+                        </button>
+
+
+                        <button class="gap-filter-btn" data-filter="methodology" type="button">
+                            Methodology
+                        </button>
+
+
+                        <button class="gap-filter-btn" data-filter="dataset" type="button">
+                            Dataset
+                        </button>
+
+
+                        <button class="gap-filter-btn" data-filter="technology" type="button">
+                            Technology
+                        </button>
+
+
+                        <button class="gap-filter-btn" data-filter="deployment" type="button">
+                            Deployment
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                 MAIN GAP LAYOUT
+                 ================================================= -->
+
+                <div class="research-gap-layout">
+
+
+                    <!-- =============================================
+                     LEFT
+                     ============================================= -->
+
+                    <div class="gap-main-content">
+
+
+                        <!-- GAP #1 -->
+
+                        <article class="research-gap-card featured-gap" data-category="technology">
+
+
+                            <div class="gap-card-top">
+
+
+                                <div class="gap-priority high">
+
+                                    <i class="fa-solid fa-fire"></i>
+
+                                    HIGH PRIORITY
+
+                                </div>
+
+
+                                <span class="gap-confidence">
+
+                                    94% confidence
+
+                                </span>
+
+
+                            </div>
+
+
+                            <div class="gap-card-title">
+
+
+                                <div class="gap-number">
+                                    01
+                                </div>
+
+
+                                <div>
+
+                                    <span class="gap-category">
+                                        TECHNOLOGY GAP
+                                    </span>
+
+                                    <h3>
+                                        Explainable Multimodal AI
+                                        for Clinical Diagnosis
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="gap-description">
+
+                                Existing approaches primarily focus on
+                                medical images independently. A significant
+                                opportunity exists to combine visual
+                                information with structured clinical data
+                                while maintaining model interpretability.
+
+                            </p>
+
+
+                            <div class="gap-evidence">
+
+
+                                <div class="gap-evidence-title">
+
+                                    <i class="fa-solid fa-link"></i>
+
+                                    Evidence from Research
+
+                                </div>
+
+
+                                <div class="evidence-item">
+
+                                    <span>
+                                        01
+                                    </span>
+
+                                    <p>
+                                        Current models rely heavily on
+                                        single-modal imaging data.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="evidence-item">
+
+                                    <span>
+                                        02
+                                    </span>
+
+                                    <p>
+                                        Explainability remains limited
+                                        in complex architectures.
+                                    </p>
+
+                                </div>
+
+
+                                <div class="evidence-item">
+
+                                    <span>
+                                        03
+                                    </span>
+
+                                    <p>
+                                        Clinical context is not fully
+                                        integrated into prediction.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="gap-card-footer">
+
+
+                                <div class="gap-tags">
+
+                                    <span>
+                                        Explainable AI
+                                    </span>
+
+                                    <span>
+                                        Multimodal Learning
+                                    </span>
+
+                                    <span>
+                                        Clinical AI
+                                    </span>
+
+                                </div>
+
+
+                                <button class="gap-explore-btn" type="button" data-gap="Explainable Multimodal AI">
+
+                                    Explore Gap
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- GAP #2 -->
+
+                        <article class="research-gap-card" data-category="dataset">
+
+
+                            <div class="gap-card-top">
+
+                                <div class="gap-priority high">
+
+                                    <i class="fa-solid fa-fire"></i>
+
+                                    HIGH PRIORITY
+
+                                </div>
+
+                                <span class="gap-confidence">
+                                    89% confidence
+                                </span>
+
+                            </div>
+
+
+                            <div class="gap-card-title">
+
+                                <div class="gap-number">
+                                    02
+                                </div>
+
+
+                                <div>
+
+                                    <span class="gap-category">
+                                        DATASET GAP
+                                    </span>
+
+                                    <h3>
+                                        Lack of Diverse Clinical Datasets
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="gap-description">
+
+                                Existing datasets may not adequately represent
+                                different patient populations, imaging devices
+                                and real-world clinical environments.
+
+                            </p>
+
+
+                            <div class="gap-mini-insight">
+
+                                <i class="fa-solid fa-database"></i>
+
+                                <div>
+
+                                    <strong>
+                                        Potential Direction
+                                    </strong>
+
+                                    <span>
+                                        Build diverse, multi-center datasets
+                                        for stronger generalization.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="gap-card-footer">
+
+                                <div class="gap-tags">
+
+                                    <span>
+                                        Dataset Diversity
+                                    </span>
+
+                                    <span>
+                                        Generalization
+                                    </span>
+
+                                </div>
+
+
+                                <button class="gap-explore-btn" type="button" data-gap="Diverse Clinical Datasets">
+
+                                    Explore Gap
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- GAP #3 -->
+
+                        <article class="research-gap-card" data-category="methodology">
+
+
+                            <div class="gap-card-top">
+
+                                <div class="gap-priority high">
+
+                                    <i class="fa-solid fa-fire"></i>
+
+                                    HIGH PRIORITY
+
+                                </div>
+
+                                <span class="gap-confidence">
+                                    86% confidence
+                                </span>
+
+                            </div>
+
+
+                            <div class="gap-card-title">
+
+                                <div class="gap-number">
+                                    03
+                                </div>
+
+
+                                <div>
+
+                                    <span class="gap-category">
+                                        METHODOLOGY GAP
+                                    </span>
+
+                                    <h3>
+                                        Limited External Validation
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="gap-description">
+
+                                Many proposed models demonstrate strong
+                                experimental results but require validation
+                                across independent hospitals, devices and
+                                populations before real-world adoption.
+
+                            </p>
+
+
+                            <div class="gap-progress-area">
+
+                                <div class="gap-progress-label">
+
+                                    <span>
+                                        Validation maturity
+                                    </span>
+
+                                    <strong>
+                                        58%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="gap-progress">
+
+                                    <span style="width:58%"></span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="gap-card-footer">
+
+                                <div class="gap-tags">
+
+                                    <span>
+                                        Validation
+                                    </span>
+
+                                    <span>
+                                        Clinical Trials
+                                    </span>
+
+                                </div>
+
+
+                                <button class="gap-explore-btn" type="button" data-gap="External Validation">
+
+                                    Explore Gap
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- GAP #4 -->
+
+                        <article class="research-gap-card" data-category="deployment">
+
+
+                            <div class="gap-card-top">
+
+                                <div class="gap-priority medium">
+
+                                    <i class="fa-solid fa-circle"></i>
+
+                                    MEDIUM PRIORITY
+
+                                </div>
+
+                                <span class="gap-confidence">
+                                    81% confidence
+                                </span>
+
+                            </div>
+
+
+                            <div class="gap-card-title">
+
+                                <div class="gap-number">
+                                    04
+                                </div>
+
+
+                                <div>
+
+                                    <span class="gap-category">
+                                        DEPLOYMENT GAP
+                                    </span>
+
+                                    <h3>
+                                        Lightweight Models for Real-Time Use
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="gap-description">
+
+                                High-performing architectures often require
+                                significant computational resources, creating
+                                barriers for deployment in resource-constrained
+                                clinical environments.
+
+                            </p>
+
+
+                            <div class="gap-mini-insight">
+
+                                <i class="fa-solid fa-microchip"></i>
+
+                                <div>
+
+                                    <strong>
+                                        Potential Direction
+                                    </strong>
+
+                                    <span>
+                                        Explore model compression,
+                                        quantization and efficient architectures.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="gap-card-footer">
+
+                                <div class="gap-tags">
+
+                                    <span>
+                                        Edge AI
+                                    </span>
+
+                                    <span>
+                                        Model Compression
+                                    </span>
+
+                                </div>
+
+
+                                <button class="gap-explore-btn" type="button" data-gap="Lightweight AI Models">
+
+                                    Explore Gap
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- GAP #5 -->
+
+                        <article class="research-gap-card" data-category="methodology">
+
+
+                            <div class="gap-card-top">
+
+                                <div class="gap-priority medium">
+
+                                    <i class="fa-solid fa-circle"></i>
+
+                                    MEDIUM PRIORITY
+
+                                </div>
+
+                                <span class="gap-confidence">
+                                    78% confidence
+                                </span>
+
+                            </div>
+
+
+                            <div class="gap-card-title">
+
+                                <div class="gap-number">
+                                    05
+                                </div>
+
+
+                                <div>
+
+                                    <span class="gap-category">
+                                        METHODOLOGY GAP
+                                    </span>
+
+                                    <h3>
+                                        Reproducibility and Standardized Evaluation
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="gap-description">
+
+                                Differences in preprocessing, evaluation
+                                protocols and reporting practices make direct
+                                comparison between research studies difficult.
+
+                            </p>
+
+
+                            <div class="gap-mini-insight">
+
+                                <i class="fa-solid fa-code-compare"></i>
+
+                                <div>
+
+                                    <strong>
+                                        Potential Direction
+                                    </strong>
+
+                                    <span>
+                                        Establish standardized benchmarks and
+                                        reproducible evaluation pipelines.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="gap-card-footer">
+
+                                <div class="gap-tags">
+
+                                    <span>
+                                        Reproducibility
+                                    </span>
+
+                                    <span>
+                                        Benchmarking
+                                    </span>
+
+                                </div>
+
+
+                                <button class="gap-explore-btn" type="button" data-gap="Standardized Evaluation">
+
+                                    Explore Gap
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- GAP #6 -->
+
+                        <article class="research-gap-card" data-category="technology">
+
+
+                            <div class="gap-card-top">
+
+                                <div class="gap-priority low">
+
+                                    <i class="fa-solid fa-circle"></i>
+
+                                    EXPLORATORY
+
+                                </div>
+
+                                <span class="gap-confidence">
+                                    72% confidence
+                                </span>
+
+                            </div>
+
+
+                            <div class="gap-card-title">
+
+                                <div class="gap-number">
+                                    06
+                                </div>
+
+
+                                <div>
+
+                                    <span class="gap-category">
+                                        TECHNOLOGY GAP
+                                    </span>
+
+                                    <h3>
+                                        Integration of Foundation Models
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="gap-description">
+
+                                Foundation and large multimodal models present
+                                a potential direction for medical reasoning,
+                                but their reliability and domain adaptation
+                                require deeper investigation.
+
+                            </p>
+
+
+                            <div class="gap-card-footer">
+
+                                <div class="gap-tags">
+
+                                    <span>
+                                        Foundation Models
+                                    </span>
+
+                                    <span>
+                                        Multimodal AI
+                                    </span>
+
+                                </div>
+
+
+                                <button class="gap-explore-btn" type="button" data-gap="Foundation Models">
+
+                                    Explore Gap
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- GAP #7 -->
+
+                        <article class="research-gap-card" data-category="deployment">
+
+
+                            <div class="gap-card-top">
+
+                                <div class="gap-priority low">
+
+                                    <i class="fa-solid fa-circle"></i>
+
+                                    EXPLORATORY
+
+                                </div>
+
+                                <span class="gap-confidence">
+                                    69% confidence
+                                </span>
+
+                            </div>
+
+
+                            <div class="gap-card-title">
+
+                                <div class="gap-number">
+                                    07
+                                </div>
+
+
+                                <div>
+
+                                    <span class="gap-category">
+                                        DEPLOYMENT GAP
+                                    </span>
+
+                                    <h3>
+                                        Clinical Workflow Integration
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="gap-description">
+
+                                Technical performance alone does not guarantee
+                                successful clinical adoption. Workflow design,
+                                human-AI collaboration and usability need
+                                further investigation.
+
+                            </p>
+
+
+                            <div class="gap-mini-insight">
+
+                                <i class="fa-solid fa-user-doctor"></i>
+
+                                <div>
+
+                                    <strong>
+                                        Potential Direction
+                                    </strong>
+
+                                    <span>
+                                        Design human-centered AI systems that
+                                        integrate naturally into clinical workflows.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="gap-card-footer">
+
+                                <div class="gap-tags">
+
+                                    <span>
+                                        Human-AI
+                                    </span>
+
+                                    <span>
+                                        Clinical Workflow
+                                    </span>
+
+                                </div>
+
+
+                                <button class="gap-explore-btn" type="button" data-gap="Clinical Workflow Integration">
+
+                                    Explore Gap
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+
+                    <!-- =============================================
+                     RIGHT SIDEBAR
+                     ============================================= -->
+
+                    <aside class="gap-sidebar">
+
+
+                        <!-- OPPORTUNITY SCORE -->
+
+                        <section class="gap-side-card">
+
+
+                            <div class="gap-side-heading">
+
+                                <div class="gap-side-heading-icon">
+
+                                    <i class="fa-solid fa-bullseye"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        AI ASSESSMENT
+                                    </span>
+
+                                    <h3>
+                                        Opportunity Score
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="opportunity-score">
+
+                                <div class="opportunity-ring">
+
+                                    <div>
+
+                                        <strong>
+                                            91
+                                        </strong>
+
+                                        <span>
+                                            %
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="opportunity-label">
+                                Overall Research Opportunity
+                            </p>
+
+
+                            <div class="opportunity-level">
+
+                                <span>
+                                    LOW
+                                </span>
+
+                                <div class="opportunity-line">
+
+                                    <span></span>
+
+                                </div>
+
+                                <span>
+                                    HIGH
+                                </span>
+
+                            </div>
+
+
+                        </section>
+
+
+                        <!-- GAP DISTRIBUTION -->
+
+                        <section class="gap-side-card">
+
+
+                            <div class="gap-side-heading">
+
+                                <div class="gap-side-heading-icon purple">
+
+                                    <i class="fa-solid fa-chart-pie"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        GAP DISTRIBUTION
+                                    </span>
+
+                                    <h3>
+                                        By Category
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="gap-distribution">
+
+
+                                <div class="distribution-row">
+
+                                    <div>
+
+                                        <span>
+                                            Technology
+                                        </span>
+
+                                        <strong>
+                                            2
+                                        </strong>
+
+                                    </div>
+
+                                    <div class="distribution-bar">
+
+                                        <span style="width:78%"></span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="distribution-row">
+
+                                    <div>
+
+                                        <span>
+                                            Methodology
+                                        </span>
+
+                                        <strong>
+                                            2
+                                        </strong>
+
+                                    </div>
+
+                                    <div class="distribution-bar">
+
+                                        <span style="width:68%"></span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="distribution-row">
+
+                                    <div>
+
+                                        <span>
+                                            Dataset
+                                        </span>
+
+                                        <strong>
+                                            1
+                                        </strong>
+
+                                    </div>
+
+                                    <div class="distribution-bar">
+
+                                        <span style="width:45%"></span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="distribution-row">
+
+                                    <div>
+
+                                        <span>
+                                            Deployment
+                                        </span>
+
+                                        <strong>
+                                            2
+                                        </strong>
+
+                                    </div>
+
+                                    <div class="distribution-bar">
+
+                                        <span style="width:62%"></span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- PRIORITY -->
+
+                        <section class="gap-side-card">
+
+
+                            <div class="gap-side-heading">
+
+                                <div class="gap-side-heading-icon red">
+
+                                    <i class="fa-solid fa-fire"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        RESEARCH PRIORITY
+                                    </span>
+
+                                    <h3>
+                                        Where to Start?
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="priority-list">
+
+
+                                <div>
+
+                                    <span class="priority-rank">
+                                        01
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Multimodal AI
+                                        </strong>
+
+                                        <small>
+                                            Very high potential
+                                        </small>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-chevron-right"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span class="priority-rank">
+                                        02
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Dataset Diversity
+                                        </strong>
+
+                                        <small>
+                                            High potential
+                                        </small>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-chevron-right"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span class="priority-rank">
+                                        03
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            External Validation
+                                        </strong>
+
+                                        <small>
+                                            High potential
+                                        </small>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-chevron-right"></i>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- AI RECOMMENDATION -->
+
+                        <section class="gap-recommendation">
+
+
+                            <div class="recommendation-icon">
+
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            </div>
+
+
+                            <span>
+                                AI RECOMMENDATION
+                            </span>
+
+
+                            <h3>
+                                Start with Multimodal Explainable AI
+                            </h3>
+
+
+                            <p>
+
+                                This direction combines strong novelty
+                                potential with a clear practical application
+                                and multiple opportunities for future research.
+
+                            </p>
+
+
+                            <button class="recommendation-btn" id="generateIdeaBtn" type="button">
+
+                                Generate Research Idea
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </section>
+
+
+                    </aside>
+
+                </div>
+
+
+                <!-- =================================================
+                 AI RESEARCH BLUEPRINT
+                 The blueprint is rendered dynamically after a
+                 validated research gap is selected above.
+                 ================================================= -->
+
+                <section class="research-question-card" aria-label="AI Research Blueprint">
+                    <div class="question-card-header">
+                        <div class="question-card-title">
+                            <div class="question-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                            <div>
+                                <span>NEXT STEP</span>
+                                <h2>Turn a Validated Gap into a Research Blueprint</h2>
+                            </div>
+                        </div>
+                        <span class="question-ai-badge"><i class="fa-solid fa-sparkles"></i> Evidence Grounded AI</span>
+                    </div>
+                    <p style="margin:0;color:#64748b;font-size:13px;line-height:1.6;">Generate a complete research plan
+                        from the actual validated gap and its source evidence. No hardcoded research questions are used.
+                    </p>
+                </section>
+
+
+                <!-- FOOTER -->
+
+                <footer class="dashboard-footer">
+
+                    <p>
+                        © 2026 Research AI. All Rights Reserved.
+                    </p>
+
+
+                    <div>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                        <a href="faq.html">
+                            FAQ
+                        </a>
+
+                    </div>
+
+                </footer>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================================
+     GAP DETAIL MODAL
+     ========================================================= -->
+
+    <div class="gap-detail-modal" id="gapDetailModal">
+
+
+        <div class="gap-modal-overlay" id="gapModalOverlay"></div>
+
+
+        <div class="gap-detail-box">
+
+
+            <button class="gap-modal-close" id="gapModalClose" type="button">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="gap-modal-icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+            </div>
+
+
+            <span class="gap-modal-label">
+                RESEARCH OPPORTUNITY
+            </span>
+
+
+            <h3 id="gapModalTitle">
+                Research Gap
+            </h3>
+
+
+            <p>
+
+                This research direction has been identified as a
+                potential opportunity based on the analyzed research.
+                Detailed evidence, related literature and future
+                recommendations can be connected here when the
+                backend and AI analysis are implemented.
+
+            </p>
+
+
+            <div class="gap-modal-meta">
+
+                <span>
+                    <i class="fa-solid fa-chart-line"></i>
+                    High Potential
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-sparkles"></i>
+                    AI Identified
+                </span>
+
+            </div>
+
+
+            <button class="gap-modal-action" id="gapModalAction" type="button">
+
+                Continue Research
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+    <script>
+
+
+        /* =========================================================
+           SIDEBAR
+           ========================================================= */
+
+        const sidebar =
+            document.getElementById("sidebar");
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const sidebarClose =
+            document.getElementById("sidebarClose");
+
+        const sidebarOverlay =
+            document.getElementById("sidebarOverlay");
+
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                sidebar.classList.add("open");
+
+                sidebarOverlay.classList.add("show");
+
+            }
+        );
+
+
+        sidebarClose.addEventListener(
+            "click",
+            function () {
+
+                sidebar.classList.remove("open");
+
+                sidebarOverlay.classList.remove("show");
+
+            }
+        );
+
+
+        sidebarOverlay.addEventListener(
+            "click",
+            function () {
+
+                sidebar.classList.remove("open");
+
+                sidebarOverlay.classList.remove("show");
+
+            }
+        );
+
+
+        /* =========================================================
+           THEME
+           ========================================================= */
+
+        const themeToggle =
+            document.getElementById("themeToggle");
+
+
+        themeToggle.addEventListener(
+            "click",
+            function () {
+
+                document.body.classList.toggle(
+                    "dark-preview"
+                );
+
+
+                const icon =
+                    this.querySelector("i");
+
+
+                if (
+                    document.body.classList.contains(
+                        "dark-preview"
+                    )
+                ) {
+
+                    icon.classList.remove(
+                        "fa-moon"
+                    );
+
+                    icon.classList.add(
+                        "fa-sun"
+                    );
+
+                } else {
+
+                    icon.classList.remove(
+                        "fa-sun"
+                    );
+
+                    icon.classList.add(
+                        "fa-moon"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           GAP FILTER
+           ========================================================= */
+
+        const filterButtons =
+            document.querySelectorAll(
+                ".gap-filter-btn"
+            );
+
+        const gapCards =
+            document.querySelectorAll(
+                ".research-gap-card"
+            );
+
+
+        filterButtons.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+
+                        filterButtons.forEach(
+                            function (item) {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        this.classList.add(
+                            "active"
+                        );
+
+
+                        const filter =
+                            this.dataset.filter;
+
+
+                        gapCards.forEach(
+                            function (card) {
+
+
+                                if (
+                                    filter === "all" ||
+                                    card.dataset.category === filter
+                                ) {
+
+                                    card.style.display =
+                                        "block";
+
+
+                                    setTimeout(
+                                        function () {
+
+                                            card.classList.add(
+                                                "gap-card-visible"
+                                            );
+
+                                        },
+                                        10
+                                    );
+
+                                } else {
+
+                                    card.style.display =
+                                        "none";
+
+                                }
+
+                            }
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =========================================================
+           GAP DETAIL MODAL
+           ========================================================= */
+
+        const gapButtons =
+            document.querySelectorAll(
+                ".gap-explore-btn"
+            );
+
+        const gapModal =
+            document.getElementById(
+                "gapDetailModal"
+            );
+
+        const gapModalClose =
+            document.getElementById(
+                "gapModalClose"
+            );
+
+        const gapModalOverlay =
+            document.getElementById(
+                "gapModalOverlay"
+            );
+
+        const gapModalTitle =
+            document.getElementById(
+                "gapModalTitle"
+            );
+
+
+        gapButtons.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const gapName =
+                            this.dataset.gap;
+
+
+                        gapModalTitle.textContent =
+                            gapName;
+
+
+                        gapModal.classList.add(
+                            "show"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        function closeGapModal() {
+
+            gapModal.classList.remove(
+                "show"
+            );
+
+        }
+
+
+        gapModalClose.addEventListener(
+            "click",
+            closeGapModal
+        );
+
+
+        gapModalOverlay.addEventListener(
+            "click",
+            closeGapModal
+        );
+
+
+        /* =========================================================
+           GENERATE IDEA
+           ========================================================= */
+
+        const generateIdeaBtn =
+            document.getElementById(
+                "generateIdeaBtn"
+            );
+
+
+        generateIdeaBtn.addEventListener(
+            "click",
+            function () {
+
+                window.location.href =
+                    "idea-generator.html";
+
+            }
+        );
+
+
+        /* =========================================================
+           MODAL CONTINUE
+           ========================================================= */
+
+        document
+            .getElementById(
+                "gapModalAction"
+            )
+            .addEventListener(
+                "click",
+                function () {
+
+                    closeGapModal();
+
+
+                    document
+                        .getElementById(
+                            "gapSelect"
+                        )
+                        .focus();
+
+                }
+            );
+
+
+        /* =========================================================
+           TOAST
+           ========================================================= */
+
+        function showGapToast(message) {
+
+
+            const oldToast =
+                document.querySelector(
+                    ".gap-toast"
+                );
+
+
+            if (oldToast) {
+
+                oldToast.remove();
+
+            }
+
+
+            const toast =
+                document.createElement(
+                    "div"
+                );
+
+
+            toast.className =
+                "gap-toast";
+
+
+            toast.innerHTML = `
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        <span>${message}</span>
+
+    `;
+
+
+            document.body.appendChild(
+                toast
+            );
+
+
+            setTimeout(
+                function () {
+
+                    toast.classList.add(
+                        "hide"
+                    );
+
+
+                    setTimeout(
+                        function () {
+
+                            toast.remove();
+
+                        },
+                        300
+                    );
+
+                },
+                2200
+            );
+
+        }
+
+
+        /* =========================================================
+           MULTI-PAPER RESEARCH GAP ENGINE
+           ========================================================= */
+
+        const gapTopicInput = document.getElementById("gapTopicInput");
+        const currentPaperId = Number(new URLSearchParams(window.location.search).get("id") || gapTopicInput.dataset.paperId || 0);
+        const generateGapsBtn = document.getElementById("generateGapsBtn");
+        const gapAnalysisResult = document.getElementById("gapAnalysisResult");
+        const gapPaperList = document.getElementById("gapPaperList");
+        const gapPaperSearch = document.getElementById("gapPaperSearch");
+        const gapSelectedCount = document.getElementById("gapSelectedCount");
+        const gapSelectAllBtn = document.getElementById("gapSelectAllBtn");
+        const gapClearAllBtn = document.getElementById("gapClearAllBtn");
+
+        let gapPaperCache = [];
+        let selectedGapPaperIds = new Set(currentPaperId > 0 ? [currentPaperId] : []);
+        let gapEntitlement = {
+            plan: { code: "free", name: "Free" },
+            limit: 8,
+            unlimited: false,
+            remaining: 8
+        };
+        let latestGapAnalysisData = null;
+        let latestBlueprintData = null;
+
+        function escapeGapHtml(value) {
+            const div = document.createElement("div");
+            div.textContent = value == null ? "" : String(value);
+            return div.innerHTML;
+        }
+
+        async function getCsrfToken() {
+            const response = await fetch("../backend/auth/csrf.php", { credentials: "same-origin", cache: "no-store" });
+            const data = await response.json();
+            if (!response.ok || !data.success || !data.csrf_token) throw new Error("Security token could not be loaded.");
+            return data.csrf_token;
+        }
+
+        function updateSelectedCount() {
+            const limitText = gapEntitlement.unlimited ? "∞" : String(gapEntitlement.limit);
+            gapSelectedCount.textContent = `${selectedGapPaperIds.size} / ${limitText} selected`;
+        }
+
+        function applyGapEntitlement(entitlement) {
+            if (!entitlement || typeof entitlement !== "object") return;
+
+            const plan = entitlement.plan && typeof entitlement.plan === "object"
+                ? entitlement.plan
+                : { code: "free", name: "Free" };
+
+            const rawLimit = Number(entitlement.limit);
+
+            gapEntitlement = {
+                plan,
+                limit: Number.isFinite(rawLimit) && rawLimit > 0 ? rawLimit : null,
+                unlimited: entitlement.unlimited === true,
+                remaining: entitlement.remaining == null ? null : Number(entitlement.remaining)
+            };
+
+            if (!gapEntitlement.unlimited &&
+                gapEntitlement.limit &&
+                selectedGapPaperIds.size > gapEntitlement.limit) {
+
+                selectedGapPaperIds = new Set(
+                    Array.from(selectedGapPaperIds).slice(0, gapEntitlement.limit)
+                );
+
+                showGapToast(
+                    `Your ${plan.name || "current"} plan allows up to ${gapEntitlement.limit} papers.`
+                );
+            }
+
+            updateSelectedCount();
+
+            const badge = document.getElementById("gapEntitlementBadge");
+            if (badge) {
+                badge.innerHTML = gapEntitlement.unlimited
+                    ? `<i class="fa-solid fa-infinity"></i> ${escapeGapHtml(plan.name || "Unlimited")} • Unlimited papers`
+                    : `<i class="fa-solid fa-layer-group"></i> ${escapeGapHtml(plan.name || "Plan")} • Up to ${gapEntitlement.limit} papers`;
+            }
+
+            const dynamicLimitText = document.getElementById("gapDynamicLimitText");
+
+            if (dynamicLimitText) {
+                dynamicLimitText.textContent = gapEntitlement.unlimited
+                    ? " No paper limit."
+                    : ` Maximum ${gapEntitlement.limit} papers.`;
+            }
+        }
+
+        async function loadGapEntitlement() {
+            const response = await fetch("../backend/subscription/api.php?action=current", {
+                credentials: "same-origin",
+                cache: "no-store"
+            });
+
+            const data = await response.json();
+
+            if (!response.ok || !data.success || !data.subscription) {
+                throw new Error(data.message || "Subscription information could not be loaded.");
+            }
+
+            const subscription = data.subscription;
+            const plan = subscription.plan || {};
+
+            applyGapEntitlement({
+                plan,
+                limit: plan.unlimited ? null : Number(plan.max_papers || 8),
+                unlimited: subscription.is_unlimited === true || plan.unlimited === true,
+                remaining: plan.unlimited ? null : Math.max(
+                    0,
+                    Number(plan.max_papers || 8) - selectedGapPaperIds.size
+                )
+            });
+        }
+
+        function renderPaperSelector(papers) {
+            const search = gapPaperSearch.value.trim().toLowerCase();
+            const filtered = papers.filter(p => {
+                if (!search) return true;
+                return `${p.title || ""} ${p.authors || ""} ${p.journal || ""}`.toLowerCase().includes(search);
+            });
+
+            if (!filtered.length) {
+                gapPaperList.innerHTML = '<div class="gap-selector-empty">No matching papers found.</div>';
+                updateSelectedCount();
+                return;
+            }
+
+            gapPaperList.innerHTML = filtered.map(paper => {
+                const id = Number(paper.id);
+                const selected = selectedGapPaperIds.has(id);
+                const score = Number(paper.relevance_score || 0);
+                const meta = [paper.authors, paper.journal, paper.publication_year].filter(Boolean).join(" • ");
+                return `
+            <label class="gap-paper-option ${selected ? "selected" : ""}" data-paper-id="${id}">
+                <input type="checkbox" ${selected ? "checked" : ""} aria-label="Select ${escapeGapHtml(paper.title)}">
+                <span class="gap-paper-option-body">
+                    <span class="gap-paper-option-title">${escapeGapHtml(paper.title)}</span>
+                    <span class="gap-paper-option-meta">${escapeGapHtml(meta || "Metadata not available")}</span>
+                    <span class="gap-paper-option-score">${score > 0 ? `Relevance ${score}` : "Available for selection"}</span>
+                </span>
+            </label>`;
+            }).join("");
+
+            gapPaperList.querySelectorAll(".gap-paper-option").forEach(label => {
+                label.addEventListener("click", function (event) {
+                    if (event.target.tagName !== "INPUT") event.preventDefault();
+                    const id = Number(this.dataset.paperId);
+                    const input = this.querySelector("input");
+                    const next = event.target.tagName === "INPUT" ? input.checked : !selectedGapPaperIds.has(id);
+                    if (next) {
+                        if (!gapEntitlement.unlimited &&
+                            selectedGapPaperIds.size >= gapEntitlement.limit &&
+                            !selectedGapPaperIds.has(id)) {
+                            showGapToast(
+                                `Your ${gapEntitlement.plan.name || "current"} plan allows up to ${gapEntitlement.limit} papers.`
+                            );
+                            input.checked = false;
+                            return;
+                        }
+                        selectedGapPaperIds.add(id);
+                    } else {
+                        selectedGapPaperIds.delete(id);
+                    }
+                    renderPaperSelector(gapPaperCache);
+                });
+            });
+            updateSelectedCount();
+        }
+
+        async function loadGapPapers(search = "") {
+            gapPaperList.innerHTML = '<div class="gap-selector-empty"><i class="fa-solid fa-spinner fa-spin"></i> Loading papers...</div>';
+            try {
+                const topic = gapTopicInput.value.trim();
+                const params = new URLSearchParams({ mode: "papers", limit: "100", topic });
+                if (search) params.set("search", search);
+                const url = `../backend/ai/research-gap.php?${params.toString()}`;
+                const response = await fetch(url, { credentials: "same-origin", cache: "no-store" });
+                const data = await response.json();
+                if (!response.ok || !data.success) throw new Error(data.message || "Unable to load papers.");
+                gapPaperCache = Array.isArray(data.papers) ? data.papers : [];
+                renderPaperSelector(gapPaperCache);
+            } catch (error) {
+                console.error("Research paper selector error:", error);
+                gapPaperList.innerHTML = `<div class="gap-selector-empty">${escapeGapHtml(error.message || "Unable to load papers.")}</div>`;
+            }
+        }
+
+        function renderValidatedEvidence(gap, papersById) {
+            const items = Array.isArray(gap.evidence_items) ? gap.evidence_items : [];
+            if (!items.length) return "";
+            const html = items.map(item => {
+                const paper = papersById[String(item.paper_id)] || {};
+                return `
+            <div class="gap-evidence-item">
+                <div class="gap-evidence-paper">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                    <a href="paper-details.html?id=${encodeURIComponent(item.paper_id)}">Paper ${escapeGapHtml(item.paper_id)}${paper.title ? ` — ${escapeGapHtml(paper.title)}` : ""}</a>
+                    <span class="gap-evidence-valid"><i class="fa-solid fa-circle-check"></i> VALIDATED</span>
+                </div>
+                <div class="gap-evidence-quote">${escapeGapHtml(item.quote)}</div>
+            </div>`;
+            }).join("");
+            return `<div class="gap-evidence-block"><strong style="font-size:12px;color:#334155">Source evidence</strong>${html}</div>`;
+        }
+
+        function renderBlueprintSelector(data) {
+            const gaps = Array.isArray(data.gaps) ? data.gaps : [];
+            if (!gaps.length) return "";
+            const options = gaps.map((gap, index) =>
+                `<option value="${index}">${escapeGapHtml(`${index + 1}. ${gap.title}`)}</option>`
+            ).join("");
+            return `
+        <div class="gap-blueprint-selector" id="gapBlueprintSelector">
+            <h3><i class="fa-solid fa-diagram-project"></i> Build Research Blueprint</h3>
+            <p>Select one of the validated gaps above. The selected gap and its verified source evidence will be sent to the AI to generate the complete research plan.</p>
+            <div class="gap-blueprint-controls">
+                <select class="gap-blueprint-select" id="gapBlueprintSelect">
+                    <option value="">Choose a validated research gap...</option>
+                    ${options}
+                </select>
+                <button class="gap-blueprint-btn" id="generateBlueprintBtn" type="button"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate Blueprint</button>
+            </div>
+        </div>`;
+        }
+
+        function renderBlueprintList(items) {
+            if (!Array.isArray(items) || !items.length) return "<p>Not returned.</p>";
+            return `<ol>${items.map(item => `<li>${escapeGapHtml(item)}</li>`).join("")}</ol>`;
+        }
+
+        function renderResearchBlueprint(result) {
+            const blueprint = result.blueprint || {};
+            const gap = result.gap || {};
+            const sources = Array.isArray(result.source_papers) ? result.source_papers : [];
+            const sourceLinks = sources.map(p =>
+                `<a class="gap-blueprint-source" href="paper-details.html?id=${encodeURIComponent(p.id)}"><i class="fa-solid fa-file-circle-check"></i> Paper ${escapeGapHtml(p.id)}</a>`
+            ).join("");
+
+            const blueprintHtml = `
+        <section class="gap-blueprint" id="gapBlueprint">
+            <div class="gap-blueprint-head">
+                <div>
+                    <h3><i class="fa-solid fa-diagram-project"></i> Research Blueprint</h3>
+                    <p><strong>Selected gap:</strong> ${escapeGapHtml(gap.title || "Validated research gap")}</p>
+                </div>
+                <div class="gap-blueprint-actions">
+                    <button class="gap-blueprint-action primary" id="exportBlueprintPdfBtn" type="button"><i class="fa-solid fa-file-pdf"></i> Export Final PDF</button>
+                    <button class="gap-blueprint-action" id="regenerateBlueprintBtn" type="button"><i class="fa-solid fa-rotate"></i> Regenerate</button>
+                </div>
+            </div>
+
+            <div class="gap-validation-banner"><i class="fa-solid fa-shield-halved"></i><div><strong>Evidence basis re-validated.</strong><br>This blueprint was generated from the selected gap and its verified source evidence. Proposed methodology/model/evaluation choices are research-design recommendations, not reported results.</div></div>
+
+            <div class="gap-blueprint-section">
+                <h4>1. Research Question</h4>
+                <p>${escapeGapHtml(blueprint.research_question || "Not returned.")}</p>
+            </div>
+            <div class="gap-blueprint-section">
+                <h4>2. Proposed Solution</h4>
+                <p>${escapeGapHtml(blueprint.proposed_solution || "Not returned.")}</p>
+            </div>
+            <div class="gap-blueprint-section">
+                <h4>3. Research Methodology</h4>
+                ${renderBlueprintList(blueprint.research_methodology)}
+            </div>
+            <div class="gap-blueprint-section">
+                <h4>4. Dataset Strategy</h4>
+                ${renderBlueprintList(blueprint.dataset_strategy)}
+            </div>
+            <div class="gap-blueprint-section">
+                <h4>5. AI Model Strategy</h4>
+                ${renderBlueprintList(blueprint.ai_model_strategy)}
+            </div>
+            <div class="gap-blueprint-section">
+                <h4>6. Evaluation Strategy</h4>
+                ${renderBlueprintList(blueprint.evaluation_strategy)}
+            </div>
+            <div class="gap-blueprint-section">
+                <h4>7. Expected Research Contribution</h4>
+                ${renderBlueprintList(blueprint.expected_research_contribution)}
+            </div>
+            <div class="gap-blueprint-section">
+                <h4>Validated Source Papers</h4>
+                <p>The selected gap was re-validated against these source papers before blueprint generation.</p>
+                <div class="gap-blueprint-source-list">${sourceLinks || "<span>No source papers returned.</span>"}</div>
+            </div>
+            <div class="gap-blueprint-note"><i class="fa-solid fa-circle-info"></i> The PDF export contains the generated blueprint and selected-gap information. Use your browser's Save as PDF option in the print dialog.</div>
+        </section>`;
+
+            const existing = document.getElementById("gapBlueprint");
+            if (existing) existing.remove();
+            gapAnalysisResult.insertAdjacentHTML("beforeend", blueprintHtml);
+            latestBlueprintData = result;
+            document.getElementById("gapBlueprint").scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        async function generateResearchBlueprint(gapIndex) {
+            if (!latestGapAnalysisData || !Array.isArray(latestGapAnalysisData.gaps)) {
+                showGapToast("Generate and validate research gaps first.");
+                return;
+            }
+            const gap = latestGapAnalysisData.gaps[Number(gapIndex)];
+            if (!gap) { showGapToast("Please select a valid research gap."); return; }
+
+            const button = document.getElementById("generateBlueprintBtn");
+            const original = button ? button.innerHTML : "";
+            if (button) { button.disabled = true; button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Generating...'; }
+
+            try {
+                const csrf = await getCsrfToken();
+                const response = await fetch("../backend/ai/research-gap.php", {
+                    method: "POST",
+                    credentials: "same-origin",
+                    headers: { "Content-Type": "application/json", "X-CSRF-Token": csrf },
+                    body: JSON.stringify({
+                        mode: "research_blueprint",
+                        topic: latestGapAnalysisData.topic || gapTopicInput.value.trim(),
+                        gap
+                    })
+                });
+                const rawText = await response.text();
+                let data = null;
+                try { data = rawText ? JSON.parse(rawText) : null; }
+                catch (e) { console.error("Blueprint non-JSON response:", rawText); throw new Error("The research blueprint service returned an unexpected server response. Check the PHP error log if this continues."); }
+                if (!response.ok || !data || !data.success) {
+                    const ref = data && data.diagnostics && data.diagnostics.request_id ? ` Diagnostic reference: ${data.diagnostics.request_id}` : "";
+                    throw new Error((data && data.message ? data.message : "Research blueprint generation failed.") + ref);
+                }
+                renderResearchBlueprint(data);
+                showGapToast("Research blueprint generated from the selected validated gap.");
+            } catch (error) {
+                console.error("Research blueprint error:", error);
+                showGapToast(error.message || "Research blueprint generation failed.");
+            } finally {
+                if (button) { button.disabled = false; button.innerHTML = original; }
+            }
+        }
+
+        function renderLiveGapAnalysis(data) {
+            latestGapAnalysisData = data;
+            latestBlueprintData = null;
+            const gaps = Array.isArray(data.gaps) ? data.gaps : [];
+            const papers = Array.isArray(data.papers) ? data.papers : [];
+            const papersById = Object.fromEntries(papers.map(p => [String(p.id), p]));
+            const validation = data.validation || {};
+
+            const cards = gaps.map((gap, index) => {
+                const sourceIds = Array.isArray(gap.source_paper_ids) ? gap.source_paper_ids : [];
+                const sourceChips = sourceIds.map(id => `<a class="gap-result-paper-chip" href="paper-details.html?id=${encodeURIComponent(id)}"><i class="fa-solid fa-file-lines"></i> Paper ${escapeGapHtml(id)}</a>`).join("");
+                const basis = gap.gap_basis === "cross_paper_pattern" ? "Cross-paper pattern" : gap.gap_basis === "explicit_limitation" ? "Explicit limitation" : "Evidence coverage";
+                return `
+            <article class="gap-live-card">
+                <div class="gap-live-meta">
+                    <span class="gap-live-pill ${escapeGapHtml(gap.priority)}">${escapeGapHtml(gap.priority)}</span>
+                    <span class="gap-live-pill">${escapeGapHtml(gap.category)}</span>
+                    <span class="gap-live-pill">${escapeGapHtml(gap.confidence)} confidence</span>
+                </div>
+                <h3>${index + 1}. ${escapeGapHtml(gap.title)}</h3>
+                <p><strong>Gap:</strong> ${escapeGapHtml(gap.description)}</p>
+                <p><strong>Evidence synthesis:</strong> ${escapeGapHtml(gap.evidence_summary)}</p>
+                ${renderValidatedEvidence(gap, papersById)}
+                <p><strong>Opportunity:</strong> ${escapeGapHtml(gap.opportunity)}</p>
+                ${gap.research_question ? `<p><strong>Research question:</strong> ${escapeGapHtml(gap.research_question)}</p>` : ""}
+                <div class="gap-paper-chip-list">${sourceChips}</div>
+                <div class="gap-basis-note"><i class="fa-solid fa-shield-halved"></i> Basis: ${escapeGapHtml(basis)} • ${gap.validation && gap.validation.evidence_checked ? "Evidence validated" : "Validation unavailable"}</div>
+            </article>`;
+            }).join("");
+
+            const bannerClass = validation.rejected_gaps > 0 ? "gap-validation-banner warning" : "gap-validation-banner";
+            const noGap = gaps.length === 0 ? `<div class="gap-selector-empty">No defensible research gap survived evidence validation. This is intentional: unsupported AI-generated gaps are discarded.</div>` : "";
+
+            gapAnalysisResult.innerHTML = `
+        <div class="${bannerClass}">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div><strong>Evidence validation completed.</strong><br>${escapeGapHtml(validation.validated_gaps || 0)} validated gaps, ${escapeGapHtml(validation.validated_quotes || 0)} exact source quotes, ${escapeGapHtml(validation.rejected_gaps || 0)} rejected unsupported gaps, ${escapeGapHtml(validation.cross_paper_gaps || 0)} cross-paper patterns.${data.partial_analysis ? " <strong>Some evidence batches were unavailable; results are partial.</strong>" : ""}</div>
+        </div>
+        <div class="gap-result-summary">
+            <strong>Evidence-grounded multi-paper synthesis</strong>
+            <div>${escapeGapHtml(data.summary || "No summary was returned.")}</div>
+            ${data.entitlement ? `
+                <div style="margin-top:8px;font-size:11px;color:#64748b;">
+                    <i class="fa-solid fa-layer-group"></i>
+                    ${escapeGapHtml(data.entitlement.plan && data.entitlement.plan.name ? data.entitlement.plan.name : "Current plan")}
+                    • ${data.entitlement.unlimited ? "Unlimited selected papers" : `Limit: ${escapeGapHtml(data.entitlement.limit)}`}
+                </div>
+            ` : ""}
+        </div>
+        <div class="gap-paper-chip-list" style="margin-bottom:14px">${papers.map(p => `<span class="gap-result-paper-chip"><i class="fa-solid fa-file-circle-check"></i> ${escapeGapHtml(p.title)}</span>`).join("")}</div>
+        <div class="gap-result-grid">${cards}</div>
+        ${noGap}
+        <div class="gap-recommendation-live">
+            <h3><i class="fa-solid fa-rocket"></i> Recommended Direction</h3>
+            <p>${escapeGapHtml(data.recommended_direction || "No recommendation was returned.")}</p>
+            <p><strong>Overall research question:</strong> ${escapeGapHtml(data.research_question || "No research question was returned.")}</p>
+        </div>
+        ${renderBlueprintSelector(data)}
+        ${Array.isArray(data.excluded_papers) && data.excluded_papers.length ? `<div class="gap-rejected-note"><strong>Excluded for low topic relevance:</strong> ${data.excluded_papers.map(p => escapeGapHtml(p.title)).join(" • ")}</div>` : ""}`;
+            gapAnalysisResult.classList.add("show");
+        }
+
+        gapAnalysisResult.addEventListener("click", function (event) {
+            const blueprintBtn = event.target.closest("#generateBlueprintBtn");
+            if (blueprintBtn) {
+                const select = document.getElementById("gapBlueprintSelect");
+                if (!select || select.value === "") { showGapToast("Please select a validated research gap first."); return; }
+                generateResearchBlueprint(select.value);
+                return;
+            }
+
+            const exportBtn = event.target.closest("#exportBlueprintPdfBtn");
+            if (exportBtn) {
+                document.body.classList.add("printing-blueprint");
+                setTimeout(function () {
+                    window.print();
+                    setTimeout(function () { document.body.classList.remove("printing-blueprint"); }, 800);
+                }, 50);
+                return;
+            }
+
+            const regenerateBtn = event.target.closest("#regenerateBlueprintBtn");
+            if (regenerateBtn) {
+                const select = document.getElementById("gapBlueprintSelect");
+                const blueprint = latestBlueprintData && latestBlueprintData.gap ? latestBlueprintData.gap : null;
+                if (blueprint && latestGapAnalysisData) {
+                    const index = latestGapAnalysisData.gaps.findIndex(g => g.title === blueprint.title);
+                    if (index >= 0) generateResearchBlueprint(index);
+                } else if (select && select.value !== "") {
+                    generateResearchBlueprint(select.value);
+                }
+            }
+        });
+
+        gapSelectAllBtn.addEventListener("click", function () {
+            for (const paper of gapPaperCache) {
+                if (!gapEntitlement.unlimited &&
+                    selectedGapPaperIds.size >= gapEntitlement.limit) {
+                    break;
+                }
+                selectedGapPaperIds.add(Number(paper.id));
+            }
+            renderPaperSelector(gapPaperCache);
+        });
+
+        gapClearAllBtn.addEventListener("click", function () {
+            selectedGapPaperIds.clear();
+            renderPaperSelector(gapPaperCache);
+        });
+
+        gapPaperSearch.addEventListener("input", function () {
+            renderPaperSelector(gapPaperCache);
+        });
+
+        generateGapsBtn.addEventListener("click", async function () {
+            const topic = gapTopicInput.value.trim();
+            if (!topic) { showGapToast("Please enter a research topic first."); gapTopicInput.focus(); return; }
+            if (selectedGapPaperIds.size === 0) { showGapToast("Please select at least one paper."); return; }
+
+            const original = this.innerHTML;
+            this.disabled = true;
+            this.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Validating & Analyzing...';
+            gapAnalysisResult.classList.remove("show");
+
+            try {
+                const csrf = await getCsrfToken();
+                const response = await fetch("../backend/ai/research-gap.php", {
+                    method: "POST",
+                    credentials: "same-origin",
+                    headers: { "Content-Type": "application/json", "X-CSRF-Token": csrf },
+                    body: JSON.stringify({ topic, paper_ids: Array.from(selectedGapPaperIds) })
+                });
+                const data = await response.json();
+
+                if (!response.ok || !data.success) {
+                    if (data && data.entitlement) {
+                        applyGapEntitlement(data.entitlement);
+                    }
+                    throw new Error(data.message || "Research gap analysis failed.");
+                }
+
+                if (data.entitlement) {
+                    applyGapEntitlement(data.entitlement);
+                }
+
+                renderLiveGapAnalysis(data);
+                gapAnalysisResult.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                showGapToast(`Validated ${data.gaps.length} research gaps from ${data.papers.length} relevant papers.`);
+            } catch (error) {
+                console.error("Research gap error:", error);
+                showGapToast(error.message || "Research gap analysis failed.");
+            } finally {
+                this.disabled = false;
+                this.innerHTML = original;
+            }
+        });
+
+        // Load the user's subscription entitlement first. The backend remains
+        // authoritative even if this client-side request is bypassed.
+        loadGapEntitlement().catch(error => {
+            console.error("Subscription entitlement error:", error);
+
+            // Safe client fallback only; this is NOT the security boundary.
+            applyGapEntitlement({
+                plan: { code: "free", name: "Free" },
+                limit: 8,
+                unlimited: false,
+                remaining: Math.max(0, 8 - selectedGapPaperIds.size)
+            });
+
+            showGapToast(
+                "Subscription limit could not be loaded. Free-plan limit is being used until refresh."
+            );
+        }).finally(() => {
+            // Initial paper discovery. The URL ?id=... paper remains selected when present.
+            loadGapPapers("");
+        });
+
+        /* =========================================================
+           ESCAPE KEY
+           ========================================================= */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeGapModal();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

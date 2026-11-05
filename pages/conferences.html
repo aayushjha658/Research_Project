@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Research Conferences | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="../css/conferences.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <a href="../index.html">
+
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <button
+            class="sidebar-close"
+            id="sidebarClose"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <!-- MAIN MENU -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                MAIN MENU
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="research-domain.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+
+                    Research Domains
+
+                </a>
+
+
+                <a href="papers.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    Research Papers
+
+                </a>
+
+
+                <a href="datasets.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+
+                    Datasets
+
+                </a>
+
+
+                <a href="models.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+
+                    AI Models
+
+                </a>
+
+
+                <a href="github.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+
+                    GitHub Explorer
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- AI TOOLS -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                AI RESEARCH TOOLS
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="ai-analysis.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+
+                    AI Analysis
+
+                </a>
+
+
+                <a href="research-gap.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+
+                    Research Gap
+
+                </a>
+
+
+                <a href="idea-generator.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+
+                    Idea Generator
+
+                </a>
+
+
+                <a href="literature.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+
+                    Literature Review
+
+                </a>
+
+
+                <a href="ai-chat.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+
+                    AI Assistant
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- RESOURCES -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                RESOURCES
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a
+                    href="conferences.html"
+                    class="sidebar-link active"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+
+                    Conferences
+
+                </a>
+
+
+                <a href="citation.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+
+                    Citation Generator
+
+                </a>
+
+
+                <a href="internet-research.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+
+                    Internet Research
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="sidebar-link">
+
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                Settings
+
+            </a>
+
+
+            <a href="profile.html" class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Researcher
+                    </strong>
+
+                    <span>
+                        Student Account
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP NAVBAR -->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="page-title">
+
+                    <span>
+                        Research Resources
+                    </span>
+
+                    <h1>
+                        Conferences
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search conferences..."
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <div class="navbar-actions">
+
+                <button
+                    class="navbar-icon-btn"
+                    id="themeToggle"
+                >
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="navbar-user"
+                >
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+
+                        <strong>
+                            Researcher
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             PAGE CONTENT
+             ===================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    Conferences
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 HERO
+                 ================================================= -->
+
+            <section class="conference-hero">
+
+                <div class="conference-hero-content">
+
+                    <div class="section-eyebrow">
+                        RESEARCH EVENTS
+                    </div>
+
+                    <h2>
+                        Find conferences for your research
+                    </h2>
+
+                    <p>
+                        Discover academic conferences, workshops and
+                        research events across computer science,
+                        artificial intelligence, data science and
+                        emerging technologies.
+                    </p>
+
+
+                    <div class="conference-hero-actions">
+
+                        <button
+                            class="primary-page-btn"
+                            id="findConferenceBtn"
+                        >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Find Conferences
+                        </button>
+
+
+                        <button
+                            class="secondary-page-btn"
+                            id="calendarBtn"
+                        >
+                            <i class="fa-regular fa-calendar"></i>
+                            View Calendar
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="conference-hero-visual">
+
+                    <div class="calendar-illustration">
+
+                        <div class="calendar-top">
+
+                            <span>
+                                RESEARCH
+                            </span>
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                        </div>
+
+
+                        <div class="calendar-month">
+                            AUG 2026
+                        </div>
+
+
+                        <div class="calendar-grid">
+
+                            <span>M</span>
+                            <span>T</span>
+                            <span>W</span>
+                            <span>T</span>
+                            <span>F</span>
+                            <span>S</span>
+                            <span>S</span>
+
+                            <b>3</b>
+                            <b>4</b>
+                            <b>5</b>
+                            <b>6</b>
+                            <b class="selected">7</b>
+                            <b>8</b>
+                            <b>9</b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 STATS
+                 ================================================= -->
+
+            <section class="conference-stats">
+
+                <div class="conference-stat">
+
+                    <div class="conference-stat-icon blue">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            UPCOMING EVENTS
+                        </span>
+
+                        <strong>
+                            248
+                        </strong>
+
+                        <small>
+                            Conferences this year
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="conference-stat">
+
+                    <div class="conference-stat-icon purple">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            COUNTRIES
+                        </span>
+
+                        <strong>
+                            42
+                        </strong>
+
+                        <small>
+                            Global locations
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="conference-stat">
+
+                    <div class="conference-stat-icon green">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CALL FOR PAPERS
+                        </span>
+
+                        <strong>
+                            86
+                        </strong>
+
+                        <small>
+                            Currently open
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="conference-stat">
+
+                    <div class="conference-stat-icon orange">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            SAVED EVENTS
+                        </span>
+
+                        <strong>
+                            14
+                        </strong>
+
+                        <small>
+                            In your workspace
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SEARCH & FILTER
+                 ================================================= -->
+
+            <section class="conference-search-panel">
+
+                <div class="conference-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="conferenceSearch"
+                        placeholder="Search conference name, topic or organization..."
+                    >
+
+                    <button id="conferenceSearchBtn">
+                        Search
+                    </button>
+
+                </div>
+
+
+                <div class="conference-filter-row">
+
+                    <select id="fieldFilter">
+
+                        <option value="all">
+                            All Research Fields
+                        </option>
+
+                        <option value="ai">
+                            Artificial Intelligence
+                        </option>
+
+                        <option value="ml">
+                            Machine Learning
+                        </option>
+
+                        <option value="cv">
+                            Computer Vision
+                        </option>
+
+                        <option value="nlp">
+                            NLP
+                        </option>
+
+                        <option value="data">
+                            Data Science
+                        </option>
+
+                    </select>
+
+
+                    <select id="locationFilter">
+
+                        <option value="all">
+                            All Locations
+                        </option>
+
+                        <option value="asia">
+                            Asia
+                        </option>
+
+                        <option value="europe">
+                            Europe
+                        </option>
+
+                        <option value="america">
+                            North America
+                        </option>
+
+                        <option value="online">
+                            Online
+                        </option>
+
+                    </select>
+
+
+                    <select id="monthFilter">
+
+                        <option value="all">
+                            All Months
+                        </option>
+
+                        <option value="august">
+                            August
+                        </option>
+
+                        <option value="september">
+                            September
+                        </option>
+
+                        <option value="october">
+                            October
+                        </option>
+
+                        <option value="november">
+                            November
+                        </option>
+
+                    </select>
+
+
+                    <select id="conferenceType">
+
+                        <option value="all">
+                            All Types
+                        </option>
+
+                        <option value="conference">
+                            Conference
+                        </option>
+
+                        <option value="workshop">
+                            Workshop
+                        </option>
+
+                        <option value="symposium">
+                            Symposium
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TOPICS
+                 ================================================= -->
+
+            <section class="conference-topics">
+
+                <span>
+                    Popular Fields:
+                </span>
+
+
+                <button
+                    class="conference-topic active"
+                    data-field="all"
+                >
+                    All
+                </button>
+
+
+                <button
+                    class="conference-topic"
+                    data-field="ai"
+                >
+                    AI
+                </button>
+
+
+                <button
+                    class="conference-topic"
+                    data-field="ml"
+                >
+                    Machine Learning
+                </button>
+
+
+                <button
+                    class="conference-topic"
+                    data-field="cv"
+                >
+                    Computer Vision
+                </button>
+
+
+                <button
+                    class="conference-topic"
+                    data-field="nlp"
+                >
+                    NLP
+                </button>
+
+
+                <button
+                    class="conference-topic"
+                    data-field="data"
+                >
+                    Data Science
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 CONFERENCE HEADER
+                 ================================================= -->
+
+            <section class="conference-section-header">
+
+                <div>
+
+                    <div class="section-eyebrow">
+                        UPCOMING CONFERENCES
+                    </div>
+
+                    <h2>
+                        Recommended research events
+                    </h2>
+
+                </div>
+
+
+                <span id="conferenceCount">
+                    6 conferences
+                </span>
+
+            </section>
+
+
+            <!-- =================================================
+                 CONFERENCE GRID
+                 ================================================= -->
+
+            <section
+                class="conference-grid"
+                id="conferenceGrid"
+            >
+
+
+                <!-- CONFERENCE 1 -->
+
+                <article
+                    class="conference-card"
+                    data-name="International Conference on Artificial Intelligence"
+                    data-field="ai"
+                    data-location="america"
+                    data-month="september"
+                    data-type="conference"
+                >
+
+                    <div class="conference-card-top">
+
+                        <div class="conference-date">
+
+                            <strong>
+                                18
+                            </strong>
+
+                            <span>
+                                SEP
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="conference-save"
+                            title="Save conference"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <span class="conference-badge">
+                        Conference
+                    </span>
+
+
+                    <h3>
+                        International Conference on Artificial Intelligence
+                    </h3>
+
+
+                    <p class="conference-organizer">
+                        Global AI Research Association
+                    </p>
+
+
+                    <p class="conference-description">
+                        A major research event covering artificial
+                        intelligence, intelligent systems, machine
+                        learning and emerging AI technologies.
+                    </p>
+
+
+                    <div class="conference-info">
+
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            New York, USA
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            Sep 18–21, 2026
+                        </div>
+
+                    </div>
+
+
+                    <div class="conference-tags">
+
+                        <span>
+                            AI
+                        </span>
+
+                        <span>
+                            ML
+                        </span>
+
+                        <span>
+                            Deep Learning
+                        </span>
+
+                    </div>
+
+
+                    <div class="conference-card-footer">
+
+                        <span class="paper-deadline">
+                            Paper deadline: Aug 20
+                        </span>
+
+                        <button class="conference-details">
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CONFERENCE 2 -->
+
+                <article
+                    class="conference-card"
+                    data-name="International Conference on Computer Vision"
+                    data-field="cv"
+                    data-location="europe"
+                    data-month="october"
+                    data-type="conference"
+                >
+
+                    <div class="conference-card-top">
+
+                        <div class="conference-date">
+
+                            <strong>
+                                06
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="conference-save"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <span class="conference-badge blue">
+                        Conference
+                    </span>
+
+
+                    <h3>
+                        International Conference on Computer Vision
+                    </h3>
+
+
+                    <p class="conference-organizer">
+                        Vision Science Society
+                    </p>
+
+
+                    <p class="conference-description">
+                        Research conference focused on computer vision,
+                        image understanding, visual recognition and
+                        multimodal perception.
+                    </p>
+
+
+                    <div class="conference-info">
+
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Paris, France
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            Oct 06–10, 2026
+                        </div>
+
+                    </div>
+
+
+                    <div class="conference-tags">
+
+                        <span>
+                            Computer Vision
+                        </span>
+
+                        <span>
+                            Images
+                        </span>
+
+                        <span>
+                            AI
+                        </span>
+
+                    </div>
+
+
+                    <div class="conference-card-footer">
+
+                        <span class="paper-deadline">
+                            Paper deadline: Aug 28
+                        </span>
+
+                        <button class="conference-details">
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CONFERENCE 3 -->
+
+                <article
+                    class="conference-card"
+                    data-name="Conference on Empirical Methods in Natural Language Processing"
+                    data-field="nlp"
+                    data-location="asia"
+                    data-month="november"
+                    data-type="conference"
+                >
+
+                    <div class="conference-card-top">
+
+                        <div class="conference-date">
+
+                            <strong>
+                                08
+                            </strong>
+
+                            <span>
+                                NOV
+                            </span>
+
+                        </div>
+
+
+                        <button class="conference-save">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <span class="conference-badge purple">
+                        Conference
+                    </span>
+
+
+                    <h3>
+                        Conference on Empirical Methods in NLP
+                    </h3>
+
+
+                    <p class="conference-organizer">
+                        Association for Computational Linguistics
+                    </p>
+
+
+                    <p class="conference-description">
+                        Research event covering natural language processing,
+                        language models, information extraction and
+                        computational linguistics.
+                    </p>
+
+
+                    <div class="conference-info">
+
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Tokyo, Japan
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            Nov 08–12, 2026
+                        </div>
+
+                    </div>
+
+
+                    <div class="conference-tags">
+
+                        <span>
+                            NLP
+                        </span>
+
+                        <span>
+                            LLM
+                        </span>
+
+                        <span>
+                            Language
+                        </span>
+
+                    </div>
+
+
+                    <div class="conference-card-footer">
+
+                        <span class="paper-deadline">
+                            Paper deadline: Sep 02
+                        </span>
+
+                        <button class="conference-details">
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CONFERENCE 4 -->
+
+                <article
+                    class="conference-card"
+                    data-name="International Conference on Machine Learning"
+                    data-field="ml"
+                    data-location="online"
+                    data-month="august"
+                    data-type="conference"
+                >
+
+                    <div class="conference-card-top">
+
+                        <div class="conference-date">
+
+                            <strong>
+                                24
+                            </strong>
+
+                            <span>
+                                AUG
+                            </span>
+
+                        </div>
+
+
+                        <button class="conference-save">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <span class="conference-badge green">
+                        Conference
+                    </span>
+
+
+                    <h3>
+                        International Conference on Machine Learning
+                    </h3>
+
+
+                    <p class="conference-organizer">
+                        Machine Learning Research Network
+                    </p>
+
+
+                    <p class="conference-description">
+                        Research presentations covering machine learning
+                        theory, algorithms, applications and modern
+                        learning architectures.
+                    </p>
+
+
+                    <div class="conference-info">
+
+                        <div>
+                            <i class="fa-solid fa-globe"></i>
+                            Online
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            Aug 24–28, 2026
+                        </div>
+
+                    </div>
+
+
+                    <div class="conference-tags">
+
+                        <span>
+                            Machine Learning
+                        </span>
+
+                        <span>
+                            Algorithms
+                        </span>
+
+                        <span>
+                            AI
+                        </span>
+
+                    </div>
+
+
+                    <div class="conference-card-footer">
+
+                        <span class="paper-deadline">
+                            Paper deadline: Closed
+                        </span>
+
+                        <button class="conference-details">
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CONFERENCE 5 -->
+
+                <article
+                    class="conference-card"
+                    data-name="International Conference on Data Science"
+                    data-field="data"
+                    data-location="europe"
+                    data-month="october"
+                    data-type="symposium"
+                >
+
+                    <div class="conference-card-top">
+
+                        <div class="conference-date">
+
+                            <strong>
+                                15
+                            </strong>
+
+                            <span>
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <button class="conference-save">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <span class="conference-badge orange">
+                        Symposium
+                    </span>
+
+
+                    <h3>
+                        International Conference on Data Science
+                    </h3>
+
+
+                    <p class="conference-organizer">
+                        European Data Research Forum
+                    </p>
+
+
+                    <p class="conference-description">
+                        A multidisciplinary event focused on data science,
+                        analytics, big data, visualization and intelligent
+                        decision systems.
+                    </p>
+
+
+                    <div class="conference-info">
+
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Berlin, Germany
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            Oct 15–17, 2026
+                        </div>
+
+                    </div>
+
+
+                    <div class="conference-tags">
+
+                        <span>
+                            Data Science
+                        </span>
+
+                        <span>
+                            Analytics
+                        </span>
+
+                        <span>
+                            Big Data
+                        </span>
+
+                    </div>
+
+
+                    <div class="conference-card-footer">
+
+                        <span class="paper-deadline">
+                            Paper deadline: Sep 10
+                        </span>
+
+                        <button class="conference-details">
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CONFERENCE 6 -->
+
+                <article
+                    class="conference-card"
+                    data-name="AI Healthcare Research Workshop"
+                    data-field="ai"
+                    data-location="asia"
+                    data-month="november"
+                    data-type="workshop"
+                >
+
+                    <div class="conference-card-top">
+
+                        <div class="conference-date">
+
+                            <strong>
+                                22
+                            </strong>
+
+                            <span>
+                                NOV
+                            </span>
+
+                        </div>
+
+
+                        <button class="conference-save">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <span class="conference-badge red">
+                        Workshop
+                    </span>
+
+
+                    <h3>
+                        AI Healthcare Research Workshop
+                    </h3>
+
+
+                    <p class="conference-organizer">
+                        Healthcare AI Research Group
+                    </p>
+
+
+                    <p class="conference-description">
+                        Workshop exploring AI applications in healthcare,
+                        medical imaging, clinical decision support and
+                        biomedical research.
+                    </p>
+
+
+                    <div class="conference-info">
+
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Singapore
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            Nov 22–23, 2026
+                        </div>
+
+                    </div>
+
+
+                    <div class="conference-tags">
+
+                        <span>
+                            Healthcare AI
+                        </span>
+
+                        <span>
+                            Medical AI
+                        </span>
+
+                        <span>
+                            Research
+                        </span>
+
+                    </div>
+
+
+                    <div class="conference-card-footer">
+
+                        <span class="paper-deadline">
+                            Paper deadline: Sep 18
+                        </span>
+
+                        <button class="conference-details">
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- EMPTY STATE -->
+
+            <section
+                class="conference-empty"
+                id="conferenceEmpty"
+            >
+
+                <div class="conference-empty-icon">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                </div>
+
+                <h3>
+                    No conferences found
+                </h3>
+
+                <p>
+                    Try another search term or change your filters.
+                </p>
+
+                <button
+                    class="secondary-page-btn"
+                    id="clearFilters"
+                >
+                    Clear Filters
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 DEADLINE SECTION
+                 ================================================= -->
+
+            <section class="deadline-section">
+
+                <div class="deadline-header">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            IMPORTANT DATES
+                        </div>
+
+                        <h2>
+                            Upcoming paper deadlines
+                        </h2>
+
+                    </div>
+
+
+                    <button class="secondary-page-btn">
+                        View Calendar
+                    </button>
+
+                </div>
+
+
+                <div class="deadline-list">
+
+
+                    <div class="deadline-item">
+
+                        <div class="deadline-date">
+                            <strong>
+                                20
+                            </strong>
+
+                            <span>
+                                AUG
+                            </span>
+                        </div>
+
+
+                        <div class="deadline-info">
+
+                            <h3>
+                                International Conference on Artificial Intelligence
+                            </h3>
+
+                            <p>
+                                Full paper submission deadline
+                            </p>
+
+                        </div>
+
+
+                        <span class="deadline-status urgent">
+                            11 days left
+                        </span>
+
+                    </div>
+
+
+                    <div class="deadline-item">
+
+                        <div class="deadline-date">
+                            <strong>
+                                28
+                            </strong>
+
+                            <span>
+                                AUG
+                            </span>
+                        </div>
+
+
+                        <div class="deadline-info">
+
+                            <h3>
+                                International Conference on Computer Vision
+                            </h3>
+
+                            <p>
+                                Paper submission deadline
+                            </p>
+
+                        </div>
+
+
+                        <span class="deadline-status">
+                            19 days left
+                        </span>
+
+                    </div>
+
+
+                    <div class="deadline-item">
+
+                        <div class="deadline-date">
+                            <strong>
+                                02
+                            </strong>
+
+                            <span>
+                                SEP
+                            </span>
+                        </div>
+
+
+                        <div class="deadline-info">
+
+                            <h3>
+                                Conference on Empirical Methods in NLP
+                            </h3>
+
+                            <p>
+                                Research paper submission
+                            </p>
+
+                        </div>
+
+
+                        <span class="deadline-status">
+                            24 days left
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 AI CTA
+                 ================================================= -->
+
+            <section class="conference-ai-cta">
+
+                <div class="conference-ai-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+
+                <div class="conference-ai-content">
+
+                    <div class="section-eyebrow">
+                        AI RESEARCH SUPPORT
+                    </div>
+
+                    <h2>
+                        Not sure which conference fits your paper?
+                    </h2>
+
+                    <p>
+                        Let the AI Research Assistant help you identify
+                        suitable conferences based on your research topic,
+                        methodology and paper scope.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="ai-chat.html"
+                    class="primary-page-btn"
+                >
+                    <i class="fa-solid fa-robot"></i>
+                    Ask AI Assistant
+                </a>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+
+    /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const sidebarClose =
+        document.getElementById("sidebarClose");
+
+    const sidebarOverlay =
+        document.getElementById("sidebarOverlay");
+
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+            sidebar.classList.add("open");
+            sidebarOverlay.classList.add("show");
+
+        }
+    );
+
+
+    sidebarClose.addEventListener(
+        "click",
+        () => {
+
+            sidebar.classList.remove("open");
+            sidebarOverlay.classList.remove("show");
+
+        }
+    );
+
+
+    sidebarOverlay.addEventListener(
+        "click",
+        () => {
+
+            sidebar.classList.remove("open");
+            sidebarOverlay.classList.remove("show");
+
+        }
+    );
+
+
+    /* =====================================================
+       THEME
+       ===================================================== */
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    themeToggle.addEventListener(
+        "click",
+        function () {
+
+            document.body.classList.toggle(
+                "dark-preview"
+            );
+
+
+            const icon =
+                this.querySelector("i");
+
+
+            if (
+                document.body.classList.contains(
+                    "dark-preview"
+                )
+            ) {
+
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+
+            } else {
+
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
+
+    const conferenceSearch =
+        document.getElementById(
+            "conferenceSearch"
+        );
+
+    const globalSearch =
+        document.getElementById(
+            "globalSearch"
+        );
+
+
+    const fieldFilter =
+        document.getElementById(
+            "fieldFilter"
+        );
+
+    const locationFilter =
+        document.getElementById(
+            "locationFilter"
+        );
+
+    const monthFilter =
+        document.getElementById(
+            "monthFilter"
+        );
+
+    const conferenceType =
+        document.getElementById(
+            "conferenceType"
+        );
+
+
+    const conferenceCards =
+        Array.from(
+            document.querySelectorAll(
+                ".conference-card"
+            )
+        );
+
+
+    const conferenceCount =
+        document.getElementById(
+            "conferenceCount"
+        );
+
+
+    const conferenceEmpty =
+        document.getElementById(
+            "conferenceEmpty"
+        );
+
+
+    function filterConferences() {
+
+        const search =
+            conferenceSearch.value
+                .toLowerCase()
+                .trim();
+
+
+        const field =
+            fieldFilter.value;
+
+
+        const location =
+            locationFilter.value;
+
+
+        const month =
+            monthFilter.value;
+
+
+        const type =
+            conferenceType.value;
+
+
+        let visibleCount = 0;
+
+
+        conferenceCards.forEach(
+            card => {
+
+                const name =
+                    card.dataset.name
+                        .toLowerCase();
+
+
+                const cardField =
+                    card.dataset.field;
+
+
+                const cardLocation =
+                    card.dataset.location;
+
+
+                const cardMonth =
+                    card.dataset.month;
+
+
+                const cardType =
+                    card.dataset.type;
+
+
+                const searchMatch =
+                    !search ||
+                    name.includes(search);
+
+
+                const fieldMatch =
+                    field === "all" ||
+                    cardField === field;
+
+
+                const locationMatch =
+                    location === "all" ||
+                    cardLocation === location;
+
+
+                const monthMatch =
+                    month === "all" ||
+                    cardMonth === month;
+
+
+                const typeMatch =
+                    type === "all" ||
+                    cardType === type;
+
+
+                const visible =
+                    searchMatch &&
+                    fieldMatch &&
+                    locationMatch &&
+                    monthMatch &&
+                    typeMatch;
+
+
+                card.style.display =
+                    visible
+                        ? ""
+                        : "none";
+
+
+                if (visible) {
+
+                    visibleCount++;
+
+                }
+
+            }
+        );
+
+
+        conferenceCount.textContent =
+            visibleCount +
+            (
+                visibleCount === 1
+                    ? " conference"
+                    : " conferences"
+            );
+
+
+        conferenceEmpty.classList.toggle(
+            "show",
+            visibleCount === 0
+        );
+
+    }
+
+
+    conferenceSearch.addEventListener(
+        "input",
+        filterConferences
+    );
+
+
+    fieldFilter.addEventListener(
+        "change",
+        filterConferences
+    );
+
+
+    locationFilter.addEventListener(
+        "change",
+        filterConferences
+    );
+
+
+    monthFilter.addEventListener(
+        "change",
+        filterConferences
+    );
+
+
+    conferenceType.addEventListener(
+        "change",
+        filterConferences
+    );
+
+
+    globalSearch.addEventListener(
+        "input",
+        function () {
+
+            conferenceSearch.value =
+                this.value;
+
+            filterConferences();
+
+        }
+    );
+
+
+    document
+        .getElementById(
+            "conferenceSearchBtn"
+        )
+        .addEventListener(
+            "click",
+            filterConferences
+        );
+
+
+    /* =====================================================
+       HERO BUTTON
+       ===================================================== */
+
+    document
+        .getElementById(
+            "findConferenceBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                conferenceSearch.focus();
+
+                conferenceSearch
+                    .scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+
+            }
+        );
+
+
+    document
+        .getElementById(
+            "calendarBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelector(
+                        ".deadline-section"
+                    )
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+            }
+        );
+
+
+    /* =====================================================
+       TOPIC FILTERS
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".conference-topic"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        document
+                            .querySelectorAll(
+                                ".conference-topic"
+                            )
+                            .forEach(
+                                item => {
+
+                                    item.classList.remove(
+                                        "active"
+                                    );
+
+                                }
+                            );
+
+
+                        this.classList.add(
+                            "active"
+                        );
+
+
+                        const field =
+                            this.dataset.field;
+
+
+                        fieldFilter.value =
+                            field;
+
+
+                        filterConferences();
+
+                    }
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       SAVE CONFERENCE
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".conference-save"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const icon =
+                            this.querySelector("i");
+
+
+                        icon.classList.toggle(
+                            "fa-regular"
+                        );
+
+
+                        icon.classList.toggle(
+                            "fa-solid"
+                        );
+
+
+                        this.classList.toggle(
+                            "saved"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       DETAILS
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".conference-details"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const card =
+                            this.closest(
+                                ".conference-card"
+                            );
+
+
+                        const name =
+                            card
+                                .querySelector("h3")
+                                .textContent
+                                .trim();
+
+
+                        alert(
+                            name +
+                            " details will be connected later."
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       CLEAR FILTERS
+       ===================================================== */
+
+    document
+        .getElementById(
+            "clearFilters"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                conferenceSearch.value =
+                    "";
+
+                fieldFilter.value =
+                    "all";
+
+                locationFilter.value =
+                    "all";
+
+                monthFilter.value =
+                    "all";
+
+                conferenceType.value =
+                    "all";
+
+
+                document
+                    .querySelectorAll(
+                        ".conference-topic"
+                    )
+                    .forEach(
+                        button => {
+
+                            button.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                document
+                    .querySelector(
+                        '.conference-topic[data-field="all"]'
+                    )
+                    .classList.add(
+                        "active"
+                    );
+
+
+                filterConferences();
+
+            }
+        );
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#2563eb">
+
+    <title>Topic Dashboard | Research AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <!-- Dashboard CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+    <!-- Pages CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/pages.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-wrapper">
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+            <a href="../index.html">
+
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- Mobile Close -->
+
+        <button
+            class="sidebar-close"
+            id="sidebarClose"
+            aria-label="Close sidebar"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <!-- =================================================
+             MAIN MENU
+             ================================================= -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                MAIN MENU
+            </p>
+
+
+            <nav class="sidebar-nav">
+
+
+                <a
+                    href="dashboard.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a
+                    href="research-domain.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+
+                    Research Domains
+
+                </a>
+
+
+                <a
+                    href="papers.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    Research Papers
+
+                    <span class="sidebar-count">
+                        12
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="datasets.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+
+                    Datasets
+
+                </a>
+
+
+                <a
+                    href="models.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+
+                    AI Models
+
+                </a>
+
+
+                <a
+                    href="github.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+
+                    GitHub Explorer
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- =================================================
+             AI TOOLS
+             ================================================= -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                AI RESEARCH TOOLS
+            </p>
+
+
+            <nav class="sidebar-nav">
+
+
+                <a
+                    href="ai-analysis.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+
+                    AI Analysis
+
+                </a>
+
+
+                <a
+                    href="research-gap.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+
+                    Research Gap
+
+                </a>
+
+
+                <a
+                    href="idea-generator.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+
+                    Idea Generator
+
+                </a>
+
+
+                <a
+                    href="literature.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+
+                    Literature Review
+
+                </a>
+
+
+                <a
+                    href="ai-chat.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+
+                    AI Assistant
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- =================================================
+             RESOURCES
+             ================================================= -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                RESOURCES
+            </p>
+
+
+            <nav class="sidebar-nav">
+
+
+                <a
+                    href="conferences.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+
+                    Conferences
+
+                </a>
+
+
+                <a
+                    href="citation.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+
+                    Citation Generator
+
+                </a>
+
+
+                <a
+                    href="internet-research.html"
+                    class="sidebar-link"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+
+                    Internet Research
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+             ================================================= -->
+
+        <div class="sidebar-bottom">
+
+
+            <a
+                href="settings.html"
+                class="sidebar-link"
+            >
+
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                Settings
+
+            </a>
+
+
+            <a
+                href="profile.html"
+                class="sidebar-profile"
+            >
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Researcher
+                    </strong>
+
+                    <span>
+                        Student Account
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Sidebar Overlay -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP NAVBAR
+             ================================================= -->
+
+        <header class="top-navbar">
+
+
+            <div class="navbar-left">
+
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open menu"
+                >
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <div class="page-title">
+
+                    <span>
+                        Research Workspace
+                    </span>
+
+                    <h1>
+                        Topic Dashboard
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <!-- Global Search -->
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search papers, topics, datasets..."
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <!-- Navbar Actions -->
+
+            <div class="navbar-actions">
+
+
+                <button
+                    class="navbar-icon-btn"
+                    id="themeToggle"
+                    aria-label="Toggle theme"
+                >
+
+                    <i class="fa-regular fa-moon"></i>
+
+                </button>
+
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="navbar-user"
+                >
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+
+                        <strong>
+                            Researcher
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <div class="page-content">
+
+
+            <!-- =================================================
+                 BREADCRUMB
+                 ================================================= -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <a href="research-domain.html">
+                    Research Domains
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    Healthcare
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TOPIC HERO
+                 ================================================= -->
+
+            <section class="topic-hero">
+
+
+                <div class="topic-hero-content">
+
+
+                    <div class="topic-domain-label">
+
+                        <span class="topic-domain-icon">
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+                        </span>
+
+                        Healthcare
+
+                        <span class="topic-status">
+                            Trending Research Area
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+                        Artificial Intelligence in
+                        Medical Diagnosis
+                    </h2>
+
+
+                    <p>
+
+                        Explore recent research, emerging trends,
+                        datasets, AI models and potential research
+                        opportunities in AI-powered medical diagnosis.
+
+                    </p>
+
+
+                    <div class="topic-keywords">
+
+                        <span>
+                            Artificial Intelligence
+                        </span>
+
+                        <span>
+                            Medical Diagnosis
+                        </span>
+
+                        <span>
+                            Deep Learning
+                        </span>
+
+                        <span>
+                            Medical Imaging
+                        </span>
+
+                    </div>
+
+
+                    <div class="topic-actions">
+
+
+                        <button
+                            class="topic-primary-btn"
+                            id="analyzeTopic"
+                        >
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            Analyze Topic
+
+                        </button>
+
+
+                        <button
+                            class="topic-secondary-btn"
+                            id="saveTopic"
+                        >
+
+                            <i class="fa-regular fa-bookmark"></i>
+
+                            Save Topic
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Topic Visual -->
+
+                <div class="topic-visual">
+
+
+                    <div class="topic-circle circle-one"></div>
+
+                    <div class="topic-circle circle-two"></div>
+
+                    <div class="topic-circle circle-three"></div>
+
+
+                    <div class="topic-ai-core">
+
+                        <i class="fa-solid fa-brain"></i>
+
+                    </div>
+
+
+                    <div class="topic-floating-card floating-one">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                        <span>
+                            12.4K Papers
+                        </span>
+
+                    </div>
+
+
+                    <div class="topic-floating-card floating-two">
+
+                        <i class="fa-solid fa-database"></i>
+
+                        <span>
+                            86 Datasets
+                        </span>
+
+                    </div>
+
+
+                    <div class="topic-floating-card floating-three">
+
+                        <i class="fa-solid fa-microchip"></i>
+
+                        <span>
+                            42 Models
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+                 ================================================= -->
+
+            <section class="topic-stat-grid">
+
+
+                <div class="topic-stat-card">
+
+                    <div class="topic-stat-icon blue">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Research Papers
+                        </span>
+
+                        <strong>
+                            12,480
+                        </strong>
+
+                        <small class="positive">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                            14.8% this year
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic-stat-card">
+
+                    <div class="topic-stat-icon purple">
+
+                        <i class="fa-solid fa-database"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Datasets
+                        </span>
+
+                        <strong>
+                            86
+                        </strong>
+
+                        <small class="positive">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                            9.2% this year
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic-stat-card">
+
+                    <div class="topic-stat-icon green">
+
+                        <i class="fa-solid fa-microchip"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            AI Models
+                        </span>
+
+                        <strong>
+                            42
+                        </strong>
+
+                        <small class="positive">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                            12 new models
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topic-stat-card">
+
+                    <div class="topic-stat-icon orange">
+
+                        <i class="fa-solid fa-quote-right"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Citations
+                        </span>
+
+                        <strong>
+                            38.6K
+                        </strong>
+
+                        <small class="positive">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                            18.4% growth
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 OVERVIEW + TREND
+                 ================================================= -->
+
+            <section class="topic-main-grid">
+
+
+                <!-- Overview -->
+
+                <div class="topic-panel topic-overview-panel">
+
+
+                    <div class="topic-panel-header">
+
+                        <div>
+
+                            <span class="panel-kicker">
+                                TOPIC OVERVIEW
+                            </span>
+
+                            <h3>
+                                Research Overview
+                            </h3>
+
+                        </div>
+
+
+                        <button
+                            class="panel-menu"
+                        >
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="overview-content">
+
+
+                        <p>
+
+                            Artificial Intelligence is increasingly
+                            being applied to medical diagnosis through
+                            machine learning, deep learning and computer
+                            vision techniques. Researchers are using
+                            medical images, clinical records and multimodal
+                            data to support faster and more accurate
+                            diagnostic decisions.
+
+                        </p>
+
+
+                        <p>
+
+                            Current research focuses on improving model
+                            accuracy, interpretability, clinical
+                            validation, data privacy and generalization
+                            across different patient populations.
+
+                        </p>
+
+
+                        <div class="overview-highlights">
+
+
+                            <div>
+
+                                <i class="fa-solid fa-check"></i>
+
+                                <span>
+                                    Medical Image Analysis
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-check"></i>
+
+                                <span>
+                                    Explainable AI
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-check"></i>
+
+                                <span>
+                                    Clinical Decision Support
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-check"></i>
+
+                                <span>
+                                    Deep Learning
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Research Trend -->
+
+                <div class="topic-panel trend-panel">
+
+
+                    <div class="topic-panel-header">
+
+                        <div>
+
+                            <span class="panel-kicker">
+                                RESEARCH TREND
+                            </span>
+
+                            <h3>
+                                Publication Growth
+                            </h3>
+
+                        </div>
+
+
+                        <select
+                            class="trend-select"
+                            id="trendSelect"
+                        >
+
+                            <option>
+                                Last 5 Years
+                            </option>
+
+                            <option>
+                                Last 10 Years
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="trend-chart">
+
+
+                        <div class="chart-y-axis">
+
+                            <span>
+                                4K
+                            </span>
+
+                            <span>
+                                3K
+                            </span>
+
+                            <span>
+                                2K
+                            </span>
+
+                            <span>
+                                1K
+                            </span>
+
+                            <span>
+                                0
+                            </span>
+
+                        </div>
+
+
+                        <div class="chart-area">
+
+
+                            <div class="chart-grid-lines">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <svg
+                                class="trend-svg"
+                                viewBox="0 0 600 230"
+                                preserveAspectRatio="none"
+                            >
+
+                                <defs>
+
+                                    <linearGradient
+                                        id="areaGradient"
+                                        x1="0"
+                                        y1="0"
+                                        x2="0"
+                                        y2="1"
+                                    >
+
+                                        <stop
+                                            offset="0%"
+                                            stop-color="#3b82f6"
+                                            stop-opacity="0.25"
+                                        />
+
+                                        <stop
+                                            offset="100%"
+                                            stop-color="#3b82f6"
+                                            stop-opacity="0"
+                                        />
+
+                                    </linearGradient>
+
+                                </defs>
+
+
+                                <path
+                                    class="trend-area"
+                                    d="
+                                    M0,190
+                                    C60,175 80,165 120,170
+                                    C170,175 190,135 240,140
+                                    C290,145 300,115 350,120
+                                    C400,125 420,75 470,90
+                                    C510,100 535,50 600,35
+                                    L600,230
+                                    L0,230
+                                    Z
+                                    "
+                                ></path>
+
+
+                                <path
+                                    class="trend-line"
+                                    d="
+                                    M0,190
+                                    C60,175 80,165 120,170
+                                    C170,175 190,135 240,140
+                                    C290,145 300,115 350,120
+                                    C400,125 420,75 470,90
+                                    C510,100 535,50 600,35
+                                    "
+                                ></path>
+
+
+                                <circle
+                                    cx="600"
+                                    cy="35"
+                                    r="5"
+                                    class="chart-point"
+                                ></circle>
+
+                            </svg>
+
+
+                            <div class="chart-x-axis">
+
+                                <span>
+                                    2021
+                                </span>
+
+                                <span>
+                                    2022
+                                </span>
+
+                                <span>
+                                    2023
+                                </span>
+
+                                <span>
+                                    2024
+                                </span>
+
+                                <span>
+                                    2025
+                                </span>
+
+                                <span>
+                                    2026
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="trend-summary">
+
+                        <span>
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            Research activity is increasing
+                        </span>
+
+                        <strong>
+                            +31.6%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 AI SUMMARY
+                 ================================================= -->
+
+            <section class="ai-topic-summary">
+
+
+                <div class="ai-summary-icon">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                </div>
+
+
+                <div class="ai-summary-content">
+
+                    <span>
+                        AI-GENERATED INSIGHT
+                    </span>
+
+                    <h3>
+                        What is happening in this research area?
+                    </h3>
+
+
+                    <p id="aiSummaryText">
+
+                        Recent research is moving toward explainable,
+                        multimodal and clinically validated AI systems.
+                        Transformer-based architectures, medical vision
+                        models and interpretable deep learning approaches
+                        are receiving increased research attention.
+
+                    </p>
+
+
+                    <div class="ai-insight-tags">
+
+                        <span>
+                            Explainable AI
+                        </span>
+
+                        <span>
+                            Vision Transformers
+                        </span>
+
+                        <span>
+                            Multimodal AI
+                        </span>
+
+                        <span>
+                            Clinical AI
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="ai-refresh-btn"
+                    id="refreshInsight"
+                >
+
+                    <i class="fa-solid fa-rotate"></i>
+
+                    Refresh Insight
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 POPULAR PAPERS
+                 ================================================= -->
+
+            <section class="topic-section">
+
+
+                <div class="topic-section-heading">
+
+
+                    <div>
+
+                        <span class="panel-kicker">
+                            RESEARCH PAPERS
+                        </span>
+
+                        <h3>
+                            Popular Papers
+                        </h3>
+
+                        <p>
+                            Highly relevant papers for this topic.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="papers.html"
+                        class="view-all-link"
+                    >
+
+                        View All
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="paper-preview-grid">
+
+
+                    <!-- Paper 1 -->
+
+                    <article class="topic-paper-card">
+
+
+                        <div class="paper-card-top">
+
+                            <span class="paper-year">
+                                2026
+                            </span>
+
+                            <button class="paper-bookmark">
+
+                                <i class="fa-regular fa-bookmark"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <span class="paper-journal">
+                            Medical AI Research
+                        </span>
+
+
+                        <h4>
+                            Deep Learning Approaches for
+                            Automated Medical Diagnosis
+                        </h4>
+
+
+                        <p>
+                            A review of deep learning approaches
+                            used for medical image classification
+                            and diagnostic support.
+                        </p>
+
+
+                        <div class="paper-card-meta">
+
+                            <span>
+                                <i class="fa-solid fa-user-group"></i>
+                                4 Authors
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-quote-right"></i>
+                                248 Citations
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="paper-details.html"
+                            class="paper-read-btn"
+                        >
+
+                            Read Paper
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- Paper 2 -->
+
+                    <article class="topic-paper-card">
+
+
+                        <div class="paper-card-top">
+
+                            <span class="paper-year">
+                                2025
+                            </span>
+
+                            <button class="paper-bookmark">
+
+                                <i class="fa-regular fa-bookmark"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <span class="paper-journal">
+                            IEEE Medical Systems
+                        </span>
+
+
+                        <h4>
+                            Explainable AI for Clinical
+                            Decision Support Systems
+                        </h4>
+
+
+                        <p>
+                            Investigating interpretable AI methods
+                            for trustworthy clinical decision support.
+                        </p>
+
+
+                        <div class="paper-card-meta">
+
+                            <span>
+                                <i class="fa-solid fa-user-group"></i>
+                                6 Authors
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-quote-right"></i>
+                                183 Citations
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="paper-details.html"
+                            class="paper-read-btn"
+                        >
+
+                            Read Paper
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- Paper 3 -->
+
+                    <article class="topic-paper-card">
+
+
+                        <div class="paper-card-top">
+
+                            <span class="paper-year">
+                                2025
+                            </span>
+
+                            <button class="paper-bookmark">
+
+                                <i class="fa-regular fa-bookmark"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <span class="paper-journal">
+                            Computer Vision in Healthcare
+                        </span>
+
+
+                        <h4>
+                            Vision Transformers for Medical
+                            Image Classification
+                        </h4>
+
+
+                        <p>
+                            An evaluation of transformer-based
+                            architectures for medical image analysis.
+                        </p>
+
+
+                        <div class="paper-card-meta">
+
+                            <span>
+                                <i class="fa-solid fa-user-group"></i>
+                                5 Authors
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-quote-right"></i>
+                                156 Citations
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="paper-details.html"
+                            class="paper-read-btn"
+                        >
+
+                            Read Paper
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DATASET + MODEL
+                 ================================================= -->
+
+            <section class="topic-main-grid lower-grid">
+
+
+                <!-- Dataset Preview -->
+
+                <div class="topic-panel">
+
+
+                    <div class="topic-panel-header">
+
+                        <div>
+
+                            <span class="panel-kicker">
+                                DATASETS
+                            </span>
+
+                            <h3>
+                                Dataset Preview
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="datasets.html"
+                            class="small-view-link"
+                        >
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="dataset-list">
+
+
+                        <div class="dataset-item">
+
+
+                            <div class="dataset-icon">
+
+                                <i class="fa-solid fa-x-ray"></i>
+
+                            </div>
+
+
+                            <div class="dataset-info">
+
+                                <strong>
+                                    Chest X-Ray Dataset
+                                </strong>
+
+                                <span>
+                                    112K Images · Medical Imaging
+                                </span>
+
+                            </div>
+
+
+                            <span class="dataset-type">
+                                Image
+                            </span>
+
+                        </div>
+
+
+                        <div class="dataset-item">
+
+
+                            <div class="dataset-icon">
+
+                                <i class="fa-solid fa-table"></i>
+
+                            </div>
+
+
+                            <div class="dataset-info">
+
+                                <strong>
+                                    Clinical Diagnosis Dataset
+                                </strong>
+
+                                <span>
+                                    48K Records · Clinical Data
+                                </span>
+
+                            </div>
+
+
+                            <span class="dataset-type">
+                                Tabular
+                            </span>
+
+                        </div>
+
+
+                        <div class="dataset-item">
+
+
+                            <div class="dataset-icon">
+
+                                <i class="fa-solid fa-lungs"></i>
+
+                            </div>
+
+
+                            <div class="dataset-info">
+
+                                <strong>
+                                    Lung CT Imaging Dataset
+                                </strong>
+
+                                <span>
+                                    32K Scans · CT Imaging
+                                </span>
+
+                            </div>
+
+
+                            <span class="dataset-type">
+                                Image
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Model Recommendation -->
+
+                <div class="topic-panel">
+
+
+                    <div class="topic-panel-header">
+
+                        <div>
+
+                            <span class="panel-kicker">
+                                AI MODELS
+                            </span>
+
+                            <h3>
+                                Recommended Models
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="models.html"
+                            class="small-view-link"
+                        >
+                            Explore
+                        </a>
+
+                    </div>
+
+
+                    <div class="model-recommendations">
+
+
+                        <div class="model-item">
+
+
+                            <div class="model-icon model-blue">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </div>
+
+
+                            <div class="model-info">
+
+                                <strong>
+                                    Vision Transformer
+                                </strong>
+
+                                <span>
+                                    Medical Image Classification
+                                </span>
+
+                            </div>
+
+
+                            <div class="model-score">
+
+                                <strong>
+                                    94%
+                                </strong>
+
+                                <span>
+                                    Match
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="model-item">
+
+
+                            <div class="model-icon model-purple">
+
+                                <i class="fa-solid fa-network-wired"></i>
+
+                            </div>
+
+
+                            <div class="model-info">
+
+                                <strong>
+                                    ResNet-50
+                                </strong>
+
+                                <span>
+                                    Image Classification
+                                </span>
+
+                            </div>
+
+
+                            <div class="model-score">
+
+                                <strong>
+                                    91%
+                                </strong>
+
+                                <span>
+                                    Match
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="model-item">
+
+
+                            <div class="model-icon model-green">
+
+                                <i class="fa-solid fa-brain"></i>
+
+                            </div>
+
+
+                            <div class="model-info">
+
+                                <strong>
+                                    EfficientNet
+                                </strong>
+
+                                <span>
+                                    Medical Image Analysis
+                                </span>
+
+                            </div>
+
+
+                            <div class="model-score">
+
+                                <strong>
+                                    89%
+                                </strong>
+
+                                <span>
+                                    Match
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RELATED TOPICS
+                 ================================================= -->
+
+            <section class="topic-section related-section">
+
+
+                <div class="topic-section-heading">
+
+                    <div>
+
+                        <span class="panel-kicker">
+                            DISCOVER MORE
+                        </span>
+
+                        <h3>
+                            Related Research Topics
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="related-topic-grid">
+
+
+                    <a
+                        href="topic-dashboard.html"
+                        class="related-topic-card"
+                    >
+
+                        <div class="related-icon">
+
+                            <i class="fa-solid fa-lungs"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                AI in Cancer Detection
+                            </strong>
+
+                            <span>
+                                4.2K papers
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <a
+                        href="topic-dashboard.html"
+                        class="related-topic-card"
+                    >
+
+                        <div class="related-icon">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Medical Image Analysis
+                            </strong>
+
+                            <span>
+                                7.8K papers
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <a
+                        href="topic-dashboard.html"
+                        class="related-topic-card"
+                    >
+
+                        <div class="related-icon">
+
+                            <i class="fa-solid fa-shield-heart"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Explainable Medical AI
+                            </strong>
+
+                            <span>
+                                3.6K papers
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <a
+                        href="topic-dashboard.html"
+                        class="related-topic-card"
+                    >
+
+                        <div class="related-icon">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Clinical AI
+                            </strong>
+
+                            <span>
+                                5.1K papers
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FOOTER
+                 ================================================= -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+
+                <div>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                </div>
+
+            </footer>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     UI JAVASCRIPT ONLY
+     ========================================================= -->
+
+<script>
+
+
+    /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const sidebarClose =
+        document.getElementById("sidebarClose");
+
+    const sidebarOverlay =
+        document.getElementById("sidebarOverlay");
+
+
+    function openSidebar() {
+
+        sidebar.classList.add("open");
+
+        sidebarOverlay.classList.add("show");
+
+    }
+
+
+    function closeSidebar() {
+
+        sidebar.classList.remove("open");
+
+        sidebarOverlay.classList.remove("show");
+
+    }
+
+
+    menuToggle.addEventListener(
+        "click",
+        openSidebar
+    );
+
+
+    sidebarClose.addEventListener(
+        "click",
+        closeSidebar
+    );
+
+
+    sidebarOverlay.addEventListener(
+        "click",
+        closeSidebar
+    );
+
+
+
+    /* =====================================================
+       SAVE TOPIC
+       ===================================================== */
+
+    const saveTopic =
+        document.getElementById("saveTopic");
+
+
+    saveTopic.addEventListener(
+        "click",
+        function () {
+
+            const icon =
+                this.querySelector("i");
+
+
+            if (
+                this.classList.contains(
+                    "saved"
+                )
+            ) {
+
+                this.classList.remove(
+                    "saved"
+                );
+
+                icon.classList.remove(
+                    "fa-solid"
+                );
+
+                icon.classList.add(
+                    "fa-regular"
+                );
+
+                this.innerHTML =
+                    '<i class="fa-regular fa-bookmark"></i> Save Topic';
+
+            } else {
+
+                this.classList.add(
+                    "saved"
+                );
+
+                this.innerHTML =
+                    '<i class="fa-solid fa-bookmark"></i> Topic Saved';
+
+            }
+
+        }
+    );
+
+
+
+    /* =====================================================
+       ANALYZE TOPIC
+       ===================================================== */
+
+    const analyzeTopic =
+        document.getElementById("analyzeTopic");
+
+
+    analyzeTopic.addEventListener(
+        "click",
+        function () {
+
+            this.classList.add(
+                "analyzing"
+            );
+
+            this.innerHTML =
+                '<i class="fa-solid fa-spinner fa-spin"></i> Analyzing...';
+
+
+            setTimeout(
+                () => {
+
+                    this.classList.remove(
+                        "analyzing"
+                    );
+
+                    this.innerHTML =
+                        '<i class="fa-solid fa-check"></i> Analysis Ready';
+
+                },
+                1500
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       PAPER BOOKMARKS
+       ===================================================== */
+
+    const paperBookmarks =
+        document.querySelectorAll(
+            ".paper-bookmark"
+        );
+
+
+    paperBookmarks.forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const icon =
+                        this.querySelector("i");
+
+
+                    this.classList.toggle(
+                        "bookmarked"
+                    );
+
+
+                    if (
+                        this.classList.contains(
+                            "bookmarked"
+                        )
+                    ) {
+
+                        icon.classList.remove(
+                            "fa-regular"
+                        );
+
+                        icon.classList.add(
+                            "fa-solid"
+                        );
+
+                    } else {
+
+                        icon.classList.remove(
+                            "fa-solid"
+                        );
+
+                        icon.classList.add(
+                            "fa-regular"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       AI INSIGHT REFRESH
+       ===================================================== */
+
+    const refreshInsight =
+        document.getElementById(
+            "refreshInsight"
+        );
+
+    const aiSummaryText =
+        document.getElementById(
+            "aiSummaryText"
+        );
+
+
+    refreshInsight.addEventListener(
+        "click",
+        function () {
+
+            this.innerHTML =
+                '<i class="fa-solid fa-spinner fa-spin"></i> Updating...';
+
+
+            setTimeout(
+                () => {
+
+                    aiSummaryText.innerText =
+                        "Current research is increasingly focused on trustworthy medical AI, combining strong predictive performance with explainability, robust validation and clinically meaningful evaluation.";
+
+                    this.innerHTML =
+                        '<i class="fa-solid fa-check"></i> Updated';
+
+                },
+                1200
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       THEME PREVIEW
+       ===================================================== */
+
+    const themeToggle =
+        document.getElementById(
+            "themeToggle"
+        );
+
+
+    themeToggle.addEventListener(
+        "click",
+        function () {
+
+            document.body.classList.toggle(
+                "dark-preview"
+            );
+
+
+            const icon =
+                this.querySelector("i");
+
+
+            if (
+                document.body.classList.contains(
+                    "dark-preview"
+                )
+            ) {
+
+                icon.classList.remove(
+                    "fa-moon"
+                );
+
+                icon.classList.add(
+                    "fa-sun"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-sun"
+                );
+
+                icon.classList.add(
+                    "fa-moon"
+                );
+
+            }
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>

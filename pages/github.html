@@ -1,0 +1,2349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub Explorer | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+
+    <!-- GitHub Page CSS -->
+    <link rel="stylesheet" href="../css/github.css">
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <a href="../index.html">
+
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <button
+            class="sidebar-close"
+            id="sidebarClose"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <!-- MAIN MENU -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                MAIN MENU
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a
+                    href="dashboard.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="research-domain.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+                    Research Domains
+                </a>
+
+
+                <a
+                    href="papers.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+                    Research Papers
+                </a>
+
+
+                <a
+                    href="datasets.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+                    Datasets
+                </a>
+
+
+                <a
+                    href="models.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+                    AI Models
+                </a>
+
+
+                <a
+                    href="github.html"
+                    class="sidebar-link active"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    GitHub Explorer
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- AI TOOLS -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                AI RESEARCH TOOLS
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a
+                    href="ai-analysis.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+                    AI Analysis
+                </a>
+
+
+                <a
+                    href="research-gap.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+                    Research Gap
+                </a>
+
+
+                <a
+                    href="idea-generator.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+                    Idea Generator
+                </a>
+
+
+                <a
+                    href="literature.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+                    Literature Review
+                </a>
+
+
+                <a
+                    href="ai-chat.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+                    AI Assistant
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- RESOURCES -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                RESOURCES
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a
+                    href="conferences.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+                    Conferences
+                </a>
+
+
+                <a
+                    href="citation.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+                    Citation Generator
+                </a>
+
+
+                <a
+                    href="internet-research.html"
+                    class="sidebar-link"
+                >
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+                    Internet Research
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="settings.html"
+                class="sidebar-link"
+            >
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+                Settings
+            </a>
+
+
+            <a
+                href="profile.html"
+                class="sidebar-profile"
+            >
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Researcher
+                    </strong>
+
+                    <span>
+                        Student Account
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP NAVBAR -->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="page-title">
+
+                    <span>
+                        Research Resources
+                    </span>
+
+                    <h1>
+                        GitHub Explorer
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search repositories..."
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <div class="navbar-actions">
+
+                <button
+                    class="navbar-icon-btn"
+                    id="themeToggle"
+                    title="Toggle theme"
+                >
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="navbar-user"
+                >
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+
+                        <strong>
+                            Researcher
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             PAGE
+             ===================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    GitHub Explorer
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 HERO
+                 ================================================= -->
+
+            <section class="github-hero">
+
+                <div class="github-hero-content">
+
+                    <div class="section-eyebrow">
+                        OPEN SOURCE RESEARCH
+                    </div>
+
+                    <h2>
+                        Explore GitHub projects for research
+                    </h2>
+
+                    <p>
+                        Discover research repositories, implementations,
+                        datasets, issues and open-source projects that can
+                        help you understand and build your research work.
+                    </p>
+
+
+                    <div class="github-hero-actions">
+
+                        <button
+                            class="primary-page-btn"
+                            id="searchGithubBtn"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                            Search GitHub
+                        </button>
+
+
+                        <button
+                            class="secondary-page-btn"
+                            id="browseIssuesBtn"
+                        >
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            Explore Issues
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="github-hero-visual">
+
+                    <div class="github-code-window">
+
+                        <div class="github-window-bar">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="github-code-line">
+                            <span class="code-purple">
+                                const
+                            </span>
+
+                            <span class="code-blue">
+                                research
+                            </span>
+
+                            =
+                            <span class="code-green">
+                                "AI"
+                            </span>;
+                        </div>
+
+
+                        <div class="github-code-line">
+                            <span class="code-purple">
+                                find
+                            </span>
+                            (
+                            <span class="code-orange">
+                                repositories
+                            </span>
+                            );
+                        </div>
+
+
+                        <div class="github-code-line">
+                            <span class="code-gray">
+                                // Explore open source
+                            </span>
+                        </div>
+
+
+                        <div class="github-code-line">
+                            <span class="code-blue">
+                                analyze
+                            </span>
+                            (
+                            <span class="code-green">
+                                issues
+                            </span>
+                            );
+                        </div>
+
+                    </div>
+
+                    <div class="github-hero-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 STATS
+                 ================================================= -->
+
+            <section class="github-stats">
+
+
+                <div class="github-stat-card">
+
+                    <div class="github-stat-icon purple">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            REPOSITORIES
+                        </span>
+
+                        <strong>
+                            12.8K
+                        </strong>
+
+                        <small>
+                            Research projects
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="github-stat-card">
+
+                    <div class="github-stat-icon orange">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            SAVED PROJECTS
+                        </span>
+
+                        <strong>
+                            128
+                        </strong>
+
+                        <small>
+                            In your workspace
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="github-stat-card">
+
+                    <div class="github-stat-icon red">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            OPEN ISSUES
+                        </span>
+
+                        <strong>
+                            4.6K
+                        </strong>
+
+                        <small>
+                            Research opportunities
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="github-stat-card">
+
+                    <div class="github-stat-icon green">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            FORKS
+                        </span>
+
+                        <strong>
+                            38.2K
+                        </strong>
+
+                        <small>
+                            Community activity
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SEARCH TOOLBAR
+                 ================================================= -->
+
+            <section class="github-search-panel">
+
+                <div class="github-search-main">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="repositorySearch"
+                        placeholder="Search repositories, topics, technologies..."
+                    >
+
+                    <button
+                        id="repositorySearchButton"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+
+                <div class="github-filter-row">
+
+                    <select id="languageFilter">
+
+                        <option value="all">
+                            All Languages
+                        </option>
+
+                        <option value="python">
+                            Python
+                        </option>
+
+                        <option value="javascript">
+                            JavaScript
+                        </option>
+
+                        <option value="typescript">
+                            TypeScript
+                        </option>
+
+                        <option value="java">
+                            Java
+                        </option>
+
+                        <option value="cpp">
+                            C++
+                        </option>
+
+                    </select>
+
+
+                    <select id="topicFilter">
+
+                        <option value="all">
+                            All Topics
+                        </option>
+
+                        <option value="machine-learning">
+                            Machine Learning
+                        </option>
+
+                        <option value="deep-learning">
+                            Deep Learning
+                        </option>
+
+                        <option value="computer-vision">
+                            Computer Vision
+                        </option>
+
+                        <option value="nlp">
+                            NLP
+                        </option>
+
+                        <option value="healthcare">
+                            Healthcare
+                        </option>
+
+                    </select>
+
+
+                    <select id="sortFilter">
+
+                        <option value="stars">
+                            Most Stars
+                        </option>
+
+                        <option value="recent">
+                            Recently Updated
+                        </option>
+
+                        <option value="forks">
+                            Most Forks
+                        </option>
+
+                        <option value="issues">
+                            Open Issues
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        class="github-filter-btn"
+                        id="advancedFilterBtn"
+                    >
+                        <i class="fa-solid fa-sliders"></i>
+                        Filters
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 QUICK TOPICS
+                 ================================================= -->
+
+            <section class="github-topic-row">
+
+                <span>
+                    Popular:
+                </span>
+
+
+                <button
+                    class="github-topic active"
+                    data-topic="all"
+                >
+                    All
+                </button>
+
+
+                <button
+                    class="github-topic"
+                    data-topic="machine-learning"
+                >
+                    Machine Learning
+                </button>
+
+
+                <button
+                    class="github-topic"
+                    data-topic="deep-learning"
+                >
+                    Deep Learning
+                </button>
+
+
+                <button
+                    class="github-topic"
+                    data-topic="computer-vision"
+                >
+                    Computer Vision
+                </button>
+
+
+                <button
+                    class="github-topic"
+                    data-topic="nlp"
+                >
+                    NLP
+                </button>
+
+
+                <button
+                    class="github-topic"
+                    data-topic="healthcare"
+                >
+                    Healthcare
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 REPOSITORY HEADER
+                 ================================================= -->
+
+            <section class="github-section-header">
+
+                <div>
+
+                    <div class="section-eyebrow">
+                        RESEARCH REPOSITORIES
+                    </div>
+
+                    <h2>
+                        Recommended projects
+                    </h2>
+
+                </div>
+
+
+                <span id="repositoryCount">
+                    6 repositories
+                </span>
+
+            </section>
+
+
+            <!-- =================================================
+                 REPOSITORY GRID
+                 ================================================= -->
+
+            <section
+                class="github-repository-grid"
+                id="repositoryGrid"
+            >
+
+
+                <!-- REPOSITORY 1 -->
+
+                <article
+                    class="github-repo-card"
+                    data-name="awesome-machine-learning"
+                    data-language="python"
+                    data-topic="machine-learning"
+                >
+
+                    <div class="github-repo-top">
+
+                        <div class="github-repo-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+
+
+                        <button
+                            class="github-save-btn"
+                            title="Save repository"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="github-repo-owner">
+                        research-community
+                    </div>
+
+
+                    <h3>
+                        awesome-machine-learning
+                    </h3>
+
+
+                    <p>
+                        A curated collection of machine learning
+                        frameworks, libraries, datasets and research
+                        resources.
+                    </p>
+
+
+                    <div class="github-repo-topics">
+
+                        <span>
+                            Machine Learning
+                        </span>
+
+                        <span>
+                            Research
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-stats">
+
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            12.4k
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-code-branch"></i>
+                            2.1k
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            48
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-footer">
+
+                        <small>
+                            Updated 2 days ago
+                        </small>
+
+                        <button class="github-explore-btn">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- REPOSITORY 2 -->
+
+                <article
+                    class="github-repo-card"
+                    data-name="pytorch-research"
+                    data-language="python"
+                    data-topic="deep-learning"
+                >
+
+                    <div class="github-repo-top">
+
+                        <div class="github-repo-icon blue">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+
+
+                        <button
+                            class="github-save-btn"
+                            title="Save repository"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="github-repo-owner">
+                        ai-research-lab
+                    </div>
+
+
+                    <h3>
+                        pytorch-research
+                    </h3>
+
+
+                    <p>
+                        Experimental implementations of deep learning
+                        architectures and reproducible research projects.
+                    </p>
+
+
+                    <div class="github-repo-topics">
+
+                        <span>
+                            Deep Learning
+                        </span>
+
+                        <span>
+                            PyTorch
+                        </span>
+
+                        <span>
+                            Research
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-stats">
+
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            8.7k
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-code-branch"></i>
+                            1.4k
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            32
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-footer">
+
+                        <small>
+                            Updated 4 days ago
+                        </small>
+
+                        <button class="github-explore-btn">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- REPOSITORY 3 -->
+
+                <article
+                    class="github-repo-card"
+                    data-name="computer-vision-lab"
+                    data-language="python"
+                    data-topic="computer-vision"
+                >
+
+                    <div class="github-repo-top">
+
+                        <div class="github-repo-icon cyan">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+
+
+                        <button
+                            class="github-save-btn"
+                            title="Save repository"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="github-repo-owner">
+                        vision-research
+                    </div>
+
+
+                    <h3>
+                        computer-vision-lab
+                    </h3>
+
+
+                    <p>
+                        Computer vision implementations covering object
+                        detection, image segmentation and classification.
+                    </p>
+
+
+                    <div class="github-repo-topics">
+
+                        <span>
+                            Computer Vision
+                        </span>
+
+                        <span>
+                            CNN
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-stats">
+
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            6.2k
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-code-branch"></i>
+                            982
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            21
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-footer">
+
+                        <small>
+                            Updated 1 week ago
+                        </small>
+
+                        <button class="github-explore-btn">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- REPOSITORY 4 -->
+
+                <article
+                    class="github-repo-card"
+                    data-name="transformer-nlp-research"
+                    data-language="python"
+                    data-topic="nlp"
+                >
+
+                    <div class="github-repo-top">
+
+                        <div class="github-repo-icon purple">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+
+
+                        <button
+                            class="github-save-btn"
+                            title="Save repository"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="github-repo-owner">
+                        nlp-research-group
+                    </div>
+
+
+                    <h3>
+                        transformer-nlp-research
+                    </h3>
+
+
+                    <p>
+                        Research implementations for transformer-based
+                        NLP, text classification and language understanding.
+                    </p>
+
+
+                    <div class="github-repo-topics">
+
+                        <span>
+                            NLP
+                        </span>
+
+                        <span>
+                            Transformers
+                        </span>
+
+                        <span>
+                            BERT
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-stats">
+
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            5.9k
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-code-branch"></i>
+                            761
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            16
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-footer">
+
+                        <small>
+                            Updated 8 days ago
+                        </small>
+
+                        <button class="github-explore-btn">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- REPOSITORY 5 -->
+
+                <article
+                    class="github-repo-card"
+                    data-name="medical-ai-research"
+                    data-language="python"
+                    data-topic="healthcare"
+                >
+
+                    <div class="github-repo-top">
+
+                        <div class="github-repo-icon red">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+
+
+                        <button
+                            class="github-save-btn"
+                            title="Save repository"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="github-repo-owner">
+                        medical-ai-lab
+                    </div>
+
+
+                    <h3>
+                        medical-ai-research
+                    </h3>
+
+
+                    <p>
+                        AI and deep learning methods for medical imaging,
+                        diagnosis support and healthcare research.
+                    </p>
+
+
+                    <div class="github-repo-topics">
+
+                        <span>
+                            Healthcare
+                        </span>
+
+                        <span>
+                            Medical AI
+                        </span>
+
+                        <span>
+                            Deep Learning
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-stats">
+
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            4.8k
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-code-branch"></i>
+                            604
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            27
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-footer">
+
+                        <small>
+                            Updated 11 days ago
+                        </small>
+
+                        <button class="github-explore-btn">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- REPOSITORY 6 -->
+
+                <article
+                    class="github-repo-card"
+                    data-name="research-paper-code"
+                    data-language="javascript"
+                    data-topic="machine-learning"
+                >
+
+                    <div class="github-repo-top">
+
+                        <div class="github-repo-icon orange">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+
+                        <button
+                            class="github-save-btn"
+                            title="Save repository"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="github-repo-owner">
+                        reproducible-ai
+                    </div>
+
+
+                    <h3>
+                        research-paper-code
+                    </h3>
+
+
+                    <p>
+                        Reproducible implementations and experiment
+                        notebooks accompanying machine learning papers.
+                    </p>
+
+
+                    <div class="github-repo-topics">
+
+                        <span>
+                            Research
+                        </span>
+
+                        <span>
+                            Reproducibility
+                        </span>
+
+                        <span>
+                            ML
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-stats">
+
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            3.7k
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-code-branch"></i>
+                            428
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            12
+                        </span>
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                    </div>
+
+
+                    <div class="github-repo-footer">
+
+                        <small>
+                            Updated 2 weeks ago
+                        </small>
+
+                        <button class="github-explore-btn">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- EMPTY -->
+
+            <section
+                class="github-empty"
+                id="githubEmpty"
+            >
+
+                <div class="github-empty-icon">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+
+                <h3>
+                    No repositories found
+                </h3>
+
+                <p>
+                    Try another keyword or change your filters.
+                </p>
+
+                <button
+                    class="secondary-page-btn"
+                    id="clearGithubFilters"
+                >
+                    Clear Filters
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 ISSUES SECTION
+                 ================================================= -->
+
+            <section
+                class="github-issues-section"
+                id="issuesSection"
+            >
+
+                <div class="github-issues-header">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            RESEARCH OPPORTUNITIES
+                        </div>
+
+                        <h2>
+                            Open issues worth exploring
+                        </h2>
+
+                        <p>
+                            Find open-source issues that may be useful
+                            for learning, experimentation and research.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="secondary-page-btn"
+                        id="viewAllIssues"
+                    >
+                        View All Issues
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="github-issues-grid">
+
+
+                    <!-- ISSUE 1 -->
+
+                    <article class="github-issue-card">
+
+                        <div class="github-issue-top">
+
+                            <span class="issue-open">
+                                <i class="fa-solid fa-circle"></i>
+                                Open
+                            </span>
+
+                            <span class="issue-label">
+                                Enhancement
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Improve model evaluation pipeline
+                        </h3>
+
+
+                        <p>
+                            Add additional evaluation metrics and
+                            reproducibility checks for research experiments.
+                        </p>
+
+
+                        <div class="github-issue-repo">
+                            <i class="fa-brands fa-github"></i>
+                            ai-research-lab / pytorch-research
+                        </div>
+
+
+                        <div class="github-issue-footer">
+
+                            <span>
+                                #482
+                            </span>
+
+                            <small>
+                                3 days ago
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ISSUE 2 -->
+
+                    <article class="github-issue-card">
+
+                        <div class="github-issue-top">
+
+                            <span class="issue-open">
+                                <i class="fa-solid fa-circle"></i>
+                                Open
+                            </span>
+
+                            <span class="issue-label blue">
+                                Research
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Add medical image segmentation example
+                        </h3>
+
+
+                        <p>
+                            Community contribution requested for a
+                            biomedical image segmentation experiment.
+                        </p>
+
+
+                        <div class="github-issue-repo">
+                            <i class="fa-brands fa-github"></i>
+                            medical-ai-lab / medical-ai-research
+                        </div>
+
+
+                        <div class="github-issue-footer">
+
+                            <span>
+                                #217
+                            </span>
+
+                            <small>
+                                5 days ago
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ISSUE 3 -->
+
+                    <article class="github-issue-card">
+
+                        <div class="github-issue-top">
+
+                            <span class="issue-open">
+                                <i class="fa-solid fa-circle"></i>
+                                Open
+                            </span>
+
+                            <span class="issue-label purple">
+                                Good First Issue
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Implement dataset preprocessing utility
+                        </h3>
+
+
+                        <p>
+                            Create a reusable preprocessing component
+                            for research datasets and experiment pipelines.
+                        </p>
+
+
+                        <div class="github-issue-repo">
+                            <i class="fa-brands fa-github"></i>
+                            research-community / datasets
+                        </div>
+
+
+                        <div class="github-issue-footer">
+
+                            <span>
+                                #89
+                            </span>
+
+                            <small>
+                                1 week ago
+                            </small>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 AI ANALYSIS CTA
+                 ================================================= -->
+
+            <section class="github-ai-cta">
+
+                <div class="github-ai-icon">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                </div>
+
+
+                <div class="github-ai-content">
+
+                    <div class="section-eyebrow">
+                        AI RESEARCH SUPPORT
+                    </div>
+
+                    <h2>
+                        Found a project but don't understand the code?
+                    </h2>
+
+                    <p>
+                        Use the AI Research Assistant to understand
+                        repositories, issues and implementation concepts.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="ai-chat.html"
+                    class="primary-page-btn"
+                >
+                    <i class="fa-solid fa-robot"></i>
+                    Ask AI Assistant
+                </a>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+    /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const sidebarClose =
+        document.getElementById("sidebarClose");
+
+    const sidebarOverlay =
+        document.getElementById("sidebarOverlay");
+
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+            sidebar.classList.add("open");
+
+            sidebarOverlay.classList.add("show");
+
+        }
+    );
+
+
+    sidebarClose.addEventListener(
+        "click",
+        () => {
+
+            sidebar.classList.remove("open");
+
+            sidebarOverlay.classList.remove("show");
+
+        }
+    );
+
+
+    sidebarOverlay.addEventListener(
+        "click",
+        () => {
+
+            sidebar.classList.remove("open");
+
+            sidebarOverlay.classList.remove("show");
+
+        }
+    );
+
+
+    /* =====================================================
+       THEME
+       ===================================================== */
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    themeToggle.addEventListener(
+        "click",
+        function () {
+
+            document.body.classList.toggle(
+                "dark-preview"
+            );
+
+
+            const icon =
+                this.querySelector("i");
+
+
+            if (
+                document.body.classList.contains(
+                    "dark-preview"
+                )
+            ) {
+
+                icon.classList.remove(
+                    "fa-moon"
+                );
+
+                icon.classList.add(
+                    "fa-sun"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-sun"
+                );
+
+                icon.classList.add(
+                    "fa-moon"
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       SEARCH + FILTER
+       ===================================================== */
+
+    const repositorySearch =
+        document.getElementById(
+            "repositorySearch"
+        );
+
+    const globalSearch =
+        document.getElementById(
+            "globalSearch"
+        );
+
+    const languageFilter =
+        document.getElementById(
+            "languageFilter"
+        );
+
+    const topicFilter =
+        document.getElementById(
+            "topicFilter"
+        );
+
+    const repositoryCards =
+        Array.from(
+            document.querySelectorAll(
+                ".github-repo-card"
+            )
+        );
+
+    const repositoryCount =
+        document.getElementById(
+            "repositoryCount"
+        );
+
+    const githubEmpty =
+        document.getElementById(
+            "githubEmpty"
+        );
+
+
+    function filterRepositories() {
+
+        const search =
+            repositorySearch.value
+                .toLowerCase()
+                .trim();
+
+
+        const language =
+            languageFilter.value;
+
+
+        const topic =
+            topicFilter.value;
+
+
+        let visibleCount = 0;
+
+
+        repositoryCards.forEach(
+            card => {
+
+                const name =
+                    card.dataset.name
+                        .toLowerCase();
+
+
+                const cardLanguage =
+                    card.dataset.language;
+
+
+                const cardTopic =
+                    card.dataset.topic;
+
+
+                const searchMatch =
+                    !search ||
+                    name.includes(search);
+
+
+                const languageMatch =
+                    language === "all" ||
+                    cardLanguage === language;
+
+
+                const topicMatch =
+                    topic === "all" ||
+                    cardTopic === topic;
+
+
+                const visible =
+                    searchMatch &&
+                    languageMatch &&
+                    topicMatch;
+
+
+                card.style.display =
+                    visible
+                        ? ""
+                        : "none";
+
+
+                if (visible) {
+
+                    visibleCount++;
+
+                }
+
+            }
+        );
+
+
+        repositoryCount.textContent =
+            visibleCount +
+            (
+                visibleCount === 1
+                    ? " repository"
+                    : " repositories"
+            );
+
+
+        githubEmpty.classList.toggle(
+            "show",
+            visibleCount === 0
+        );
+
+    }
+
+
+    repositorySearch.addEventListener(
+        "input",
+        filterRepositories
+    );
+
+
+    languageFilter.addEventListener(
+        "change",
+        filterRepositories
+    );
+
+
+    topicFilter.addEventListener(
+        "change",
+        filterRepositories
+    );
+
+
+    globalSearch.addEventListener(
+        "input",
+        function () {
+
+            repositorySearch.value =
+                this.value;
+
+            filterRepositories();
+
+        }
+    );
+
+
+    /* =====================================================
+       TOPIC BUTTONS
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".github-topic"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        document
+                            .querySelectorAll(
+                                ".github-topic"
+                            )
+                            .forEach(
+                                item => {
+
+                                    item.classList.remove(
+                                        "active"
+                                    );
+
+                                }
+                            );
+
+
+                        this.classList.add(
+                            "active"
+                        );
+
+
+                        const topic =
+                            this.dataset.topic;
+
+
+                        topicFilter.value =
+                            topic;
+
+
+                        if (
+                            topic === "all"
+                        ) {
+
+                            repositorySearch.value =
+                                "";
+
+                        }
+
+
+                        filterRepositories();
+
+                    }
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       SEARCH BUTTON
+       ===================================================== */
+
+    document
+        .getElementById(
+            "repositorySearchButton"
+        )
+        .addEventListener(
+            "click",
+            filterRepositories
+        );
+
+
+    /* =====================================================
+       HERO SEARCH
+       ===================================================== */
+
+    document
+        .getElementById(
+            "searchGithubBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                repositorySearch.focus();
+
+                repositorySearch
+                    .scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+
+            }
+        );
+
+
+    /* =====================================================
+       ISSUES SCROLL
+       ===================================================== */
+
+    document
+        .getElementById(
+            "browseIssuesBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                document
+                    .getElementById(
+                        "issuesSection"
+                    )
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+            }
+        );
+
+
+    document
+        .getElementById(
+            "viewAllIssues"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                alert(
+                    "All GitHub issues will be connected later."
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       SAVE REPOSITORY
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".github-save-btn"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const icon =
+                            this.querySelector(
+                                "i"
+                            );
+
+
+                        icon.classList.toggle(
+                            "fa-regular"
+                        );
+
+
+                        icon.classList.toggle(
+                            "fa-solid"
+                        );
+
+
+                        this.classList.toggle(
+                            "saved"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       EXPLORE REPOSITORY
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".github-explore-btn"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const card =
+                            this.closest(
+                                ".github-repo-card"
+                            );
+
+
+                        const repository =
+                            card
+                                .querySelector(
+                                    "h3"
+                                )
+                                .textContent
+                                .trim();
+
+
+                        alert(
+                            repository +
+                            " details will be connected later."
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       ADVANCED FILTER
+       ===================================================== */
+
+    document
+        .getElementById(
+            "advancedFilterBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                alert(
+                    "Advanced GitHub filters will be connected later."
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       CLEAR FILTERS
+       ===================================================== */
+
+    document
+        .getElementById(
+            "clearGithubFilters"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                repositorySearch.value =
+                    "";
+
+                languageFilter.value =
+                    "all";
+
+                topicFilter.value =
+                    "all";
+
+
+                document
+                    .querySelectorAll(
+                        ".github-topic"
+                    )
+                    .forEach(
+                        button => {
+
+                            button.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                document
+                    .querySelector(
+                        '.github-topic[data-topic="all"]'
+                    )
+                    .classList.add(
+                        "active"
+                    );
+
+
+                filterRepositories();
+
+            }
+        );
+
+</script>
+
+</body>
+</html>

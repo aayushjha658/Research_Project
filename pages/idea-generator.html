@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Idea Generator | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <a href="../index.html">
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+            </a>
+        </div>
+
+        <button class="sidebar-close" id="sidebarClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">MAIN MENU</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    Dashboard
+                </a>
+
+                <a href="research-domain.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+                    Research Domains
+                </a>
+
+                <a href="papers.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+                    Research Papers
+                </a>
+
+                <a href="datasets.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+                    Datasets
+                </a>
+
+                <a href="models.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+                    AI Models
+                </a>
+
+                <a href="github.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    GitHub Explorer
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">AI RESEARCH TOOLS</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="ai-analysis.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+                    AI Analysis
+                </a>
+
+                <a href="research-gap.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+                    Research Gap
+                </a>
+
+                <a href="idea-generator.html" class="sidebar-link active">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+                    Idea Generator
+                </a>
+
+                <a href="literature.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+                    Literature Review
+                </a>
+
+                <a href="ai-chat.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+                    AI Assistant
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">RESOURCES</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="conferences.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+                    Conferences
+                </a>
+
+                <a href="citation.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+                    Citation Generator
+                </a>
+
+                <a href="internet-research.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+                    Internet Research
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="sidebar-link">
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+                Settings
+            </a>
+
+            <a href="profile.html" class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+                    <strong>Researcher</strong>
+                    <span>Student Account</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP NAVBAR -->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="page-title">
+
+                    <span>AI Research Tools</span>
+
+                    <h1>Research Idea Generator</h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search papers, topics, datasets..."
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <div class="navbar-actions">
+
+                <button class="navbar-icon-btn" id="themeToggle">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </a>
+
+                <a href="profile.html" class="navbar-user">
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+                        <strong>Researcher</strong>
+                        <span>Student</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE ================= -->
+
+        <div class="page-content">
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <a href="research-gap.html">
+                    Research Gap
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    Idea Generator
+                </span>
+
+            </div>
+
+
+            <!-- ================= HERO ================= -->
+
+            <section class="idea-generator-hero">
+
+                <div class="idea-hero-content">
+
+                    <div class="idea-ai-badge">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        AI-POWERED RESEARCH DISCOVERY
+
+                    </div>
+
+
+                    <h2>
+                        Turn Research Gaps into
+                        <span>Innovative Ideas</span>
+                    </h2>
+
+
+                    <p>
+                        Generate practical, novel and research-ready
+                        ideas from existing research gaps, topics and
+                        emerging technologies.
+                    </p>
+
+
+                    <div class="idea-hero-actions">
+
+                        <button
+                            class="primary-idea-btn"
+                            id="startIdeaBtn"
+                        >
+                            <i class="fa-solid fa-lightbulb"></i>
+                            Generate Research Ideas
+                        </button>
+
+                        <a
+                            href="research-gap.html"
+                            class="secondary-idea-btn"
+                        >
+                            <i class="fa-solid fa-chart-pie"></i>
+                            View Research Gaps
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="idea-hero-visual">
+
+                    <div class="idea-orbit orbit-one"></div>
+
+                    <div class="idea-orbit orbit-two"></div>
+
+                    <div class="idea-orbit orbit-three"></div>
+
+                    <div class="idea-visual-center">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                    </div>
+
+                    <span class="idea-node node-one">
+                        <i class="fa-solid fa-brain"></i>
+                    </span>
+
+                    <span class="idea-node node-two">
+                        <i class="fa-solid fa-flask"></i>
+                    </span>
+
+                    <span class="idea-node node-three">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </span>
+
+                    <span class="idea-node node-four">
+                        <i class="fa-solid fa-microscope"></i>
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= QUICK STATS ================= -->
+
+            <section class="idea-stats-grid">
+
+                <div class="idea-stat-card">
+
+                    <div class="idea-stat-icon blue">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+                        <span>IDEAS GENERATED</span>
+                        <strong>24</strong>
+                        <small>This research session</small>
+                    </div>
+
+                </div>
+
+
+                <div class="idea-stat-card">
+
+                    <div class="idea-stat-icon purple">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <div>
+                        <span>AI NOVELTY SCORE</span>
+                        <strong>87%</strong>
+                        <small>Average generated score</small>
+                    </div>
+
+                </div>
+
+
+                <div class="idea-stat-card">
+
+                    <div class="idea-stat-icon green">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <div>
+                        <span>RESEARCH READY</span>
+                        <strong>11</strong>
+                        <small>Potential project ideas</small>
+                    </div>
+
+                </div>
+
+
+                <div class="idea-stat-card">
+
+                    <div class="idea-stat-icon orange">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+
+                    <div>
+                        <span>SAVED IDEAS</span>
+                        <strong>06</strong>
+                        <small>Ideas saved by you</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= GENERATOR PANEL ================= -->
+
+            <section class="idea-generator-panel" id="generatorPanel">
+
+                <div class="idea-panel-header">
+
+                    <div class="idea-panel-title">
+
+                        <div class="idea-panel-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+
+                        <div>
+
+                            <span>CREATE NEW</span>
+
+                            <h2>
+                                Research Idea Generator
+                            </h2>
+
+                            <p>
+                                Provide your research context and let
+                                AI suggest potential research directions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="idea-step-badge">
+                        Step 1 of 3
+                    </div>
+
+                </div>
+
+
+                <div class="idea-form-grid">
+
+
+                    <!-- RESEARCH DOMAIN -->
+
+                    <div class="idea-form-group">
+
+                        <label for="researchDomain">
+                            Research Domain
+                        </label>
+
+                        <div class="idea-input-wrapper">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <select id="researchDomain">
+
+                                <option value="">
+                                    Select research domain
+                                </option>
+
+                                <option value="artificial-intelligence">
+                                    Artificial Intelligence
+                                </option>
+
+                                <option value="machine-learning">
+                                    Machine Learning
+                                </option>
+
+                                <option value="deep-learning">
+                                    Deep Learning
+                                </option>
+
+                                <option value="healthcare-ai">
+                                    Healthcare AI
+                                </option>
+
+                                <option value="computer-vision">
+                                    Computer Vision
+                                </option>
+
+                                <option value="nlp">
+                                    Natural Language Processing
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESEARCH TOPIC -->
+
+                    <div class="idea-form-group">
+
+                        <label for="researchTopic">
+                            Research Topic
+                        </label>
+
+                        <div class="idea-input-wrapper">
+
+                            <i class="fa-solid fa-book-open"></i>
+
+                            <input
+                                type="text"
+                                id="researchTopic"
+                                placeholder="e.g. AI-based medical diagnosis"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESEARCH GAP -->
+
+                    <div class="idea-form-group full-width">
+
+                        <label for="researchGap">
+
+                            Existing Research Gap
+
+                            <span class="optional-label">
+                                Optional
+                            </span>
+
+                        </label>
+
+                        <div class="idea-textarea-wrapper">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                            <textarea
+                                id="researchGap"
+                                rows="4"
+                                placeholder="Describe the research gap you want to explore..."
+                            ></textarea>
+
+                        </div>
+
+                        <small class="field-help">
+                            You can copy a gap from the Research Gap page.
+                        </small>
+
+                    </div>
+
+
+                    <!-- TECHNOLOGY -->
+
+                    <div class="idea-form-group">
+
+                        <label for="technology">
+                            Preferred Technology
+                        </label>
+
+                        <div class="idea-input-wrapper">
+
+                            <i class="fa-solid fa-microchip"></i>
+
+                            <select id="technology">
+
+                                <option value="">
+                                    Select technology
+                                </option>
+
+                                <option>
+                                    CNN
+                                </option>
+
+                                <option>
+                                    Transformer
+                                </option>
+
+                                <option>
+                                    Vision Transformer
+                                </option>
+
+                                <option>
+                                    Large Language Model
+                                </option>
+
+                                <option>
+                                    Multimodal AI
+                                </option>
+
+                                <option>
+                                    Explainable AI
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LEVEL -->
+
+                    <div class="idea-form-group">
+
+                        <label for="researchLevel">
+                            Research Level
+                        </label>
+
+                        <div class="idea-input-wrapper">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                            <select id="researchLevel">
+
+                                <option value="">
+                                    Select research level
+                                </option>
+
+                                <option>
+                                    Undergraduate Project
+                                </option>
+
+                                <option>
+                                    Master's Research
+                                </option>
+
+                                <option>
+                                    PhD Research
+                                </option>
+
+                                <option>
+                                    Industry Research
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GENERATION OPTIONS -->
+
+                <div class="idea-options-section">
+
+                    <div class="idea-options-title">
+
+                        <i class="fa-solid fa-sliders"></i>
+
+                        Generation Preferences
+
+                    </div>
+
+
+                    <div class="idea-preference-grid">
+
+
+                        <label class="idea-check-card">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span class="custom-check">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Novel Ideas
+                                </strong>
+
+                                <small>
+                                    Prioritize originality
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="idea-check-card">
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                            <span class="custom-check">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Practical Ideas
+                                </strong>
+
+                                <small>
+                                    Focus on implementation
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="idea-check-card">
+
+                            <input
+                                type="checkbox"
+                            >
+
+                            <span class="custom-check">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Industry Focus
+                                </strong>
+
+                                <small>
+                                    Real-world applications
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="idea-check-card">
+
+                            <input
+                                type="checkbox"
+                            >
+
+                            <span class="custom-check">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Publication Potential
+                                </strong>
+
+                                <small>
+                                    Journal-ready directions
+                                </small>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="idea-generator-footer">
+
+                    <span class="idea-security-note">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        Your research information stays private.
+
+                    </span>
+
+
+                    <button
+                        class="generate-ideas-btn"
+                        id="generateIdeasBtn"
+                    >
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        Generate Ideas
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= GENERATED IDEAS ================= -->
+
+            <section
+                class="generated-ideas-section"
+                id="generatedIdeasSection"
+            >
+
+                <div class="section-heading-row">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            AI RESULTS
+                        </span>
+
+                        <h2>
+                            Suggested Research Ideas
+                        </h2>
+
+                        <p>
+                            Explore potential directions generated
+                            from your research context.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="refresh-ideas-btn"
+                        id="refreshIdeasBtn"
+                    >
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        Generate Again
+
+                    </button>
+
+                </div>
+
+
+                <div class="generated-ideas-grid">
+
+
+                    <!-- IDEA 1 -->
+
+                    <article class="generated-idea-card">
+
+                        <div class="idea-card-top">
+
+                            <span class="idea-rank">
+                                #01
+                            </span>
+
+                            <span class="idea-novelty high">
+                                <i class="fa-solid fa-fire"></i>
+                                92% Novel
+                            </span>
+
+                            <button
+                                class="save-idea-btn"
+                                title="Save idea"
+                            >
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="idea-card-icon">
+
+                            <i class="fa-solid fa-brain"></i>
+
+                        </div>
+
+
+                        <span class="idea-card-category">
+                            MULTIMODAL AI
+                        </span>
+
+
+                        <h3>
+                            Explainable Multimodal AI for
+                            Clinical Diagnosis
+                        </h3>
+
+
+                        <p>
+                            Develop a multimodal framework that combines
+                            medical imaging with structured clinical
+                            information while providing interpretable
+                            diagnostic reasoning.
+                        </p>
+
+
+                        <div class="idea-card-metrics">
+
+                            <div>
+
+                                <span>
+                                    Novelty
+                                </span>
+
+                                <strong>
+                                    92%
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Feasibility
+                                </span>
+
+                                <strong>
+                                    84%
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Impact
+                                </span>
+
+                                <strong>
+                                    90%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="idea-card-tags">
+
+                            <span>Explainable AI</span>
+                            <span>Healthcare</span>
+                            <span>Multimodal</span>
+
+                        </div>
+
+
+                        <div class="idea-card-footer">
+
+                            <button
+                                class="view-idea-btn"
+                            >
+                                View Details
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- IDEA 2 -->
+
+                    <article class="generated-idea-card">
+
+                        <div class="idea-card-top">
+
+                            <span class="idea-rank">
+                                #02
+                            </span>
+
+                            <span class="idea-novelty high">
+                                <i class="fa-solid fa-fire"></i>
+                                89% Novel
+                            </span>
+
+                            <button class="save-idea-btn">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="idea-card-icon purple">
+
+                            <i class="fa-solid fa-database"></i>
+
+                        </div>
+
+
+                        <span class="idea-card-category">
+                            DATASET & AI
+                        </span>
+
+
+                        <h3>
+                            Federated Learning for
+                            Privacy-Preserving Diagnosis
+                        </h3>
+
+
+                        <p>
+                            Investigate federated learning approaches
+                            for training medical AI models across
+                            institutions without directly sharing
+                            sensitive patient data.
+                        </p>
+
+
+                        <div class="idea-card-metrics">
+
+                            <div>
+                                <span>Novelty</span>
+                                <strong>89%</strong>
+                            </div>
+
+                            <div>
+                                <span>Feasibility</span>
+                                <strong>78%</strong>
+                            </div>
+
+                            <div>
+                                <span>Impact</span>
+                                <strong>94%</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="idea-card-tags">
+
+                            <span>Federated Learning</span>
+                            <span>Privacy</span>
+                            <span>Healthcare</span>
+
+                        </div>
+
+
+                        <div class="idea-card-footer">
+
+                            <button class="view-idea-btn">
+                                View Details
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- IDEA 3 -->
+
+                    <article class="generated-idea-card">
+
+                        <div class="idea-card-top">
+
+                            <span class="idea-rank">
+                                #03
+                            </span>
+
+                            <span class="idea-novelty medium">
+                                <i class="fa-solid fa-star"></i>
+                                84% Novel
+                            </span>
+
+                            <button class="save-idea-btn">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="idea-card-icon green">
+
+                            <i class="fa-solid fa-microchip"></i>
+
+                        </div>
+
+
+                        <span class="idea-card-category">
+                            EDGE AI
+                        </span>
+
+
+                        <h3>
+                            Lightweight AI Models for
+                            Real-Time Medical Screening
+                        </h3>
+
+
+                        <p>
+                            Design an optimized deep learning model using
+                            compression and efficient architectures for
+                            real-time medical screening on edge devices.
+                        </p>
+
+
+                        <div class="idea-card-metrics">
+
+                            <div>
+                                <span>Novelty</span>
+                                <strong>84%</strong>
+                            </div>
+
+                            <div>
+                                <span>Feasibility</span>
+                                <strong>91%</strong>
+                            </div>
+
+                            <div>
+                                <span>Impact</span>
+                                <strong>86%</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="idea-card-tags">
+
+                            <span>Edge AI</span>
+                            <span>Optimization</span>
+                            <span>Computer Vision</span>
+
+                        </div>
+
+
+                        <div class="idea-card-footer">
+
+                            <button class="view-idea-btn">
+                                View Details
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= IDEA DETAILS ================= -->
+
+            <section class="idea-roadmap-card">
+
+                <div class="roadmap-header">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            RESEARCH ROADMAP
+                        </span>
+
+                        <h2>
+                            From Idea to Research Paper
+                        </h2>
+
+                    </div>
+
+                    <span class="roadmap-status">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Ready to Start
+                    </span>
+
+                </div>
+
+
+                <div class="roadmap-steps">
+
+
+                    <div class="roadmap-step active">
+
+                        <div class="roadmap-number">
+                            01
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Research Idea
+                            </strong>
+
+                            <span>
+                                Define the core problem
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="roadmap-line"></div>
+
+
+                    <div class="roadmap-step">
+
+                        <div class="roadmap-number">
+                            02
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Literature Review
+                            </strong>
+
+                            <span>
+                                Analyze existing research
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="roadmap-line"></div>
+
+
+                    <div class="roadmap-step">
+
+                        <div class="roadmap-number">
+                            03
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Methodology
+                            </strong>
+
+                            <span>
+                                Design research approach
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="roadmap-line"></div>
+
+
+                    <div class="roadmap-step">
+
+                        <div class="roadmap-number">
+                            04
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Experiment
+                            </strong>
+
+                            <span>
+                                Implement and evaluate
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="roadmap-line"></div>
+
+
+                    <div class="roadmap-step">
+
+                        <div class="roadmap-number">
+                            05
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Publication
+                            </strong>
+
+                            <span>
+                                Prepare research paper
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- ================= IDEA DETAIL MODAL ================= -->
+
+<div class="idea-modal" id="ideaModal">
+
+    <div class="idea-modal-overlay" id="ideaModalOverlay"></div>
+
+    <div class="idea-modal-box">
+
+        <button
+            class="idea-modal-close"
+            id="ideaModalClose"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="idea-modal-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+        </div>
+
+
+        <span class="section-eyebrow">
+            AI GENERATED RESEARCH IDEA
+        </span>
+
+
+        <h2 id="ideaModalTitle">
+            Research Idea
+        </h2>
+
+
+        <p id="ideaModalDescription">
+            Detailed research information will appear here.
+        </p>
+
+
+        <div class="modal-score-grid">
+
+            <div>
+                <span>Novelty</span>
+                <strong id="modalNovelty">92%</strong>
+            </div>
+
+            <div>
+                <span>Feasibility</span>
+                <strong id="modalFeasibility">84%</strong>
+            </div>
+
+            <div>
+                <span>Impact</span>
+                <strong id="modalImpact">90%</strong>
+            </div>
+
+        </div>
+
+
+        <div class="modal-actions">
+
+            <button
+                class="modal-save-btn"
+                id="modalSaveBtn"
+            >
+                <i class="fa-regular fa-bookmark"></i>
+                Save Idea
+            </button>
+
+            <button
+                class="modal-roadmap-btn"
+                id="modalRoadmapBtn"
+            >
+                Start Research
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ================= SIDEBAR ================= */
+
+const sidebar =
+    document.getElementById("sidebar");
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const sidebarClose =
+    document.getElementById("sidebarClose");
+
+const sidebarOverlay =
+    document.getElementById("sidebarOverlay");
+
+
+menuToggle.addEventListener("click", () => {
+
+    sidebar.classList.add("open");
+    sidebarOverlay.classList.add("show");
+
+});
+
+
+sidebarClose.addEventListener("click", () => {
+
+    sidebar.classList.remove("open");
+    sidebarOverlay.classList.remove("show");
+
+});
+
+
+sidebarOverlay.addEventListener("click", () => {
+
+    sidebar.classList.remove("open");
+    sidebarOverlay.classList.remove("show");
+
+});
+
+
+/* ================= THEME ================= */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+
+themeToggle.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark-preview");
+
+    const icon =
+        this.querySelector("i");
+
+    if (
+        document.body.classList.contains("dark-preview")
+    ) {
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+
+    } else {
+
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+
+    }
+
+});
+
+
+/* ================= START BUTTON ================= */
+
+document
+    .getElementById("startIdeaBtn")
+    .addEventListener("click", () => {
+
+        document
+            .getElementById("generatorPanel")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    });
+
+
+/* ================= GENERATE IDEAS ================= */
+
+const generateIdeasBtn =
+    document.getElementById("generateIdeasBtn");
+
+const generatedIdeasSection =
+    document.getElementById("generatedIdeasSection");
+
+
+generateIdeasBtn.addEventListener("click", function () {
+
+    const domain =
+        document.getElementById("researchDomain").value;
+
+    const topic =
+        document.getElementById("researchTopic").value.trim();
+
+
+    if (!domain && !topic) {
+
+        showIdeaToast(
+            "Please select a research domain or enter a research topic."
+        );
+
+        return;
+
+    }
+
+
+    const originalHTML =
+        this.innerHTML;
+
+
+    this.disabled = true;
+
+    this.innerHTML = `
+        <i class="fa-solid fa-spinner fa-spin"></i>
+        Generating Ideas...
+    `;
+
+
+    setTimeout(() => {
+
+        this.disabled = false;
+
+        this.innerHTML =
+            originalHTML;
+
+
+        generatedIdeasSection.classList.add(
+            "ideas-visible"
+        );
+
+
+        generatedIdeasSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+
+        showIdeaToast(
+            "Research ideas generated successfully."
+        );
+
+    }, 1200);
+
+});
+
+
+/* ================= REFRESH ================= */
+
+document
+    .getElementById("refreshIdeasBtn")
+    .addEventListener("click", () => {
+
+        const button =
+            document.getElementById("refreshIdeasBtn");
+
+        const original =
+            button.innerHTML;
+
+        button.disabled = true;
+
+        button.innerHTML = `
+            <i class="fa-solid fa-spinner fa-spin"></i>
+            Generating...
+        `;
+
+
+        setTimeout(() => {
+
+            button.disabled = false;
+
+            button.innerHTML = original;
+
+            showIdeaToast(
+                "New research ideas generated."
+            );
+
+        }, 1000);
+
+    });
+
+
+/* ================= SAVE IDEA ================= */
+
+document
+    .querySelectorAll(".save-idea-btn")
+    .forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const icon =
+                this.querySelector("i");
+
+
+            this.classList.toggle("saved");
+
+
+            if (
+                this.classList.contains("saved")
+            ) {
+
+                icon.classList.remove(
+                    "fa-regular"
+                );
+
+                icon.classList.add(
+                    "fa-solid"
+                );
+
+                showIdeaToast(
+                    "Research idea saved."
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-solid"
+                );
+
+                icon.classList.add(
+                    "fa-regular"
+                );
+
+            }
+
+        });
+
+    });
+
+
+/* ================= IDEA MODAL ================= */
+
+const ideaModal =
+    document.getElementById("ideaModal");
+
+const ideaModalClose =
+    document.getElementById("ideaModalClose");
+
+const ideaModalOverlay =
+    document.getElementById("ideaModalOverlay");
+
+const ideaModalTitle =
+    document.getElementById("ideaModalTitle");
+
+const ideaModalDescription =
+    document.getElementById("ideaModalDescription");
+
+
+const ideaDescriptions = {
+
+    "Explainable Multimodal AI for Clinical Diagnosis":
+        "Develop a multimodal framework that combines medical imaging and structured clinical information while producing interpretable diagnostic reasoning.",
+
+    "Federated Learning for Privacy-Preserving Diagnosis":
+        "Investigate federated learning approaches that allow multiple institutions to collaboratively train medical AI systems without directly sharing sensitive patient information.",
+
+    "Lightweight AI Models for Real-Time Medical Screening":
+        "Design an efficient deep learning architecture using model compression and optimization techniques for real-time screening on resource-constrained devices."
+
+};
+
+
+document
+    .querySelectorAll(".view-idea-btn")
+    .forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const card =
+                this.closest(".generated-idea-card");
+
+            const title =
+                card.querySelector("h3").textContent.trim();
+
+            const description =
+                ideaDescriptions[title] ||
+                card.querySelector("p").textContent.trim();
+
+
+            ideaModalTitle.textContent =
+                title;
+
+            ideaModalDescription.textContent =
+                description;
+
+
+            ideaModal.classList.add("show");
+
+        });
+
+    });
+
+
+function closeIdeaModal() {
+
+    ideaModal.classList.remove("show");
+
+}
+
+
+ideaModalClose.addEventListener(
+    "click",
+    closeIdeaModal
+);
+
+
+ideaModalOverlay.addEventListener(
+    "click",
+    closeIdeaModal
+);
+
+
+document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+
+        closeIdeaModal();
+
+    }
+
+});
+
+
+/* ================= MODAL SAVE ================= */
+
+document
+    .getElementById("modalSaveBtn")
+    .addEventListener("click", function () {
+
+        this.classList.toggle("saved");
+
+        if (this.classList.contains("saved")) {
+
+            this.innerHTML = `
+                <i class="fa-solid fa-bookmark"></i>
+                Saved
+            `;
+
+            showIdeaToast(
+                "Research idea saved."
+            );
+
+        } else {
+
+            this.innerHTML = `
+                <i class="fa-regular fa-bookmark"></i>
+                Save Idea
+            `;
+
+        }
+
+    });
+
+
+/* ================= START RESEARCH ================= */
+
+document
+    .getElementById("modalRoadmapBtn")
+    .addEventListener("click", () => {
+
+        closeIdeaModal();
+
+        document
+            .querySelector(".idea-roadmap-card")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    });
+
+
+/* ================= TOAST ================= */
+
+function showIdeaToast(message) {
+
+    const old =
+        document.querySelector(".idea-toast");
+
+    if (old) {
+        old.remove();
+    }
+
+
+    const toast =
+        document.createElement("div");
+
+    toast.className =
+        "idea-toast";
+
+    toast.innerHTML = `
+        <i class="fa-solid fa-circle-check"></i>
+        <span>${message}</span>
+    `;
+
+
+    document.body.appendChild(toast);
+
+
+    setTimeout(() => {
+
+        toast.classList.add("hide");
+
+        setTimeout(() => {
+
+            toast.remove();
+
+        }, 300);
+
+    }, 2200);
+
+}
+
+</script>
+
+</body>
+</html>

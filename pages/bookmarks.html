@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookmarks | Research AI</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Bookmarks CSS -->
+    <link rel="stylesheet" href="../css/bookmarks.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="top-header">
+
+        <a href="dashboard.html" class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <span>Research AI</span>
+
+        </a>
+
+
+        <div class="header-actions">
+
+            <a href="papers.html" class="header-link">
+                <i class="fa-solid fa-book"></i>
+                Research Papers
+            </a>
+
+            <a href="dashboard.html" class="header-link">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+                My Bookmarks
+            </span>
+
+        </div>
+
+
+        <!-- HERO -->
+
+        <section class="bookmarks-hero">
+
+            <div class="hero-left">
+
+                <div class="hero-icon">
+                    <i class="fa-solid fa-bookmark"></i>
+                </div>
+
+
+                <div class="hero-content">
+
+                    <h1>My Bookmarked Papers</h1>
+
+                    <p>
+                        Access and manage the research papers
+                        you have saved for later.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="bookmark-count">
+
+                <strong id="bookmarkCount">0</strong>
+
+                <span>Saved Papers</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="toolbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" id="searchInput" placeholder="Search your saved papers...">
+
+            </div>
+
+
+            <a href="papers.html" class="explore-btn">
+                <i class="fa-solid fa-compass"></i>
+                Explore Papers
+            </a>
+
+        </section>
+
+
+        <!-- BOOKMARK CARDS -->
+
+        <section class="bookmarks-grid" id="bookmarksContainer">
+
+            <div class="loading-state">
+
+                <div class="loading-spinner"></div>
+
+                <p>
+                    Loading your bookmarked papers...
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <script>
+
+        "use strict";
+
+        const API_BASE = "../backend";
+
+        const bookmarksContainer =
+            document.getElementById("bookmarksContainer");
+
+        const bookmarkCount =
+            document.getElementById("bookmarkCount");
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        let allBookmarks = [];
+        let csrfToken = "";
+
+
+        /* ================================
+           ESCAPE HTML
+        ================================ */
+
+        function escapeHtml(value) {
+
+            if (value === null || value === undefined) {
+                return "";
+            }
+
+            const div = document.createElement("div");
+
+            div.textContent = String(value);
+
+            return div.innerHTML;
+        }
+
+
+        /* ================================
+           LOAD BOOKMARKS
+        ================================ */
+
+        async function loadBookmarks() {
+
+            try {
+
+                const response = await fetch(
+                    API_BASE + "/user/bookmarks.php",
+                    {
+                        method: "GET",
+                        credentials: "same-origin",
+                        headers: {
+                            "Accept": "application/json"
+                        }
+                    }
+                );
+
+                const data = await response.json();
+
+                if (!response.ok || !data.success) {
+
+                    throw new Error(
+                        data.message ||
+                        "Unable to load bookmarks."
+                    );
+                }
+
+                csrfToken = data.csrf_token || "";
+
+                allBookmarks =
+                    data.bookmarks ||
+                    data.data?.bookmarks ||
+                    data.data ||
+                    [];
+
+
+                bookmarkCount.textContent =
+                    allBookmarks.length;
+
+
+                renderBookmarks(allBookmarks);
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Bookmark Load Error:",
+                    error
+                );
+
+                bookmarksContainer.innerHTML = `
+            <div class="error-state">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <br><br>
+
+                ${escapeHtml(error.message)}
+
+            </div>
+        `;
+            }
+        }
+
+
+        /* ================================
+           RENDER BOOKMARKS
+        ================================ */
+
+        function renderBookmarks(bookmarks) {
+
+            if (!Array.isArray(bookmarks) || bookmarks.length === 0) {
+
+                bookmarksContainer.innerHTML = `
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+
+                    <i class="fa-regular fa-bookmark"></i>
+
+                </div>
+
+                <h2>No Bookmarked Papers Yet</h2>
+
+                <p>
+                    You haven't saved any research papers yet.
+                </p>
+
+                <a
+                    href="papers.html"
+                    class="explore-btn"
+                >
+
+                    <i class="fa-solid fa-compass"></i>
+
+                    Explore Research Papers
+
+                </a>
+
+            </div>
+        `;
+
+                return;
+            }
+
+
+            bookmarksContainer.innerHTML =
+                bookmarks
+                    .map(createBookmarkCard)
+                    .join("");
+        }
+
+
+        /* ================================
+           CREATE BOOKMARK CARD
+        ================================ */
+
+        function createBookmarkCard(paper) {
+
+            const paperId =
+                paper.paper_id ||
+                paper.id ||
+                paper.paper?.id;
+
+            const title =
+                paper.title ||
+                paper.paper?.title ||
+                "Untitled Research Paper";
+
+            const authors =
+                paper.authors ||
+                paper.paper?.authors ||
+                "Authors not available";
+
+            const abstract =
+                paper.abstract ||
+                paper.paper?.abstract ||
+                "Abstract not available.";
+
+            const journal =
+                paper.journal ||
+                paper.paper?.journal ||
+                "Journal not specified";
+
+            const domain =
+                paper.domain ||
+                paper.paper?.domain;
+
+            const year =
+                paper.publication_year ||
+                paper.paper?.publication_year;
+
+            const citationCount =
+                paper.citation_count ??
+                paper.paper?.citation_count ??
+                0;
+
+            const viewCount =
+                paper.view_count ??
+                paper.paper?.view_count ??
+                0;
+
+            const pdfPath =
+                paper.pdf_path ||
+                paper.paper?.pdf_path;
+
+
+            const downloadButton =
+                pdfPath
+                    ? `
+                <a
+                    href="../backend/papers/download.php?id=${encodeURIComponent(paperId)}"
+                    class="action-btn download-btn"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download PDF
+
+                </a>
+            `
+                    : "";
+
+
+            return `
+
+        <article
+            class="paper-card"
+            data-paper-id="${paperId}"
+        >
+
+            <div class="paper-card-top">
+
+                <div class="paper-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <div class="saved-badge">
+
+                    <i class="fa-solid fa-bookmark"></i>
+
+                    Saved
+
+                </div>
+
+            </div>
+
+
+            <h2 class="paper-title">
+
+                <a
+                    href="paper-details.html?id=${encodeURIComponent(paperId)}"
+                >
+                    ${escapeHtml(title)}
+                </a>
+
+            </h2>
+
+
+            <div class="authors">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>
+                    ${escapeHtml(authors)}
+                </span>
+
+            </div>
+
+
+            <p class="abstract">
+
+                ${escapeHtml(abstract)}
+
+            </p>
+
+
+            <div class="meta-tags">
+
+                ${domain
+                    ? `
+                            <span class="tag">
+
+                                <i class="fa-solid fa-layer-group"></i>
+
+                                ${escapeHtml(domain)}
+
+                            </span>
+                        `
+                    : ""
+                }
+
+
+                ${year
+                    ? `
+                            <span class="tag">
+
+                                <i class="fa-solid fa-calendar"></i>
+
+                                ${escapeHtml(year)}
+
+                            </span>
+                        `
+                    : ""
+                }
+
+            </div>
+
+
+            <div class="journal-info">
+
+                <i class="fa-solid fa-building-columns"></i>
+
+                ${escapeHtml(journal)}
+
+            </div>
+
+
+            <div class="paper-stats">
+
+                <span>
+
+                    <i class="fa-solid fa-quote-right"></i>
+
+                    ${citationCount} Citations
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    ${viewCount} Views
+
+                </span>
+
+            </div>
+
+
+            <div class="card-actions">
+
+
+                <a
+                    href="paper-details.html?id=${encodeURIComponent(paperId)}"
+                    class="action-btn view-btn"
+                >
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View Paper
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="action-btn remove-btn"
+                    onclick="removeBookmark(${Number(paperId)})"
+                >
+
+                    <i class="fa-solid fa-bookmark"></i>
+
+                    Remove
+
+                </button>
+
+
+                ${downloadButton}
+
+
+            </div>
+
+
+        </article>
+    `;
+        }
+
+
+        /* ================================
+           REMOVE BOOKMARK
+        ================================ */
+
+        async function removeBookmark(paperId) {
+
+            if (
+                !confirm(
+                    "Remove this paper from your bookmarks?"
+                )
+            ) {
+                return;
+            }
+
+            if (!csrfToken) {
+
+                alert(
+                    "Security token is missing. Please refresh the page."
+                );
+
+                return;
+            }
+
+
+            try {
+
+                const response = await fetch(
+                    API_BASE + "/user/bookmarks.php",
+                    {
+
+                        method: "DELETE",
+
+                        credentials: "same-origin",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json",
+
+                            "Accept":
+                                "application/json",
+
+                            "X-CSRF-Token":
+                                csrfToken
+
+                        },
+
+                        body: JSON.stringify({
+                            paper_id: paperId
+                        })
+
+                    }
+                );
+
+
+                const data =
+                    await response.json();
+
+
+                if (
+                    !response.ok ||
+                    !data.success
+                ) {
+
+                    throw new Error(
+                        data.message ||
+                        "Unable to remove bookmark."
+                    );
+                }
+
+
+                allBookmarks =
+                    allBookmarks.filter(
+                        paper =>
+                            Number(
+                                paper.paper_id ||
+                                paper.id ||
+                                paper.paper?.id
+                            ) !== Number(paperId)
+                    );
+
+
+                bookmarkCount.textContent =
+                    allBookmarks.length;
+
+
+                renderBookmarks(allBookmarks);
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Bookmark Remove Error:",
+                    error
+                );
+
+                alert(
+                    error.message ||
+                    "Unable to remove bookmark."
+                );
+            }
+        }
+
+
+        /* ================================
+           SEARCH
+        ================================ */
+
+        searchInput.addEventListener(
+            "input",
+            function () {
+
+                const query =
+                    this.value
+                        .trim()
+                        .toLowerCase();
+
+
+                if (!query) {
+
+                    renderBookmarks(allBookmarks);
+
+                    return;
+                }
+
+
+                const filtered =
+                    allBookmarks.filter(
+                        paper => {
+
+                            const searchableText =
+                                [
+                                    paper.title,
+                                    paper.authors,
+                                    paper.abstract,
+                                    paper.journal,
+                                    paper.domain,
+
+                                    paper.paper?.title,
+                                    paper.paper?.authors,
+                                    paper.paper?.abstract,
+                                    paper.paper?.journal
+
+                                ]
+                                    .filter(Boolean)
+                                    .join(" ")
+                                    .toLowerCase();
+
+
+                            return searchableText.includes(query);
+
+                        }
+                    );
+
+
+                renderBookmarks(filtered);
+
+            }
+        );
+
+
+        /* ================================
+           INITIAL LOAD
+        ================================ */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            loadBookmarks
+        );
+
+    </script>
+
+</body>
+
+</html>

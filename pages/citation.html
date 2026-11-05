@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Citation Generator | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/citation.css">
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <a href="../index.html">
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+            </a>
+        </div>
+
+        <button class="sidebar-close" id="sidebarClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">MAIN MENU</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    Dashboard
+                </a>
+
+                <a href="research-domain.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+                    Research Domains
+                </a>
+
+                <a href="papers.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+                    Research Papers
+                </a>
+
+                <a href="datasets.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+                    Datasets
+                </a>
+
+                <a href="models.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+                    AI Models
+                </a>
+
+                <a href="github.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    GitHub Explorer
+                </a>
+
+            </nav>
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">AI RESEARCH TOOLS</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="ai-analysis.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+                    AI Analysis
+                </a>
+
+                <a href="research-gap.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+                    Research Gap
+                </a>
+
+                <a href="idea-generator.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+                    Idea Generator
+                </a>
+
+                <a href="literature.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+                    Literature Review
+                </a>
+
+                <a href="ai-chat.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+                    AI Assistant
+                </a>
+
+            </nav>
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">RESOURCES</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="conferences.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+                    Conferences
+                </a>
+
+                <a href="citation.html" class="sidebar-link active">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+                    Citation Generator
+                </a>
+
+                <a href="internet-research.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+                    Internet Research
+                </a>
+
+            </nav>
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="sidebar-link">
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+                Settings
+            </a>
+
+            <a href="profile.html" class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+                    <strong>Researcher</strong>
+                    <span>Student Account</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP NAVBAR -->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="page-title">
+                    <span>Research Resources</span>
+                    <h1>Citation Generator</h1>
+                </div>
+
+            </div>
+
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    id="globalSearch"
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <div class="navbar-actions">
+
+                <button
+                    class="navbar-icon-btn"
+                    id="themeToggle"
+                >
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </a>
+
+                <a
+                    href="profile.html"
+                    class="navbar-user"
+                >
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+                        <strong>Researcher</strong>
+                        <span>Student</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE ================= -->
+
+        <div class="page-content">
+
+            <!-- BREADCRUMB -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    Citation Generator
+                </span>
+
+            </div>
+
+
+            <!-- ================= HERO ================= -->
+
+            <section class="citation-hero">
+
+                <div class="citation-hero-content">
+
+                    <div class="section-eyebrow">
+                        ACADEMIC WRITING TOOL
+                    </div>
+
+                    <h2>
+                        Generate accurate citations in seconds
+                    </h2>
+
+                    <p>
+                        Create properly formatted references for research
+                        papers, books, websites and academic resources.
+                        Choose your preferred citation style and copy
+                        the generated citation instantly.
+                    </p>
+
+                    <div class="citation-hero-actions">
+
+                        <button
+                            class="primary-page-btn"
+                            id="startCitationBtn"
+                        >
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Create Citation
+                        </button>
+
+                        <button
+                            class="secondary-page-btn"
+                            id="historyBtn"
+                        >
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            Citation History
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="citation-hero-visual">
+
+                    <div class="citation-paper">
+
+                        <div class="citation-paper-top">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="citation-paper-line large"></div>
+                        <div class="citation-paper-line"></div>
+                        <div class="citation-paper-line"></div>
+
+                        <div class="citation-quote">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+
+                        <div class="citation-paper-line"></div>
+                        <div class="citation-paper-line short"></div>
+
+                    </div>
+
+                    <div class="citation-symbol">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STATS ================= -->
+
+            <section class="citation-stats">
+
+                <div class="citation-stat">
+
+                    <div class="citation-stat-icon purple">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+
+                    <div>
+                        <span>CITATIONS CREATED</span>
+                        <strong>342</strong>
+                        <small>Your generated citations</small>
+                    </div>
+
+                </div>
+
+
+                <div class="citation-stat">
+
+                    <div class="citation-stat-icon blue">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div>
+                        <span>SUPPORTED STYLES</span>
+                        <strong>8</strong>
+                        <small>Academic formatting styles</small>
+                    </div>
+
+                </div>
+
+
+                <div class="citation-stat">
+
+                    <div class="citation-stat-icon green">
+                        <i class="fa-solid fa-copy"></i>
+                    </div>
+
+                    <div>
+                        <span>COPIED</span>
+                        <strong>286</strong>
+                        <small>References copied</small>
+                    </div>
+
+                </div>
+
+
+                <div class="citation-stat">
+
+                    <div class="citation-stat-icon orange">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+
+                    <div>
+                        <span>SAVED</span>
+                        <strong>48</strong>
+                        <small>Saved references</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= GENERATOR ================= -->
+
+            <section
+                class="citation-generator"
+                id="citationGenerator"
+            >
+
+                <div class="citation-section-heading">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            CITATION GENERATOR
+                        </div>
+
+                        <h2>
+                            Create a new citation
+                        </h2>
+
+                        <p>
+                            Enter the source information below and select
+                            the citation style you want to use.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOURCE TYPE -->
+
+                <div class="source-type-wrapper">
+
+                    <label>
+                        Source Type
+                    </label>
+
+                    <div class="source-types">
+
+                        <button
+                            class="source-type active"
+                            data-source="journal"
+                        >
+                            <i class="fa-solid fa-file-lines"></i>
+                            Journal Article
+                        </button>
+
+                        <button
+                            class="source-type"
+                            data-source="book"
+                        >
+                            <i class="fa-solid fa-book"></i>
+                            Book
+                        </button>
+
+                        <button
+                            class="source-type"
+                            data-source="website"
+                        >
+                            <i class="fa-solid fa-globe"></i>
+                            Website
+                        </button>
+
+                        <button
+                            class="source-type"
+                            data-source="conference"
+                        >
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Conference
+                        </button>
+
+                        <button
+                            class="source-type"
+                            data-source="thesis"
+                        >
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            Thesis
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DOI / URL -->
+
+                <div class="citation-quick-input">
+
+                    <div class="quick-input-icon">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+
+                    <div class="quick-input-content">
+
+                        <label>
+                            Quick Import
+                        </label>
+
+                        <p>
+                            Paste a DOI or source URL to import information.
+                        </p>
+
+                    </div>
+
+                    <input
+                        type="text"
+                        id="doiInput"
+                        placeholder="https://doi.org/... or source URL"
+                    >
+
+                    <button id="importBtn">
+                        <i class="fa-solid fa-download"></i>
+                        Import
+                    </button>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <div class="citation-form">
+
+                    <div class="citation-form-header">
+
+                        <div>
+                            <h3>
+                                Source Information
+                            </h3>
+
+                            <p>
+                                Fill in the details of your source.
+                            </p>
+                        </div>
+
+                        <span class="required-note">
+                            * Required
+                        </span>
+
+                    </div>
+
+
+                    <div class="citation-form-grid">
+
+                        <div class="citation-field full">
+
+                            <label for="title">
+                                Title <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="title"
+                                placeholder="Enter the title of the article or source"
+                            >
+
+                        </div>
+
+
+                        <div class="citation-field">
+
+                            <label for="author">
+                                Author <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="author"
+                                placeholder="e.g. A. Jha"
+                            >
+
+                        </div>
+
+
+                        <div class="citation-field">
+
+                            <label for="year">
+                                Publication Year <span>*</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="year"
+                                placeholder="2026"
+                            >
+
+                        </div>
+
+
+                        <div class="citation-field">
+
+                            <label for="journal">
+                                Journal / Publisher
+                            </label>
+
+                            <input
+                                type="text"
+                                id="journal"
+                                placeholder="Journal or publisher name"
+                            >
+
+                        </div>
+
+
+                        <div class="citation-field">
+
+                            <label for="volume">
+                                Volume
+                            </label>
+
+                            <input
+                                type="text"
+                                id="volume"
+                                placeholder="e.g. 12"
+                            >
+
+                        </div>
+
+
+                        <div class="citation-field">
+
+                            <label for="issue">
+                                Issue
+                            </label>
+
+                            <input
+                                type="text"
+                                id="issue"
+                                placeholder="e.g. 4"
+                            >
+
+                        </div>
+
+
+                        <div class="citation-field">
+
+                            <label for="pages">
+                                Pages
+                            </label>
+
+                            <input
+                                type="text"
+                                id="pages"
+                                placeholder="e.g. 120–135"
+                            >
+
+                        </div>
+
+
+                        <div class="citation-field">
+
+                            <label for="doi">
+                                DOI
+                            </label>
+
+                            <input
+                                type="text"
+                                id="doi"
+                                placeholder="10.xxxx/xxxxx"
+                            >
+
+                        </div>
+
+
+                        <div class="citation-field">
+
+                            <label for="url">
+                                URL
+                            </label>
+
+                            <input
+                                type="url"
+                                id="url"
+                                placeholder="https://example.com"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STYLE -->
+
+                    <div class="citation-style-section">
+
+                        <div class="citation-style-heading">
+
+                            <div>
+                                <h3>
+                                    Citation Style
+                                </h3>
+
+                                <p>
+                                    Select the formatting style for your reference.
+                                </p>
+                            </div>
+
+                            <span id="selectedStyle">
+                                APA 7th
+                            </span>
+
+                        </div>
+
+
+                        <div class="citation-styles">
+
+                            <button
+                                class="citation-style active"
+                                data-style="APA 7th"
+                            >
+                                <strong>APA</strong>
+                                <span>7th Edition</span>
+                            </button>
+
+
+                            <button
+                                class="citation-style"
+                                data-style="MLA 9th"
+                            >
+                                <strong>MLA</strong>
+                                <span>9th Edition</span>
+                            </button>
+
+
+                            <button
+                                class="citation-style"
+                                data-style="IEEE"
+                            >
+                                <strong>IEEE</strong>
+                                <span>Engineering</span>
+                            </button>
+
+
+                            <button
+                                class="citation-style"
+                                data-style="Chicago"
+                            >
+                                <strong>Chicago</strong>
+                                <span>Notes & Bibliography</span>
+                            </button>
+
+
+                            <button
+                                class="citation-style"
+                                data-style="Harvard"
+                            >
+                                <strong>Harvard</strong>
+                                <span>Author-Date</span>
+                            </button>
+
+
+                            <button
+                                class="citation-style"
+                                data-style="Vancouver"
+                            >
+                                <strong>Vancouver</strong>
+                                <span>Medical</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GENERATE -->
+
+                    <div class="citation-generate-area">
+
+                        <button
+                            class="primary-page-btn"
+                            id="generateBtn"
+                        >
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Generate Citation
+                        </button>
+
+                        <button
+                            class="secondary-page-btn"
+                            id="clearBtn"
+                        >
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Clear
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RESULT ================= -->
+
+            <section
+                class="citation-result"
+                id="citationResult"
+            >
+
+                <div class="result-header">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            GENERATED REFERENCE
+                        </div>
+
+                        <h2>
+                            Your citation
+                        </h2>
+
+                    </div>
+
+                    <div class="result-actions">
+
+                        <button
+                            class="result-action"
+                            id="copyCitation"
+                        >
+                            <i class="fa-regular fa-copy"></i>
+                            Copy
+                        </button>
+
+                        <button
+                            class="result-action"
+                            id="saveCitation"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                            Save
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="citation-result-card">
+
+                    <div class="citation-style-label">
+                        APA 7th
+                    </div>
+
+                    <p id="citationOutput">
+                        Jha, A. (2026). Research methodology and artificial
+                        intelligence applications. Journal of Research
+                        Technology, 12(4), 120–135.
+                        https://doi.org/10.xxxx/xxxxx
+                    </p>
+
+                </div>
+
+
+                <div class="citation-success" id="copyMessage">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Citation copied to clipboard.
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= HISTORY ================= -->
+
+            <section
+                class="citation-history"
+                id="citationHistory"
+            >
+
+                <div class="history-header">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            RECENT CITATIONS
+                        </div>
+
+                        <h2>
+                            Citation history
+                        </h2>
+
+                    </div>
+
+                    <button
+                        class="text-btn"
+                        id="clearHistory"
+                    >
+                        Clear History
+                    </button>
+
+                </div>
+
+
+                <div class="history-list">
+
+
+                    <div class="history-item">
+
+                        <div class="history-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <div class="history-info">
+
+                            <h3>
+                                Artificial Intelligence in Research
+                            </h3>
+
+                            <p>
+                                APA 7th · Journal Article
+                            </p>
+
+                        </div>
+
+                        <span>
+                            Today
+                        </span>
+
+                        <button class="history-copy">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="history-item">
+
+                        <div class="history-icon blue">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+
+                        <div class="history-info">
+
+                            <h3>
+                                Deep Learning Fundamentals
+                            </h3>
+
+                            <p>
+                                IEEE · Book
+                            </p>
+
+                        </div>
+
+                        <span>
+                            Yesterday
+                        </span>
+
+                        <button class="history-copy">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="history-item">
+
+                        <div class="history-icon green">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+
+                        <div class="history-info">
+
+                            <h3>
+                                Research Data Management Guide
+                            </h3>
+
+                            <p>
+                                MLA 9th · Website
+                            </p>
+
+                        </div>
+
+                        <span>
+                            3 days ago
+                        </span>
+
+                        <button class="history-copy">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= TIPS ================= -->
+
+            <section class="citation-tips">
+
+                <div class="tips-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Citation tip
+                    </h3>
+
+                    <p>
+                        Always verify author names, publication dates,
+                        DOI numbers and source details before submitting
+                        your research paper.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+
+    /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const sidebarClose =
+        document.getElementById("sidebarClose");
+
+    const sidebarOverlay =
+        document.getElementById("sidebarOverlay");
+
+
+    menuToggle.addEventListener("click", () => {
+
+        sidebar.classList.add("open");
+
+        sidebarOverlay.classList.add("show");
+
+    });
+
+
+    sidebarClose.addEventListener("click", () => {
+
+        sidebar.classList.remove("open");
+
+        sidebarOverlay.classList.remove("show");
+
+    });
+
+
+    sidebarOverlay.addEventListener("click", () => {
+
+        sidebar.classList.remove("open");
+
+        sidebarOverlay.classList.remove("show");
+
+    });
+
+
+    /* =====================================================
+       THEME
+       ===================================================== */
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    themeToggle.addEventListener("click", function () {
+
+        document.body.classList.toggle(
+            "dark-preview"
+        );
+
+        const icon =
+            this.querySelector("i");
+
+
+        if (
+            document.body.classList.contains(
+                "dark-preview"
+            )
+        ) {
+
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+
+        } else {
+
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+
+        }
+
+    });
+
+
+    /* =====================================================
+       SOURCE TYPE
+       ===================================================== */
+
+    document
+        .querySelectorAll(".source-type")
+        .forEach(button => {
+
+            button.addEventListener("click", function () {
+
+                document
+                    .querySelectorAll(".source-type")
+                    .forEach(item => {
+
+                        item.classList.remove("active");
+
+                    });
+
+                this.classList.add("active");
+
+            });
+
+        });
+
+
+    /* =====================================================
+       CITATION STYLE
+       ===================================================== */
+
+    const selectedStyle =
+        document.getElementById(
+            "selectedStyle"
+        );
+
+
+    document
+        .querySelectorAll(".citation-style")
+        .forEach(button => {
+
+            button.addEventListener("click", function () {
+
+                document
+                    .querySelectorAll(".citation-style")
+                    .forEach(item => {
+
+                        item.classList.remove("active");
+
+                    });
+
+
+                this.classList.add("active");
+
+
+                selectedStyle.textContent =
+                    this.dataset.style;
+
+            });
+
+        });
+
+
+    /* =====================================================
+       GENERATE CITATION
+       ===================================================== */
+
+    const generateBtn =
+        document.getElementById(
+            "generateBtn"
+        );
+
+    const citationOutput =
+        document.getElementById(
+            "citationOutput"
+        );
+
+    const citationResult =
+        document.getElementById(
+            "citationResult"
+        );
+
+
+    generateBtn.addEventListener(
+        "click",
+        () => {
+
+            const title =
+                document.getElementById(
+                    "title"
+                ).value.trim();
+
+            const author =
+                document.getElementById(
+                    "author"
+                ).value.trim();
+
+            const year =
+                document.getElementById(
+                    "year"
+                ).value.trim();
+
+            const journal =
+                document.getElementById(
+                    "journal"
+                ).value.trim();
+
+            const volume =
+                document.getElementById(
+                    "volume"
+                ).value.trim();
+
+            const issue =
+                document.getElementById(
+                    "issue"
+                ).value.trim();
+
+            const pages =
+                document.getElementById(
+                    "pages"
+                ).value.trim();
+
+            const doi =
+                document.getElementById(
+                    "doi"
+                ).value.trim();
+
+            const url =
+                document.getElementById(
+                    "url"
+                ).value.trim();
+
+
+            if (!title || !author || !year) {
+
+                alert(
+                    "Please enter Title, Author and Publication Year."
+                );
+
+                return;
+
+            }
+
+
+            const style =
+                selectedStyle.textContent;
+
+
+            let citation = "";
+
+
+            if (style === "APA 7th") {
+
+                citation =
+                    `${author} (${year}). ${title}. ` +
+                    `${journal ? journal + ", " : ""}` +
+                    `${volume ? volume : ""}` +
+                    `${issue ? `(${issue})` : ""}` +
+                    `${pages ? `, ${pages}` : ""}. ` +
+                    `${doi || url || ""}`;
+
+            }
+
+            else if (style === "MLA 9th") {
+
+                citation =
+                    `${author}. "${title}." ` +
+                    `${journal ? journal + ", " : ""}` +
+                    `${volume ? "vol. " + volume + ", " : ""}` +
+                    `${issue ? "no. " + issue + ", " : ""}` +
+                    `${year}` +
+                    `${pages ? ", pp. " + pages : ""}. ` +
+                    `${doi || url || ""}`;
+
+            }
+
+            else if (style === "IEEE") {
+
+                citation =
+                    `[1] ${author}, "${title}," ` +
+                    `${journal ? journal + ", " : ""}` +
+                    `${volume ? "vol. " + volume + ", " : ""}` +
+                    `${issue ? "no. " + issue + ", " : ""}` +
+                    `${pages ? "pp. " + pages + ", " : ""}` +
+                    `${year}.`;
+
+            }
+
+            else {
+
+                citation =
+                    `${author}. ${year}. ${title}. ` +
+                    `${journal || "Research Publication"}. ` +
+                    `${doi || url || ""}`;
+
+            }
+
+
+            citationOutput.textContent =
+                citation;
+
+
+            citationResult.classList.add(
+                "show"
+            );
+
+
+            citationResult.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }
+    );
+
+
+    /* =====================================================
+       COPY
+       ===================================================== */
+
+    const copyCitation =
+        document.getElementById(
+            "copyCitation"
+        );
+
+    const copyMessage =
+        document.getElementById(
+            "copyMessage"
+        );
+
+
+    copyCitation.addEventListener(
+        "click",
+        async () => {
+
+            try {
+
+                await navigator.clipboard.writeText(
+                    citationOutput.textContent
+                );
+
+                copyMessage.classList.add(
+                    "show"
+                );
+
+                setTimeout(() => {
+
+                    copyMessage.classList.remove(
+                        "show"
+                    );
+
+                }, 2500);
+
+            } catch (error) {
+
+                alert(
+                    "Unable to copy citation."
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       SAVE
+       ===================================================== */
+
+    document
+        .getElementById("saveCitation")
+        .addEventListener(
+            "click",
+            function () {
+
+                const icon =
+                    this.querySelector("i");
+
+                icon.classList.toggle(
+                    "fa-regular"
+                );
+
+                icon.classList.toggle(
+                    "fa-solid"
+                );
+
+                this.classList.toggle(
+                    "saved"
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       CLEAR
+       ===================================================== */
+
+    document
+        .getElementById("clearBtn")
+        .addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelectorAll(
+                        ".citation-field input"
+                    )
+                    .forEach(input => {
+
+                        input.value = "";
+
+                    });
+
+
+                document.getElementById(
+                    "doiInput"
+                ).value = "";
+
+            }
+        );
+
+
+    /* =====================================================
+       IMPORT
+       ===================================================== */
+
+    document
+        .getElementById("importBtn")
+        .addEventListener(
+            "click",
+            () => {
+
+                const value =
+                    document
+                        .getElementById(
+                            "doiInput"
+                        )
+                        .value
+                        .trim();
+
+
+                if (!value) {
+
+                    alert(
+                        "Please enter a DOI or URL."
+                    );
+
+                    return;
+
+                }
+
+
+                alert(
+                    "Automatic source import will be connected to the backend later."
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       HISTORY
+       ===================================================== */
+
+    document
+        .getElementById("historyBtn")
+        .addEventListener(
+            "click",
+            () => {
+
+                document
+                    .getElementById(
+                        "citationHistory"
+                    )
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+            }
+        );
+
+
+    document
+        .getElementById("startCitationBtn")
+        .addEventListener(
+            "click",
+            () => {
+
+                document
+                    .getElementById(
+                        "citationGenerator"
+                    )
+                    .scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+            }
+        );
+
+
+    document
+        .getElementById("clearHistory")
+        .addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelector(
+                        ".history-list"
+                    )
+                    .innerHTML = `
+                        <div class="history-empty">
+                            <i class="fa-regular fa-clock"></i>
+                            <h3>No citation history</h3>
+                            <p>Your recently generated citations will appear here.</p>
+                        </div>
+                    `;
+
+            }
+        );
+
+
+    /* =====================================================
+       HISTORY COPY BUTTONS
+       ===================================================== */
+
+    document
+        .querySelectorAll(".history-copy")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const item =
+                        button.closest(
+                            ".history-item"
+                        );
+
+                    const title =
+                        item.querySelector(
+                            "h3"
+                        ).textContent.trim();
+
+
+                    navigator.clipboard.writeText(
+                        title
+                    );
+
+                    button.innerHTML =
+                        '<i class="fa-solid fa-check"></i>';
+
+                    setTimeout(() => {
+
+                        button.innerHTML =
+                            '<i class="fa-regular fa-copy"></i>';
+
+                    }, 1500);
+
+                }
+            );
+
+        });
+
+</script>
+
+</body>
+</html>

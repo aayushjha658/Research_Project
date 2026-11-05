@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/notifications.css">
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <a href="../index.html">
+
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <button class="sidebar-close" id="sidebarClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <!-- MAIN MENU -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                MAIN MENU
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="research-domain.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+
+                    Research Domains
+
+                </a>
+
+
+                <a href="papers.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    Research Papers
+
+                </a>
+
+
+                <a href="datasets.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+
+                    Datasets
+
+                </a>
+
+
+                <a href="models.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+
+                    AI Models
+
+                </a>
+
+
+                <a href="github.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+
+                    GitHub Explorer
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- AI RESEARCH TOOLS -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                AI RESEARCH TOOLS
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="ai-analysis.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+
+                    AI Analysis
+
+                </a>
+
+
+                <a href="research-gap.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+
+                    Research Gap
+
+                </a>
+
+
+                <a href="idea-generator.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+
+                    Idea Generator
+
+                </a>
+
+
+                <a href="literature.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+
+                    Literature Review
+
+                </a>
+
+
+                <a href="ai-chat.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+
+                    AI Assistant
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- RESOURCES -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                RESOURCES
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="conferences.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+
+                    Conferences
+
+                </a>
+
+
+                <a href="citation.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+
+                    Citation Generator
+
+                </a>
+
+
+                <a href="internet-research.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+
+                    Internet Research
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="sidebar-link">
+
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                Settings
+
+            </a>
+
+
+            <a href="profile.html" class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Researcher
+                    </strong>
+
+                    <span>
+                        Student Account
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP NAVBAR -->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="page-title">
+
+                    <span>
+                        Account
+                    </span>
+
+                    <h1>
+                        Notifications
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search..."
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <div class="navbar-actions">
+
+                <button
+                    class="navbar-icon-btn"
+                    id="themeToggle"
+                >
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn active"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span
+                        class="notification-dot"
+                        id="navbarNotificationDot"
+                    ></span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="navbar-user"
+                >
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+
+                        <strong>
+                            Researcher
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             PAGE CONTENT
+             ===================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    Notifications
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 NOTIFICATION HEADER
+                 ================================================= -->
+
+            <section class="notifications-header">
+
+                <div>
+
+                    <div class="section-eyebrow">
+                        ACTIVITY CENTER
+                    </div>
+
+                    <h2>
+                        Notifications
+                    </h2>
+
+                    <p>
+                        Stay updated with your research activity,
+                        AI analysis and important account events.
+                    </p>
+
+                </div>
+
+
+                <div class="notification-header-actions">
+
+                    <button
+                        class="secondary-page-btn"
+                        id="markAllReadBtn"
+                    >
+                        <i class="fa-solid fa-check-double"></i>
+                        Mark all as read
+                    </button>
+
+
+                    <button
+                        class="clear-notifications-btn"
+                        id="clearAllBtn"
+                    >
+                        <i class="fa-solid fa-trash-can"></i>
+                        Clear all
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NOTIFICATION SUMMARY
+                 ================================================= -->
+
+            <section class="notification-summary">
+
+                <div class="notification-summary-card">
+
+                    <div class="summary-icon purple">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL NOTIFICATIONS
+                        </span>
+
+                        <strong id="totalCount">
+                            12
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="notification-summary-card">
+
+                    <div class="summary-icon blue">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            UNREAD
+                        </span>
+
+                        <strong id="unreadCount">
+                            5
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="notification-summary-card">
+
+                    <div class="summary-icon green">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            RESEARCH UPDATES
+                        </span>
+
+                        <strong>
+                            7
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="notification-summary-card">
+
+                    <div class="summary-icon orange">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            AI ACTIVITY
+                        </span>
+
+                        <strong>
+                            8
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NOTIFICATION TOOLBAR
+                 ================================================= -->
+
+            <section class="notification-toolbar">
+
+                <div class="notification-tabs">
+
+                    <button
+                        class="notification-tab active"
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="notification-tab"
+                        data-filter="unread"
+                    >
+                        Unread
+                        <span id="unreadTabCount">
+                            5
+                        </span>
+                    </button>
+
+                    <button
+                        class="notification-tab"
+                        data-filter="research"
+                    >
+                        Research
+                    </button>
+
+                    <button
+                        class="notification-tab"
+                        data-filter="ai"
+                    >
+                        AI Activity
+                    </button>
+
+                    <button
+                        class="notification-tab"
+                        data-filter="system"
+                    >
+                        System
+                    </button>
+
+                </div>
+
+
+                <div class="notification-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="notificationSearch"
+                        placeholder="Search notifications..."
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NOTIFICATION LIST
+                 ================================================= -->
+
+            <section class="notifications-card">
+
+
+                <!-- TODAY -->
+
+                <div class="notification-day">
+
+                    <div class="notification-day-title">
+
+                        <span>
+                            Today
+                        </span>
+
+                        <span class="day-line"></span>
+
+                    </div>
+
+
+                    <div class="notification-list">
+
+
+                        <!-- NOTIFICATION 1 -->
+
+                        <article
+                            class="notification-item unread"
+                            data-category="ai"
+                            data-search="AI analysis completed deep learning medical image analysis"
+                        >
+
+                            <div class="notification-type-icon purple">
+
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        AI analysis completed
+                                    </h3>
+
+                                    <span class="unread-badge">
+                                        New
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Your AI analysis of
+                                    <strong>
+                                        "Deep Learning for Medical Image Analysis"
+                                    </strong>
+                                    has been completed successfully.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        15 minutes ago
+                                    </span>
+
+                                    <span class="notification-category">
+                                        AI Activity
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                    title="Mark as read"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                    title="Delete"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATION 2 -->
+
+                        <article
+                            class="notification-item unread"
+                            data-category="research"
+                            data-search="new research papers machine learning healthcare recommendation"
+                        >
+
+                            <div class="notification-type-icon blue">
+
+                                <i class="fa-solid fa-file-lines"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        New research papers found
+                                    </h3>
+
+                                    <span class="unread-badge">
+                                        New
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    We found
+                                    <strong>
+                                        12 new papers
+                                    </strong>
+                                    related to your Machine Learning
+                                    and Healthcare interests.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        42 minutes ago
+                                    </span>
+
+                                    <span class="notification-category">
+                                        Research
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                    title="Mark as read"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                    title="Delete"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATION 3 -->
+
+                        <article
+                            class="notification-item unread"
+                            data-category="research"
+                            data-search="research idea generated AI healthcare prediction system"
+                        >
+
+                            <div class="notification-type-icon green">
+
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        Research idea generated
+                                    </h3>
+
+                                    <span class="unread-badge">
+                                        New
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Your research idea
+                                    <strong>
+                                        "AI-assisted healthcare prediction system"
+                                    </strong>
+                                    is ready to review.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        1 hour ago
+                                    </span>
+
+                                    <span class="notification-category">
+                                        Research
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                    title="Mark as read"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                    title="Delete"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATION 4 -->
+
+                        <article
+                            class="notification-item unread"
+                            data-category="system"
+                            data-search="profile completion account profile 85 percent"
+                        >
+
+                            <div class="notification-type-icon orange">
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        Complete your profile
+                                    </h3>
+
+                                    <span class="unread-badge">
+                                        New
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Your profile is
+                                    <strong>
+                                        85% complete
+                                    </strong>.
+                                    Add more information to improve
+                                    your research recommendations.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        2 hours ago
+                                    </span>
+
+                                    <span class="notification-category">
+                                        System
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                    title="Mark as read"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                    title="Delete"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATION 5 -->
+
+                        <article
+                            class="notification-item unread"
+                            data-category="ai"
+                            data-search="literature review AI healthcare completed"
+                        >
+
+                            <div class="notification-type-icon purple">
+
+                                <i class="fa-solid fa-book-open"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        Literature review completed
+                                    </h3>
+
+                                    <span class="unread-badge">
+                                        New
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Your literature review on
+                                    <strong>
+                                        "Artificial Intelligence in Healthcare"
+                                    </strong>
+                                    is ready.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        3 hours ago
+                                    </span>
+
+                                    <span class="notification-category">
+                                        AI Activity
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                    title="Mark as read"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                    title="Delete"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- YESTERDAY -->
+
+                <div class="notification-day">
+
+                    <div class="notification-day-title">
+
+                        <span>
+                            Yesterday
+                        </span>
+
+                        <span class="day-line"></span>
+
+                    </div>
+
+
+                    <div class="notification-list">
+
+
+                        <!-- NOTIFICATION 6 -->
+
+                        <article
+                            class="notification-item"
+                            data-category="research"
+                            data-search="paper saved research papers computer vision"
+                        >
+
+                            <div class="notification-type-icon blue">
+
+                                <i class="fa-solid fa-bookmark"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        Paper saved
+                                    </h3>
+
+                                </div>
+
+                                <p>
+                                    You saved
+                                    <strong>
+                                        "Vision Transformers for Medical Imaging"
+                                    </strong>
+                                    to your research library.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        Yesterday, 6:32 PM
+                                    </span>
+
+                                    <span class="notification-category">
+                                        Research
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                    title="Mark as unread"
+                                >
+                                    <i class="fa-solid fa-envelope"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                    title="Delete"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATION 7 -->
+
+                        <article
+                            class="notification-item"
+                            data-category="ai"
+                            data-search="research gap analysis completed machine learning"
+                        >
+
+                            <div class="notification-type-icon green">
+
+                                <i class="fa-solid fa-chart-pie"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        Research gap analysis completed
+                                    </h3>
+
+                                </div>
+
+                                <p>
+                                    AI identified
+                                    <strong>
+                                        8 potential research gaps
+                                    </strong>
+                                    in your selected topic.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        Yesterday, 4:15 PM
+                                    </span>
+
+                                    <span class="notification-category">
+                                        AI Activity
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                    title="Mark as unread"
+                                >
+                                    <i class="fa-solid fa-envelope"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                    title="Delete"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATION 8 -->
+
+                        <article
+                            class="notification-item"
+                            data-category="system"
+                            data-search="security password account security updated"
+                        >
+
+                            <div class="notification-type-icon orange">
+
+                                <i class="fa-solid fa-shield-halved"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        Security settings updated
+                                    </h3>
+
+                                </div>
+
+                                <p>
+                                    Your account security preferences
+                                    were successfully updated.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        Yesterday, 2:20 PM
+                                    </span>
+
+                                    <span class="notification-category">
+                                        System
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                    title="Mark as unread"
+                                >
+                                    <i class="fa-solid fa-envelope"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                    title="Delete"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EARLIER -->
+
+                <div class="notification-day">
+
+                    <div class="notification-day-title">
+
+                        <span>
+                            Earlier
+                        </span>
+
+                        <span class="day-line"></span>
+
+                    </div>
+
+
+                    <div class="notification-list">
+
+
+                        <!-- NOTIFICATION 9 -->
+
+                        <article
+                            class="notification-item"
+                            data-category="research"
+                            data-search="conference recommendation machine learning conference"
+                        >
+
+                            <div class="notification-type-icon blue">
+
+                                <i class="fa-solid fa-calendar-days"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        Conference recommendation
+                                    </h3>
+
+                                </div>
+
+                                <p>
+                                    A new conference matching your
+                                    research interests was added.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        3 days ago
+                                    </span>
+
+                                    <span class="notification-category">
+                                        Research
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                >
+                                    <i class="fa-solid fa-envelope"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATION 10 -->
+
+                        <article
+                            class="notification-item"
+                            data-category="ai"
+                            data-search="citation generated APA citation research paper"
+                        >
+
+                            <div class="notification-type-icon purple">
+
+                                <i class="fa-solid fa-quote-right"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        Citation generated
+                                    </h3>
+
+                                </div>
+
+                                <p>
+                                    Your APA citation was generated
+                                    successfully.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        4 days ago
+                                    </span>
+
+                                    <span class="notification-category">
+                                        AI Activity
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                >
+                                    <i class="fa-solid fa-envelope"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATION 11 -->
+
+                        <article
+                            class="notification-item"
+                            data-category="system"
+                            data-search="welcome research AI account created"
+                        >
+
+                            <div class="notification-type-icon green">
+
+                                <i class="fa-solid fa-hand-sparkles"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        Welcome to Research AI
+                                    </h3>
+
+                                </div>
+
+                                <p>
+                                    Your Research AI account is ready.
+                                    Start exploring your research workspace.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        5 days ago
+                                    </span>
+
+                                    <span class="notification-category">
+                                        System
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                >
+                                    <i class="fa-solid fa-envelope"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- NOTIFICATION 12 -->
+
+                        <article
+                            class="notification-item"
+                            data-category="research"
+                            data-search="dataset explorer dataset healthcare research"
+                        >
+
+                            <div class="notification-type-icon orange">
+
+                                <i class="fa-solid fa-database"></i>
+
+                            </div>
+
+
+                            <div class="notification-content">
+
+                                <div class="notification-title-row">
+
+                                    <h3>
+                                        New dataset available
+                                    </h3>
+
+                                </div>
+
+                                <p>
+                                    A healthcare dataset related to your
+                                    research interests is now available.
+                                </p>
+
+                                <div class="notification-meta">
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        1 week ago
+                                    </span>
+
+                                    <span class="notification-category">
+                                        Research
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="notification-actions">
+
+                                <button
+                                    class="notification-action mark-read"
+                                >
+                                    <i class="fa-solid fa-envelope"></i>
+                                </button>
+
+                                <button
+                                    class="notification-action delete-notification"
+                                >
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="notifications-empty"
+                    id="notificationsEmpty"
+                >
+
+                    <div class="empty-icon">
+
+                        <i class="fa-regular fa-bell-slash"></i>
+
+                    </div>
+
+                    <h3>
+                        No notifications found
+                    </h3>
+
+                    <p>
+                        There are no notifications matching your
+                        current filter or search.
+                    </p>
+
+                    <button
+                        class="secondary-page-btn"
+                        id="resetNotifications"
+                    >
+                        Reset Filters
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NOTIFICATION SETTINGS BANNER
+                 ================================================= -->
+
+            <section class="notification-settings-banner">
+
+                <div class="banner-icon">
+
+                    <i class="fa-solid fa-sliders"></i>
+
+                </div>
+
+
+                <div class="banner-content">
+
+                    <h3>
+                        Customize your notifications
+                    </h3>
+
+                    <p>
+                        Choose which research updates and AI activity
+                        notifications you want to receive.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="settings.html"
+                    class="banner-link"
+                >
+                    Notification Settings
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+    /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const sidebarClose =
+        document.getElementById("sidebarClose");
+
+    const sidebarOverlay =
+        document.getElementById("sidebarOverlay");
+
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+            sidebar.classList.add("open");
+
+            sidebarOverlay.classList.add("show");
+
+        }
+    );
+
+
+    sidebarClose.addEventListener(
+        "click",
+        () => {
+
+            sidebar.classList.remove("open");
+
+            sidebarOverlay.classList.remove("show");
+
+        }
+    );
+
+
+    sidebarOverlay.addEventListener(
+        "click",
+        () => {
+
+            sidebar.classList.remove("open");
+
+            sidebarOverlay.classList.remove("show");
+
+        }
+    );
+
+
+    /* =====================================================
+       THEME
+       ===================================================== */
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    themeToggle.addEventListener(
+        "click",
+        function () {
+
+            document.body.classList.toggle(
+                "dark-preview"
+            );
+
+
+            const icon =
+                this.querySelector("i");
+
+
+            if (
+                document.body.classList.contains(
+                    "dark-preview"
+                )
+            ) {
+
+                icon.classList.remove(
+                    "fa-moon"
+                );
+
+                icon.classList.add(
+                    "fa-sun"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-sun"
+                );
+
+                icon.classList.add(
+                    "fa-moon"
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const notificationItems =
+        document.querySelectorAll(
+            ".notification-item"
+        );
+
+    const notificationTabs =
+        document.querySelectorAll(
+            ".notification-tab"
+        );
+
+    const notificationSearch =
+        document.getElementById(
+            "notificationSearch"
+        );
+
+    const notificationsEmpty =
+        document.getElementById(
+            "notificationsEmpty"
+        );
+
+    const totalCount =
+        document.getElementById(
+            "totalCount"
+        );
+
+    const unreadCount =
+        document.getElementById(
+            "unreadCount"
+        );
+
+    const unreadTabCount =
+        document.getElementById(
+            "unreadTabCount"
+        );
+
+    const navbarNotificationDot =
+        document.getElementById(
+            "navbarNotificationDot"
+        );
+
+
+    let activeFilter = "all";
+
+
+    /* =====================================================
+       UPDATE COUNTS
+       ===================================================== */
+
+    function updateCounts() {
+
+        const visibleItems =
+            document.querySelectorAll(
+                ".notification-item:not(.deleted)"
+            );
+
+
+        const unreadItems =
+            document.querySelectorAll(
+                ".notification-item.unread:not(.deleted)"
+            );
+
+
+        totalCount.textContent =
+            visibleItems.length;
+
+
+        unreadCount.textContent =
+            unreadItems.length;
+
+
+        unreadTabCount.textContent =
+            unreadItems.length;
+
+
+        if (
+            unreadItems.length === 0
+        ) {
+
+            navbarNotificationDot
+                .classList.add("hidden");
+
+        } else {
+
+            navbarNotificationDot
+                .classList.remove("hidden");
+
+        }
+
+    }
+
+
+    /* =====================================================
+       FILTER NOTIFICATIONS
+       ===================================================== */
+
+    function filterNotifications() {
+
+        const query =
+            notificationSearch.value
+                .trim()
+                .toLowerCase();
+
+
+        let visibleCount = 0;
+
+
+        notificationItems.forEach(
+            item => {
+
+                if (
+                    item.classList.contains(
+                        "deleted"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                const category =
+                    item.dataset.category;
+
+
+                const searchText =
+                    item.dataset.search
+                        .toLowerCase();
+
+
+                const isUnread =
+                    item.classList.contains(
+                        "unread"
+                    );
+
+
+                let categoryMatch =
+                    true;
+
+
+                if (
+                    activeFilter === "unread"
+                ) {
+
+                    categoryMatch =
+                        isUnread;
+
+                } else if (
+                    activeFilter !== "all"
+                ) {
+
+                    categoryMatch =
+                        category ===
+                        activeFilter;
+
+                }
+
+
+                const searchMatch =
+                    !query ||
+                    searchText.includes(query);
+
+
+                if (
+                    categoryMatch &&
+                    searchMatch
+                ) {
+
+                    item.style.display =
+                        "flex";
+
+                    visibleCount++;
+
+                } else {
+
+                    item.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        notificationsEmpty.classList.toggle(
+            "show",
+            visibleCount === 0
+        );
+
+    }
+
+
+    /* =====================================================
+       TAB FILTER
+       ===================================================== */
+
+    notificationTabs.forEach(
+        tab => {
+
+            tab.addEventListener(
+                "click",
+                () => {
+
+                    notificationTabs
+                        .forEach(item => {
+
+                            item.classList.remove(
+                                "active"
+                            );
+
+                        });
+
+
+                    tab.classList.add(
+                        "active"
+                    );
+
+
+                    activeFilter =
+                        tab.dataset.filter;
+
+
+                    filterNotifications();
+
+                }
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
+
+    notificationSearch.addEventListener(
+        "input",
+        filterNotifications
+    );
+
+
+    /* =====================================================
+       MARK INDIVIDUAL AS READ / UNREAD
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".mark-read"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const item =
+                        button.closest(
+                            ".notification-item"
+                        );
+
+
+                    if (
+                        item.classList.contains(
+                            "unread"
+                        )
+                    ) {
+
+                        item.classList.remove(
+                            "unread"
+                        );
+
+                        button.innerHTML =
+                            '<i class="fa-solid fa-envelope"></i>';
+
+                        button.title =
+                            "Mark as unread";
+
+                    } else {
+
+                        item.classList.add(
+                            "unread"
+                        );
+
+                        button.innerHTML =
+                            '<i class="fa-solid fa-check"></i>';
+
+                        button.title =
+                            "Mark as read";
+
+                    }
+
+
+                    const badge =
+                        item.querySelector(
+                            ".unread-badge"
+                        );
+
+
+                    if (badge) {
+
+                        badge.remove();
+
+                    }
+
+
+                    if (
+                        item.classList.contains(
+                            "unread"
+                        )
+                    ) {
+
+                        const titleRow =
+                            item.querySelector(
+                                ".notification-title-row"
+                            );
+
+
+                        const newBadge =
+                            document.createElement(
+                                "span"
+                            );
+
+
+                        newBadge.className =
+                            "unread-badge";
+
+
+                        newBadge.textContent =
+                            "New";
+
+
+                        titleRow.appendChild(
+                            newBadge
+                        );
+
+                    }
+
+
+                    updateCounts();
+
+                    filterNotifications();
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       DELETE INDIVIDUAL
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".delete-notification"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const item =
+                        button.closest(
+                            ".notification-item"
+                        );
+
+
+                    item.classList.add(
+                        "deleted"
+                    );
+
+
+                    item.style.animation =
+                        "notificationRemove .25s ease";
+
+
+                    setTimeout(
+                        () => {
+
+                            item.style.display =
+                                "none";
+
+                            updateCounts();
+
+                            filterNotifications();
+
+                        },
+                        230
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       MARK ALL READ
+       ===================================================== */
+
+    document
+        .getElementById(
+            "markAllReadBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                notificationItems
+                    .forEach(item => {
+
+                        if (
+                            item.classList.contains(
+                                "deleted"
+                            )
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        item.classList.remove(
+                            "unread"
+                        );
+
+
+                        const badge =
+                            item.querySelector(
+                                ".unread-badge"
+                            );
+
+
+                        if (badge) {
+
+                            badge.remove();
+
+                        }
+
+
+                        const button =
+                            item.querySelector(
+                                ".mark-read"
+                            );
+
+
+                        if (button) {
+
+                            button.innerHTML =
+                                '<i class="fa-solid fa-envelope"></i>';
+
+                            button.title =
+                                "Mark as unread";
+
+                        }
+
+                    });
+
+
+                updateCounts();
+
+                filterNotifications();
+
+            }
+        );
+
+
+    /* =====================================================
+       CLEAR ALL
+       ===================================================== */
+
+    document
+        .getElementById(
+            "clearAllBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                const confirmed =
+                    confirm(
+                        "Are you sure you want to clear all notifications?"
+                    );
+
+
+                if (!confirmed) {
+
+                    return;
+
+                }
+
+
+                notificationItems
+                    .forEach(item => {
+
+                        item.classList.add(
+                            "deleted"
+                        );
+
+                        item.style.display =
+                            "none";
+
+                    });
+
+
+                updateCounts();
+
+                filterNotifications();
+
+            }
+        );
+
+
+    /* =====================================================
+       RESET FILTERS
+       ===================================================== */
+
+    document
+        .getElementById(
+            "resetNotifications"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                activeFilter =
+                    "all";
+
+
+                notificationSearch.value =
+                    "";
+
+
+                notificationTabs
+                    .forEach(tab => {
+
+                        tab.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                document
+                    .querySelector(
+                        '.notification-tab[data-filter="all"]'
+                    )
+                    .classList.add(
+                        "active"
+                    );
+
+
+                filterNotifications();
+
+            }
+        );
+
+
+    /* =====================================================
+       GLOBAL SEARCH
+       ===================================================== */
+
+    document
+        .getElementById(
+            "globalSearch"
+        )
+        .addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "Enter"
+                ) {
+
+                    const value =
+                        event.target.value
+                            .trim();
+
+
+                    if (value) {
+
+                        alert(
+                            `Searching Research AI for: ${value}`
+                        );
+
+                    }
+
+                }
+
+            }
+        );
+
+
+    /* =====================================================
+       INITIALIZE
+       ===================================================== */
+
+    updateCounts();
+
+    filterNotifications();
+
+</script>
+
+</body>
+</html>

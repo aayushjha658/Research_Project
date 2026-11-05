@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-logo">
+
+                <a href="../index.html">
+
+                    <span class="sidebar-logo-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </span>
+
+                    <span class="sidebar-logo-text">
+                        Research <strong>AI</strong>
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-heading">
+                    MAIN MENU
+                </p>
+
+                <nav class="sidebar-nav">
+
+                    <a href="dashboard.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+
+                        Dashboard
+
+                    </a>
+
+
+                    <a href="research-domain.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </span>
+
+                        Research Domains
+
+                    </a>
+
+
+                    <a href="papers.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </span>
+
+                        Research Papers
+
+                    </a>
+
+
+                    <a href="datasets.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </span>
+
+                        Datasets
+
+                    </a>
+
+
+                    <a href="models.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-microchip"></i>
+                        </span>
+
+                        AI Models
+
+                    </a>
+
+
+                    <a href="github.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </span>
+
+                        GitHub Explorer
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-heading">
+                    AI RESEARCH TOOLS
+                </p>
+
+                <nav class="sidebar-nav">
+
+                    <a href="ai-analysis.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </span>
+
+                        AI Analysis
+
+                    </a>
+
+
+                    <a href="research-gap.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </span>
+
+                        Research Gap
+
+                    </a>
+
+
+                    <a href="idea-generator.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </span>
+
+                        Idea Generator
+
+                    </a>
+
+
+                    <a href="literature.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </span>
+
+                        Literature Review
+
+                    </a>
+
+
+                    <a href="ai-chat.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-robot"></i>
+                        </span>
+
+                        AI Assistant
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <p class="sidebar-heading">
+                    RESOURCES
+                </p>
+
+                <nav class="sidebar-nav">
+
+                    <a href="conferences.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </span>
+
+                        Conferences
+
+                    </a>
+
+
+                    <a href="citation.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </span>
+
+                        Citation Generator
+
+                    </a>
+
+
+                    <a href="internet-research.html" class="sidebar-link">
+
+                        <span class="sidebar-link-icon">
+                            <i class="fa-solid fa-globe"></i>
+                        </span>
+
+                        Internet Research
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="settings.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+
+                    Settings
+
+                </a>
+
+
+                <a href="profile.html" class="sidebar-profile active">
+
+                    <div class="profile-avatar" id="sidebarAvatar">
+                        U
+                    </div>
+
+                    <div class="profile-info">
+                        <strong id="sidebarUserName">
+                            User
+                        </strong>
+
+                        <span id="sidebarUserRole">
+                            Student Account
+                        </span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+        <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- TOP NAVBAR -->
+
+            <header class="top-navbar">
+
+                <div class="navbar-left">
+
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+
+                    <div class="page-title">
+
+                        <span>
+                            Account
+                        </span>
+
+                        <h1>
+                            My Profile
+                        </h1>
+
+                    </div>
+
+                </div>
+
+
+                <div class="global-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" id="globalSearch" placeholder="Search...">
+
+                    <span class="search-shortcut">
+                        Ctrl K
+                    </span>
+
+                </div>
+
+
+                <div class="navbar-actions">
+
+                    <button class="navbar-icon-btn" id="themeToggle">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+
+
+                    <a href="notifications.html" class="navbar-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </a>
+
+
+                    <a href="profile.html" class="navbar-user">
+
+                        <div class="navbar-avatar">
+                            U
+                        </div>
+
+                        <div class="navbar-user-info">
+
+                            <strong>
+                                User
+                            </strong>
+
+                            <span>
+                                Student
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <!-- =====================================================
+             PAGE
+             ===================================================== -->
+
+            <div class="page-content">
+
+
+                <!-- BREADCRUMB -->
+
+                <div class="page-breadcrumb">
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>
+                        Profile
+                    </span>
+
+                </div>
+
+
+                <!-- =================================================
+                 PROFILE HERO
+                 ================================================= -->
+
+                <section class="profile-hero">
+
+                    <div class="profile-cover"></div>
+
+
+                    <div class="profile-main">
+
+                        <div class="profile-large-avatar" id="profileLargeAvatar">
+
+                            <span id="avatarText">
+                                U
+                            </span>
+
+                            <label for="avatarInput" class="avatar-edit" title="Change profile picture">
+                                <i class="fa-solid fa-camera"></i>
+                            </label>
+
+                            <input type="file" id="avatarInput" accept="image/jpeg,image/png,image/webp" hidden>
+
+                        </div>
+
+
+                        <div class="profile-identity">
+
+                            <div class="profile-name-row">
+
+                                <h2 id="profileName">
+                                    User
+                                </h2>
+
+                                <span class="verified-badge">
+                                    <i class="fa-solid fa-check"></i>
+                                    Verified
+                                </span>
+
+                            </div>
+
+
+                            <p class="profile-role">
+                                Researcher · Student
+                            </p>
+
+
+                            <p class="profile-location">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                India
+
+                                <span>•</span>
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                Joined 2026
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="profile-hero-actions">
+
+                            <button class="primary-page-btn" id="editProfileBtn">
+                                <i class="fa-solid fa-pen"></i>
+                                Edit Profile
+                            </button>
+
+
+                            <button class="secondary-page-btn" id="shareProfileBtn">
+                                <i class="fa-solid fa-share-nodes"></i>
+                                Share
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                 PROFILE STATS
+                 ================================================= -->
+
+                <section class="profile-stats">
+
+                    <div class="profile-stat-card">
+
+                        <div class="profile-stat-icon purple">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                RESEARCH PAPERS
+                            </span>
+
+                            <strong>
+                                24
+                            </strong>
+
+                            <small>
+                                Saved papers
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-stat-card">
+
+                        <div class="profile-stat-icon blue">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                LITERATURE REVIEWS
+                            </span>
+
+                            <strong>
+                                12
+                            </strong>
+
+                            <small>
+                                Completed reviews
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-stat-card">
+
+                        <div class="profile-stat-icon green">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                RESEARCH IDEAS
+                            </span>
+
+                            <strong>
+                                18
+                            </strong>
+
+                            <small>
+                                Generated ideas
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-stat-card">
+
+                        <div class="profile-stat-icon orange">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                CITATIONS
+                            </span>
+
+                            <strong>
+                                342
+                            </strong>
+
+                            <small>
+                                Generated citations
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                 PROFILE GRID
+                 ================================================= -->
+
+                <section class="profile-grid">
+
+
+                    <!-- =================================================
+                     LEFT COLUMN
+                     ================================================= -->
+
+                    <div class="profile-left-column">
+
+
+                        <!-- ABOUT -->
+
+                        <div class="profile-card">
+
+                            <div class="profile-card-header">
+
+                                <div>
+
+                                    <div class="section-eyebrow">
+                                        ABOUT
+                                    </div>
+
+                                    <h2>
+                                        About me
+                                    </h2>
+
+                                </div>
+
+
+                                <button class="icon-action" id="editAboutBtn">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+
+                            </div>
+
+
+                            <p class="about-text" id="aboutText">
+                                I am a research-focused student interested in
+                                artificial intelligence, machine learning,
+                                data science and modern web technologies.
+                                I use Research AI to explore research papers,
+                                identify research gaps, generate ideas and
+                                organize my academic work.
+                            </p>
+
+                        </div>
+
+
+                        <!-- RESEARCH INTERESTS -->
+
+                        <div class="profile-card">
+
+                            <div class="profile-card-header">
+
+                                <div>
+
+                                    <div class="section-eyebrow">
+                                        RESEARCH
+                                    </div>
+
+                                    <h2>
+                                        Research interests
+                                    </h2>
+
+                                </div>
+
+
+                                <button class="icon-action" id="addInterestBtn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="interest-tags" id="interestTags">
+
+                                <span>
+                                    Artificial Intelligence
+                                    <button>
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </span>
+
+                                <span>
+                                    Machine Learning
+                                    <button>
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </span>
+
+                                <span>
+                                    Data Science
+                                    <button>
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </span>
+
+                                <span>
+                                    Deep Learning
+                                    <button>
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </span>
+
+                                <span>
+                                    Computer Vision
+                                    <button>
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </span>
+
+                                <span>
+                                    Web Development
+                                    <button>
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EDUCATION -->
+
+                        <div class="profile-card">
+
+                            <div class="profile-card-header">
+
+                                <div>
+
+                                    <div class="section-eyebrow">
+                                        ACADEMIC INFORMATION
+                                    </div>
+
+                                    <h2>
+                                        Education
+                                    </h2>
+
+                                </div>
+
+
+                                <button class="icon-action" id="editEducationBtn">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="education-item">
+
+                                <div class="education-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+
+                                <div class="education-info">
+
+                                    <h3>
+                                        Bachelor of Technology
+                                    </h3>
+
+                                    <p>
+                                        Computer Science & Engineering
+                                    </p>
+
+                                    <span>
+                                        Rai University · 2022 – 2026
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- RECENT ACTIVITY -->
+
+                        <div class="profile-card">
+
+                            <div class="profile-card-header">
+
+                                <div>
+
+                                    <div class="section-eyebrow">
+                                        ACTIVITY
+                                    </div>
+
+                                    <h2>
+                                        Recent activity
+                                    </h2>
+
+                                </div>
+
+
+                                <a href="dashboard.html" class="view-all-link">
+                                    View All
+                                </a>
+
+                            </div>
+
+
+                            <div class="activity-list">
+
+
+                                <div class="activity-item">
+
+                                    <div class="activity-icon purple">
+                                        <i class="fa-solid fa-file-lines"></i>
+                                    </div>
+
+                                    <div class="activity-info">
+
+                                        <h3>
+                                            Saved a research paper
+                                        </h3>
+
+                                        <p>
+                                            Deep Learning for Medical Image Analysis
+                                        </p>
+
+                                        <span>
+                                            2 hours ago
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="activity-item">
+
+                                    <div class="activity-icon blue">
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                    </div>
+
+                                    <div class="activity-info">
+
+                                        <h3>
+                                            Generated a research idea
+                                        </h3>
+
+                                        <p>
+                                            AI-assisted healthcare prediction system
+                                        </p>
+
+                                        <span>
+                                            Yesterday
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="activity-item">
+
+                                    <div class="activity-icon green">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+
+                                    <div class="activity-info">
+
+                                        <h3>
+                                            Created a citation
+                                        </h3>
+
+                                        <p>
+                                            APA 7th Edition
+                                        </p>
+
+                                        <span>
+                                            2 days ago
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="activity-item">
+
+                                    <div class="activity-icon orange">
+                                        <i class="fa-solid fa-book-open"></i>
+                                    </div>
+
+                                    <div class="activity-info">
+
+                                        <h3>
+                                            Completed literature review
+                                        </h3>
+
+                                        <p>
+                                            Artificial Intelligence in Healthcare
+                                        </p>
+
+                                        <span>
+                                            4 days ago
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                     RIGHT COLUMN
+                     ================================================= -->
+
+                    <div class="profile-right-column">
+
+
+                        <!-- CONTACT -->
+
+                        <div class="profile-card">
+
+                            <div class="profile-card-header">
+
+                                <div>
+
+                                    <div class="section-eyebrow">
+                                        CONTACT
+                                    </div>
+
+                                    <h2>
+                                        Contact information
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="contact-list">
+
+
+                                <div class="contact-item">
+
+                                    <div class="contact-icon">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <span>
+                                            Email
+                                        </span>
+
+                                        <strong id="profileEmail">
+                                            Loading...
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="contact-item">
+
+                                    <div class="contact-icon">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <span>
+                                            Phone
+                                        </span>
+
+                                        <strong>
+                                            +91 XXXXX XXXXX
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="contact-item">
+
+                                    <div class="contact-icon">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <span>
+                                            Website
+                                        </span>
+
+                                        <strong>
+                                            researchai.example
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="contact-item">
+
+                                    <div class="contact-icon">
+                                        <i class="fa-brands fa-github"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <span>
+                                            GitHub
+                                        </span>
+
+                                        <strong>
+                                            github.com/researcher
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- RESEARCH PROJECTS -->
+
+                        <div class="profile-card">
+
+                            <div class="profile-card-header">
+
+                                <div>
+
+                                    <div class="section-eyebrow">
+                                        PROJECTS
+                                    </div>
+
+                                    <h2>
+                                        Research projects
+                                    </h2>
+
+                                </div>
+
+
+                                <button class="icon-action" id="addProjectBtn">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div class="project-list">
+
+
+                                <div class="project-item">
+
+                                    <div class="project-icon purple">
+                                        <i class="fa-solid fa-brain"></i>
+                                    </div>
+
+                                    <div class="project-info">
+
+                                        <h3>
+                                            AI Research Assistant
+                                        </h3>
+
+                                        <p>
+                                            AI-powered research workflow
+                                        </p>
+
+                                        <div class="project-progress">
+
+                                            <span style="width: 78%;"></span>
+
+                                        </div>
+
+                                        <small>
+                                            78% completed
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="project-item">
+
+                                    <div class="project-icon blue">
+                                        <i class="fa-solid fa-chart-line"></i>
+                                    </div>
+
+                                    <div class="project-info">
+
+                                        <h3>
+                                            Research Gap Analysis
+                                        </h3>
+
+                                        <p>
+                                            Literature and gap identification
+                                        </p>
+
+                                        <div class="project-progress">
+
+                                            <span style="width: 55%;"></span>
+
+                                        </div>
+
+                                        <small>
+                                            55% completed
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="project-item">
+
+                                    <div class="project-icon green">
+                                        <i class="fa-solid fa-database"></i>
+                                    </div>
+
+                                    <div class="project-info">
+
+                                        <h3>
+                                            Dataset Exploration
+                                        </h3>
+
+                                        <p>
+                                            Research dataset collection
+                                        </p>
+
+                                        <div class="project-progress">
+
+                                            <span style="width: 34%;"></span>
+
+                                        </div>
+
+                                        <small>
+                                            34% completed
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ACCOUNT STATUS -->
+
+                        <div class="profile-card account-status-card">
+
+                            <div class="account-status-top">
+
+                                <div class="status-icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+
+                                <div>
+
+                                    <div class="section-eyebrow">
+                                        ACCOUNT
+                                    </div>
+
+                                    <h2>
+                                        Account status
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="status-row">
+
+                                <span>
+                                    Profile completion
+                                </span>
+
+                                <strong>
+                                    85%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="profile-progress">
+
+                                <span style="width: 85%;"></span>
+
+                            </div>
+
+
+                            <p>
+                                Complete your profile to get better
+                                research recommendations.
+                            </p>
+
+
+                            <a href="settings.html" class="account-settings-link">
+                                Manage Account
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <!-- SOCIAL LINKS -->
+
+                        <div class="profile-card">
+
+                            <div class="profile-card-header">
+
+                                <div>
+
+                                    <div class="section-eyebrow">
+                                        SOCIAL
+                                    </div>
+
+                                    <h2>
+                                        Connect
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="social-links">
+
+                                <a href="#" class="social-link">
+
+                                    <i class="fa-brands fa-github"></i>
+
+                                    <span>
+                                        GitHub
+                                    </span>
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+
+                                <a href="#" class="social-link">
+
+                                    <i class="fa-brands fa-linkedin"></i>
+
+                                    <span>
+                                        LinkedIn
+                                    </span>
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+
+                                <a href="#" class="social-link">
+
+                                    <i class="fa-brands fa-google-scholar"></i>
+
+                                    <span>
+                                        Google Scholar
+                                    </span>
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                 EDIT PROFILE MODAL
+                 ================================================= -->
+
+                <div class="profile-modal" id="profileModal">
+
+                    <div class="modal-overlay"></div>
+
+
+                    <div class="profile-modal-box">
+
+                        <div class="modal-header">
+
+                            <div>
+
+                                <div class="section-eyebrow">
+                                    PROFILE
+                                </div>
+
+                                <h2>
+                                    Edit Profile
+                                </h2>
+
+                            </div>
+
+
+                            <button class="modal-close" id="modalClose">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <form id="profileForm">
+
+                            <div class="modal-avatar">
+
+                                <div class="modal-avatar-circle" id="modalAvatarCircle">
+                                    <span id="modalAvatarText">U</span>
+                                </div>
+
+                                <button type="button" id="changeAvatarModal">
+                                    <i class="fa-solid fa-camera"></i>
+                                    Change Photo
+                                </button>
+
+                            </div>
+
+
+                            <div class="profile-form-grid">
+
+                                <div class="profile-field">
+
+                                    <label for="editName">
+                                        Full Name
+                                    </label>
+
+                                    <input type="text" id="editName" value="">
+
+                                </div>
+
+
+                                <div class="profile-field">
+
+                                    <label for="editRole">
+                                        Role
+                                    </label>
+
+                                    <input type="text" id="editRole" value="Researcher">
+
+                                </div>
+
+
+                                <div class="profile-field">
+
+                                    <label for="editEmail">
+                                        Email
+                                    </label>
+
+                                    <input type="email" id="editEmail" value="">
+
+                                </div>
+
+
+                                <div class="profile-field">
+
+                                    <label for="editLocation">
+                                        Location
+                                    </label>
+
+                                    <input type="text" id="editLocation" value="India">
+
+                                </div>
+
+
+                                <div class="profile-field full">
+
+                                    <label for="editBio">
+                                        About
+                                    </label>
+
+                                    <textarea id="editBio"
+                                        rows="4">I am a research-focused student interested in artificial intelligence, machine learning, data science and modern web technologies.</textarea>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="modal-actions">
+
+                                <button type="button" class="secondary-page-btn" id="cancelModal">
+                                    Cancel
+                                </button>
+
+                                <button type="submit" class="primary-page-btn">
+                                    <i class="fa-solid fa-check"></i>
+                                    Save Changes
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                 FOOTER
+                 ================================================= -->
+
+                <footer class="dashboard-footer">
+
+                    <p>
+                        © 2026 Research AI. All Rights Reserved.
+                    </p>
+
+                    <div>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                        <a href="faq.html">
+                            FAQ
+                        </a>
+
+                    </div>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            /* =========================================================
+               ELEMENTS
+            ========================================================= */
+
+            const sidebar =
+                document.getElementById("sidebar");
+
+            const menuToggle =
+                document.getElementById("menuToggle");
+
+            const sidebarClose =
+                document.getElementById("sidebarClose");
+
+            const sidebarOverlay =
+                document.getElementById("sidebarOverlay");
+
+            const themeToggle =
+                document.getElementById("themeToggle");
+
+            const profileModal =
+                document.getElementById("profileModal");
+
+            const editProfileBtn =
+                document.getElementById("editProfileBtn");
+
+            const modalClose =
+                document.getElementById("modalClose");
+
+            const cancelModal =
+                document.getElementById("cancelModal");
+
+            const profileForm =
+                document.getElementById("profileForm");
+
+            const avatarInput =
+                document.getElementById("avatarInput");
+
+            const changeAvatarModal =
+                document.getElementById("changeAvatarModal");
+
+
+            /* =========================================================
+               SIDEBAR
+            ========================================================= */
+
+            if (menuToggle) {
+
+                menuToggle.addEventListener("click", function () {
+
+                    if (sidebar) {
+                        sidebar.classList.add("open");
+                    }
+
+                    if (sidebarOverlay) {
+                        sidebarOverlay.classList.add("show");
+                    }
+
+                });
+
+            }
+
+
+            if (sidebarClose) {
+
+                sidebarClose.addEventListener("click", function () {
+
+                    if (sidebar) {
+                        sidebar.classList.remove("open");
+                    }
+
+                    if (sidebarOverlay) {
+                        sidebarOverlay.classList.remove("show");
+                    }
+
+                });
+
+            }
+
+
+            if (sidebarOverlay) {
+
+                sidebarOverlay.addEventListener("click", function () {
+
+                    if (sidebar) {
+                        sidebar.classList.remove("open");
+                    }
+
+                    sidebarOverlay.classList.remove("show");
+
+                });
+
+            }
+
+
+            /* =========================================================
+               THEME
+            ========================================================= */
+
+            if (themeToggle) {
+
+                themeToggle.addEventListener("click", function () {
+
+                    document.body.classList.toggle("dark-preview");
+
+                    const icon =
+                        themeToggle.querySelector("i");
+
+                    if (!icon) {
+                        return;
+                    }
+
+                    if (
+                        document.body.classList.contains(
+                            "dark-preview"
+                        )
+                    ) {
+
+                        icon.classList.remove("fa-moon");
+                        icon.classList.add("fa-sun");
+
+                    } else {
+
+                        icon.classList.remove("fa-sun");
+                        icon.classList.add("fa-moon");
+
+                    }
+
+                });
+
+            }
+
+
+            /* =========================================================
+               MODAL
+            ========================================================= */
+
+            function openProfileModal() {
+
+                if (!profileModal) {
+                    return;
+                }
+
+                profileModal.classList.add("show");
+
+                document.body.classList.add("modal-open");
+
+            }
+
+
+            function closeProfileModal() {
+
+                if (!profileModal) {
+                    return;
+                }
+
+                profileModal.classList.remove("show");
+
+                document.body.classList.remove("modal-open");
+
+            }
+
+
+            if (editProfileBtn) {
+
+                editProfileBtn.addEventListener(
+                    "click",
+                    openProfileModal
+                );
+
+            }
+
+
+            if (modalClose) {
+
+                modalClose.addEventListener(
+                    "click",
+                    closeProfileModal
+                );
+
+            }
+
+
+            if (cancelModal) {
+
+                cancelModal.addEventListener(
+                    "click",
+                    closeProfileModal
+                );
+
+            }
+
+
+            if (profileModal) {
+
+                const overlay =
+                    profileModal.querySelector(
+                        ".modal-overlay"
+                    );
+
+                if (overlay) {
+
+                    overlay.addEventListener(
+                        "click",
+                        closeProfileModal
+                    );
+
+                }
+
+            }
+
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key === "Escape" &&
+                        profileModal &&
+                        profileModal.classList.contains("show")
+                    ) {
+
+                        closeProfileModal();
+
+                    }
+
+                }
+            );
+
+
+            /* =========================================================
+               INITIALS
+            ========================================================= */
+
+            function getInitials(name) {
+
+                const cleanName =
+                    String(name || "User").trim();
+
+                if (!cleanName) {
+                    return "U";
+                }
+
+                return cleanName
+                    .split(/\s+/)
+                    .map(function (word) {
+
+                        return word.charAt(0);
+
+                    })
+                    .slice(0, 2)
+                    .join("")
+                    .toUpperCase();
+
+            }
+
+
+            /* =========================================================
+               AVATAR RENDER
+            ========================================================= */
+
+            function renderAvatar(
+                elementId,
+                textId,
+                imagePath,
+                userName
+            ) {
+
+                const element =
+                    document.getElementById(elementId);
+
+                if (!element) {
+                    return;
+                }
+
+
+                const textElement =
+                    document.getElementById(textId);
+
+
+                /*
+                 * No profile image
+                 * Show initials
+                 */
+
+                if (!imagePath) {
+
+                    element.style.backgroundImage = "";
+
+                    element.style.backgroundSize = "";
+
+                    element.style.backgroundPosition = "";
+
+                    if (textElement) {
+
+                        textElement.textContent =
+                            getInitials(userName);
+
+                        textElement.style.display =
+                            "";
+
+                    }
+
+                    return;
+                }
+
+
+                /*
+                 * Profile image exists
+                 */
+
+                let finalPath =
+                    String(imagePath);
+
+
+                /*
+                 * Database returns:
+                 *
+                 * uploads/profile/user_1_xxx.jpg
+                 *
+                 * profile.html is inside /pages/
+                 *
+                 * Therefore:
+                 *
+                 * ../uploads/profile/...
+                 */
+
+                if (
+                    !finalPath.startsWith("/") &&
+                    !finalPath.startsWith("http://") &&
+                    !finalPath.startsWith("https://") &&
+                    !finalPath.startsWith("../")
+                ) {
+
+                    finalPath =
+                        "../" + finalPath;
+
+                }
+
+
+                element.style.backgroundImage =
+                    'url("' +
+                    finalPath +
+                    '?v=' +
+                    Date.now() +
+                    '")';
+
+                element.style.backgroundSize =
+                    "cover";
+
+                element.style.backgroundPosition =
+                    "center";
+
+                element.style.backgroundRepeat =
+                    "no-repeat";
+
+
+                if (textElement) {
+
+                    textElement.style.display =
+                        "none";
+
+                }
+
+            }
+
+
+            /* =========================================================
+               LOAD PROFILE FROM DATABASE
+            ========================================================= */
+
+            async function loadProfile() {
+
+                try {
+
+                    const response =
+                        await fetch(
+                            "../backend/pages/profile.php",
+                            {
+                                method: "GET",
+                                credentials: "same-origin",
+                                cache: "no-store"
+                            }
+                        );
+
+
+                    const data =
+                        await response.json();
+
+
+                    /*
+                     * Authentication failed
+                     */
+
+                    if (
+                        !response.ok ||
+                        !data.success ||
+                        !data.user
+                    ) {
+
+                        window.location.href =
+                            "login.html";
+
+                        return;
+
+                    }
+
+
+                    const user =
+                        data.user;
+
+
+                    const userName =
+                        user.name || "User";
+
+                    const userEmail =
+                        user.email || "";
+
+                    const userRole =
+                        user.role || "user";
+
+                    const profileImage =
+                        user.profile_image || "";
+
+                    const profileEmail =
+                        document.getElementById("profileEmail");
+
+                    if (profileEmail) {
+                        profileEmail.textContent = userEmail;
+                    }
+                    /*
+                     * Save globally
+                     */
+
+                    window.currentUser =
+                        user;
+
+                    window.csrfToken =
+                        data.csrf_token || "";
+
+
+                    /* =================================================
+                       MAIN PROFILE
+                    ================================================= */
+
+                    const profileName =
+                        document.getElementById(
+                            "profileName"
+                        );
+
+                    if (profileName) {
+
+                        profileName.textContent =
+                            userName;
+
+                    }
+
+
+                    const editName =
+                        document.getElementById(
+                            "editName"
+                        );
+
+                    if (editName) {
+
+                        editName.value =
+                            userName;
+
+                    }
+
+
+                    const editEmail =
+                        document.getElementById(
+                            "editEmail"
+                        );
+
+                    if (editEmail) {
+
+                        editEmail.value =
+                            userEmail;
+
+                    }
+
+
+                    /* =================================================
+                       NAVBAR
+                    ================================================= */
+
+                    const navbarUserName =
+                        document.getElementById(
+                            "navbarUserName"
+                        );
+
+                    if (navbarUserName) {
+
+                        navbarUserName.textContent =
+                            userName;
+
+                    }
+
+
+                    const navbarUserRole =
+                        document.getElementById(
+                            "navbarUserRole"
+                        );
+
+                    if (navbarUserRole) {
+
+                        navbarUserRole.textContent =
+                            userRole === "user"
+                                ? "Student"
+                                : userRole;
+
+                    }
+
+
+                    renderAvatar(
+                        "navbarAvatar",
+                        null,
+                        profileImage,
+                        userName
+                    );
+
+
+                    /* =================================================
+                       SIDEBAR
+                    ================================================= */
+
+                    const sidebarUserName =
+                        document.getElementById(
+                            "sidebarUserName"
+                        );
+
+                    if (sidebarUserName) {
+
+                        sidebarUserName.textContent =
+                            userName;
+
+                    }
+
+
+                    const sidebarUserRole =
+                        document.getElementById(
+                            "sidebarUserRole"
+                        );
+
+                    if (sidebarUserRole) {
+
+                        sidebarUserRole.textContent =
+                            userRole === "user"
+                                ? "Student Account"
+                                : userRole;
+
+                    }
+
+
+                    renderAvatar(
+                        "sidebarAvatar",
+                        null,
+                        profileImage,
+                        userName
+                    );
+
+
+                    /* =================================================
+                       MAIN PROFILE AVATAR
+                    ================================================= */
+
+                    renderAvatar(
+                        "profileLargeAvatar",
+                        "avatarText",
+                        profileImage,
+                        userName
+                    );
+
+
+                    /* =================================================
+                       MODAL AVATAR
+                    ================================================= */
+
+                    renderAvatar(
+                        "modalAvatarCircle",
+                        "modalAvatarText",
+                        profileImage,
+                        userName
+                    );
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Profile loading error:",
+                        error
+                    );
+
+                    window.location.href =
+                        "login.html";
+
+                }
+
+            }
+
+
+            /* =========================================================
+               CHANGE AVATAR BUTTON
+            ========================================================= */
+
+            if (
+                changeAvatarModal &&
+                avatarInput
+            ) {
+
+                changeAvatarModal.addEventListener(
+                    "click",
+                    function () {
+
+                        avatarInput.click();
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================================
+               AVATAR PREVIEW
+            ========================================================= */
+
+            if (avatarInput) {
+
+                avatarInput.addEventListener(
+                    "change",
+                    function () {
+
+                        const file =
+                            avatarInput.files[0];
+
+                        if (!file) {
+                            return;
+                        }
+
+
+                        const allowedTypes = [
+                            "image/jpeg",
+                            "image/png",
+                            "image/webp"
+                        ];
+
+
+                        if (
+                            !allowedTypes.includes(
+                                file.type
+                            )
+                        ) {
+
+                            alert(
+                                "Only JPG, PNG and WEBP images are allowed."
+                            );
+
+                            avatarInput.value = "";
+
+                            return;
+
+                        }
+
+
+                        if (
+                            file.size >
+                            2 * 1024 * 1024
+                        ) {
+
+                            alert(
+                                "Profile image must be less than 2 MB."
+                            );
+
+                            avatarInput.value = "";
+
+                            return;
+
+                        }
+
+
+                        const reader =
+                            new FileReader();
+
+
+                        reader.onload =
+                            function (event) {
+
+                                const imageUrl =
+                                    event.target.result;
+
+
+                                const largeAvatar =
+                                    document.getElementById(
+                                        "profileLargeAvatar"
+                                    );
+
+
+                                const modalAvatar =
+                                    document.getElementById(
+                                        "modalAvatarCircle"
+                                    );
+
+
+                                if (largeAvatar) {
+
+                                    largeAvatar.style.backgroundImage =
+                                        'url("' +
+                                        imageUrl +
+                                        '")';
+
+                                    largeAvatar.style.backgroundSize =
+                                        "cover";
+
+                                    largeAvatar.style.backgroundPosition =
+                                        "center";
+
+                                    const text =
+                                        document.getElementById(
+                                            "avatarText"
+                                        );
+
+                                    if (text) {
+
+                                        text.style.display =
+                                            "none";
+
+                                    }
+
+                                }
+
+
+                                if (modalAvatar) {
+
+                                    modalAvatar.style.backgroundImage =
+                                        'url("' +
+                                        imageUrl +
+                                        '")';
+
+                                    modalAvatar.style.backgroundSize =
+                                        "cover";
+
+                                    modalAvatar.style.backgroundPosition =
+                                        "center";
+
+                                    const modalText =
+                                        document.getElementById(
+                                            "modalAvatarText"
+                                        );
+
+                                    if (modalText) {
+
+                                        modalText.style.display =
+                                            "none";
+
+                                    }
+
+                                }
+
+                            };
+
+
+                        reader.readAsDataURL(file);
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================================
+               SAVE PROFILE TO DATABASE
+            ========================================================= */
+
+            if (profileForm) {
+
+                profileForm.addEventListener(
+                    "submit",
+                    async function (event) {
+
+                        event.preventDefault();
+
+
+                        const nameInput =
+                            document.getElementById(
+                                "editName"
+                            );
+
+
+                        if (!nameInput) {
+
+                            alert(
+                                "Name field not found."
+                            );
+
+                            return;
+
+                        }
+
+
+                        const fullName =
+                            nameInput.value.trim();
+
+
+                        if (
+                            fullName.length < 2 ||
+                            fullName.length > 100
+                        ) {
+
+                            alert(
+                                "Please enter a valid name."
+                            );
+
+                            return;
+
+                        }
+
+
+                        if (!window.csrfToken) {
+
+                            alert(
+                                "Security token is missing. Please refresh the page."
+                            );
+
+                            return;
+
+                        }
+
+
+                        const formData =
+                            new FormData();
+
+
+                        formData.append(
+                            "csrf_token",
+                            window.csrfToken
+                        );
+
+
+                        formData.append(
+                            "full_name",
+                            fullName
+                        );
+
+
+                        if (
+                            avatarInput &&
+                            avatarInput.files &&
+                            avatarInput.files[0]
+                        ) {
+
+                            formData.append(
+                                "profile_image",
+                                avatarInput.files[0]
+                            );
+
+                        }
+
+
+                        try {
+
+                            const response =
+                                await fetch(
+                                    "../backend/pages/profile.php",
+                                    {
+                                        method: "POST",
+                                        body: formData,
+                                        credentials: "same-origin",
+                                        cache: "no-store"
+                                    }
+                                );
+
+
+                            const data =
+                                await response.json();
+
+
+                            if (
+                                !response.ok ||
+                                !data.success
+                            ) {
+
+                                throw new Error(
+                                    data.message ||
+                                    "Unable to update profile."
+                                );
+
+                            }
+
+
+                            /*
+                             * Reload fresh database data
+                             */
+
+                            await loadProfile();
+
+
+                            /*
+                             * Clear selected file
+                             */
+
+                            if (avatarInput) {
+
+                                avatarInput.value = "";
+
+                            }
+
+
+                            closeProfileModal();
+
+
+                            alert(
+                                "Profile updated successfully."
+                            );
+
+
+                        } catch (error) {
+
+                            console.error(
+                                "Profile update error:",
+                                error
+                            );
+
+
+                            alert(
+                                error.message ||
+                                "Unable to update profile."
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================================
+               SHARE PROFILE
+            ========================================================= */
+
+            const shareProfileBtn =
+                document.getElementById(
+                    "shareProfileBtn"
+                );
+
+
+            if (shareProfileBtn) {
+
+                shareProfileBtn.addEventListener(
+                    "click",
+                    async function () {
+
+                        const shareData = {
+
+                            title:
+                                "Research AI Profile",
+
+                            text:
+                                "Researcher profile on Research AI.",
+
+                            url:
+                                window.location.href
+
+                        };
+
+
+                        if (
+                            navigator.share
+                        ) {
+
+                            try {
+
+                                await navigator.share(
+                                    shareData
+                                );
+
+                            } catch (error) {
+
+                                /*
+                                 * User cancelled sharing.
+                                 */
+
+                            }
+
+                        } else {
+
+                            try {
+
+                                await navigator.clipboard.writeText(
+                                    window.location.href
+                                );
+
+                                alert(
+                                    "Profile link copied."
+                                );
+
+                            } catch (error) {
+
+                                alert(
+                                    "Unable to share profile."
+                                );
+
+                            }
+
+                        }
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================================
+               REMOVE INTEREST
+            ========================================================= */
+
+            function bindInterestButtons() {
+
+                document
+                    .querySelectorAll(
+                        ".interest-tags span button"
+                    )
+                    .forEach(function (button) {
+
+                        button.onclick =
+                            function () {
+
+                                const tag =
+                                    this.closest("span");
+
+                                if (tag) {
+                                    tag.remove();
+                                }
+
+                            };
+
+                    });
+
+            }
+
+
+            bindInterestButtons();
+
+
+            /* =========================================================
+               ADD INTEREST
+            ========================================================= */
+
+            const addInterestBtn =
+                document.getElementById(
+                    "addInterestBtn"
+                );
+
+
+            if (addInterestBtn) {
+
+                addInterestBtn.addEventListener(
+                    "click",
+                    function () {
+
+                        const interest =
+                            prompt(
+                                "Enter a research interest:"
+                            );
+
+
+                        if (!interest) {
+                            return;
+                        }
+
+
+                        const cleanInterest =
+                            interest.trim();
+
+
+                        if (!cleanInterest) {
+                            return;
+                        }
+
+
+                        const tag =
+                            document.createElement(
+                                "span"
+                            );
+
+
+                        tag.innerHTML =
+                            `
+                        ${cleanInterest}
+
+                        <button type="button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    `;
+
+
+                        const interestTags =
+                            document.getElementById(
+                                "interestTags"
+                            );
+
+
+                        if (interestTags) {
+
+                            interestTags.appendChild(
+                                tag
+                            );
+
+                            bindInterestButtons();
+
+                        }
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================================
+               EDIT ABOUT
+            ========================================================= */
+
+            const editAboutBtn =
+                document.getElementById(
+                    "editAboutBtn"
+                );
+
+
+            if (editAboutBtn) {
+
+                editAboutBtn.addEventListener(
+                    "click",
+                    openProfileModal
+                );
+
+            }
+
+
+            /* =========================================================
+               EDUCATION
+            ========================================================= */
+
+            const editEducationBtn =
+                document.getElementById(
+                    "editEducationBtn"
+                );
+
+
+            if (editEducationBtn) {
+
+                editEducationBtn.addEventListener(
+                    "click",
+                    function () {
+
+                        alert(
+                            "Education editing will be connected to the backend later."
+                        );
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================================
+               ADD PROJECT
+            ========================================================= */
+
+            const addProjectBtn =
+                document.getElementById(
+                    "addProjectBtn"
+                );
+
+
+            if (addProjectBtn) {
+
+                addProjectBtn.addEventListener(
+                    "click",
+                    function () {
+
+                        const project =
+                            prompt(
+                                "Enter research project name:"
+                            );
+
+
+                        if (project) {
+
+                            alert(
+                                `"${project}" project will be connected to the backend later.`
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================================
+               GLOBAL SEARCH
+            ========================================================= */
+
+            const globalSearch =
+                document.getElementById(
+                    "globalSearch"
+                );
+
+
+            if (globalSearch) {
+
+                globalSearch.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Enter"
+                        ) {
+
+                            const value =
+                                event.target.value.trim();
+
+
+                            if (value) {
+
+                                alert(
+                                    `Searching Research AI for: ${value}`
+                                );
+
+                            }
+
+                        }
+
+                    }
+                );
+
+            }
+
+
+            /* =========================================================
+               LOAD DATABASE PROFILE
+            ========================================================= */
+
+            loadProfile();
+
+        });
+
+    </script>
+
+</body>
+
+</html>

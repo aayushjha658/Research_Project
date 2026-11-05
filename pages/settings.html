@@ -1,0 +1,2718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <!-- Existing common CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+
+    <!-- Settings CSS -->
+    <link rel="stylesheet" href="../css/settings.css">
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <a href="../index.html">
+
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <button class="sidebar-close" id="sidebarClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <!-- MAIN MENU -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                MAIN MENU
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="research-domain.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+
+                    Research Domains
+
+                </a>
+
+
+                <a href="papers.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    Research Papers
+
+                </a>
+
+
+                <a href="datasets.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+
+                    Datasets
+
+                </a>
+
+
+                <a href="models.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+
+                    AI Models
+
+                </a>
+
+
+                <a href="github.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+
+                    GitHub Explorer
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- AI RESEARCH TOOLS -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                AI RESEARCH TOOLS
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="ai-analysis.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+
+                    AI Analysis
+
+                </a>
+
+
+                <a href="research-gap.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+
+                    Research Gap
+
+                </a>
+
+
+                <a href="idea-generator.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+
+                    Idea Generator
+
+                </a>
+
+
+                <a href="literature.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+
+                    Literature Review
+
+                </a>
+
+
+                <a href="ai-chat.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+
+                    AI Assistant
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- RESOURCES -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                RESOURCES
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="conferences.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+
+                    Conferences
+
+                </a>
+
+
+                <a href="citation.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+
+                    Citation Generator
+
+                </a>
+
+
+                <a href="internet-research.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+
+                    Internet Research
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="settings.html"
+                class="sidebar-link active"
+            >
+
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                Settings
+
+            </a>
+
+
+            <a href="profile.html" class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Researcher
+                    </strong>
+
+                    <span>
+                        Student Account
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP NAVBAR -->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="page-title">
+
+                    <span>
+                        Account
+                    </span>
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search..."
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <div class="navbar-actions">
+
+                <button
+                    class="navbar-icon-btn"
+                    id="themeToggle"
+                >
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="navbar-user"
+                >
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+
+                        <strong>
+                            Researcher
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             PAGE CONTENT
+             ===================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    Settings
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 SETTINGS HEADER
+                 ================================================= -->
+
+            <section class="settings-header">
+
+                <div>
+
+                    <div class="section-eyebrow">
+                        ACCOUNT PREFERENCES
+                    </div>
+
+                    <h2>
+                        Settings
+                    </h2>
+
+                    <p>
+                        Manage your profile, preferences, notifications,
+                        privacy and research workspace settings.
+                    </p>
+
+                </div>
+
+
+                <div class="settings-save-status" id="saveStatus">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span>
+                        All changes saved
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SETTINGS LAYOUT
+                 ================================================= -->
+
+            <section class="settings-layout">
+
+
+                <!-- =================================================
+                     SETTINGS NAVIGATION
+                     ================================================= -->
+
+                <aside class="settings-navigation">
+
+                    <button
+                        class="settings-nav-item active"
+                        data-section="account"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="fa-regular fa-user"></i>
+                        </span>
+
+                        <span>
+                            Account
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-section="appearance"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </span>
+
+                        <span>
+                            Appearance
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-section="notifications"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="fa-regular fa-bell"></i>
+                        </span>
+
+                        <span>
+                            Notifications
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-section="research"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="fa-solid fa-flask"></i>
+                        </span>
+
+                        <span>
+                            Research
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-section="privacy"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </span>
+
+                        <span>
+                            Privacy & Security
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-section="data"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </span>
+
+                        <span>
+                            Data & Storage
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="settings-nav-item"
+                        data-section="help"
+                    >
+
+                        <span class="settings-nav-icon">
+                            <i class="fa-regular fa-circle-question"></i>
+                        </span>
+
+                        <span>
+                            Help & Support
+                        </span>
+
+                    </button>
+
+
+                    <div class="settings-nav-divider"></div>
+
+
+                    <a
+                        href="profile.html"
+                        class="settings-profile-link"
+                    >
+
+                        <div class="settings-profile-avatar">
+                            AJ
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Aayush Jha
+                            </strong>
+
+                            <span>
+                                View Profile
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </a>
+
+                </aside>
+
+
+                <!-- =================================================
+                     SETTINGS CONTENT
+                     ================================================= -->
+
+                <div class="settings-content">
+
+
+                    <!-- =================================================
+                         ACCOUNT
+                         ================================================= -->
+
+                    <div
+                        class="settings-section active"
+                        id="section-account"
+                    >
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <div class="section-eyebrow">
+                                    ACCOUNT
+                                </div>
+
+                                <h2>
+                                    Account information
+                                </h2>
+
+                                <p>
+                                    Update your personal account details.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PERSONAL INFORMATION -->
+
+                        <div class="settings-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Personal information
+                                    </h3>
+
+                                    <p>
+                                        Your basic account information.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-regular fa-user"></i>
+
+                            </div>
+
+
+                            <div class="settings-form-grid">
+
+                                <div class="settings-field">
+
+                                    <label for="firstName">
+                                        First name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        value="Aayush"
+                                    >
+
+                                </div>
+
+
+                                <div class="settings-field">
+
+                                    <label for="lastName">
+                                        Last name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        value="Jha"
+                                    >
+
+                                </div>
+
+
+                                <div class="settings-field full">
+
+                                    <label for="email">
+                                        Email address
+                                    </label>
+
+                                    <div class="input-with-icon">
+
+                                        <i class="fa-regular fa-envelope"></i>
+
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            value="researcher@example.com"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="settings-field">
+
+                                    <label for="role">
+                                        Role
+                                    </label>
+
+                                    <select id="role">
+
+                                        <option>
+                                            Student
+                                        </option>
+
+                                        <option>
+                                            Researcher
+                                        </option>
+
+                                        <option>
+                                            Professor
+                                        </option>
+
+                                        <option>
+                                            Developer
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="settings-field">
+
+                                    <label for="institution">
+                                        Institution
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="institution"
+                                        value="Rai University"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="settings-card-actions">
+
+                                <button
+                                    class="secondary-page-btn"
+                                    id="resetAccount"
+                                >
+                                    Reset
+                                </button>
+
+                                <button
+                                    class="primary-page-btn save-settings"
+                                >
+                                    <i class="fa-solid fa-check"></i>
+                                    Save Changes
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="settings-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Password
+                                    </h3>
+
+                                    <p>
+                                        Update your account password.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-solid fa-lock"></i>
+
+                            </div>
+
+
+                            <div class="password-info">
+
+                                <div class="password-status-icon">
+                                    <i class="fa-solid fa-shield-check"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Your password is secure
+                                    </strong>
+
+                                    <p>
+                                        Last changed more than 30 days ago.
+                                    </p>
+
+                                </div>
+
+                                <button
+                                    class="secondary-page-btn"
+                                    id="changePasswordBtn"
+                                >
+                                    Change Password
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         APPEARANCE
+                         ================================================= -->
+
+                    <div
+                        class="settings-section"
+                        id="section-appearance"
+                    >
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <div class="section-eyebrow">
+                                    APPEARANCE
+                                </div>
+
+                                <h2>
+                                    Appearance
+                                </h2>
+
+                                <p>
+                                    Customize how Research AI looks.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Theme
+                                    </h3>
+
+                                    <p>
+                                        Choose your preferred interface theme.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-solid fa-palette"></i>
+
+                            </div>
+
+
+                            <div class="theme-options">
+
+                                <button
+                                    class="theme-option active"
+                                    data-theme="light"
+                                >
+
+                                    <div class="theme-preview light-preview">
+
+                                        <div class="preview-sidebar"></div>
+
+                                        <div class="preview-main">
+
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        Light
+                                    </strong>
+
+                                    <small>
+                                        Clean and bright
+                                    </small>
+
+                                    <i class="fa-solid fa-circle-check"></i>
+
+                                </button>
+
+
+                                <button
+                                    class="theme-option"
+                                    data-theme="dark"
+                                >
+
+                                    <div class="theme-preview dark-preview">
+
+                                        <div class="preview-sidebar"></div>
+
+                                        <div class="preview-main">
+
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        Dark
+                                    </strong>
+
+                                    <small>
+                                        Comfortable at night
+                                    </small>
+
+                                    <i class="fa-solid fa-circle-check"></i>
+
+                                </button>
+
+
+                                <button
+                                    class="theme-option"
+                                    data-theme="system"
+                                >
+
+                                    <div class="theme-preview system-preview">
+
+                                        <div class="preview-sidebar"></div>
+
+                                        <div class="preview-main">
+
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        System
+                                    </strong>
+
+                                    <small>
+                                        Follow device settings
+                                    </small>
+
+                                    <i class="fa-solid fa-circle-check"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FONT SIZE -->
+
+                        <div class="settings-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Text size
+                                    </h3>
+
+                                    <p>
+                                        Adjust the interface text size.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-solid fa-text-height"></i>
+
+                            </div>
+
+
+                            <div class="font-size-control">
+
+                                <span class="font-small">
+                                    A
+                                </span>
+
+                                <input
+                                    type="range"
+                                    id="fontSizeRange"
+                                    min="90"
+                                    max="115"
+                                    value="100"
+                                >
+
+                                <span class="font-large">
+                                    A
+                                </span>
+
+                            </div>
+
+
+                            <div class="font-size-label">
+
+                                <span>
+                                    Smaller
+                                </span>
+
+                                <strong id="fontSizeValue">
+                                    Normal
+                                </strong>
+
+                                <span>
+                                    Larger
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         NOTIFICATIONS
+                         ================================================= -->
+
+                    <div
+                        class="settings-section"
+                        id="section-notifications"
+                    >
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <div class="section-eyebrow">
+                                    NOTIFICATIONS
+                                </div>
+
+                                <h2>
+                                    Notification preferences
+                                </h2>
+
+                                <p>
+                                    Control which notifications you receive.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Email notifications
+                                    </h3>
+
+                                    <p>
+                                        Choose the research updates you want
+                                        to receive by email.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                            </div>
+
+
+                            <div class="toggle-list">
+
+                                <div class="toggle-row">
+
+                                    <div>
+
+                                        <strong>
+                                            Research recommendations
+                                        </strong>
+
+                                        <span>
+                                            Receive recommended papers and
+                                            research resources.
+                                        </span>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                            checked
+                                        >
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="toggle-row">
+
+                                    <div>
+
+                                        <strong>
+                                            New research alerts
+                                        </strong>
+
+                                        <span>
+                                            Get notified about new research
+                                            related to your interests.
+                                        </span>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                            checked
+                                        >
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="toggle-row">
+
+                                    <div>
+
+                                        <strong>
+                                            Weekly research summary
+                                        </strong>
+
+                                        <span>
+                                            Receive a weekly summary of your
+                                            research activity.
+                                        </span>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                            checked
+                                        >
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="toggle-row">
+
+                                    <div>
+
+                                        <strong>
+                                            Product updates
+                                        </strong>
+
+                                        <span>
+                                            Learn about new Research AI features.
+                                        </span>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                        >
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        In-app notifications
+                                    </h3>
+
+                                    <p>
+                                        Manage notifications shown inside
+                                        Research AI.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-regular fa-bell"></i>
+
+                            </div>
+
+
+                            <div class="toggle-list">
+
+                                <div class="toggle-row">
+
+                                    <div>
+
+                                        <strong>
+                                            Paper processing
+                                        </strong>
+
+                                        <span>
+                                            Notify when paper analysis is complete.
+                                        </span>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                            checked
+                                        >
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="toggle-row">
+
+                                    <div>
+
+                                        <strong>
+                                            AI analysis completion
+                                        </strong>
+
+                                        <span>
+                                            Notify when AI analysis finishes.
+                                        </span>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                            checked
+                                        >
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         RESEARCH
+                         ================================================= -->
+
+                    <div
+                        class="settings-section"
+                        id="section-research"
+                    >
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <div class="section-eyebrow">
+                                    RESEARCH WORKSPACE
+                                </div>
+
+                                <h2>
+                                    Research preferences
+                                </h2>
+
+                                <p>
+                                    Configure how your research workspace behaves.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Default research settings
+                                    </h3>
+
+                                    <p>
+                                        Choose your preferred research defaults.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-solid fa-flask"></i>
+
+                            </div>
+
+
+                            <div class="settings-form-grid">
+
+                                <div class="settings-field">
+
+                                    <label for="defaultDomain">
+                                        Default research domain
+                                    </label>
+
+                                    <select id="defaultDomain">
+
+                                        <option>
+                                            Artificial Intelligence
+                                        </option>
+
+                                        <option>
+                                            Machine Learning
+                                        </option>
+
+                                        <option>
+                                            Data Science
+                                        </option>
+
+                                        <option>
+                                            Computer Science
+                                        </option>
+
+                                        <option>
+                                            Computer Vision
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="settings-field">
+
+                                    <label for="citationStyle">
+                                        Citation style
+                                    </label>
+
+                                    <select id="citationStyle">
+
+                                        <option>
+                                            APA 7th Edition
+                                        </option>
+
+                                        <option>
+                                            MLA 9th Edition
+                                        </option>
+
+                                        <option>
+                                            IEEE
+                                        </option>
+
+                                        <option>
+                                            Chicago
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="settings-field">
+
+                                    <label for="paperLanguage">
+                                        Paper language
+                                    </label>
+
+                                    <select id="paperLanguage">
+
+                                        <option>
+                                            English
+                                        </option>
+
+                                        <option>
+                                            Hindi
+                                        </option>
+
+                                        <option>
+                                            Gujarati
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="settings-field">
+
+                                    <label for="resultsPerPage">
+                                        Results per page
+                                    </label>
+
+                                    <select id="resultsPerPage">
+
+                                        <option>
+                                            10
+                                        </option>
+
+                                        <option selected>
+                                            20
+                                        </option>
+
+                                        <option>
+                                            50
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Research assistance
+                                    </h3>
+
+                                    <p>
+                                        Configure AI-assisted research features.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-solid fa-robot"></i>
+
+                            </div>
+
+
+                            <div class="toggle-list">
+
+                                <div class="toggle-row">
+
+                                    <div>
+
+                                        <strong>
+                                            Smart paper recommendations
+                                        </strong>
+
+                                        <span>
+                                            Recommend papers based on your
+                                            research interests.
+                                        </span>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                            checked
+                                        >
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="toggle-row">
+
+                                    <div>
+
+                                        <strong>
+                                            Research gap suggestions
+                                        </strong>
+
+                                        <span>
+                                            Show possible research gaps during
+                                            literature exploration.
+                                        </span>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                            checked
+                                        >
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="toggle-row">
+
+                                    <div>
+
+                                        <strong>
+                                            AI-generated research ideas
+                                        </strong>
+
+                                        <span>
+                                            Enable research idea suggestions.
+                                        </span>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                            checked
+                                        >
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PRIVACY
+                         ================================================= -->
+
+                    <div
+                        class="settings-section"
+                        id="section-privacy"
+                    >
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <div class="section-eyebrow">
+                                    PRIVACY & SECURITY
+                                </div>
+
+                                <h2>
+                                    Privacy and security
+                                </h2>
+
+                                <p>
+                                    Manage your account security and privacy.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Account security
+                                    </h3>
+
+                                    <p>
+                                        Protect your Research AI account.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-solid fa-shield-halved"></i>
+
+                            </div>
+
+
+                            <div class="security-list">
+
+                                <div class="security-item">
+
+                                    <div class="security-icon green">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Password
+                                        </strong>
+
+                                        <span>
+                                            Your password is protected.
+                                        </span>
+
+                                    </div>
+
+                                    <button
+                                        class="secondary-page-btn"
+                                        id="securityPassword"
+                                    >
+                                        Update
+                                    </button>
+
+                                </div>
+
+
+                                <div class="security-item">
+
+                                    <div class="security-icon blue">
+                                        <i class="fa-solid fa-mobile-screen"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Two-factor authentication
+                                        </strong>
+
+                                        <span>
+                                            Add an additional layer of security.
+                                        </span>
+
+                                    </div>
+
+                                    <label class="switch">
+
+                                        <input
+                                            type="checkbox"
+                                        >
+
+                                        <span class="slider"></span>
+
+                                    </label>
+
+                                </div>
+
+
+                                <div class="security-item">
+
+                                    <div class="security-icon purple">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Active sessions
+                                        </strong>
+
+                                        <span>
+                                            Manage devices where you are signed in.
+                                        </span>
+
+                                    </div>
+
+                                    <button
+                                        class="secondary-page-btn"
+                                        id="sessionsBtn"
+                                    >
+                                        Manage
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card danger-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Danger zone
+                                    </h3>
+
+                                    <p>
+                                        Permanent account actions.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                            </div>
+
+
+                            <div class="danger-row">
+
+                                <div>
+
+                                    <strong>
+                                        Delete account
+                                    </strong>
+
+                                    <span>
+                                        Permanently remove your account
+                                        and associated data.
+                                    </span>
+
+                                </div>
+
+                                <button
+                                    class="danger-btn"
+                                    id="deleteAccountBtn"
+                                >
+                                    Delete Account
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         DATA
+                         ================================================= -->
+
+                    <div
+                        class="settings-section"
+                        id="section-data"
+                    >
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <div class="section-eyebrow">
+                                    DATA & STORAGE
+                                </div>
+
+                                <h2>
+                                    Data and storage
+                                </h2>
+
+                                <p>
+                                    Manage your research data and storage.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="storage-overview">
+
+                            <div class="storage-icon">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+
+                            <div class="storage-details">
+
+                                <div class="storage-title">
+
+                                    <strong>
+                                        Research storage
+                                    </strong>
+
+                                    <span>
+                                        2.4 GB / 10 GB
+                                    </span>
+
+                                </div>
+
+                                <div class="storage-bar">
+
+                                    <span
+                                        style="width: 24%;"
+                                    ></span>
+
+                                </div>
+
+                                <p>
+                                    You are using 24% of your available storage.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card">
+
+                            <div class="settings-card-header">
+
+                                <div>
+
+                                    <h3>
+                                        Your data
+                                    </h3>
+
+                                    <p>
+                                        Manage your stored research information.
+                                    </p>
+
+                                </div>
+
+                                <i class="fa-solid fa-folder-open"></i>
+
+                            </div>
+
+
+                            <div class="data-action-list">
+
+                                <button
+                                    class="data-action"
+                                    id="exportDataBtn"
+                                >
+
+                                    <div class="data-action-icon blue">
+                                        <i class="fa-solid fa-download"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Export your data
+                                        </strong>
+
+                                        <span>
+                                            Download your research data and
+                                            account information.
+                                        </span>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-chevron-right"></i>
+
+                                </button>
+
+
+                                <button
+                                    class="data-action"
+                                    id="clearCacheBtn"
+                                >
+
+                                    <div class="data-action-icon orange">
+                                        <i class="fa-solid fa-broom"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Clear temporary data
+                                        </strong>
+
+                                        <span>
+                                            Remove cached files and temporary
+                                            browser data.
+                                        </span>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-chevron-right"></i>
+
+                                </button>
+
+
+                                <button
+                                    class="data-action"
+                                    id="downloadPapersBtn"
+                                >
+
+                                    <div class="data-action-icon purple">
+                                        <i class="fa-solid fa-file-arrow-down"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Download saved papers
+                                        </strong>
+
+                                        <span>
+                                            Export your saved research papers.
+                                        </span>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-chevron-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         HELP
+                         ================================================= -->
+
+                    <div
+                        class="settings-section"
+                        id="section-help"
+                    >
+
+                        <div class="settings-section-title">
+
+                            <div>
+
+                                <div class="section-eyebrow">
+                                    SUPPORT
+                                </div>
+
+                                <h2>
+                                    Help & Support
+                                </h2>
+
+                                <p>
+                                    Find answers and get help with Research AI.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="support-grid">
+
+                            <a
+                                href="faq.html"
+                                class="support-card"
+                            >
+
+                                <div class="support-icon blue">
+                                    <i class="fa-regular fa-circle-question"></i>
+                                </div>
+
+                                <h3>
+                                    Frequently Asked Questions
+                                </h3>
+
+                                <p>
+                                    Find answers to common questions about
+                                    Research AI.
+                                </p>
+
+                                <span>
+                                    View FAQ
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="contact.html"
+                                class="support-card"
+                            >
+
+                                <div class="support-icon purple">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+
+                                <h3>
+                                    Contact Support
+                                </h3>
+
+                                <p>
+                                    Get in touch with our support team.
+                                </p>
+
+                                <span>
+                                    Contact Us
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="about.html"
+                                class="support-card"
+                            >
+
+                                <div class="support-icon green">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+
+                                <h3>
+                                    About Research AI
+                                </h3>
+
+                                <p>
+                                    Learn more about the Research AI platform.
+                                </p>
+
+                                <span>
+                                    Learn More
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="support-banner">
+
+                            <div class="support-banner-icon">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Need more help?
+                                </h3>
+
+                                <p>
+                                    Our support team is here to help you
+                                    with your research workspace.
+                                </p>
+
+                            </div>
+
+                            <a href="contact.html">
+                                Contact Support
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+                 ================================================= -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+    /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const sidebarClose =
+        document.getElementById("sidebarClose");
+
+    const sidebarOverlay =
+        document.getElementById("sidebarOverlay");
+
+
+    menuToggle.addEventListener("click", () => {
+
+        sidebar.classList.add("open");
+
+        sidebarOverlay.classList.add("show");
+
+    });
+
+
+    sidebarClose.addEventListener("click", () => {
+
+        sidebar.classList.remove("open");
+
+        sidebarOverlay.classList.remove("show");
+
+    });
+
+
+    sidebarOverlay.addEventListener("click", () => {
+
+        sidebar.classList.remove("open");
+
+        sidebarOverlay.classList.remove("show");
+
+    });
+
+
+    /* =====================================================
+       SETTINGS NAVIGATION
+       ===================================================== */
+
+    const navItems =
+        document.querySelectorAll(
+            ".settings-nav-item"
+        );
+
+    const settingsSections =
+        document.querySelectorAll(
+            ".settings-section"
+        );
+
+
+    navItems.forEach(item => {
+
+        item.addEventListener(
+            "click",
+            () => {
+
+                const section =
+                    item.dataset.section;
+
+
+                navItems.forEach(nav => {
+
+                    nav.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+                item.classList.add(
+                    "active"
+                );
+
+
+                settingsSections.forEach(
+                    content => {
+
+                        content.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                const target =
+                    document.getElementById(
+                        "section-" + section
+                    );
+
+
+                if (target) {
+
+                    target.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+
+    /* =====================================================
+       SAVE STATUS
+       ===================================================== */
+
+    const saveStatus =
+        document.getElementById(
+            "saveStatus"
+        );
+
+
+    function showSavedStatus() {
+
+        saveStatus.classList.add(
+            "show"
+        );
+
+
+        setTimeout(() => {
+
+            saveStatus.classList.remove(
+                "show"
+            );
+
+        }, 2500);
+
+    }
+
+
+    document
+        .querySelectorAll(
+            ".save-settings"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    showSavedStatus();
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       THEME
+       ===================================================== */
+
+    const themeToggle =
+        document.getElementById(
+            "themeToggle"
+        );
+
+
+    themeToggle.addEventListener(
+        "click",
+        function () {
+
+            document.body.classList.toggle(
+                "dark-preview"
+            );
+
+
+            const icon =
+                this.querySelector("i");
+
+
+            if (
+                document.body.classList.contains(
+                    "dark-preview"
+                )
+            ) {
+
+                icon.classList.remove(
+                    "fa-moon"
+                );
+
+                icon.classList.add(
+                    "fa-sun"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-sun"
+                );
+
+                icon.classList.add(
+                    "fa-moon"
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       THEME OPTIONS
+       ===================================================== */
+
+    const themeOptions =
+        document.querySelectorAll(
+            ".theme-option"
+        );
+
+
+    themeOptions.forEach(option => {
+
+        option.addEventListener(
+            "click",
+            () => {
+
+                themeOptions.forEach(item => {
+
+                    item.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+                option.classList.add(
+                    "active"
+                );
+
+
+                const theme =
+                    option.dataset.theme;
+
+
+                if (theme === "dark") {
+
+                    document.body.classList.add(
+                        "dark-preview"
+                    );
+
+                } else {
+
+                    document.body.classList.remove(
+                        "dark-preview"
+                    );
+
+                }
+
+
+                showSavedStatus();
+
+            }
+        );
+
+    });
+
+
+    /* =====================================================
+       FONT SIZE
+       ===================================================== */
+
+    const fontRange =
+        document.getElementById(
+            "fontSizeRange"
+        );
+
+    const fontValue =
+        document.getElementById(
+            "fontSizeValue"
+        );
+
+
+    fontRange.addEventListener(
+        "input",
+        () => {
+
+            const value =
+                Number(fontRange.value);
+
+
+            if (value < 97) {
+
+                fontValue.textContent =
+                    "Small";
+
+            } else if (value <= 105) {
+
+                fontValue.textContent =
+                    "Normal";
+
+            } else {
+
+                fontValue.textContent =
+                    "Large";
+
+            }
+
+
+            document.documentElement.style
+                .setProperty(
+                    "--settings-scale",
+                    value / 100
+                );
+
+        }
+    );
+
+
+    /* =====================================================
+       PASSWORD
+       ===================================================== */
+
+    function passwordMessage() {
+
+        alert(
+            "Password change UI will be connected to the secure PHP backend later."
+        );
+
+    }
+
+
+    document
+        .getElementById(
+            "changePasswordBtn"
+        )
+        .addEventListener(
+            "click",
+            passwordMessage
+        );
+
+
+    document
+        .getElementById(
+            "securityPassword"
+        )
+        .addEventListener(
+            "click",
+            passwordMessage
+        );
+
+
+    /* =====================================================
+       ACTIVE SESSIONS
+       ===================================================== */
+
+    document
+        .getElementById(
+            "sessionsBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                alert(
+                    "Active session management will be connected to the backend later."
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       DELETE ACCOUNT
+       ===================================================== */
+
+    document
+        .getElementById(
+            "deleteAccountBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                const confirmation =
+                    confirm(
+                        "Are you sure you want to delete your account? This action cannot be undone."
+                    );
+
+
+                if (confirmation) {
+
+                    alert(
+                        "Account deletion will be handled securely by the backend later."
+                    );
+
+                }
+
+            }
+        );
+
+
+    /* =====================================================
+       DATA ACTIONS
+       ===================================================== */
+
+    document
+        .getElementById(
+            "exportDataBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                alert(
+                    "Data export will be connected to the backend later."
+                );
+
+            }
+        );
+
+
+    document
+        .getElementById(
+            "clearCacheBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                const confirmed =
+                    confirm(
+                        "Clear temporary browser data?"
+                    );
+
+
+                if (confirmed) {
+
+                    alert(
+                        "Temporary data cleared for this UI session."
+                    );
+
+                }
+
+            }
+        );
+
+
+    document
+        .getElementById(
+            "downloadPapersBtn"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                alert(
+                    "Paper export will be connected to the backend later."
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       RESET ACCOUNT FORM
+       ===================================================== */
+
+    document
+        .getElementById(
+            "resetAccount"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                document.getElementById(
+                    "firstName"
+                ).value = "Aayush";
+
+
+                document.getElementById(
+                    "lastName"
+                ).value = "Jha";
+
+
+                document.getElementById(
+                    "email"
+                ).value =
+                    "researcher@example.com";
+
+
+                document.getElementById(
+                    "institution"
+                ).value =
+                    "Rai University";
+
+            }
+        );
+
+
+    /* =====================================================
+       GLOBAL SEARCH
+       ===================================================== */
+
+    document
+        .getElementById(
+            "globalSearch"
+        )
+        .addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "Enter"
+                ) {
+
+                    const query =
+                        event.target.value.trim();
+
+
+                    if (query) {
+
+                        alert(
+                            `Searching Research AI for: ${query}`
+                        );
+
+                    }
+
+                }
+
+            }
+        );
+
+</script>
+
+</body>
+</html>

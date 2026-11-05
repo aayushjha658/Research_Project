@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Literature Review | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <a href="../index.html">
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+            </a>
+        </div>
+
+        <button class="sidebar-close" id="sidebarClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">MAIN MENU</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    Dashboard
+                </a>
+
+                <a href="research-domain.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+                    Research Domains
+                </a>
+
+                <a href="papers.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+                    Research Papers
+                </a>
+
+                <a href="datasets.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+                    Datasets
+                </a>
+
+                <a href="models.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+                    AI Models
+                </a>
+
+                <a href="github.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    GitHub Explorer
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">AI RESEARCH TOOLS</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="ai-analysis.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+                    AI Analysis
+                </a>
+
+                <a href="research-gap.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+                    Research Gap
+                </a>
+
+                <a href="idea-generator.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+                    Idea Generator
+                </a>
+
+                <a href="literature.html" class="sidebar-link active">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+                    Literature Review
+                </a>
+
+                <a href="ai-chat.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+                    AI Assistant
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">RESOURCES</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="conferences.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+                    Conferences
+                </a>
+
+                <a href="citation.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+                    Citation Generator
+                </a>
+
+                <a href="internet-research.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+                    Internet Research
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="sidebar-link">
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+                Settings
+            </a>
+
+            <a href="profile.html" class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+                    <strong>Researcher</strong>
+                    <span>Student Account</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP NAVBAR -->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="page-title">
+                    <span>AI Research Tools</span>
+                    <h1>Literature Review</h1>
+                </div>
+
+            </div>
+
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search papers, topics, datasets..."
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <div class="navbar-actions">
+
+                <button
+                    class="navbar-icon-btn"
+                    id="themeToggle"
+                >
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </a>
+
+                <a
+                    href="profile.html"
+                    class="navbar-user"
+                >
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+                        <strong>Researcher</strong>
+                        <span>Student</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE CONTENT ================= -->
+
+        <div class="page-content">
+
+            <!-- BREADCRUMB -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    Literature Review
+                </span>
+
+            </div>
+
+
+            <!-- ================= HERO ================= -->
+
+            <section class="literature-hero">
+
+                <div class="literature-hero-content">
+
+                    <div class="literature-badge">
+                        <i class="fa-solid fa-book-open"></i>
+                        AI-POWERED LITERATURE DISCOVERY
+                    </div>
+
+                    <h2>
+                        Build Your
+                        <span>Literature Review</span>
+                        Faster
+                    </h2>
+
+                    <p>
+                        Discover relevant research papers, identify
+                        important themes, compare findings and organize
+                        the literature around your research topic.
+                    </p>
+
+                    <div class="literature-hero-features">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Semantic Search
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Relevance Ranking
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                            Research Themes
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="literature-hero-visual">
+
+                    <div class="book-circle circle-one"></div>
+                    <div class="book-circle circle-two"></div>
+
+                    <div class="book-center">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <span class="book-node node-a">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="book-node node-b">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+
+                    <span class="book-node node-c">
+                        <i class="fa-solid fa-link"></i>
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SEARCH PANEL ================= -->
+
+            <section class="literature-search-panel">
+
+                <div class="literature-search-header">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            LITERATURE DISCOVERY
+                        </span>
+
+                        <h2>
+                            Search Research Literature
+                        </h2>
+
+                        <p>
+                            Search for papers using your research topic,
+                            keywords or research gap.
+                        </p>
+
+                    </div>
+
+                    <span class="literature-source-badge">
+                        <i class="fa-solid fa-database"></i>
+                        Research Database
+                    </span>
+
+                </div>
+
+
+                <div class="literature-search-main">
+
+                    <div class="literature-main-input">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="literatureQuery"
+                            placeholder="e.g. Explainable AI for medical image diagnosis"
+                        >
+
+                        <button
+                            id="literatureSearchBtn"
+                            class="literature-search-btn"
+                        >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Search Literature
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="literature-filter-grid">
+
+                    <div class="literature-filter">
+
+                        <label>
+                            Research Domain
+                        </label>
+
+                        <select id="literatureDomain">
+
+                            <option>
+                                All Domains
+                            </option>
+
+                            <option>
+                                Artificial Intelligence
+                            </option>
+
+                            <option>
+                                Machine Learning
+                            </option>
+
+                            <option>
+                                Healthcare AI
+                            </option>
+
+                            <option>
+                                Computer Vision
+                            </option>
+
+                            <option>
+                                Natural Language Processing
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="literature-filter">
+
+                        <label>
+                            Publication Year
+                        </label>
+
+                        <select>
+
+                            <option>
+                                Any Year
+                            </option>
+
+                            <option>
+                                2025 - 2026
+                            </option>
+
+                            <option>
+                                2020 - 2025
+                            </option>
+
+                            <option>
+                                2015 - 2020
+                            </option>
+
+                            <option>
+                                Before 2015
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="literature-filter">
+
+                        <label>
+                            Publication Type
+                        </label>
+
+                        <select>
+
+                            <option>
+                                All Types
+                            </option>
+
+                            <option>
+                                Journal Article
+                            </option>
+
+                            <option>
+                                Conference Paper
+                            </option>
+
+                            <option>
+                                Review Paper
+                            </option>
+
+                            <option>
+                                Survey
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="literature-filter">
+
+                        <label>
+                            Sort By
+                        </label>
+
+                        <select>
+
+                            <option>
+                                Relevance
+                            </option>
+
+                            <option>
+                                Most Recent
+                            </option>
+
+                            <option>
+                                Most Cited
+                            </option>
+
+                            <option>
+                                Highest Impact
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="literature-advanced">
+
+                    <button id="advancedToggle">
+                        <i class="fa-solid fa-sliders"></i>
+                        Advanced Search
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div
+                        class="advanced-options"
+                        id="advancedOptions"
+                    >
+
+                        <label class="advanced-check">
+
+                            <input type="checkbox" checked>
+
+                            <span>
+                                Include preprints
+                            </span>
+
+                        </label>
+
+                        <label class="advanced-check">
+
+                            <input type="checkbox">
+
+                            <span>
+                                Open access only
+                            </span>
+
+                        </label>
+
+                        <label class="advanced-check">
+
+                            <input type="checkbox">
+
+                            <span>
+                                Highly cited papers
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STATS ================= -->
+
+            <section class="literature-stats">
+
+                <div class="literature-stat-card">
+
+                    <div class="literature-stat-icon blue">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div>
+                        <span>PAPERS FOUND</span>
+                        <strong id="papersFound">
+                            1,284
+                        </strong>
+                        <small>Relevant publications</small>
+                    </div>
+
+                </div>
+
+
+                <div class="literature-stat-card">
+
+                    <div class="literature-stat-icon purple">
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+
+                    <div>
+                        <span>HIGHLY RELEVANT</span>
+                        <strong>
+                            186
+                        </strong>
+                        <small>Above 80% relevance</small>
+                    </div>
+
+                </div>
+
+
+                <div class="literature-stat-card">
+
+                    <div class="literature-stat-icon green">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+
+                    <div>
+                        <span>SAVED PAPERS</span>
+                        <strong>
+                            27
+                        </strong>
+                        <small>Your literature library</small>
+                    </div>
+
+                </div>
+
+
+                <div class="literature-stat-card">
+
+                    <div class="literature-stat-icon orange">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <div>
+                        <span>IN REVIEW</span>
+                        <strong>
+                            14
+                        </strong>
+                        <small>Added to current review</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MAIN LAYOUT ================= -->
+
+            <section class="literature-workspace">
+
+                <!-- RESULTS -->
+
+                <div class="literature-results">
+
+                    <div class="literature-results-header">
+
+                        <div>
+
+                            <span class="section-eyebrow">
+                                SEARCH RESULTS
+                            </span>
+
+                            <h2>
+                                Relevant Research Papers
+                            </h2>
+
+                        </div>
+
+                        <div class="results-view-toggle">
+
+                            <button class="active">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+
+                            <button>
+                                <i class="fa-solid fa-border-all"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PAPER 1 -->
+
+                    <article class="literature-paper-card">
+
+                        <div class="paper-card-header">
+
+                            <span class="paper-type">
+                                JOURNAL ARTICLE
+                            </span>
+
+                            <span class="paper-year">
+                                2025
+                            </span>
+
+                            <button
+                                class="literature-save"
+                            >
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Explainable Artificial Intelligence
+                            for Medical Image Diagnosis:
+                            A Comprehensive Framework
+                        </h3>
+
+
+                        <p class="paper-authors">
+                            A. Kumar · R. Sharma · M. Patel
+                        </p>
+
+
+                        <p class="paper-abstract">
+
+                            This study presents an explainable AI
+                            framework for medical image diagnosis.
+                            The proposed approach combines deep learning
+                            with interpretable visualization techniques
+                            to improve transparency and clinical trust.
+
+                        </p>
+
+
+                        <div class="paper-metadata">
+
+                            <span>
+                                <i class="fa-solid fa-quote-right"></i>
+                                186 Citations
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-book"></i>
+                                Medical AI
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-calendar"></i>
+                                2025
+                            </span>
+
+                        </div>
+
+
+                        <div class="paper-card-bottom">
+
+                            <div class="relevance-score">
+
+                                <span>
+                                    Relevance
+                                </span>
+
+                                <strong>
+                                    96%
+                                </strong>
+
+                                <div class="relevance-bar">
+                                    <span style="width:96%"></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="paper-actions">
+
+                                <button class="paper-action secondary">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add to Review
+                                </button>
+
+                                <button class="paper-action primary">
+                                    View Paper
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAPER 2 -->
+
+                    <article class="literature-paper-card">
+
+                        <div class="paper-card-header">
+
+                            <span class="paper-type conference">
+                                CONFERENCE PAPER
+                            </span>
+
+                            <span class="paper-year">
+                                2024
+                            </span>
+
+                            <button class="literature-save">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Vision Transformers for Automated
+                            Medical Diagnosis and Disease Detection
+                        </h3>
+
+
+                        <p class="paper-authors">
+                            S. Zhang · P. Williams · K. Singh
+                        </p>
+
+
+                        <p class="paper-abstract">
+
+                            A transformer-based architecture is
+                            investigated for automated disease detection
+                            from medical images. Experimental results
+                            demonstrate improvements over traditional
+                            convolutional architectures across multiple
+                            diagnostic tasks.
+
+                        </p>
+
+
+                        <div class="paper-metadata">
+
+                            <span>
+                                <i class="fa-solid fa-quote-right"></i>
+                                124 Citations
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-book"></i>
+                                Computer Vision
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-calendar"></i>
+                                2024
+                            </span>
+
+                        </div>
+
+
+                        <div class="paper-card-bottom">
+
+                            <div class="relevance-score">
+
+                                <span>
+                                    Relevance
+                                </span>
+
+                                <strong>
+                                    91%
+                                </strong>
+
+                                <div class="relevance-bar">
+                                    <span style="width:91%"></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="paper-actions">
+
+                                <button class="paper-action secondary">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add to Review
+                                </button>
+
+                                <button class="paper-action primary">
+                                    View Paper
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAPER 3 -->
+
+                    <article class="literature-paper-card">
+
+                        <div class="paper-card-header">
+
+                            <span class="paper-type review">
+                                REVIEW PAPER
+                            </span>
+
+                            <span class="paper-year">
+                                2023
+                            </span>
+
+                            <button class="literature-save">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Deep Learning in Healthcare:
+                            Trends, Challenges and Future Directions
+                        </h3>
+
+
+                        <p class="paper-authors">
+                            L. Chen · D. Wilson · A. Mehta
+                        </p>
+
+
+                        <p class="paper-abstract">
+
+                            This review analyzes recent developments
+                            in deep learning applications within
+                            healthcare. It identifies limitations
+                            related to data quality, explainability,
+                            generalization and clinical deployment.
+
+                        </p>
+
+
+                        <div class="paper-metadata">
+
+                            <span>
+                                <i class="fa-solid fa-quote-right"></i>
+                                312 Citations
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-book"></i>
+                                Healthcare AI
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-calendar"></i>
+                                2023
+                            </span>
+
+                        </div>
+
+
+                        <div class="paper-card-bottom">
+
+                            <div class="relevance-score">
+
+                                <span>
+                                    Relevance
+                                </span>
+
+                                <strong>
+                                    87%
+                                </strong>
+
+                                <div class="relevance-bar">
+                                    <span style="width:87%"></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="paper-actions">
+
+                                <button class="paper-action secondary">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add to Review
+                                </button>
+
+                                <button class="paper-action primary">
+                                    View Paper
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PAPER 4 -->
+
+                    <article class="literature-paper-card">
+
+                        <div class="paper-card-header">
+
+                            <span class="paper-type">
+                                JOURNAL ARTICLE
+                            </span>
+
+                            <span class="paper-year">
+                                2022
+                            </span>
+
+                            <button class="literature-save">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Federated Learning for Privacy-Preserving
+                            Medical AI Applications
+                        </h3>
+
+
+                        <p class="paper-authors">
+                            R. Gupta · J. Anderson · N. Shah
+                        </p>
+
+
+                        <p class="paper-abstract">
+
+                            The paper investigates federated learning
+                            as a privacy-preserving approach for
+                            collaborative healthcare AI. The work
+                            evaluates communication efficiency,
+                            privacy considerations and model performance.
+
+                        </p>
+
+
+                        <div class="paper-metadata">
+
+                            <span>
+                                <i class="fa-solid fa-quote-right"></i>
+                                98 Citations
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-book"></i>
+                                Federated Learning
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-calendar"></i>
+                                2022
+                            </span>
+
+                        </div>
+
+
+                        <div class="paper-card-bottom">
+
+                            <div class="relevance-score">
+
+                                <span>
+                                    Relevance
+                                </span>
+
+                                <strong>
+                                    83%
+                                </strong>
+
+                                <div class="relevance-bar">
+                                    <span style="width:83%"></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="paper-actions">
+
+                                <button class="paper-action secondary">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add to Review
+                                </button>
+
+                                <button class="paper-action primary">
+                                    View Paper
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <button class="load-more-literature">
+                        <i class="fa-solid fa-plus"></i>
+                        Load More Papers
+                    </button>
+
+                </div>
+
+
+                <!-- ================= RIGHT SIDEBAR ================= -->
+
+                <aside class="literature-side-panel">
+
+                    <!-- REVIEW PROGRESS -->
+
+                    <div class="literature-side-card">
+
+                        <div class="side-card-header">
+
+                            <div>
+
+                                <span class="section-eyebrow">
+                                    CURRENT PROJECT
+                                </span>
+
+                                <h3>
+                                    Literature Review
+                                </h3>
+
+                            </div>
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </div>
+
+
+                        <div class="review-progress">
+
+                            <div class="progress-circle">
+
+                                <strong>
+                                    64%
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Review Progress
+                                </span>
+
+                                <strong>
+                                    14 / 22 papers
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="review-progress-bar">
+                            <span style="width:64%"></span>
+                        </div>
+
+
+                        <div class="review-checklist">
+
+                            <div>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Papers collected
+                                <strong>22</strong>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Papers screened
+                                <strong>18</strong>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-clock"></i>
+                                Papers analyzed
+                                <strong>14</strong>
+                            </div>
+
+                            <div>
+                                <i class="fa-regular fa-circle"></i>
+                                Synthesis
+                                <strong>0%</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button class="continue-review-btn">
+                            Continue Review
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <!-- RESEARCH THEMES -->
+
+                    <div class="literature-side-card">
+
+                        <div class="side-card-header">
+
+                            <div>
+
+                                <span class="section-eyebrow">
+                                    AI DETECTED
+                                </span>
+
+                                <h3>
+                                    Research Themes
+                                </h3>
+
+                            </div>
+
+                            <i class="fa-solid fa-tags"></i>
+
+                        </div>
+
+
+                        <div class="research-theme-list">
+
+                            <div class="research-theme">
+                                <span>
+                                    Explainable AI
+                                </span>
+                                <strong>34</strong>
+                            </div>
+
+                            <div class="research-theme">
+                                <span>
+                                    Medical Imaging
+                                </span>
+                                <strong>29</strong>
+                            </div>
+
+                            <div class="research-theme">
+                                <span>
+                                    Deep Learning
+                                </span>
+                                <strong>27</strong>
+                            </div>
+
+                            <div class="research-theme">
+                                <span>
+                                    Clinical AI
+                                </span>
+                                <strong>21</strong>
+                            </div>
+
+                            <div class="research-theme">
+                                <span>
+                                    Privacy
+                                </span>
+                                <strong>16</strong>
+                            </div>
+
+                        </div>
+
+                        <button class="view-themes-btn">
+                            View All Themes
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <!-- QUICK TOOLS -->
+
+                    <div class="literature-side-card">
+
+                        <div class="side-card-header">
+
+                            <div>
+
+                                <span class="section-eyebrow">
+                                    QUICK TOOLS
+                                </span>
+
+                                <h3>
+                                    Research Tools
+                                </h3>
+
+                            </div>
+
+                            <i class="fa-solid fa-toolbox"></i>
+
+                        </div>
+
+
+                        <div class="quick-literature-tools">
+
+                            <button>
+                                <i class="fa-solid fa-file-export"></i>
+                                <span>
+                                    Export References
+                                </span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button>
+                                <i class="fa-solid fa-quote-right"></i>
+                                <span>
+                                    Generate Citations
+                                </span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button>
+                                <i class="fa-solid fa-chart-line"></i>
+                                <span>
+                                    Citation Analysis
+                                </span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button>
+                                <i class="fa-solid fa-file-word"></i>
+                                <span>
+                                    Review Summary
+                                </span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </section>
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div
+    class="literature-toast"
+    id="literatureToast"
+>
+    <i class="fa-solid fa-circle-check"></i>
+    <span>Paper added successfully.</span>
+</div>
+
+
+<script>
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+const sidebar =
+    document.getElementById("sidebar");
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const sidebarClose =
+    document.getElementById("sidebarClose");
+
+const sidebarOverlay =
+    document.getElementById("sidebarOverlay");
+
+
+menuToggle.addEventListener("click", () => {
+
+    sidebar.classList.add("open");
+
+    sidebarOverlay.classList.add("show");
+
+});
+
+
+sidebarClose.addEventListener("click", () => {
+
+    sidebar.classList.remove("open");
+
+    sidebarOverlay.classList.remove("show");
+
+});
+
+
+sidebarOverlay.addEventListener("click", () => {
+
+    sidebar.classList.remove("open");
+
+    sidebarOverlay.classList.remove("show");
+
+});
+
+
+/* =========================================================
+   THEME
+   ========================================================= */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+
+themeToggle.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark-preview");
+
+    const icon =
+        this.querySelector("i");
+
+
+    if (
+        document.body.classList.contains(
+            "dark-preview"
+        )
+    ) {
+
+        icon.classList.remove("fa-moon");
+
+        icon.classList.add("fa-sun");
+
+    } else {
+
+        icon.classList.remove("fa-sun");
+
+        icon.classList.add("fa-moon");
+
+    }
+
+});
+
+
+/* =========================================================
+   ADVANCED SEARCH
+   ========================================================= */
+
+const advancedToggle =
+    document.getElementById("advancedToggle");
+
+const advancedOptions =
+    document.getElementById("advancedOptions");
+
+
+advancedToggle.addEventListener("click", () => {
+
+    advancedOptions.classList.toggle("show");
+
+    advancedToggle.classList.toggle("open");
+
+});
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+const searchButton =
+    document.getElementById("literatureSearchBtn");
+
+const searchInput =
+    document.getElementById("literatureQuery");
+
+
+searchButton.addEventListener("click", performSearch);
+
+
+searchInput.addEventListener("keydown", event => {
+
+    if (event.key === "Enter") {
+
+        performSearch();
+
+    }
+
+});
+
+
+function performSearch() {
+
+    const query =
+        searchInput.value.trim();
+
+
+    if (!query) {
+
+        showLiteratureToast(
+            "Please enter a research topic or keyword."
+        );
+
+        searchInput.focus();
+
+        return;
+
+    }
+
+
+    const original =
+        searchButton.innerHTML;
+
+
+    searchButton.disabled = true;
+
+    searchButton.innerHTML = `
+        <i class="fa-solid fa-spinner fa-spin"></i>
+        Searching...
+    `;
+
+
+    setTimeout(() => {
+
+        searchButton.disabled = false;
+
+        searchButton.innerHTML =
+            original;
+
+
+        document.getElementById(
+            "papersFound"
+        ).textContent = "1,284";
+
+
+        showLiteratureToast(
+            "Literature search completed successfully."
+        );
+
+
+        document
+            .querySelector(".literature-results")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+    }, 1200);
+
+}
+
+
+/* =========================================================
+   SAVE PAPERS
+   ========================================================= */
+
+document
+    .querySelectorAll(".literature-save")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const icon =
+                    this.querySelector("i");
+
+
+                this.classList.toggle("saved");
+
+
+                if (
+                    this.classList.contains("saved")
+                ) {
+
+                    icon.classList.remove(
+                        "fa-regular"
+                    );
+
+                    icon.classList.add(
+                        "fa-solid"
+                    );
+
+                    showLiteratureToast(
+                        "Paper saved to your library."
+                    );
+
+                } else {
+
+                    icon.classList.remove(
+                        "fa-solid"
+                    );
+
+                    icon.classList.add(
+                        "fa-regular"
+                    );
+
+                    showLiteratureToast(
+                        "Paper removed from saved papers."
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   ADD TO REVIEW
+   ========================================================= */
+
+document
+    .querySelectorAll(".paper-action.secondary")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                this.classList.toggle(
+                    "added"
+                );
+
+
+                if (
+                    this.classList.contains(
+                        "added"
+                    )
+                ) {
+
+                    this.innerHTML = `
+                        <i class="fa-solid fa-check"></i>
+                        Added to Review
+                    `;
+
+                    showLiteratureToast(
+                        "Paper added to current review."
+                    );
+
+                } else {
+
+                    this.innerHTML = `
+                        <i class="fa-solid fa-plus"></i>
+                        Add to Review
+                    `;
+
+                    showLiteratureToast(
+                        "Paper removed from review."
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   VIEW PAPER
+   ========================================================= */
+
+document
+    .querySelectorAll(".paper-action.primary")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                showLiteratureToast(
+                    "Paper details will open here."
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   LOAD MORE
+   ========================================================= */
+
+const loadMore =
+    document.querySelector(
+        ".load-more-literature"
+    );
+
+
+loadMore.addEventListener(
+    "click",
+    function () {
+
+        const original =
+            this.innerHTML;
+
+
+        this.disabled = true;
+
+        this.innerHTML = `
+            <i class="fa-solid fa-spinner fa-spin"></i>
+            Loading Papers...
+        `;
+
+
+        setTimeout(() => {
+
+            this.disabled = false;
+
+            this.innerHTML =
+                original;
+
+            showLiteratureToast(
+                "More papers loaded."
+            );
+
+        }, 1000);
+
+    }
+);
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+function showLiteratureToast(message) {
+
+    const toast =
+        document.getElementById(
+            "literatureToast"
+        );
+
+
+    toast.querySelector(
+        "span"
+    ).textContent = message;
+
+
+    toast.classList.add("show");
+
+
+    clearTimeout(
+        window.literatureToastTimer
+    );
+
+
+    window.literatureToastTimer =
+        setTimeout(() => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        }, 2400);
+
+}
+
+</script>
+
+</body>
+</html>

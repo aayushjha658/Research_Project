@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Research Papers | Research AI</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #1f2937;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a, #4f46e5);
+            color: white;
+            padding: 22px 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        .header p {
+            margin: 6px 0 0;
+            opacity: .8;
+        }
+
+        .logout-area {
+            text-align: right;
+        }
+
+        .logout-area span {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .07);
+            margin-bottom: 25px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #1e3a8a;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #4f46e5;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .upload-box {
+            border: 2px dashed #6366f1;
+            padding: 25px;
+            border-radius: 12px;
+            background: #f8f9ff;
+        }
+
+        .upload-status {
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        .success {
+            color: #15803d;
+        }
+
+        .error {
+            color: #dc2626;
+        }
+
+        .warning {
+            color: #d97706;
+        }
+
+        button {
+            border: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .primary-btn {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #4338ca;
+        }
+
+        .primary-btn:disabled {
+            opacity: .6;
+            cursor: not-allowed;
+        }
+
+        .secondary-btn {
+            background: #e5e7eb;
+            color: #374151;
+        }
+
+        .actions {
+            margin-top: 25px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .message.success-message {
+            background: #dcfce7;
+            color: #166534;
+            display: block;
+        }
+
+        .message.error-message {
+            background: #fee2e2;
+            color: #991b1b;
+            display: block;
+        }
+
+        .papers-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .papers-table th,
+        .papers-table td {
+            padding: 13px;
+            border-bottom: 1px solid #e5e7eb;
+            text-align: left;
+        }
+
+        .papers-table th {
+            background: #f8fafc;
+        }
+
+        .pdf-badge {
+            background: #dcfce7;
+            color: #15803d;
+            padding: 5px 9px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .no-pdf {
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 5px 9px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .import-box {
+            margin-top: 16px;
+            padding: 18px;
+            border: 1px solid #dbe4ff;
+            border-radius: 14px;
+            background: #f8faff;
+        }
+
+        .import-box h3 {
+            margin: 0 0 8px;
+        }
+
+        .import-box p {
+            margin: 0 0 12px;
+            color: #667085;
+            line-height: 1.5;
+        }
+
+        .import-btn {
+            border: 0;
+            border-radius: 10px;
+            padding: 11px 16px;
+            cursor: pointer;
+            font-weight: 700;
+            background: #eef2ff;
+            color: #3730a3;
+        }
+
+        .import-btn:disabled {
+            opacity: .6;
+            cursor: wait;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: auto;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .papers-table {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div>
+            <h1>Research AI – Paper Management</h1>
+            <p>Add research papers and upload their PDF files.</p>
+        </div>
+
+        <div class="logout-area">
+            <span id="adminName">Administrator</span>
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- ADD PAPER -->
+
+        <section class="card">
+
+            <h2>Add New Research Paper</h2>
+
+            <form id="paperForm">
+
+                <div class="form-grid">
+
+                    <div class="full-width">
+
+                        <label for="title">
+                            Paper Title *
+                        </label>
+
+                        <input type="text" id="title" required maxlength="500" placeholder="Enter research paper title">
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="authors">
+                            Authors
+                        </label>
+
+                        <input type="text" id="authors" placeholder="Author 1, Author 2, Author 3">
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="journal">
+                            Journal / Conference
+                        </label>
+
+                        <input type="text" id="journal" placeholder="Journal name">
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="publication_year">
+                            Publication Year
+                        </label>
+
+                        <input type="number" id="publication_year" min="1800" max="2100" placeholder="2026">
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="doi">
+                            DOI
+                        </label>
+
+                        <input type="text" id="doi" placeholder="10.xxxx/example">
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="url">
+                            Paper URL
+                        </label>
+
+                        <input type="url" id="url" placeholder="https://example.com/paper">
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="domain">
+                            Research Domain
+                        </label>
+
+                        <select id="domain">
+
+                            <option value="">Select Domain</option>
+
+                            <option value="healthcare">
+                                Healthcare
+                            </option>
+
+                            <option value="computer_science">
+                                Computer Science
+                            </option>
+
+                            <option value="artificial_intelligence">
+                                Artificial Intelligence
+                            </option>
+
+                            <option value="engineering">
+                                Engineering
+                            </option>
+
+                            <option value="science">
+                                Science
+                            </option>
+
+                            <option value="business">
+                                Business
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="paper_type">
+                            Paper Type
+                        </label>
+
+                        <select id="paper_type">
+
+                            <option value="research">
+                                Research Article
+                            </option>
+
+                            <option value="review">
+                                Review Paper
+                            </option>
+
+                            <option value="conference">
+                                Conference Paper
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="access_type">
+                            Access Type
+                        </label>
+
+                        <select id="access_type">
+
+                            <option value="open">
+                                Open Access
+                            </option>
+
+                            <option value="subscription">
+                                Subscription
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="full-width">
+
+                        <label for="abstract">
+                            Abstract
+                        </label>
+
+                        <textarea id="abstract" placeholder="Enter paper abstract..."></textarea>
+
+                    </div>
+
+
+                    <!-- PDF -->
+
+                    <div class="full-width">
+
+                        <label for="pdf">
+                            Research Paper PDF *
+                        </label>
+
+                        <div class="upload-box">
+
+                            <input type="file" id="pdf" accept="application/pdf,.pdf" required>
+
+                            <div id="pdfStatus" class="upload-status">
+                                Select a PDF file. Maximum size: 20 MB.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="actions">
+
+                    <button type="submit" class="primary-btn" id="saveButton">
+                        Upload PDF & Save Paper
+                    </button>
+
+
+                    <button type="reset" class="secondary-btn" id="resetButton">
+                        Reset
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <div id="message" class="message"></div>
+
+        </section>
+
+
+        <!-- DENTAL CARIES IMPORT -->
+
+        <section class="card">
+            <h2>Import Verified Dental Caries Literature</h2>
+            <div class="import-box">
+                <h3>PubMed import</h3>
+                <p>
+                    Imports the curated 2025–2026 AI/dental-caries literature set from PubMed.
+                    Existing records are skipped automatically. PDF files are not downloaded by this action.
+                </p>
+                <button type="button" class="import-btn" id="importDentalCariesButton">
+                    Import Dental Caries Papers
+                </button>
+                <div id="importStatus" class="upload-status" style="margin-top:12px;"></div>
+            </div>
+        </section>
+
+
+        <!-- EXISTING PAPERS -->
+
+        <section class="card">
+
+            <h2>Existing Research Papers</h2>
+
+            <div id="papersContainer">
+
+                Loading papers...
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        let csrfToken = "";
+
+        /*
+        ------------------------------------------------------------
+        API PATHS
+        ------------------------------------------------------------
+        */
+
+        const API = {
+
+            csrf:
+                "../backend/auth/csrf.php",
+
+            dashboard:
+                "../backend/pages/dashboard.php",
+
+            uploadPdf:
+                "../backend/admin/upload-paper-pdf.php",
+
+            papers:
+                "../backend/admin/papers.php",
+
+            importDentalCaries:
+                "../backend/admin/import-dental-caries-papers.php",
+
+            list:
+                "../backend/papers/list.php"
+
+        };
+
+
+        /*
+        ------------------------------------------------------------
+        MESSAGE
+        ------------------------------------------------------------
+        */
+
+        function showMessage(message, type = "success") {
+
+            const box =
+                document.getElementById("message");
+
+            box.textContent =
+                message;
+
+            box.className =
+                "message " +
+                (
+                    type === "success"
+                        ? "success-message"
+                        : "error-message"
+                );
+
+        }
+
+
+        function clearMessage() {
+
+            const box =
+                document.getElementById("message");
+
+            box.textContent = "";
+
+            box.className =
+                "message";
+
+        }
+
+
+        /*
+        ------------------------------------------------------------
+        CHECK ADMIN LOGIN
+        ------------------------------------------------------------
+        */
+
+        async function checkAdminAuthentication() {
+
+            try {
+
+                const response =
+                    await fetch(
+                        API.dashboard,
+                        {
+                            method: "GET",
+                            credentials: "same-origin",
+                            cache: "no-store"
+                        }
+                    );
+
+                const data =
+                    await response.json();
+
+                if (
+                    !response.ok ||
+                    !data.success ||
+                    !data.authenticated
+                ) {
+
+                    window.location.href =
+                        "login.html";
+
+                    return false;
+
+                }
+
+
+                if (
+                    !data.user ||
+                    data.user.role !== "admin"
+                ) {
+
+                    document.body.innerHTML =
+                        `
+                        <div style="
+                            font-family:Arial;
+                            text-align:center;
+                            padding:80px;
+                        ">
+                            <h2>Access Denied</h2>
+                            <p>
+                                Administrator access is required.
+                            </p>
+                        </div>
+                        `;
+
+                    return false;
+
+                }
+
+
+                document.getElementById(
+                    "adminName"
+                ).textContent =
+                    data.user.name ||
+                    "Administrator";
+
+
+                return true;
+
+            } catch (error) {
+
+                console.error(error);
+
+                showMessage(
+                    "Unable to verify administrator login.",
+                    "error"
+                );
+
+                return false;
+
+            }
+
+        }
+
+
+        /*
+        ------------------------------------------------------------
+        GET CSRF TOKEN
+        ------------------------------------------------------------
+        */
+
+        async function loadCsrfToken() {
+
+            const response =
+                await fetch(
+                    API.csrf,
+                    {
+                        method: "GET",
+                        credentials: "same-origin",
+                        cache: "no-store"
+                    }
+                );
+
+            const data =
+                await response.json();
+
+            if (
+                !response.ok ||
+                !data.success ||
+                !data.csrf_token
+            ) {
+
+                throw new Error(
+                    data.message ||
+                    "Unable to get security token."
+                );
+
+            }
+
+            csrfToken =
+                data.csrf_token;
+
+        }
+
+
+        /*
+        ------------------------------------------------------------
+        PDF FILE CHANGE
+        ------------------------------------------------------------
+        */
+
+        document
+            .getElementById("pdf")
+            .addEventListener(
+                "change",
+                function () {
+
+                    const file =
+                        this.files[0];
+
+                    const status =
+                        document.getElementById(
+                            "pdfStatus"
+                        );
+
+                    if (!file) {
+
+                        status.textContent =
+                            "Select a PDF file. Maximum size: 20 MB.";
+
+                        status.className =
+                            "upload-status";
+
+                        return;
+
+                    }
+
+
+                    const maxSize =
+                        20 * 1024 * 1024;
+
+
+                    if (
+                        file.size > maxSize
+                    ) {
+
+                        status.textContent =
+                            "File is larger than 20 MB.";
+
+                        status.className =
+                            "upload-status error";
+
+                        this.value = "";
+
+                        return;
+
+                    }
+
+
+                    status.textContent =
+                        "Selected: " +
+                        file.name;
+
+                    status.className =
+                        "upload-status success";
+
+                }
+            );
+
+
+        /*
+        ------------------------------------------------------------
+        UPLOAD PDF
+        ------------------------------------------------------------
+        */
+
+        async function uploadPdfFile(file) {
+
+            const formData =
+                new FormData();
+
+            formData.append(
+                "pdf",
+                file
+            );
+
+
+            const response =
+                await fetch(
+                    API.uploadPdf,
+                    {
+                        method: "POST",
+
+                        credentials:
+                            "same-origin",
+
+                        headers: {
+
+                            "X-CSRF-Token":
+                                csrfToken
+
+                        },
+
+                        body:
+                            formData
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if (
+                !response.ok ||
+                !data.success
+            ) {
+
+                throw new Error(
+                    data.message ||
+                    "PDF upload failed."
+                );
+
+            }
+
+
+            return data;
+
+        }
+
+
+        /*
+        ------------------------------------------------------------
+        SAVE PAPER
+        ------------------------------------------------------------
+        */
+
+        async function savePaper(pdfPath) {
+
+            const paperData = {
+
+                title:
+                    document
+                        .getElementById("title")
+                        .value
+                        .trim(),
+
+                authors:
+                    document
+                        .getElementById("authors")
+                        .value
+                        .trim(),
+
+                journal:
+                    document
+                        .getElementById("journal")
+                        .value
+                        .trim(),
+
+                publication_year:
+                    document
+                        .getElementById(
+                            "publication_year"
+                        )
+                        .value,
+
+                doi:
+                    document
+                        .getElementById("doi")
+                        .value
+                        .trim(),
+
+                url:
+                    document
+                        .getElementById("url")
+                        .value
+                        .trim(),
+
+                domain:
+                    document
+                        .getElementById("domain")
+                        .value,
+
+                paper_type:
+                    document
+                        .getElementById(
+                            "paper_type"
+                        )
+                        .value,
+
+                access_type:
+                    document
+                        .getElementById(
+                            "access_type"
+                        )
+                        .value,
+
+                abstract:
+                    document
+                        .getElementById(
+                            "abstract"
+                        )
+                        .value
+                        .trim(),
+
+                pdf_path:
+                    pdfPath
+
+            };
+
+
+            const response =
+                await fetch(
+                    API.papers,
+                    {
+                        method: "POST",
+
+                        credentials:
+                            "same-origin",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json",
+
+                            "X-CSRF-Token":
+                                csrfToken
+
+                        },
+
+                        body:
+                            JSON.stringify(
+                                paperData
+                            )
+
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if (
+                !response.ok ||
+                !data.success
+            ) {
+
+                throw new Error(
+                    data.message ||
+                    "Unable to save research paper."
+                );
+
+            }
+
+
+            return data;
+
+        }
+
+
+        /*
+        ------------------------------------------------------------
+        IMPORT CURATED DENTAL CARIES LITERATURE
+        ------------------------------------------------------------
+        */
+
+        document
+            .getElementById("importDentalCariesButton")
+            .addEventListener("click", async function () {
+                const button = this;
+                const status = document.getElementById("importStatus");
+                button.disabled = true;
+                button.textContent = "Importing from PubMed...";
+                status.textContent = "Fetching and importing the curated literature set...";
+                status.className = "upload-status";
+
+                try {
+                    const response = await fetch(API.importDentalCaries, {
+                        method: "POST",
+                        credentials: "same-origin",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRF-Token": csrfToken
+                        },
+                        body: JSON.stringify({})
+                    });
+                    const data = await response.json();
+                    if (!response.ok || !data.success) {
+                        throw new Error(data.message || "Dental caries literature import failed.");
+                    }
+                    status.textContent = `Import complete: ${data.inserted_count} inserted, ${data.skipped_count} already present, ${data.failed_count} failed.`;
+                    status.className = "upload-status success";
+                    await loadPapers();
+                } catch (error) {
+                    console.error(error);
+                    status.textContent = error.message || "Dental caries literature import failed.";
+                    status.className = "upload-status error";
+                } finally {
+                    button.disabled = false;
+                    button.textContent = "Import Dental Caries Papers";
+                }
+            });
+
+
+        /*
+        ------------------------------------------------------------
+        FORM SUBMIT
+        ------------------------------------------------------------
+        */
+
+        document
+            .getElementById("paperForm")
+            .addEventListener(
+                "submit",
+                async function (event) {
+
+                    event.preventDefault();
+
+                    clearMessage();
+
+
+                    const saveButton =
+                        document.getElementById(
+                            "saveButton"
+                        );
+
+
+                    const pdfInput =
+                        document.getElementById(
+                            "pdf"
+                        );
+
+
+                    const file =
+                        pdfInput.files[0];
+
+
+                    if (!file) {
+
+                        showMessage(
+                            "Please select a PDF file.",
+                            "error"
+                        );
+
+                        return;
+
+                    }
+
+
+                    saveButton.disabled = true;
+
+                    saveButton.textContent =
+                        "Uploading PDF...";
+
+
+                    try {
+
+                        /*
+                        STEP 1
+                        Upload PDF
+                        */
+
+                        const uploadResult =
+                            await uploadPdfFile(
+                                file
+                            );
+
+
+                        saveButton.textContent =
+                            "Saving Paper...";
+
+
+                        /*
+                        STEP 2
+                        Save paper details
+                        */
+
+                        const paperResult =
+                            await savePaper(
+                                uploadResult.pdf_path
+                            );
+
+
+                        showMessage(
+                            "Research paper added successfully. Paper ID: " +
+                            paperResult.id
+                        );
+
+
+                        document
+                            .getElementById(
+                                "paperForm"
+                            )
+                            .reset();
+
+
+                        document
+                            .getElementById(
+                                "pdfStatus"
+                            )
+                            .textContent =
+                            "Select a PDF file. Maximum size: 20 MB.";
+
+
+                        await loadPapers();
+
+
+                    } catch (error) {
+
+                        console.error(error);
+
+                        showMessage(
+                            error.message ||
+                            "Something went wrong.",
+                            "error"
+                        );
+
+                    } finally {
+
+                        saveButton.disabled =
+                            false;
+
+                        saveButton.textContent =
+                            "Upload PDF & Save Paper";
+
+                    }
+
+                }
+            );
+
+
+        /*
+        ------------------------------------------------------------
+        LOAD PAPERS
+        ------------------------------------------------------------
+        */
+
+        async function loadPapers() {
+
+            const container =
+                document.getElementById(
+                    "papersContainer"
+                );
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        API.list +
+                        "?page=1&limit=100",
+                        {
+                            method: "GET",
+
+                            credentials:
+                                "same-origin",
+
+                            cache:
+                                "no-store"
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (
+                    !response.ok ||
+                    !data.success
+                ) {
+
+                    throw new Error(
+                        data.message ||
+                        "Unable to load papers."
+                    );
+
+                }
+
+
+                const papers =
+                    data.data?.papers || [];
+
+
+                if (!papers.length) {
+
+                    container.innerHTML =
+                        `
+                        <p>
+                            No research papers found.
+                        </p>
+                        `;
+
+                    return;
+
+                }
+
+
+                let html = `
+                    <div style="overflow-x:auto;">
+                    <table class="papers-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>ID</th>
+
+                                <th>Title</th>
+
+                                <th>Authors</th>
+
+                                <th>Year</th>
+
+                                <th>PDF</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                `;
+
+
+                papers.forEach(
+                    function (paper) {
+
+                        html += `
+
+                            <tr>
+
+                                <td>
+                                    ${paper.id}
+                                </td>
+
+                                <td>
+                                    ${escapeHtml(
+                            paper.title || ""
+                        )}
+                                </td>
+
+                                <td>
+                                    ${escapeHtml(
+                            paper.authors || "-"
+                        )}
+                                </td>
+
+                                <td>
+                                    ${paper.publication_year ||
+                            "-"
+                            }
+                                </td>
+
+                                <td>
+
+                                    ${paper.pdf_path
+                                ? `
+                                            <span class="pdf-badge">
+                                                PDF Attached
+                                            </span>
+                                            `
+                                : `
+                                            <span class="no-pdf">
+                                                No PDF
+                                            </span>
+                                            `
+                            }
+
+                                </td>
+
+                            </tr>
+
+                        `;
+
+                    }
+                );
+
+
+                html += `
+                        </tbody>
+
+                    </table>
+
+                    </div>
+                `;
+
+
+                container.innerHTML =
+                    html;
+
+
+            } catch (error) {
+
+                console.error(error);
+
+                container.innerHTML =
+                    `
+                    <p class="error">
+                        ${escapeHtml(
+                        error.message
+                    )}
+                    </p>
+                    `;
+
+            }
+
+        }
+
+
+        /*
+        ------------------------------------------------------------
+        ESCAPE HTML
+        ------------------------------------------------------------
+        */
+
+        function escapeHtml(value) {
+
+            const div =
+                document.createElement("div");
+
+            div.textContent =
+                String(value ?? "");
+
+            return div.innerHTML;
+
+        }
+
+
+        /*
+        ------------------------------------------------------------
+        INITIALIZE PAGE
+        ------------------------------------------------------------
+        */
+
+        async function initializePage() {
+
+            const authenticated =
+                await checkAdminAuthentication();
+
+            if (!authenticated) {
+                return;
+            }
+
+
+            try {
+
+                await loadCsrfToken();
+
+                await loadPapers();
+
+            } catch (error) {
+
+                console.error(error);
+
+                showMessage(
+                    error.message ||
+                    "Unable to initialize page.",
+                    "error"
+                );
+
+            }
+
+        }
+
+
+        initializePage();
+
+    </script>
+
+</body>
+
+</html>

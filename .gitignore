@@ -1,0 +1,18 @@
+# Environment variables and secrets
+/backend/config/.env
+
+# Other environment files
+.env
+.env.*
+!.env.example
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE files
+.vscode/

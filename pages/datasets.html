@@ -1,0 +1,2599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Datasets | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <a href="../index.html">
+
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+
+            </a>
+        </div>
+
+        <button class="sidebar-close" id="sidebarClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <!-- MAIN MENU -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                MAIN MENU
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    Dashboard
+                </a>
+
+                <a href="research-domain.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+                    Research Domains
+                </a>
+
+                <a href="papers.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+                    Research Papers
+                </a>
+
+                <a href="datasets.html" class="sidebar-link active">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+                    Datasets
+                </a>
+
+                <a href="models.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+                    AI Models
+                </a>
+
+                <a href="github.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    GitHub Explorer
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- AI TOOLS -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                AI RESEARCH TOOLS
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="ai-analysis.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+                    AI Analysis
+                </a>
+
+                <a href="research-gap.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+                    Research Gap
+                </a>
+
+                <a href="idea-generator.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+                    Idea Generator
+                </a>
+
+                <a href="literature.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+                    Literature Review
+                </a>
+
+                <a href="ai-chat.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+                    AI Assistant
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- RESOURCES -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                RESOURCES
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="conferences.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+                    Conferences
+                </a>
+
+                <a href="citation.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+                    Citation Generator
+                </a>
+
+                <a href="internet-research.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+                    Internet Research
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="sidebar-link">
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+                Settings
+            </a>
+
+            <a href="profile.html" class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+                    <strong>Researcher</strong>
+                    <span>Student Account</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP NAVBAR -->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="page-title">
+
+                    <span>
+                        Research Resources
+                    </span>
+
+                    <h1>
+                        Dataset Explorer
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search datasets..."
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <div class="navbar-actions">
+
+                <button
+                    class="navbar-icon-btn"
+                    id="themeToggle"
+                    title="Toggle theme"
+                >
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </a>
+
+                <a href="profile.html" class="navbar-user">
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+                        <strong>Researcher</strong>
+                        <span>Student</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             PAGE CONTENT
+             ===================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    Datasets
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 HERO
+                 ================================================= -->
+
+            <section class="dataset-hero">
+
+                <div class="dataset-hero-content">
+
+                    <div class="section-eyebrow">
+                        RESEARCH DATASETS
+                    </div>
+
+                    <h2>
+                        Explore datasets for your research
+                    </h2>
+
+                    <p>
+                        Discover, compare and organize datasets
+                        for machine learning, artificial intelligence,
+                        healthcare, computer vision and other research
+                        domains.
+                    </p>
+
+                    <div class="dataset-hero-actions">
+
+                        <button
+                            class="primary-page-btn"
+                            id="uploadDatasetBtn"
+                        >
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            Upload Dataset
+                        </button>
+
+                        <button
+                            class="secondary-page-btn"
+                            id="browseDatasetBtn"
+                        >
+                            <i class="fa-solid fa-compass"></i>
+                            Browse Datasets
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dataset-hero-visual">
+
+                    <div class="dataset-visual-circle">
+
+                        <i class="fa-solid fa-database"></i>
+
+                    </div>
+
+                    <div class="dataset-floating-card card-one">
+
+                        <i class="fa-solid fa-file-csv"></i>
+
+                        <div>
+                            <strong>
+                                CSV Dataset
+                            </strong>
+                            <span>
+                                2.8 GB
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dataset-floating-card card-two">
+
+                        <i class="fa-solid fa-image"></i>
+
+                        <div>
+                            <strong>
+                                Image Dataset
+                            </strong>
+                            <span>
+                                14.2 GB
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 STATISTICS
+                 ================================================= -->
+
+            <section class="dataset-stats-grid">
+
+
+                <div class="dataset-stat-card">
+
+                    <div class="dataset-stat-icon blue">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL DATASETS
+                        </span>
+
+                        <strong>
+                            2,486
+                        </strong>
+
+                        <small>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            12.4% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dataset-stat-card">
+
+                    <div class="dataset-stat-icon purple">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            IMAGE DATASETS
+                        </span>
+
+                        <strong>
+                            842
+                        </strong>
+
+                        <small>
+                            Computer vision
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dataset-stat-card">
+
+                    <div class="dataset-stat-icon green">
+                        <i class="fa-solid fa-table"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TABULAR DATASETS
+                        </span>
+
+                        <strong>
+                            967
+                        </strong>
+
+                        <small>
+                            Structured data
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dataset-stat-card">
+
+                    <div class="dataset-stat-icon orange">
+                        <i class="fa-solid fa-hard-drive"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL STORAGE
+                        </span>
+
+                        <strong>
+                            4.8 TB
+                        </strong>
+
+                        <small>
+                            Across all datasets
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SEARCH + FILTER
+                 ================================================= -->
+
+            <section class="dataset-toolbar">
+
+
+                <div class="dataset-search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="datasetSearch"
+                        placeholder="Search by dataset name, domain or keyword..."
+                    >
+
+                </div>
+
+
+                <div class="dataset-filter-actions">
+
+                    <select id="datasetTypeFilter">
+
+                        <option value="all">
+                            All Types
+                        </option>
+
+                        <option value="image">
+                            Image
+                        </option>
+
+                        <option value="tabular">
+                            Tabular
+                        </option>
+
+                        <option value="text">
+                            Text / NLP
+                        </option>
+
+                        <option value="audio">
+                            Audio
+                        </option>
+
+                        <option value="video">
+                            Video
+                        </option>
+
+                    </select>
+
+
+                    <select id="datasetDomainFilter">
+
+                        <option value="all">
+                            All Domains
+                        </option>
+
+                        <option value="healthcare">
+                            Healthcare
+                        </option>
+
+                        <option value="computer-vision">
+                            Computer Vision
+                        </option>
+
+                        <option value="nlp">
+                            NLP
+                        </option>
+
+                        <option value="finance">
+                            Finance
+                        </option>
+
+                        <option value="education">
+                            Education
+                        </option>
+
+                    </select>
+
+
+                    <select id="datasetSort">
+
+                        <option value="recent">
+                            Recently Added
+                        </option>
+
+                        <option value="popular">
+                            Most Popular
+                        </option>
+
+                        <option value="size">
+                            Dataset Size
+                        </option>
+
+                        <option value="name">
+                            Name A-Z
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        class="dataset-filter-btn"
+                        id="advancedFilterBtn"
+                    >
+                        <i class="fa-solid fa-sliders"></i>
+                        Filters
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CATEGORY CHIPS
+                 ================================================= -->
+
+            <section class="dataset-category-row">
+
+                <span class="category-label">
+                    Popular:
+                </span>
+
+                <button
+                    class="dataset-category active"
+                    data-category="all"
+                >
+                    All Datasets
+                </button>
+
+                <button
+                    class="dataset-category"
+                    data-category="medical"
+                >
+                    Medical Imaging
+                </button>
+
+                <button
+                    class="dataset-category"
+                    data-category="computer-vision"
+                >
+                    Computer Vision
+                </button>
+
+                <button
+                    class="dataset-category"
+                    data-category="nlp"
+                >
+                    NLP
+                </button>
+
+                <button
+                    class="dataset-category"
+                    data-category="deep-learning"
+                >
+                    Deep Learning
+                </button>
+
+                <button
+                    class="dataset-category"
+                    data-category="benchmark"
+                >
+                    Benchmark
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 DATASET CONTENT
+                 ================================================= -->
+
+            <section class="dataset-content-header">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        DATASET LIBRARY
+                    </span>
+
+                    <h2>
+                        Recommended datasets
+                    </h2>
+
+                </div>
+
+
+                <div class="dataset-view-actions">
+
+                    <span id="datasetCount">
+                        6 datasets
+                    </span>
+
+                    <button
+                        class="dataset-view-btn active"
+                        data-view="grid"
+                        title="Grid view"
+                    >
+                        <i class="fa-solid fa-grip"></i>
+                    </button>
+
+                    <button
+                        class="dataset-view-btn"
+                        data-view="list"
+                        title="List view"
+                    >
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 DATASET GRID
+                 ================================================= -->
+
+            <section
+                class="dataset-grid"
+                id="datasetGrid"
+            >
+
+
+                <!-- DATASET 1 -->
+
+                <article
+                    class="dataset-card"
+                    data-name="Chest X-Ray Pneumonia Dataset"
+                    data-type="image"
+                    data-domain="healthcare"
+                >
+
+                    <div class="dataset-card-top">
+
+                        <div class="dataset-card-icon medical">
+                            <i class="fa-solid fa-x-ray"></i>
+                        </div>
+
+                        <button
+                            class="dataset-bookmark"
+                            title="Save dataset"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="dataset-card-body">
+
+                        <div class="dataset-tags">
+
+                            <span class="dataset-tag medical">
+                                Healthcare
+                            </span>
+
+                            <span class="dataset-tag image">
+                                Image
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Chest X-Ray Pneumonia Dataset
+                        </h3>
+
+                        <p>
+                            Chest radiography images designed for
+                            pneumonia classification and medical
+                            image analysis research.
+                        </p>
+
+
+                        <div class="dataset-meta">
+
+                            <div>
+                                <i class="fa-solid fa-images"></i>
+                                5,856 images
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-hard-drive"></i>
+                                1.2 GB
+                            </div>
+
+                        </div>
+
+
+                        <div class="dataset-card-footer">
+
+                            <div class="dataset-author">
+
+                                <span>
+                                    KR
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Research Dataset
+                                    </strong>
+                                    <small>
+                                        Updated 2 days ago
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <button class="dataset-open-btn">
+                                Explore
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DATASET 2 -->
+
+                <article
+                    class="dataset-card"
+                    data-name="Brain MRI Tumor Dataset"
+                    data-type="image"
+                    data-domain="healthcare"
+                >
+
+                    <div class="dataset-card-top">
+
+                        <div class="dataset-card-icon brain">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+
+                        <button
+                            class="dataset-bookmark"
+                            title="Save dataset"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="dataset-card-body">
+
+                        <div class="dataset-tags">
+
+                            <span class="dataset-tag medical">
+                                Healthcare
+                            </span>
+
+                            <span class="dataset-tag image">
+                                Image
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Brain MRI Tumor Dataset
+                        </h3>
+
+                        <p>
+                            MRI brain scans categorized for tumor
+                            detection, segmentation and classification
+                            experiments.
+                        </p>
+
+
+                        <div class="dataset-meta">
+
+                            <div>
+                                <i class="fa-solid fa-images"></i>
+                                7,023 images
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-hard-drive"></i>
+                                2.4 GB
+                            </div>
+
+                        </div>
+
+
+                        <div class="dataset-card-footer">
+
+                            <div class="dataset-author">
+
+                                <span>
+                                    BM
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Medical Research
+                                    </strong>
+                                    <small>
+                                        Updated 5 days ago
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <button class="dataset-open-btn">
+                                Explore
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DATASET 3 -->
+
+                <article
+                    class="dataset-card"
+                    data-name="Natural Language Questions Dataset"
+                    data-type="text"
+                    data-domain="nlp"
+                >
+
+                    <div class="dataset-card-top">
+
+                        <div class="dataset-card-icon nlp">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+
+                        <button
+                            class="dataset-bookmark"
+                            title="Save dataset"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="dataset-card-body">
+
+                        <div class="dataset-tags">
+
+                            <span class="dataset-tag nlp">
+                                NLP
+                            </span>
+
+                            <span class="dataset-tag text">
+                                Text
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Natural Language Questions Dataset
+                        </h3>
+
+                        <p>
+                            Question-answer pairs for natural language
+                            understanding and conversational AI research.
+                        </p>
+
+
+                        <div class="dataset-meta">
+
+                            <div>
+                                <i class="fa-solid fa-file-lines"></i>
+                                98K records
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-hard-drive"></i>
+                                640 MB
+                            </div>
+
+                        </div>
+
+
+                        <div class="dataset-card-footer">
+
+                            <div class="dataset-author">
+
+                                <span>
+                                    NL
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        NLP Research
+                                    </strong>
+                                    <small>
+                                        Updated 1 week ago
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <button class="dataset-open-btn">
+                                Explore
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DATASET 4 -->
+
+                <article
+                    class="dataset-card"
+                    data-name="Urban Traffic Image Dataset"
+                    data-type="image"
+                    data-domain="computer-vision"
+                >
+
+                    <div class="dataset-card-top">
+
+                        <div class="dataset-card-icon vision">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+
+                        <button
+                            class="dataset-bookmark"
+                            title="Save dataset"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="dataset-card-body">
+
+                        <div class="dataset-tags">
+
+                            <span class="dataset-tag vision">
+                                Computer Vision
+                            </span>
+
+                            <span class="dataset-tag image">
+                                Image
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Urban Traffic Image Dataset
+                        </h3>
+
+                        <p>
+                            Street-level images for object detection,
+                            traffic analysis and autonomous driving research.
+                        </p>
+
+
+                        <div class="dataset-meta">
+
+                            <div>
+                                <i class="fa-solid fa-images"></i>
+                                42K images
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-hard-drive"></i>
+                                8.7 GB
+                            </div>
+
+                        </div>
+
+
+                        <div class="dataset-card-footer">
+
+                            <div class="dataset-author">
+
+                                <span>
+                                    CV
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Vision Lab
+                                    </strong>
+                                    <small>
+                                        Updated 9 days ago
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <button class="dataset-open-btn">
+                                Explore
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DATASET 5 -->
+
+                <article
+                    class="dataset-card"
+                    data-name="Student Performance Dataset"
+                    data-type="tabular"
+                    data-domain="education"
+                >
+
+                    <div class="dataset-card-top">
+
+                        <div class="dataset-card-icon education">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <button
+                            class="dataset-bookmark"
+                            title="Save dataset"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="dataset-card-body">
+
+                        <div class="dataset-tags">
+
+                            <span class="dataset-tag education">
+                                Education
+                            </span>
+
+                            <span class="dataset-tag tabular">
+                                Tabular
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Student Performance Dataset
+                        </h3>
+
+                        <p>
+                            Student academic and demographic data for
+                            performance prediction and educational analytics.
+                        </p>
+
+
+                        <div class="dataset-meta">
+
+                            <div>
+                                <i class="fa-solid fa-table"></i>
+                                12K records
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-hard-drive"></i>
+                                85 MB
+                            </div>
+
+                        </div>
+
+
+                        <div class="dataset-card-footer">
+
+                            <div class="dataset-author">
+
+                                <span>
+                                    ED
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Education Lab
+                                    </strong>
+                                    <small>
+                                        Updated 2 weeks ago
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <button class="dataset-open-btn">
+                                Explore
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DATASET 6 -->
+
+                <article
+                    class="dataset-card"
+                    data-name="Financial Market Dataset"
+                    data-type="tabular"
+                    data-domain="finance"
+                >
+
+                    <div class="dataset-card-top">
+
+                        <div class="dataset-card-icon finance">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <button
+                            class="dataset-bookmark"
+                            title="Save dataset"
+                        >
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="dataset-card-body">
+
+                        <div class="dataset-tags">
+
+                            <span class="dataset-tag finance">
+                                Finance
+                            </span>
+
+                            <span class="dataset-tag tabular">
+                                Tabular
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Financial Market Dataset
+                        </h3>
+
+                        <p>
+                            Historical market data for financial
+                            forecasting, prediction and time-series research.
+                        </p>
+
+
+                        <div class="dataset-meta">
+
+                            <div>
+                                <i class="fa-solid fa-table"></i>
+                                2.1M records
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-hard-drive"></i>
+                                3.1 GB
+                            </div>
+
+                        </div>
+
+
+                        <div class="dataset-card-footer">
+
+                            <div class="dataset-author">
+
+                                <span>
+                                    FN
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Finance Research
+                                    </strong>
+                                    <small>
+                                        Updated 3 weeks ago
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <button class="dataset-open-btn">
+                                Explore
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                class="dataset-empty-state"
+                id="datasetEmptyState"
+            >
+
+                <div class="dataset-empty-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <h3>
+                    No datasets found
+                </h3>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+                <button
+                    class="secondary-page-btn"
+                    id="clearDatasetFilters"
+                >
+                    Clear Filters
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGINATION
+                 ================================================= -->
+
+            <section class="dataset-pagination">
+
+                <span>
+                    Showing 1–6 of 2,486 datasets
+                </span>
+
+                <div>
+
+                    <button disabled>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="active">
+                        1
+                    </button>
+
+                    <button>
+                        2
+                    </button>
+
+                    <button>
+                        3
+                    </button>
+
+                    <span>
+                        ...
+                    </span>
+
+                    <button>
+                        25
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 UPLOAD AREA
+                 ================================================= -->
+
+            <section class="dataset-upload-section">
+
+                <div class="dataset-upload-icon">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        YOUR DATASET
+                    </span>
+
+                    <h2>
+                        Have your own research dataset?
+                    </h2>
+
+                    <p>
+                        Upload your dataset and organize it inside
+                        your research workspace.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-page-btn"
+                    id="uploadDatasetBottomBtn"
+                >
+                    <i class="fa-solid fa-upload"></i>
+                    Upload Dataset
+                </button>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     UPLOAD MODAL
+     ===================================================== -->
+
+<div
+    class="dataset-modal"
+    id="datasetModal"
+>
+
+    <div class="dataset-modal-overlay"></div>
+
+    <div class="dataset-modal-box">
+
+        <button
+            class="dataset-modal-close"
+            id="datasetModalClose"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="dataset-modal-header">
+
+            <div class="dataset-modal-icon">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+
+            <div>
+
+                <h2>
+                    Upload Dataset
+                </h2>
+
+                <p>
+                    Add your research dataset to the workspace.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <label
+            class="dataset-dropzone"
+            for="datasetFileInput"
+            id="datasetDropzone"
+        >
+
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            <strong>
+                Drop your dataset here
+            </strong>
+
+            <span>
+                or click to browse files
+            </span>
+
+            <small>
+                CSV, XLSX, JSON, ZIP, PDF and image files supported
+            </small>
+
+        </label>
+
+
+        <input
+            type="file"
+            id="datasetFileInput"
+            hidden
+            multiple
+        >
+
+
+        <div
+            class="selected-file-list"
+            id="selectedFileList"
+        ></div>
+
+
+        <div class="dataset-modal-actions">
+
+            <button
+                class="secondary-page-btn"
+                id="cancelUploadBtn"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="primary-page-btn"
+                id="confirmUploadBtn"
+            >
+                <i class="fa-solid fa-upload"></i>
+                Upload Dataset
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="dataset-toast"
+    id="datasetToast"
+>
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span>
+        Done
+    </span>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+const sidebar =
+    document.getElementById("sidebar");
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const sidebarClose =
+    document.getElementById("sidebarClose");
+
+const sidebarOverlay =
+    document.getElementById("sidebarOverlay");
+
+
+menuToggle.addEventListener("click", () => {
+
+    sidebar.classList.add("open");
+
+    sidebarOverlay.classList.add("show");
+
+});
+
+
+sidebarClose.addEventListener("click", () => {
+
+    sidebar.classList.remove("open");
+
+    sidebarOverlay.classList.remove("show");
+
+});
+
+
+sidebarOverlay.addEventListener("click", () => {
+
+    sidebar.classList.remove("open");
+
+    sidebarOverlay.classList.remove("show");
+
+});
+
+
+/* =========================================================
+   THEME
+   ========================================================= */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+
+themeToggle.addEventListener("click", function () {
+
+    document.body.classList.toggle(
+        "dark-preview"
+    );
+
+    const icon =
+        this.querySelector("i");
+
+
+    if (
+        document.body.classList.contains(
+            "dark-preview"
+        )
+    ) {
+
+        icon.classList.remove("fa-moon");
+
+        icon.classList.add("fa-sun");
+
+    } else {
+
+        icon.classList.remove("fa-sun");
+
+        icon.classList.add("fa-moon");
+
+    }
+
+});
+
+
+/* =========================================================
+   DATASET SEARCH + FILTER
+   ========================================================= */
+
+const datasetSearch =
+    document.getElementById(
+        "datasetSearch"
+    );
+
+const datasetTypeFilter =
+    document.getElementById(
+        "datasetTypeFilter"
+    );
+
+const datasetDomainFilter =
+    document.getElementById(
+        "datasetDomainFilter"
+    );
+
+const datasetGrid =
+    document.getElementById(
+        "datasetGrid"
+    );
+
+const datasetCards =
+    Array.from(
+        document.querySelectorAll(
+            ".dataset-card"
+        )
+    );
+
+const datasetEmptyState =
+    document.getElementById(
+        "datasetEmptyState"
+    );
+
+const datasetCount =
+    document.getElementById(
+        "datasetCount"
+    );
+
+
+function filterDatasets() {
+
+    const search =
+        datasetSearch.value
+            .toLowerCase()
+            .trim();
+
+    const type =
+        datasetTypeFilter.value;
+
+    const domain =
+        datasetDomainFilter.value;
+
+    let visibleCount = 0;
+
+
+    datasetCards.forEach(card => {
+
+        const name =
+            card.dataset.name
+                .toLowerCase();
+
+        const cardType =
+            card.dataset.type;
+
+        const cardDomain =
+            card.dataset.domain;
+
+
+        const matchesSearch =
+            !search ||
+            name.includes(search);
+
+
+        const matchesType =
+            type === "all" ||
+            cardType === type;
+
+
+        const matchesDomain =
+            domain === "all" ||
+            cardDomain === domain;
+
+
+        const visible =
+            matchesSearch &&
+            matchesType &&
+            matchesDomain;
+
+
+        card.style.display =
+            visible
+                ? ""
+                : "none";
+
+
+        if (visible) {
+
+            visibleCount++;
+
+        }
+
+    });
+
+
+    datasetCount.textContent =
+        visibleCount +
+        (
+            visibleCount === 1
+                ? " dataset"
+                : " datasets"
+        );
+
+
+    datasetEmptyState.classList.toggle(
+        "show",
+        visibleCount === 0
+    );
+
+}
+
+
+datasetSearch.addEventListener(
+    "input",
+    filterDatasets
+);
+
+
+datasetTypeFilter.addEventListener(
+    "change",
+    filterDatasets
+);
+
+
+datasetDomainFilter.addEventListener(
+    "change",
+    filterDatasets
+);
+
+
+/* =========================================================
+   GLOBAL SEARCH
+   ========================================================= */
+
+const globalSearch =
+    document.getElementById(
+        "globalSearch"
+    );
+
+
+globalSearch.addEventListener(
+    "input",
+    function () {
+
+        datasetSearch.value =
+            this.value;
+
+        filterDatasets();
+
+    }
+);
+
+
+/* =========================================================
+   CATEGORY CHIPS
+   ========================================================= */
+
+document
+    .querySelectorAll(
+        ".dataset-category"
+    )
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                document
+                    .querySelectorAll(
+                        ".dataset-category"
+                    )
+                    .forEach(
+                        item =>
+                            item.classList.remove(
+                                "active"
+                            )
+                    );
+
+
+                this.classList.add(
+                    "active"
+                );
+
+
+                const category =
+                    this.dataset.category;
+
+
+                if (
+                    category === "all"
+                ) {
+
+                    datasetSearch.value = "";
+
+                    datasetTypeFilter.value =
+                        "all";
+
+                    datasetDomainFilter.value =
+                        "all";
+
+                } else if (
+                    category === "medical"
+                ) {
+
+                    datasetSearch.value =
+                        "medical";
+
+                } else if (
+                    category === "computer-vision"
+                ) {
+
+                    datasetDomainFilter.value =
+                        "computer-vision";
+
+                } else if (
+                    category === "nlp"
+                ) {
+
+                    datasetDomainFilter.value =
+                        "nlp";
+
+                } else {
+
+                    datasetSearch.value =
+                        category;
+
+                }
+
+
+                filterDatasets();
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   SORT
+   ========================================================= */
+
+const datasetSort =
+    document.getElementById(
+        "datasetSort"
+    );
+
+
+datasetSort.addEventListener(
+    "change",
+    function () {
+
+        const value =
+            this.value;
+
+
+        const sorted =
+            [...datasetCards].sort(
+                (a, b) => {
+
+                    const nameA =
+                        a.dataset.name;
+
+                    const nameB =
+                        b.dataset.name;
+
+
+                    if (
+                        value === "name"
+                    ) {
+
+                        return nameA.localeCompare(
+                            nameB
+                        );
+
+                    }
+
+
+                    return 0;
+
+                }
+            );
+
+
+        sorted.forEach(card => {
+
+            datasetGrid.appendChild(
+                card
+            );
+
+        });
+
+    }
+);
+
+
+/* =========================================================
+   GRID / LIST VIEW
+   ========================================================= */
+
+document
+    .querySelectorAll(
+        ".dataset-view-btn"
+    )
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                document
+                    .querySelectorAll(
+                        ".dataset-view-btn"
+                    )
+                    .forEach(
+                        btn =>
+                            btn.classList.remove(
+                                "active"
+                            )
+                    );
+
+
+                this.classList.add(
+                    "active"
+                );
+
+
+                const view =
+                    this.dataset.view;
+
+
+                datasetGrid.classList.toggle(
+                    "list-view",
+                    view === "list"
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   BOOKMARK
+   ========================================================= */
+
+document
+    .querySelectorAll(
+        ".dataset-bookmark"
+    )
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const icon =
+                    this.querySelector("i");
+
+
+                icon.classList.toggle(
+                    "fa-regular"
+                );
+
+                icon.classList.toggle(
+                    "fa-solid"
+                );
+
+
+                this.classList.toggle(
+                    "saved"
+                );
+
+
+                showDatasetToast(
+                    this.classList.contains(
+                        "saved"
+                    )
+                        ? "Dataset saved."
+                        : "Dataset removed from saved."
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   EXPLORE DATASET
+   ========================================================= */
+
+document
+    .querySelectorAll(
+        ".dataset-open-btn"
+    )
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const card =
+                    this.closest(
+                        ".dataset-card"
+                    );
+
+
+                const title =
+                    card.querySelector(
+                        "h3"
+                    ).textContent.trim();
+
+
+                showDatasetToast(
+                    "Opening " + title
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   UPLOAD MODAL
+   ========================================================= */
+
+const datasetModal =
+    document.getElementById(
+        "datasetModal"
+    );
+
+const datasetModalClose =
+    document.getElementById(
+        "datasetModalClose"
+    );
+
+const cancelUploadBtn =
+    document.getElementById(
+        "cancelUploadBtn"
+    );
+
+const uploadDatasetBtn =
+    document.getElementById(
+        "uploadDatasetBtn"
+    );
+
+const uploadDatasetBottomBtn =
+    document.getElementById(
+        "uploadDatasetBottomBtn"
+    );
+
+
+function openUploadModal() {
+
+    datasetModal.classList.add(
+        "show"
+    );
+
+}
+
+
+function closeUploadModal() {
+
+    datasetModal.classList.remove(
+        "show"
+    );
+
+}
+
+
+uploadDatasetBtn.addEventListener(
+    "click",
+    openUploadModal
+);
+
+
+uploadDatasetBottomBtn.addEventListener(
+    "click",
+    openUploadModal
+);
+
+
+datasetModalClose.addEventListener(
+    "click",
+    closeUploadModal
+);
+
+
+cancelUploadBtn.addEventListener(
+    "click",
+    closeUploadModal
+);
+
+
+document
+    .querySelector(
+        ".dataset-modal-overlay"
+    )
+    .addEventListener(
+        "click",
+        closeUploadModal
+    );
+
+
+/* =========================================================
+   FILE INPUT
+   ========================================================= */
+
+const datasetFileInput =
+    document.getElementById(
+        "datasetFileInput"
+    );
+
+const selectedFileList =
+    document.getElementById(
+        "selectedFileList"
+    );
+
+
+datasetFileInput.addEventListener(
+    "change",
+    function () {
+
+        renderSelectedFiles(
+            this.files
+        );
+
+    }
+);
+
+
+function renderSelectedFiles(files) {
+
+    selectedFileList.innerHTML = "";
+
+
+    Array.from(files).forEach(file => {
+
+        const item =
+            document.createElement(
+                "div"
+            );
+
+
+        item.className =
+            "selected-file";
+
+
+        item.innerHTML = `
+
+            <span class="selected-file-icon">
+                <i class="fa-solid fa-file"></i>
+            </span>
+
+            <div>
+
+                <strong>
+                    ${escapeHTML(file.name)}
+                </strong>
+
+                <small>
+                    ${formatFileSize(file.size)}
+                </small>
+
+            </div>
+
+            <i class="fa-solid fa-circle-check"></i>
+
+        `;
+
+
+        selectedFileList.appendChild(
+            item
+        );
+
+    });
+
+}
+
+
+function formatFileSize(bytes) {
+
+    if (bytes < 1024) {
+
+        return bytes + " B";
+
+    }
+
+    if (bytes < 1024 * 1024) {
+
+        return (
+            bytes / 1024
+        ).toFixed(1) + " KB";
+
+    }
+
+    if (
+        bytes <
+        1024 * 1024 * 1024
+    ) {
+
+        return (
+            bytes /
+            (1024 * 1024)
+        ).toFixed(1) + " MB";
+
+    }
+
+    return (
+        bytes /
+        (1024 * 1024 * 1024)
+    ).toFixed(1) + " GB";
+
+}
+
+
+function escapeHTML(value) {
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+    div.textContent =
+        value;
+
+    return div.innerHTML;
+
+}
+
+
+/* =========================================================
+   DRAG & DROP
+   ========================================================= */
+
+const datasetDropzone =
+    document.getElementById(
+        "datasetDropzone"
+    );
+
+
+[
+    "dragenter",
+    "dragover"
+].forEach(eventName => {
+
+    datasetDropzone.addEventListener(
+        eventName,
+        event => {
+
+            event.preventDefault();
+
+            datasetDropzone.classList.add(
+                "dragging"
+            );
+
+        }
+    );
+
+});
+
+
+[
+    "dragleave",
+    "drop"
+].forEach(eventName => {
+
+    datasetDropzone.addEventListener(
+        eventName,
+        event => {
+
+            event.preventDefault();
+
+            datasetDropzone.classList.remove(
+                "dragging"
+            );
+
+        }
+    );
+
+});
+
+
+datasetDropzone.addEventListener(
+    "drop",
+    event => {
+
+        const files =
+            event.dataTransfer.files;
+
+
+        if (files.length) {
+
+            datasetFileInput.files =
+                files;
+
+            renderSelectedFiles(
+                files
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CONFIRM UPLOAD
+   ========================================================= */
+
+document
+    .getElementById(
+        "confirmUploadBtn"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if (
+                datasetFileInput.files.length === 0
+            ) {
+
+                showDatasetToast(
+                    "Please select a dataset first."
+                );
+
+                return;
+
+            }
+
+
+            showDatasetToast(
+                "Dataset upload UI completed."
+            );
+
+
+            setTimeout(() => {
+
+                closeUploadModal();
+
+            }, 1000);
+
+        }
+    );
+
+
+/* =========================================================
+   CLEAR FILTERS
+   ========================================================= */
+
+document
+    .getElementById(
+        "clearDatasetFilters"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            datasetSearch.value = "";
+
+            datasetTypeFilter.value =
+                "all";
+
+            datasetDomainFilter.value =
+                "all";
+
+            document
+                .querySelectorAll(
+                    ".dataset-category"
+                )
+                .forEach(
+                    button =>
+                        button.classList.remove(
+                            "active"
+                        )
+                );
+
+
+            document
+                .querySelector(
+                    '.dataset-category[data-category="all"]'
+                )
+                .classList.add(
+                    "active"
+                );
+
+
+            filterDatasets();
+
+        }
+    );
+
+
+/* =========================================================
+   BROWSE BUTTON
+   ========================================================= */
+
+document
+    .getElementById(
+        "browseDatasetBtn"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            document
+                .getElementById(
+                    "datasetGrid"
+                )
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+    );
+
+
+/* =========================================================
+   ADVANCED FILTER
+   ========================================================= */
+
+document
+    .getElementById(
+        "advancedFilterBtn"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            showDatasetToast(
+                "Advanced filters will be connected later."
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+function showDatasetToast(message) {
+
+    const toast =
+        document.getElementById(
+            "datasetToast"
+        );
+
+
+    toast.querySelector(
+        "span"
+    ).textContent =
+        message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        window.datasetToastTimer
+    );
+
+
+    window.datasetToastTimer =
+        setTimeout(() => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        }, 2200);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Internet Research | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../css/internet-research.css">
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <a href="../index.html">
+
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <button class="sidebar-close" id="sidebarClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <!-- MAIN MENU -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                MAIN MENU
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="research-domain.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+
+                    Research Domains
+
+                </a>
+
+
+                <a href="papers.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    Research Papers
+
+                </a>
+
+
+                <a href="datasets.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+
+                    Datasets
+
+                </a>
+
+
+                <a href="models.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+
+                    AI Models
+
+                </a>
+
+
+                <a href="github.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+
+                    GitHub Explorer
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- AI RESEARCH TOOLS -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                AI RESEARCH TOOLS
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="ai-analysis.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+
+                    AI Analysis
+
+                </a>
+
+
+                <a href="research-gap.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+
+                    Research Gap
+
+                </a>
+
+
+                <a href="idea-generator.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+
+                    Idea Generator
+
+                </a>
+
+
+                <a href="literature.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+
+                    Literature Review
+
+                </a>
+
+
+                <a href="ai-chat.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+
+                    AI Assistant
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- RESOURCES -->
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                RESOURCES
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="conferences.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+
+                    Conferences
+
+                </a>
+
+
+                <a href="citation.html" class="sidebar-link">
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+
+                    Citation Generator
+
+                </a>
+
+
+                <a
+                    href="internet-research.html"
+                    class="sidebar-link active"
+                >
+
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+
+                    Internet Research
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="sidebar-link">
+
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                Settings
+
+            </a>
+
+
+            <a href="profile.html" class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Researcher
+                    </strong>
+
+                    <span>
+                        Student Account
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOP NAVBAR -->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="page-title">
+
+                    <span>
+                        Research Resources
+                    </span>
+
+                    <h1>
+                        Internet Research
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search..."
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <div class="navbar-actions">
+
+                <button
+                    class="navbar-icon-btn"
+                    id="themeToggle"
+                >
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </a>
+
+
+                <a
+                    href="profile.html"
+                    class="navbar-user"
+                >
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+
+                        <strong>
+                            Researcher
+                        </strong>
+
+                        <span>
+                            Student
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             PAGE CONTENT
+             ===================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    Internet Research
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 HERO
+                 ================================================= -->
+
+            <section class="internet-hero">
+
+                <div class="internet-hero-content">
+
+                    <div class="section-eyebrow">
+                        WEB RESEARCH WORKSPACE
+                    </div>
+
+                    <h2>
+                        Search the web for your research
+                    </h2>
+
+                    <p>
+                        Find academic resources, technical documentation,
+                        research organizations, datasets and trusted web
+                        sources from one research workspace.
+                    </p>
+
+
+                    <div class="research-search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="researchSearch"
+                            placeholder="Search for a research topic..."
+                        >
+
+                        <button
+                            id="searchButton"
+                        >
+                            Search
+                        </button>
+
+                    </div>
+
+
+                    <div class="search-suggestions">
+
+                        <span>
+                            Try:
+                        </span>
+
+                        <button data-query="large language models">
+                            Large Language Models
+                        </button>
+
+                        <button data-query="computer vision research">
+                            Computer Vision
+                        </button>
+
+                        <button data-query="AI healthcare">
+                            AI Healthcare
+                        </button>
+
+                        <button data-query="machine learning datasets">
+                            ML Datasets
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="internet-hero-visual">
+
+                    <div class="browser-window">
+
+                        <div class="browser-top">
+
+                            <div class="browser-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="browser-url">
+                                research.ai/search
+                            </div>
+
+                        </div>
+
+
+                        <div class="browser-content">
+
+                            <div class="browser-search-line">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                artificial intelligence
+                            </div>
+
+                            <div class="browser-result-line large"></div>
+                            <div class="browser-result-line"></div>
+                            <div class="browser-result-line short"></div>
+
+                            <div class="browser-result-line large"></div>
+                            <div class="browser-result-line"></div>
+                            <div class="browser-result-line short"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 RESEARCH STATS
+                 ================================================= -->
+
+            <section class="research-stats">
+
+                <div class="research-stat">
+
+                    <div class="research-stat-icon blue">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            SEARCHES
+                        </span>
+
+                        <strong>
+                            128
+                        </strong>
+
+                        <small>
+                            Research searches
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="research-stat">
+
+                    <div class="research-stat-icon purple">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            SOURCES
+                        </span>
+
+                        <strong>
+                            684
+                        </strong>
+
+                        <small>
+                            Sources discovered
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="research-stat">
+
+                    <div class="research-stat-icon green">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            SAVED
+                        </span>
+
+                        <strong>
+                            52
+                        </strong>
+
+                        <small>
+                            Saved sources
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="research-stat">
+
+                    <div class="research-stat-icon orange">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            COLLECTIONS
+                        </span>
+
+                        <strong>
+                            8
+                        </strong>
+
+                        <small>
+                            Research collections
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FILTER BAR
+                 ================================================= -->
+
+            <section class="research-filter-panel">
+
+                <div class="research-filter-title">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            RESEARCH SOURCES
+                        </div>
+
+                        <h2>
+                            Explore web resources
+                        </h2>
+
+                    </div>
+
+                    <span id="resultCount">
+                        6 results
+                    </span>
+
+                </div>
+
+
+                <div class="research-filters">
+
+                    <button
+                        class="research-filter active"
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="research-filter"
+                        data-filter="academic"
+                    >
+                        Academic
+                    </button>
+
+                    <button
+                        class="research-filter"
+                        data-filter="documentation"
+                    >
+                        Documentation
+                    </button>
+
+                    <button
+                        class="research-filter"
+                        data-filter="dataset"
+                    >
+                        Datasets
+                    </button>
+
+                    <button
+                        class="research-filter"
+                        data-filter="organization"
+                    >
+                        Organizations
+                    </button>
+
+                    <button
+                        class="research-filter"
+                        data-filter="news"
+                    >
+                        Research News
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 RESULT LAYOUT
+                 ================================================= -->
+
+            <section class="research-layout">
+
+
+                <!-- RESULTS -->
+
+                <div class="research-results">
+
+                    <div class="results-header">
+
+                        <div>
+
+                            <h2>
+                                Search results
+                            </h2>
+
+                            <p>
+                                Relevant sources for your research
+                            </p>
+
+                        </div>
+
+
+                        <select id="sortResults">
+
+                            <option value="relevance">
+                                Relevance
+                            </option>
+
+                            <option value="recent">
+                                Most Recent
+                            </option>
+
+                            <option value="popular">
+                                Most Popular
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- RESULT 1 -->
+
+                    <article
+                        class="web-result"
+                        data-type="academic"
+                        data-title="Artificial Intelligence Research and Machine Learning"
+                    >
+
+                        <div class="result-source-row">
+
+                            <span class="source-type academic">
+                                Academic
+                            </span>
+
+                            <span class="source-domain">
+                                research.example.edu
+                            </span>
+
+                            <button
+                                class="save-source"
+                                title="Save source"
+                            >
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Artificial Intelligence Research and Machine Learning
+                        </h3>
+
+
+                        <p class="result-url">
+                            https://research.example.edu/ai-machine-learning
+                        </p>
+
+
+                        <p class="result-description">
+                            Explore research resources covering machine learning,
+                            deep learning, artificial intelligence architectures,
+                            algorithms and current research directions.
+                        </p>
+
+
+                        <div class="result-tags">
+
+                            <span>
+                                AI
+                            </span>
+
+                            <span>
+                                Machine Learning
+                            </span>
+
+                            <span>
+                                Deep Learning
+                            </span>
+
+                        </div>
+
+
+                        <div class="result-footer">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                Updated recently
+                            </span>
+
+                            <div>
+
+                                <button class="result-action-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    Open
+                                </button>
+
+                                <button class="result-action-btn secondary">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add to Research
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- RESULT 2 -->
+
+                    <article
+                        class="web-result"
+                        data-type="documentation"
+                        data-title="Machine Learning Documentation and Developer Resources"
+                    >
+
+                        <div class="result-source-row">
+
+                            <span class="source-type documentation">
+                                Documentation
+                            </span>
+
+                            <span class="source-domain">
+                                developer.example.com
+                            </span>
+
+                            <button
+                                class="save-source"
+                                title="Save source"
+                            >
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Machine Learning Documentation and Developer Resources
+                        </h3>
+
+
+                        <p class="result-url">
+                            https://developer.example.com/machine-learning
+                        </p>
+
+
+                        <p class="result-description">
+                            Technical documentation for machine learning
+                            frameworks, APIs, model development and
+                            implementation workflows.
+                        </p>
+
+
+                        <div class="result-tags">
+
+                            <span>
+                                Documentation
+                            </span>
+
+                            <span>
+                                ML
+                            </span>
+
+                            <span>
+                                APIs
+                            </span>
+
+                        </div>
+
+
+                        <div class="result-footer">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                Technical resource
+                            </span>
+
+                            <div>
+
+                                <button class="result-action-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    Open
+                                </button>
+
+                                <button class="result-action-btn secondary">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add to Research
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- RESULT 3 -->
+
+                    <article
+                        class="web-result"
+                        data-type="dataset"
+                        data-title="Public Machine Learning Datasets Collection"
+                    >
+
+                        <div class="result-source-row">
+
+                            <span class="source-type dataset">
+                                Dataset
+                            </span>
+
+                            <span class="source-domain">
+                                datasets.example.org
+                            </span>
+
+                            <button
+                                class="save-source"
+                                title="Save source"
+                            >
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Public Machine Learning Datasets Collection
+                        </h3>
+
+
+                        <p class="result-url">
+                            https://datasets.example.org/machine-learning
+                        </p>
+
+
+                        <p class="result-description">
+                            A collection of publicly available datasets for
+                            machine learning, computer vision, natural language
+                            processing and data science experiments.
+                        </p>
+
+
+                        <div class="result-tags">
+
+                            <span>
+                                Datasets
+                            </span>
+
+                            <span>
+                                Computer Vision
+                            </span>
+
+                            <span>
+                                NLP
+                            </span>
+
+                        </div>
+
+
+                        <div class="result-footer">
+
+                            <span>
+                                <i class="fa-solid fa-database"></i>
+                                Dataset collection
+                            </span>
+
+                            <div>
+
+                                <button class="result-action-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    Open
+                                </button>
+
+                                <button class="result-action-btn secondary">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add to Research
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- RESULT 4 -->
+
+                    <article
+                        class="web-result"
+                        data-type="organization"
+                        data-title="Artificial Intelligence Research Organization"
+                    >
+
+                        <div class="result-source-row">
+
+                            <span class="source-type organization">
+                                Organization
+                            </span>
+
+                            <span class="source-domain">
+                                ai-research.example.org
+                            </span>
+
+                            <button
+                                class="save-source"
+                                title="Save source"
+                            >
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Artificial Intelligence Research Organization
+                        </h3>
+
+
+                        <p class="result-url">
+                            https://ai-research.example.org
+                        </p>
+
+
+                        <p class="result-description">
+                            Research organization focused on advancing
+                            artificial intelligence, responsible AI and
+                            interdisciplinary research collaboration.
+                        </p>
+
+
+                        <div class="result-tags">
+
+                            <span>
+                                AI Research
+                            </span>
+
+                            <span>
+                                Research Lab
+                            </span>
+
+                            <span>
+                                Responsible AI
+                            </span>
+
+                        </div>
+
+
+                        <div class="result-footer">
+
+                            <span>
+                                <i class="fa-solid fa-building-columns"></i>
+                                Research organization
+                            </span>
+
+                            <div>
+
+                                <button class="result-action-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    Open
+                                </button>
+
+                                <button class="result-action-btn secondary">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add to Research
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- RESULT 5 -->
+
+                    <article
+                        class="web-result"
+                        data-type="academic"
+                        data-title="Recent Advances in Computer Vision Research"
+                    >
+
+                        <div class="result-source-row">
+
+                            <span class="source-type academic">
+                                Academic
+                            </span>
+
+                            <span class="source-domain">
+                                vision-research.example.org
+                            </span>
+
+                            <button
+                                class="save-source"
+                                title="Save source"
+                            >
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Recent Advances in Computer Vision Research
+                        </h3>
+
+
+                        <p class="result-url">
+                            https://vision-research.example.org/advances
+                        </p>
+
+
+                        <p class="result-description">
+                            Review recent developments in computer vision,
+                            image classification, object detection,
+                            segmentation and multimodal systems.
+                        </p>
+
+
+                        <div class="result-tags">
+
+                            <span>
+                                Computer Vision
+                            </span>
+
+                            <span>
+                                Image AI
+                            </span>
+
+                            <span>
+                                Multimodal
+                            </span>
+
+                        </div>
+
+
+                        <div class="result-footer">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                Research article
+                            </span>
+
+                            <div>
+
+                                <button class="result-action-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    Open
+                                </button>
+
+                                <button class="result-action-btn secondary">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add to Research
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- RESULT 6 -->
+
+                    <article
+                        class="web-result"
+                        data-type="news"
+                        data-title="Latest Trends in Artificial Intelligence Research"
+                    >
+
+                        <div class="result-source-row">
+
+                            <span class="source-type news">
+                                Research News
+                            </span>
+
+                            <span class="source-domain">
+                                research-news.example.com
+                            </span>
+
+                            <button
+                                class="save-source"
+                                title="Save source"
+                            >
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+
+                        </div>
+
+
+                        <h3>
+                            Latest Trends in Artificial Intelligence Research
+                        </h3>
+
+
+                        <p class="result-url">
+                            https://research-news.example.com/ai-trends
+                        </p>
+
+
+                        <p class="result-description">
+                            Follow emerging research trends, new AI models,
+                            research publications and developments across
+                            the artificial intelligence ecosystem.
+                        </p>
+
+
+                        <div class="result-tags">
+
+                            <span>
+                                AI Trends
+                            </span>
+
+                            <span>
+                                Research News
+                            </span>
+
+                            <span>
+                                Technology
+                            </span>
+
+                        </div>
+
+
+                        <div class="result-footer">
+
+                            <span>
+                                <i class="fa-regular fa-clock"></i>
+                                Recent update
+                            </span>
+
+                            <div>
+
+                                <button class="result-action-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    Open
+                                </button>
+
+                                <button class="result-action-btn secondary">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add to Research
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- EMPTY STATE -->
+
+                    <div
+                        class="research-empty"
+                        id="researchEmpty"
+                    >
+
+                        <div class="empty-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+                        <h3>
+                            No research sources found
+                        </h3>
+
+                        <p>
+                            Try another search term or select a different
+                            source category.
+                        </p>
+
+                        <button
+                            class="secondary-page-btn"
+                            id="clearResearch"
+                        >
+                            Clear Search
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RIGHT SIDEBAR
+                     ================================================= -->
+
+                <aside class="research-side-panel">
+
+
+                    <!-- AI RESEARCH -->
+
+                    <div class="research-ai-card">
+
+                        <div class="ai-card-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+
+                        <div class="section-eyebrow">
+                            AI RESEARCH
+                        </div>
+
+                        <h3>
+                            Need help with your research?
+                        </h3>
+
+                        <p>
+                            Ask the AI Research Assistant to summarize
+                            sources, compare information or identify useful
+                            research directions.
+                        </p>
+
+                        <a
+                            href="ai-chat.html"
+                            class="ai-card-button"
+                        >
+                            <i class="fa-solid fa-robot"></i>
+                            Ask AI Assistant
+                        </a>
+
+                    </div>
+
+
+                    <!-- RECENT SEARCHES -->
+
+                    <div class="side-card">
+
+                        <div class="side-card-header">
+
+                            <h3>
+                                Recent Searches
+                            </h3>
+
+                            <button id="clearSearches">
+                                Clear
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            class="recent-searches"
+                            id="recentSearches"
+                        >
+
+                            <button data-query="generative AI research">
+
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                                <span>
+                                    Generative AI research
+                                </span>
+
+                                <i class="fa-solid fa-arrow-up-right"></i>
+
+                            </button>
+
+
+                            <button data-query="medical image analysis">
+
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                                <span>
+                                    Medical image analysis
+                                </span>
+
+                                <i class="fa-solid fa-arrow-up-right"></i>
+
+                            </button>
+
+
+                            <button data-query="deep learning models">
+
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                                <span>
+                                    Deep learning models
+                                </span>
+
+                                <i class="fa-solid fa-arrow-up-right"></i>
+
+                            </button>
+
+
+                            <button data-query="research methodology">
+
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                                <span>
+                                    Research methodology
+                                </span>
+
+                                <i class="fa-solid fa-arrow-up-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SAVED SOURCES -->
+
+                    <div class="side-card">
+
+                        <div class="side-card-header">
+
+                            <h3>
+                                Saved Sources
+                            </h3>
+
+                            <a href="#">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="saved-source-list">
+
+                            <div class="saved-source">
+
+                                <div class="saved-source-icon purple">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        AI Research Methods
+                                    </h4>
+
+                                    <span>
+                                        Academic
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="saved-source">
+
+                                <div class="saved-source-icon blue">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        ML Dataset Guide
+                                    </h4>
+
+                                    <span>
+                                        Dataset
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="saved-source">
+
+                                <div class="saved-source-icon green">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Research Resources
+                                    </h4>
+
+                                    <span>
+                                        Website
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESEARCH TIPS -->
+
+                    <div class="research-tip-card">
+
+                        <div class="tip-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Research Tip
+                            </h3>
+
+                            <p>
+                                Prefer primary academic sources and verify
+                                important claims using multiple reliable
+                                sources.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </section>
+
+
+            <!-- =================================================
+                 RESEARCH COLLECTION
+                 ================================================= -->
+
+            <section class="research-collection">
+
+                <div class="collection-header">
+
+                    <div>
+
+                        <div class="section-eyebrow">
+                            ORGANIZE YOUR RESEARCH
+                        </div>
+
+                        <h2>
+                            Research collections
+                        </h2>
+
+                        <p>
+                            Keep useful internet sources organized by topic.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-page-btn"
+                        id="createCollection"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        New Collection
+                    </button>
+
+                </div>
+
+
+                <div class="collection-grid">
+
+                    <div class="collection-card">
+
+                        <div class="collection-icon purple">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+
+                        <div class="collection-info">
+
+                            <h3>
+                                Artificial Intelligence
+                            </h3>
+
+                            <p>
+                                AI papers, research labs and resources
+                            </p>
+
+                            <span>
+                                18 sources
+                            </span>
+
+                        </div>
+
+                        <button class="collection-menu">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="collection-card">
+
+                        <div class="collection-icon blue">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+
+                        <div class="collection-info">
+
+                            <h3>
+                                Computer Vision
+                            </h3>
+
+                            <p>
+                                Vision models and image research
+                            </p>
+
+                            <span>
+                                12 sources
+                            </span>
+
+                        </div>
+
+                        <button class="collection-menu">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="collection-card">
+
+                        <div class="collection-icon green">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+
+                        <div class="collection-info">
+
+                            <h3>
+                                Research Datasets
+                            </h3>
+
+                            <p>
+                                Useful datasets for experiments
+                            </p>
+
+                            <span>
+                                15 sources
+                            </span>
+
+                        </div>
+
+                        <button class="collection-menu">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="collection-card add-collection">
+
+                        <div class="add-collection-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+
+                        <h3>
+                            Create Collection
+                        </h3>
+
+                        <p>
+                            Organize sources around a new research topic.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+                 ================================================= -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+    /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const sidebarClose =
+        document.getElementById("sidebarClose");
+
+    const sidebarOverlay =
+        document.getElementById("sidebarOverlay");
+
+
+    menuToggle.addEventListener("click", () => {
+
+        sidebar.classList.add("open");
+
+        sidebarOverlay.classList.add("show");
+
+    });
+
+
+    sidebarClose.addEventListener("click", () => {
+
+        sidebar.classList.remove("open");
+
+        sidebarOverlay.classList.remove("show");
+
+    });
+
+
+    sidebarOverlay.addEventListener("click", () => {
+
+        sidebar.classList.remove("open");
+
+        sidebarOverlay.classList.remove("show");
+
+    });
+
+
+    /* =====================================================
+       THEME
+       ===================================================== */
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    themeToggle.addEventListener("click", function () {
+
+        document.body.classList.toggle(
+            "dark-preview"
+        );
+
+        const icon =
+            this.querySelector("i");
+
+
+        if (
+            document.body.classList.contains(
+                "dark-preview"
+            )
+        ) {
+
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+
+        } else {
+
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+
+        }
+
+    });
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
+
+    const searchInput =
+        document.getElementById(
+            "researchSearch"
+        );
+
+    const searchButton =
+        document.getElementById(
+            "searchButton"
+        );
+
+    const results =
+        Array.from(
+            document.querySelectorAll(
+                ".web-result"
+            )
+        );
+
+    const resultCount =
+        document.getElementById(
+            "resultCount"
+        );
+
+    const emptyState =
+        document.getElementById(
+            "researchEmpty"
+        );
+
+
+    function performSearch() {
+
+        const query =
+            searchInput.value
+                .toLowerCase()
+                .trim();
+
+
+        let visible =
+            0;
+
+
+        results.forEach(result => {
+
+            const title =
+                result.dataset.title
+                    .toLowerCase();
+
+
+            const text =
+                result.textContent
+                    .toLowerCase();
+
+
+            const match =
+                !query ||
+                title.includes(query) ||
+                text.includes(query);
+
+
+            result.style.display =
+                match
+                    ? ""
+                    : "block";
+
+
+            if (!match) {
+
+                result.style.display =
+                    "none";
+
+            }
+
+
+            if (match) {
+
+                visible++;
+
+            }
+
+        });
+
+
+        resultCount.textContent =
+            visible +
+            (
+                visible === 1
+                    ? " result"
+                    : " results"
+            );
+
+
+        emptyState.classList.toggle(
+            "show",
+            visible === 0
+        );
+
+    }
+
+
+    searchButton.addEventListener(
+        "click",
+        performSearch
+    );
+
+
+    searchInput.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                performSearch();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       SUGGESTIONS
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".search-suggestions button"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    searchInput.value =
+                        button.dataset.query;
+
+                    performSearch();
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       FILTER
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".research-filter"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document
+                        .querySelectorAll(
+                            ".research-filter"
+                        )
+                        .forEach(item => {
+
+                            item.classList.remove(
+                                "active"
+                            );
+
+                        });
+
+
+                    this.classList.add(
+                        "active"
+                    );
+
+
+                    const filter =
+                        this.dataset.filter;
+
+
+                    let visible =
+                        0;
+
+
+                    results.forEach(result => {
+
+                        const type =
+                            result.dataset.type;
+
+
+                        const match =
+                            filter === "all" ||
+                            type === filter;
+
+
+                        result.style.display =
+                            match
+                                ? ""
+                                : "none";
+
+
+                        if (match) {
+
+                            visible++;
+
+                        }
+
+                    });
+
+
+                    resultCount.textContent =
+                        visible +
+                        (
+                            visible === 1
+                                ? " result"
+                                : " results"
+                        );
+
+
+                    emptyState.classList.toggle(
+                        "show",
+                        visible === 0
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       SAVE SOURCES
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".save-source"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const icon =
+                        this.querySelector("i");
+
+
+                    icon.classList.toggle(
+                        "fa-regular"
+                    );
+
+                    icon.classList.toggle(
+                        "fa-solid"
+                    );
+
+
+                    this.classList.toggle(
+                        "saved"
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       ADD TO RESEARCH
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".result-action-btn.secondary"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    this.classList.toggle(
+                        "added"
+                    );
+
+
+                    if (
+                        this.classList.contains(
+                            "added"
+                        )
+                    ) {
+
+                        this.innerHTML =
+                            '<i class="fa-solid fa-check"></i> Added';
+
+                    } else {
+
+                        this.innerHTML =
+                            '<i class="fa-solid fa-plus"></i> Add to Research';
+
+                    }
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       RECENT SEARCH
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            ".recent-searches button"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    searchInput.value =
+                        button.dataset.query;
+
+                    performSearch();
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       CLEAR SEARCHES
+       ===================================================== */
+
+    document
+        .getElementById(
+            "clearSearches"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                document
+                    .getElementById(
+                        "recentSearches"
+                    )
+                    .innerHTML = `
+
+                        <div class="recent-empty">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                            <span>
+                                No recent searches
+                            </span>
+
+                        </div>
+
+                    `;
+
+            }
+        );
+
+
+    /* =====================================================
+       CLEAR CURRENT SEARCH
+       ===================================================== */
+
+    document
+        .getElementById(
+            "clearResearch"
+        )
+        .addEventListener(
+            "click",
+            () => {
+
+                searchInput.value =
+                    "";
+
+                document
+                    .querySelector(
+                        '.research-filter[data-filter="all"]'
+                    )
+                    .click();
+
+            }
+        );
+
+
+    /* =====================================================
+       SORT
+       ===================================================== */
+
+    document
+        .getElementById(
+            "sortResults"
+        )
+        .addEventListener(
+            "change",
+            function () {
+
+                const container =
+                    document.querySelector(
+                        ".research-results"
+                    );
+
+
+                const items =
+                    Array.from(
+                        container.querySelectorAll(
+                            ".web-result"
+                        )
+                    );
+
+
+                if (
+                    this.value === "recent"
+                ) {
+
+                    items.reverse();
+
+                }
+
+
+                items.forEach(item => {
+
+                    container.appendChild(
+                        item
+                    );
+
+                });
+
+            }
+        );
+
+
+    /* =====================================================
+       CREATE COLLECTION
+       ===================================================== */
+
+    function createCollection() {
+
+        const name =
+            prompt(
+                "Enter collection name:"
+            );
+
+
+        if (!name) {
+
+            return;
+
+        }
+
+
+        alert(
+            `"${name}" collection will be connected to the backend later.`
+        );
+
+    }
+
+
+    document
+        .getElementById(
+            "createCollection"
+        )
+        .addEventListener(
+            "click",
+            createCollection
+        );
+
+
+    document
+        .querySelector(
+            ".add-collection"
+        )
+        .addEventListener(
+            "click",
+            createCollection
+        );
+
+
+    /* =====================================================
+       GLOBAL SEARCH
+       ===================================================== */
+
+    document
+        .getElementById(
+            "globalSearch"
+        )
+        .addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "Enter"
+                ) {
+
+                    searchInput.value =
+                        event.target.value;
+
+                    performSearch();
+
+                }
+
+            }
+        );
+
+</script>
+
+</body>
+</html>

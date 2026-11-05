@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Models | Research AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/models.css">
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <a href="../index.html">
+
+                <span class="sidebar-logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span class="sidebar-logo-text">
+                    Research <strong>AI</strong>
+                </span>
+
+            </a>
+        </div>
+
+        <button class="sidebar-close" id="sidebarClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                MAIN MENU
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    Dashboard
+                </a>
+
+                <a href="research-domain.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </span>
+                    Research Domains
+                </a>
+
+                <a href="papers.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+                    Research Papers
+                </a>
+
+                <a href="datasets.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </span>
+                    Datasets
+                </a>
+
+                <a href="models.html" class="sidebar-link active">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </span>
+                    AI Models
+                </a>
+
+                <a href="github.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </span>
+                    GitHub Explorer
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                AI RESEARCH TOOLS
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="ai-analysis.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </span>
+                    AI Analysis
+                </a>
+
+                <a href="research-gap.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </span>
+                    Research Gap
+                </a>
+
+                <a href="idea-generator.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </span>
+                    Idea Generator
+                </a>
+
+                <a href="literature.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+                    Literature Review
+                </a>
+
+                <a href="ai-chat.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </span>
+                    AI Assistant
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">
+                RESOURCES
+            </p>
+
+            <nav class="sidebar-nav">
+
+                <a href="conferences.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </span>
+                    Conferences
+                </a>
+
+                <a href="citation.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </span>
+                    Citation Generator
+                </a>
+
+                <a href="internet-research.html" class="sidebar-link">
+                    <span class="sidebar-link-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </span>
+                    Internet Research
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="sidebar-link">
+                <span class="sidebar-link-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+                Settings
+            </a>
+
+            <a href="profile.html" class="sidebar-profile">
+
+                <div class="profile-avatar">
+                    AJ
+                </div>
+
+                <div class="profile-info">
+                    <strong>Researcher</strong>
+                    <span>Student Account</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="main-content">
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="page-title">
+                    <span>Research Resources</span>
+                    <h1>AI Models</h1>
+                </div>
+
+            </div>
+
+
+            <div class="global-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search AI models..."
+                >
+
+                <span class="search-shortcut">
+                    Ctrl K
+                </span>
+
+            </div>
+
+
+            <div class="navbar-actions">
+
+                <button
+                    class="navbar-icon-btn"
+                    id="themeToggle"
+                >
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+                <a
+                    href="notifications.html"
+                    class="navbar-icon-btn notification-btn"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </a>
+
+                <a href="profile.html" class="navbar-user">
+
+                    <div class="navbar-avatar">
+                        AJ
+                    </div>
+
+                    <div class="navbar-user-info">
+                        <strong>Researcher</strong>
+                        <span>Student</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <div class="page-content">
+
+
+            <!-- BREADCRUMB -->
+
+            <div class="page-breadcrumb">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    AI Models
+                </span>
+
+            </div>
+
+
+            <!-- HERO -->
+
+            <section class="models-hero">
+
+                <div class="models-hero-content">
+
+                    <div class="section-eyebrow">
+                        AI MODEL EXPLORER
+                    </div>
+
+                    <h2>
+                        Discover AI models for your research
+                    </h2>
+
+                    <p>
+                        Explore machine learning and deep learning
+                        models across computer vision, NLP, generative AI,
+                        healthcare and other research domains.
+                    </p>
+
+                    <div class="models-hero-actions">
+
+                        <button
+                            class="primary-page-btn"
+                            id="exploreModelsBtn"
+                        >
+                            <i class="fa-solid fa-compass"></i>
+                            Explore Models
+                        </button>
+
+                        <button
+                            class="secondary-page-btn"
+                            id="compareModelsBtn"
+                        >
+                            <i class="fa-solid fa-code-compare"></i>
+                            Compare Models
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="models-hero-visual">
+
+                    <div class="model-orbit">
+
+                        <div class="orbit-node one">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+
+                        <div class="orbit-node two">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+
+                        <div class="orbit-node three">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div class="orbit-node four">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="model-core">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- STATS -->
+
+            <section class="models-stats">
+
+                <div class="model-stat">
+
+                    <div class="model-stat-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <div>
+                        <span>AI MODELS</span>
+                        <strong>1,842</strong>
+                        <small>Available models</small>
+                    </div>
+
+                </div>
+
+
+                <div class="model-stat">
+
+                    <div class="model-stat-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+
+                    <div>
+                        <span>VISION MODELS</span>
+                        <strong>486</strong>
+                        <small>Computer vision</small>
+                    </div>
+
+                </div>
+
+
+                <div class="model-stat">
+
+                    <div class="model-stat-icon">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+
+                    <div>
+                        <span>NLP MODELS</span>
+                        <strong>624</strong>
+                        <small>Language models</small>
+                    </div>
+
+                </div>
+
+
+                <div class="model-stat">
+
+                    <div class="model-stat-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+
+                    <div>
+                        <span>GENERATIVE AI</span>
+                        <strong>318</strong>
+                        <small>Generative models</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SEARCH -->
+
+            <section class="models-toolbar">
+
+                <div class="models-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="modelSearch"
+                        placeholder="Search model name, architecture or task..."
+                    >
+
+                </div>
+
+
+                <select id="modelTask">
+
+                    <option value="all">
+                        All Tasks
+                    </option>
+
+                    <option value="vision">
+                        Computer Vision
+                    </option>
+
+                    <option value="nlp">
+                        NLP
+                    </option>
+
+                    <option value="generation">
+                        Generation
+                    </option>
+
+                    <option value="classification">
+                        Classification
+                    </option>
+
+                </select>
+
+
+                <select id="modelFramework">
+
+                    <option value="all">
+                        Framework
+                    </option>
+
+                    <option value="pytorch">
+                        PyTorch
+                    </option>
+
+                    <option value="tensorflow">
+                        TensorFlow
+                    </option>
+
+                    <option value="transformers">
+                        Transformers
+                    </option>
+
+                </select>
+
+
+                <select id="modelSort">
+
+                    <option value="popular">
+                        Most Popular
+                    </option>
+
+                    <option value="recent">
+                        Recently Added
+                    </option>
+
+                    <option value="name">
+                        Name A-Z
+                    </option>
+
+                </select>
+
+            </section>
+
+
+            <!-- CATEGORIES -->
+
+            <section class="model-categories">
+
+                <button
+                    class="model-category active"
+                    data-category="all"
+                >
+                    All Models
+                </button>
+
+                <button
+                    class="model-category"
+                    data-category="vision"
+                >
+                    Computer Vision
+                </button>
+
+                <button
+                    class="model-category"
+                    data-category="nlp"
+                >
+                    NLP
+                </button>
+
+                <button
+                    class="model-category"
+                    data-category="generation"
+                >
+                    Generative AI
+                </button>
+
+                <button
+                    class="model-category"
+                    data-category="healthcare"
+                >
+                    Healthcare AI
+                </button>
+
+                <button
+                    class="model-category"
+                    data-category="classification"
+                >
+                    Classification
+                </button>
+
+            </section>
+
+
+            <!-- MODEL HEADER -->
+
+            <section class="models-section-header">
+
+                <div>
+
+                    <div class="section-eyebrow">
+                        MODEL LIBRARY
+                    </div>
+
+                    <h2>
+                        Popular research models
+                    </h2>
+
+                </div>
+
+                <span
+                    class="models-count"
+                    id="modelsCount"
+                >
+                    6 models
+                </span>
+
+            </section>
+
+
+            <!-- MODEL GRID -->
+
+            <section
+                class="models-grid"
+                id="modelsGrid"
+            >
+
+
+                <!-- MODEL 1 -->
+
+                <article
+                    class="model-card"
+                    data-name="ResNet-50"
+                    data-task="classification"
+                    data-framework="pytorch"
+                    data-category="vision"
+                >
+
+                    <div class="model-card-top">
+
+                        <div class="model-logo">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+
+                        <button class="model-menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+
+                    </div>
+
+                    <h3>
+                        ResNet-50
+                    </h3>
+
+                    <div class="model-provider">
+                        Microsoft Research
+                    </div>
+
+                    <p class="model-description">
+                        Deep residual convolutional neural network
+                        commonly used for image classification and
+                        computer vision research.
+                    </p>
+
+                    <div class="model-tags">
+
+                        <span class="model-tag">
+                            CNN
+                        </span>
+
+                        <span class="model-tag blue">
+                            Vision
+                        </span>
+
+                        <span class="model-tag green">
+                            PyTorch
+                        </span>
+
+                    </div>
+
+                    <div class="model-card-meta">
+
+                        <div class="model-meta-item">
+                            <span>Parameters</span>
+                            <strong>25.6M</strong>
+                        </div>
+
+                        <div class="model-meta-item">
+                            <span>Input</span>
+                            <strong>224 × 224</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="model-card-footer">
+
+                        <span class="model-license">
+                            Research License
+                        </span>
+
+                        <button class="model-explore">
+                            Explore
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MODEL 2 -->
+
+                <article
+                    class="model-card"
+                    data-name="BERT Base"
+                    data-task="nlp"
+                    data-framework="transformers"
+                    data-category="nlp"
+                >
+
+                    <div class="model-card-top">
+
+                        <div class="model-logo">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+
+                        <button class="model-menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+
+                    </div>
+
+                    <h3>
+                        BERT Base
+                    </h3>
+
+                    <div class="model-provider">
+                        Google Research
+                    </div>
+
+                    <p class="model-description">
+                        Bidirectional transformer model designed for
+                        natural language understanding and NLP tasks.
+                    </p>
+
+                    <div class="model-tags">
+
+                        <span class="model-tag">
+                            Transformer
+                        </span>
+
+                        <span class="model-tag blue">
+                            NLP
+                        </span>
+
+                        <span class="model-tag green">
+                            Hugging Face
+                        </span>
+
+                    </div>
+
+                    <div class="model-card-meta">
+
+                        <div class="model-meta-item">
+                            <span>Parameters</span>
+                            <strong>110M</strong>
+                        </div>
+
+                        <div class="model-meta-item">
+                            <span>Layers</span>
+                            <strong>12</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="model-card-footer">
+
+                        <span class="model-license">
+                            Apache 2.0
+                        </span>
+
+                        <button class="model-explore">
+                            Explore
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MODEL 3 -->
+
+                <article
+                    class="model-card"
+                    data-name="YOLOv8"
+                    data-task="vision"
+                    data-framework="pytorch"
+                    data-category="vision"
+                >
+
+                    <div class="model-card-top">
+
+                        <div class="model-logo">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+
+                        <button class="model-menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+
+                    </div>
+
+                    <h3>
+                        YOLOv8
+                    </h3>
+
+                    <div class="model-provider">
+                        Ultralytics
+                    </div>
+
+                    <p class="model-description">
+                        Real-time object detection and image analysis
+                        model designed for high-speed computer vision tasks.
+                    </p>
+
+                    <div class="model-tags">
+
+                        <span class="model-tag">
+                            Detection
+                        </span>
+
+                        <span class="model-tag blue">
+                            Vision
+                        </span>
+
+                        <span class="model-tag green">
+                            PyTorch
+                        </span>
+
+                    </div>
+
+                    <div class="model-card-meta">
+
+                        <div class="model-meta-item">
+                            <span>Task</span>
+                            <strong>Detection</strong>
+                        </div>
+
+                        <div class="model-meta-item">
+                            <span>Speed</span>
+                            <strong>Real-time</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="model-card-footer">
+
+                        <span class="model-license">
+                            Open Source
+                        </span>
+
+                        <button class="model-explore">
+                            Explore
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MODEL 4 -->
+
+                <article
+                    class="model-card"
+                    data-name="ViT Base"
+                    data-task="vision"
+                    data-framework="pytorch"
+                    data-category="vision"
+                >
+
+                    <div class="model-card-top">
+
+                        <div class="model-logo">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+
+                        <button class="model-menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+
+                    </div>
+
+                    <h3>
+                        Vision Transformer
+                    </h3>
+
+                    <div class="model-provider">
+                        Google Research
+                    </div>
+
+                    <p class="model-description">
+                        Transformer architecture for image recognition
+                        using attention mechanisms instead of traditional CNNs.
+                    </p>
+
+                    <div class="model-tags">
+
+                        <span class="model-tag">
+                            ViT
+                        </span>
+
+                        <span class="model-tag blue">
+                            Vision
+                        </span>
+
+                        <span class="model-tag green">
+                            PyTorch
+                        </span>
+
+                    </div>
+
+                    <div class="model-card-meta">
+
+                        <div class="model-meta-item">
+                            <span>Parameters</span>
+                            <strong>86M</strong>
+                        </div>
+
+                        <div class="model-meta-item">
+                            <span>Architecture</span>
+                            <strong>Transformer</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="model-card-footer">
+
+                        <span class="model-license">
+                            Apache 2.0
+                        </span>
+
+                        <button class="model-explore">
+                            Explore
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MODEL 5 -->
+
+                <article
+                    class="model-card"
+                    data-name="T5 Base"
+                    data-task="nlp"
+                    data-framework="transformers"
+                    data-category="nlp"
+                >
+
+                    <div class="model-card-top">
+
+                        <div class="model-logo">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+
+                        <button class="model-menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+
+                    </div>
+
+                    <h3>
+                        T5 Base
+                    </h3>
+
+                    <div class="model-provider">
+                        Google Research
+                    </div>
+
+                    <p class="model-description">
+                        Text-to-text transformer architecture supporting
+                        summarization, translation and question answering.
+                    </p>
+
+                    <div class="model-tags">
+
+                        <span class="model-tag">
+                            T5
+                        </span>
+
+                        <span class="model-tag blue">
+                            NLP
+                        </span>
+
+                        <span class="model-tag orange">
+                            Generation
+                        </span>
+
+                    </div>
+
+                    <div class="model-card-meta">
+
+                        <div class="model-meta-item">
+                            <span>Parameters</span>
+                            <strong>220M</strong>
+                        </div>
+
+                        <div class="model-meta-item">
+                            <span>Architecture</span>
+                            <strong>Encoder-Decoder</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="model-card-footer">
+
+                        <span class="model-license">
+                            Apache 2.0
+                        </span>
+
+                        <button class="model-explore">
+                            Explore
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MODEL 6 -->
+
+                <article
+                    class="model-card"
+                    data-name="U-Net"
+                    data-task="vision"
+                    data-framework="tensorflow"
+                    data-category="healthcare"
+                >
+
+                    <div class="model-card-top">
+
+                        <div class="model-logo">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+
+                        <button class="model-menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+
+                    </div>
+
+                    <h3>
+                        U-Net
+                    </h3>
+
+                    <div class="model-provider">
+                        Biomedical Research
+                    </div>
+
+                    <p class="model-description">
+                        Encoder-decoder architecture widely used for
+                        biomedical image segmentation and medical imaging.
+                    </p>
+
+                    <div class="model-tags">
+
+                        <span class="model-tag">
+                            Segmentation
+                        </span>
+
+                        <span class="model-tag blue">
+                            Healthcare
+                        </span>
+
+                        <span class="model-tag green">
+                            TensorFlow
+                        </span>
+
+                    </div>
+
+                    <div class="model-card-meta">
+
+                        <div class="model-meta-item">
+                            <span>Task</span>
+                            <strong>Segmentation</strong>
+                        </div>
+
+                        <div class="model-meta-item">
+                            <span>Domain</span>
+                            <strong>Medical AI</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="model-card-footer">
+
+                        <span class="model-license">
+                            Open Research
+                        </span>
+
+                        <button class="model-explore">
+                            Explore
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- EMPTY -->
+
+            <section
+                class="models-empty"
+                id="modelsEmpty"
+            >
+
+                <i class="fa-solid fa-microchip"></i>
+
+                <h3>
+                    No AI models found
+                </h3>
+
+                <p>
+                    Try another search term or change the filters.
+                </p>
+
+            </section>
+
+
+            <!-- COMPARISON -->
+
+            <section
+                class="model-comparison"
+                id="comparisonSection"
+            >
+
+                <div class="model-comparison-header">
+
+                    <div>
+
+                        <h2>
+                            Popular Model Comparison
+                        </h2>
+
+                        <p>
+                            Quick overview of commonly used research models.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="secondary-page-btn"
+                        id="hideComparison"
+                    >
+                        Hide
+                    </button>
+
+                </div>
+
+
+                <div class="comparison-table-wrapper">
+
+                    <table class="comparison-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Model</th>
+                                <th>Architecture</th>
+                                <th>Task</th>
+                                <th>Parameters</th>
+                                <th>Research Score</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>ResNet-50</td>
+                                <td>CNN</td>
+                                <td>Classification</td>
+                                <td>25.6M</td>
+                                <td class="model-score">94%</td>
+                            </tr>
+
+                            <tr>
+                                <td>BERT Base</td>
+                                <td>Transformer</td>
+                                <td>NLP</td>
+                                <td>110M</td>
+                                <td class="model-score">96%</td>
+                            </tr>
+
+                            <tr>
+                                <td>YOLOv8</td>
+                                <td>CNN</td>
+                                <td>Detection</td>
+                                <td>25.9M</td>
+                                <td class="model-score">95%</td>
+                            </tr>
+
+                            <tr>
+                                <td>ViT Base</td>
+                                <td>Transformer</td>
+                                <td>Vision</td>
+                                <td>86M</td>
+                                <td class="model-score">93%</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- CTA -->
+
+            <section class="models-cta">
+
+                <div class="models-cta-icon">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+
+                <div class="models-cta-content">
+
+                    <div class="section-eyebrow">
+                        RESEARCH EXPERIMENT
+                    </div>
+
+                    <h2>
+                        Need help selecting a model?
+                    </h2>
+
+                    <p>
+                        Use the AI Research Assistant to identify suitable
+                        models based on your research problem.
+                    </p>
+
+                </div>
+
+                <a
+                    href="ai-chat.html"
+                    class="primary-page-btn"
+                >
+                    <i class="fa-solid fa-robot"></i>
+                    Ask AI Assistant
+                </a>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+                    © 2026 Research AI. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+
+    /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const sidebarClose =
+        document.getElementById("sidebarClose");
+
+    const sidebarOverlay =
+        document.getElementById("sidebarOverlay");
+
+
+    menuToggle.addEventListener("click", () => {
+
+        sidebar.classList.add("open");
+        sidebarOverlay.classList.add("show");
+
+    });
+
+
+    sidebarClose.addEventListener("click", () => {
+
+        sidebar.classList.remove("open");
+        sidebarOverlay.classList.remove("show");
+
+    });
+
+
+    sidebarOverlay.addEventListener("click", () => {
+
+        sidebar.classList.remove("open");
+        sidebarOverlay.classList.remove("show");
+
+    });
+
+
+    /* =====================================================
+       THEME
+       ===================================================== */
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    themeToggle.addEventListener("click", function () {
+
+        document.body.classList.toggle(
+            "dark-preview"
+        );
+
+        const icon =
+            this.querySelector("i");
+
+
+        if (
+            document.body.classList.contains(
+                "dark-preview"
+            )
+        ) {
+
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+
+        } else {
+
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+
+        }
+
+    });
+
+
+    /* =====================================================
+       MODEL SEARCH
+       ===================================================== */
+
+    const modelSearch =
+        document.getElementById("modelSearch");
+
+    const globalSearch =
+        document.getElementById("globalSearch");
+
+    const modelTask =
+        document.getElementById("modelTask");
+
+    const modelFramework =
+        document.getElementById("modelFramework");
+
+    const modelCards =
+        Array.from(
+            document.querySelectorAll(".model-card")
+        );
+
+    const modelsCount =
+        document.getElementById("modelsCount");
+
+    const modelsEmpty =
+        document.getElementById("modelsEmpty");
+
+
+    function filterModels() {
+
+        const search =
+            modelSearch.value
+                .toLowerCase()
+                .trim();
+
+        const task =
+            modelTask.value;
+
+        const framework =
+            modelFramework.value;
+
+        let count = 0;
+
+
+        modelCards.forEach(card => {
+
+            const name =
+                card.dataset.name
+                    .toLowerCase();
+
+            const cardTask =
+                card.dataset.task;
+
+            const cardFramework =
+                card.dataset.framework;
+
+
+            const searchMatch =
+                !search ||
+                name.includes(search);
+
+
+            const taskMatch =
+                task === "all" ||
+                cardTask === task;
+
+
+            const frameworkMatch =
+                framework === "all" ||
+                cardFramework === framework;
+
+
+            const visible =
+                searchMatch &&
+                taskMatch &&
+                frameworkMatch;
+
+
+            card.style.display =
+                visible ? "" : "none";
+
+
+            if (visible) {
+                count++;
+            }
+
+        });
+
+
+        modelsCount.textContent =
+            count +
+            (
+                count === 1
+                    ? " model"
+                    : " models"
+            );
+
+
+        modelsEmpty.classList.toggle(
+            "show",
+            count === 0
+        );
+
+    }
+
+
+    modelSearch.addEventListener(
+        "input",
+        filterModels
+    );
+
+
+    modelTask.addEventListener(
+        "change",
+        filterModels
+    );
+
+
+    modelFramework.addEventListener(
+        "change",
+        filterModels
+    );
+
+
+    globalSearch.addEventListener(
+        "input",
+        function () {
+
+            modelSearch.value =
+                this.value;
+
+            filterModels();
+
+        }
+    );
+
+
+    /* =====================================================
+       CATEGORY FILTER
+       ===================================================== */
+
+    document
+        .querySelectorAll(".model-category")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document
+                        .querySelectorAll(
+                            ".model-category"
+                        )
+                        .forEach(item => {
+
+                            item.classList.remove(
+                                "active"
+                            );
+
+                        });
+
+
+                    this.classList.add("active");
+
+
+                    const category =
+                        this.dataset.category;
+
+
+                    if (category === "all") {
+
+                        modelSearch.value = "";
+
+                        modelTask.value = "all";
+
+                        modelFramework.value = "all";
+
+                    } else {
+
+                        modelSearch.value = "";
+
+                        modelTask.value =
+                            category === "vision"
+                                ? "vision"
+                                : category === "nlp"
+                                    ? "nlp"
+                                    : category === "generation"
+                                        ? "generation"
+                                        : category === "classification"
+                                            ? "classification"
+                                            : "all";
+
+                    }
+
+
+                    filterModels();
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       EXPLORE BUTTON
+       ===================================================== */
+
+    document
+        .getElementById("exploreModelsBtn")
+        .addEventListener("click", () => {
+
+            document
+                .getElementById("modelsGrid")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        });
+
+
+    /* =====================================================
+       COMPARISON
+       ===================================================== */
+
+    document
+        .getElementById("compareModelsBtn")
+        .addEventListener("click", () => {
+
+            document
+                .getElementById("comparisonSection")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        });
+
+
+    document
+        .getElementById("hideComparison")
+        .addEventListener("click", function () {
+
+            const section =
+                document.getElementById(
+                    "comparisonSection"
+                );
+
+
+            if (section.style.display === "none") {
+
+                section.style.display = "";
+
+                this.textContent = "Hide";
+
+            } else {
+
+                section.style.display = "none";
+
+                this.textContent = "Show";
+
+            }
+
+        });
+
+
+    /* =====================================================
+       MODEL EXPLORE
+       ===================================================== */
+
+    document
+        .querySelectorAll(".model-explore")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const card =
+                        this.closest(".model-card");
+
+                    const modelName =
+                        card
+                            .querySelector("h3")
+                            .textContent
+                            .trim();
+
+                    alert(
+                        modelName +
+                        " model details will be connected later."
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       MODEL MENU
+       ===================================================== */
+
+    document
+        .querySelectorAll(".model-menu")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    alert(
+                        "More model actions will be added later."
+                    );
+
+                }
+            );
+
+        });
+
+
+</script>
+
+</body>
+</html>
